@@ -5,23 +5,31 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
 from User.models import UserProfile
+from User.forms import LoginForm
 
 # Create your views here.
 class Login(View):
     def get(self, request : HttpRequest):
-        return render(request, "User/login.html")
+        fm = LoginForm()
+        return render(request, "User/login.html", {'form':fm, 'pwd_err':""})
     
     def post(self, request : HttpRequest):
-        username = request.POST.get('username')
-        pwd = request.POST.get('pwd')
-        user = authenticate(username = username, password = pwd)
-        if user is None:
-            return redirect('/login/')
+        # username = request.POST.get('username')
+        # pwd = request.POST.get('pwd')
+        fm = LoginForm(request.POST)
+        if not fm.is_valid():
+            return render(request, "User/login.html", {'form':fm, 'pwd_err':""})
         else:
-            login(request, user)
-            path = request.GET.get('next') or '/home/'
-            # TODO: 
-            return redirect(path)
+            username = fm.cleaned_data.get('username')
+            pwd = fm.cleaned_data.get('password')
+            user = authenticate(username = username, password = pwd)
+            if user is None:
+                return render(request, "User/login.html", {'form':fm, 'pwd_err':"密码错误"})
+            else:
+                login(request, user)
+                path = request.GET.get('next') or '/home/'
+                # TODO: 
+                return redirect(path)
         
 
 @login_required
