@@ -15,13 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
+
+from User import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include(("User.urls", "User"))),  
-    # 默认重定向到user里.
-    # 后面那里定义了命名空间.似乎也可以在User/urls.py底下用app_name="User".  
-    path('Neo4j/', include(("Neo4j.urls", "Neo4j"))),
-    # 访问Neo4j下的url需要用Neo4j/...
+    path('login/', views.Login.as_view(), name="login"),
+    path('home/', views.Homepage, name='home'),
 ]
