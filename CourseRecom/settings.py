@@ -15,6 +15,19 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# neomodel连接.  
+from neomodel import config
+
+config.DATABASE_URL = 'bolt://neo4j:$password$@localhost:7687/course-recom'  
+config.MAX_CONNECTION_POOL_SIZE = 50
+config.AUTO_INSTALL_LABELS = False
+config.ENCRYPTED = True
+
+# TODO: 修改上面的password为那串又臭又长的password, 然后写完模型定义之后，用  
+# neomodel_install_labels yourapp.py someapp.models --db bolt://neo4j:neo4j@localhost:7687  
+# 在数据库中创建标签. 后面那个网址应该和config.Dataset_Url那个一致.yourapp不知道是什么, someapp是Neo4j(在本项目中)
+# 必须指定数据库名称.  
+# 参考 https://blog.csdn.net/qq_44853197/article/details/124384117
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
