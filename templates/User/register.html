@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>注册</title>
+</head>
+<body>
+    <h1>注册</h1>
+    <form action="{% url 'User:register' %}" method="post">
+        {% csrf_token %} 
+        <div>
+            <!--用户名-->
+            <label for="username">用户名</label>
+            {{form.username}}<span>{{form.username.errors.0}}</span>
+        </div>
+        <div>
+            <!--密码-->
+            <label for="password1">密码</label>
+            {{form.password1}}<span>{{form.password1.errors.0}}</span>
+        </div>
+        <div>
+            <!--再次输入密码-->
+            <label for="password2">再次输入密码</label>
+            {{form.password2}}<span>{{form.password2.errors.0}}</span>
+        </div>
+        <input type="submit">
+    </form>
+
+</body>
+</html>
