@@ -18,10 +18,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # neomodel连接.  
 from neomodel import config
 
-config.DATABASE_URL = 'bolt://neo4j:$password$@localhost:7687/course-recom'  
+config.DATABASE_URL = 'bolt://neo4j:agent-watch-orbit-anatomy-biology-7138@localhost:7687/course-recom'  
 config.MAX_CONNECTION_POOL_SIZE = 50
 config.AUTO_INSTALL_LABELS = False
-config.ENCRYPTED = True
+config.ENCRYPTED = False   # Neo4j默认不ENCRYPTED.
 
 # TODO: 修改上面的password为那串又臭又长的password, 然后写完模型定义之后，用  
 # neomodel_install_labels yourapp.py someapp.models --db bolt://neo4j:neo4j@localhost:7687  

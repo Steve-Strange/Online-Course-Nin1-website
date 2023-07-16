@@ -5,7 +5,7 @@ from neomodel import (StructuredNode, StructuredRel, StringProperty, IntegerProp
 # Create your models here.
 class TagNode(StructuredNode):
     uid = UniqueIdProperty()
-    tag = StringProperty(unique_index = True, default = "")    
+    tag = StringProperty(default = "")    
     
     def __str__(self):
         if self.tag == "":
@@ -19,7 +19,7 @@ class TagEdge(StructuredRel):
     连接课程和课程的有向边.
     '''
     uid = UniqueIdProperty()
-    tag = StringProperty(unique_index = True, default = "")
+    tag = StringProperty(default = "")
 
     def __str__(self) -> str:
         if self.tag == "":
