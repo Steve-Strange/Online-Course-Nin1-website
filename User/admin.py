@@ -8,7 +8,7 @@ class UserGraphInline(admin.TabularInline):
 class MyUserAdmin(UserAdmin):
     inlines = [UserGraphInline]
     fieldsets = UserAdmin.fieldsets + (
-        ('Knowledge Roots Array (binary)', {'fields':('profile_picture',)}),
+        ('Profile Picture', {'fields':('profile_picture',)}),
     )
     
 

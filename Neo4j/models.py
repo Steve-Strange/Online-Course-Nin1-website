@@ -2,6 +2,10 @@ from django.db import models
 from neomodel import (StructuredNode, StructuredRel, StringProperty, IntegerProperty, RelationshipTo,
                       UniqueIdProperty)
 
+# 这个字符串表示这个节点是空的，是无效的.
+# 如果节点的名称是这个的话，就不要对它爬取内容了.
+placeholder = "Empty Node"
+
 # Create your models here.
 class TagNode(StructuredNode):
     uid = UniqueIdProperty()

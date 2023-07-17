@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +26,4 @@ urlpatterns = [
     # 后面那里定义了命名空间.似乎也可以在User/urls.py底下用app_name="User".  
     path('Neo4j/', include(("Neo4j.urls", "Neo4j"))),
     # 访问Neo4j下的url需要用Neo4j/...
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

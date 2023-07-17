@@ -66,4 +66,5 @@ class RegisterSuccess(View):
 @login_required
 def Homepage(request: HttpRequest):
     # 下面那个context只是临时的...后面根据homepage.html更改..
-    return render(request, "User/homepage.html", {'request':request})
+    thisuser = UserProfile.objects.get(username = request.user.username)
+    return render(request, "User/homepage.html", {'user':thisuser})
