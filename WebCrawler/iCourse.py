@@ -49,6 +49,7 @@ for i in range(1, 5):
         teacher = text[15]
 
         print(name, class_type, teacher)
+        url_list.append([href, name, class_type, teacher])
     
     try:
         if i == 1:
