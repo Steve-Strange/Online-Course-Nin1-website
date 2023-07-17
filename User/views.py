@@ -45,7 +45,8 @@ class Register(View):
         form = MyUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)   # 创建新用户了.
-            user.graph_roots = bytearray([0x00])
+            # TODO: 初始化第一张默认图!
+            #user.graph_roots = bytearray([0x00])
             user.save()
             return redirect('/register/success/')
         else:
