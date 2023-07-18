@@ -30,3 +30,11 @@ class UserGraphs(models.Model):
     root_uid = models.CharField(max_length=200)
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
     # 不指定，反向查询名字默认为 user_set
+
+
+class UserTags(models.Model):
+    '''
+    用户所创建的所有tags.
+    '''
+    tag_uid = models.CharField(max_length=200)
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)

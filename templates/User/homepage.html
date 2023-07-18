@@ -1,3 +1,26 @@
-<p>This is homepage...</p>
+<!--TODO: 需要创建form: 头像上传文件.-->
+<!--TODO: 需要建立链接，Tags和Graphs.跳转到相应页面-->
+<h1>This is homepage...</h1>
 <img width="50" height="50" src="{{user.profile_picture.url}}" alt="">
 <p>User: {{user.username}} </p>
+
+<h2>Tags</h2>
+<h3>GraphTags</h3>
+{% for graph_node in GraphTag_List %}
+    <p>{{graph_node.graph_name}} : {{graph_node.tag}}</p>
+{% endfor %}
+
+<h3>KnowledgeTags</h3>
+{% for know_node in KnowTag_List %}
+    <p>{{know_node.name}} : {{know_node.tag}}</p>
+{% endfor %}
+
+<h3>CourseTags</h3>
+{% for course_node in CourseTag_List %}
+    <p>{{course_node.name}} : {{course_node.tag}}</p>
+{% endfor %}
+
+<h2>Graphs</h2>
+{% for graph_node in Graph_List %}
+    <p>{{graph_node.graph_name}}, uid: {{graph_node.uid}}</p>
+{% endfor %}

@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 from User.models import UserProfile
 from User.forms import LoginForm, MyUserCreationForm
+from Utils.find import find_all_graphs, find_all_tags
 
 # Create your views here.
 class Login(View):
@@ -62,9 +63,29 @@ class RegisterSuccess(View):
         return render(request, 'User/register_success.html')
 
         
+class Homepage:
+    @login_required
+    def homepage(request: HttpRequest):
+        # 下面那个context只是临时的...后面根据homepage.html更改..
+        '''
+        homepage.html context: 
+        user: instance of UserProfile, means current user.
+        GraphTag_List: list of GraphRoot instances.  
+        KnowTag_List:  list of KnowledgeBlock instances.
+        CourseTag_List:list of Course instances.
+        Graph_List: list of GraphRoot instances.
+        '''
+        thisuser = UserProfile.objects.get(id = request.user.id)
+        tags = find_all_tags(thisuser)
+        graphs = find_all_graphs(thisuser)
+        ctx = {
+            'user': thisuser,
+            'GraphTag_List': tags['GraphTags'],
+            'KnowTag_List': tags['KnowTags'],
+            'CourseTag_List': tags['CourseTags'],
+            'Graph_List': graphs,
+        }
+        return render(request, "User/homepage.html", ctx)
 
-@login_required
-def Homepage(request: HttpRequest):
-    # 下面那个context只是临时的...后面根据homepage.html更改..
-    thisuser = UserProfile.objects.get(username = request.user.username)
-    return render(request, "User/homepage.html", {'user':thisuser})
+
+    
