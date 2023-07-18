@@ -9,7 +9,7 @@ DELETE n,r
 from neomodel import config
 from models import KnowledgeBlock, Course, GraphRoot
 
-with open('../developer_sign.txt', 'r') as f:
+with open('./developer_sign.txt', 'r') as f:
     username = f.readline().strip()
     pwd = f.readline().strip()
 

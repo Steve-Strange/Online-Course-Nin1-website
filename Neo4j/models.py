@@ -37,6 +37,7 @@ class KnowledgeBlock(TagNode):
     知识图谱上的节点.
     '''
     name = StringProperty(required = True)
+    introduction = StringProperty(default = "")
     rel_knowledge = RelationshipTo("KnowledgeBlock", "relevant knowledge", model=TagEdge)
     rel_courses = RelationshipTo("Course", "courses about the knowledge")
 
@@ -50,6 +51,7 @@ class KnowledgeBlock(TagNode):
 
 class GraphRoot(TagNode):
     graph_name = StringProperty(default = "Unnamed Knowledge Graph")
+    introduction = StringProperty(default = "")
     rel_knowledge = RelationshipTo("KnowledgeBlock", "Graph") # 连接到一个图的节点上.
     
     def __str__(self):

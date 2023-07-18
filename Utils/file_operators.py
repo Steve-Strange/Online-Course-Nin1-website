@@ -1,4 +1,9 @@
 '''
+此文件进行知识图谱文件的导入、导出操作.
+'''
+
+
+'''
 加载csv格式的知识图谱。  
 规定：每一行的第一个元素为该节点的知识点名称，后面全都是由这个知识点指向的其它知识点.  
 不爬取课程数据.  
@@ -19,17 +24,18 @@ else:
     # 不是直接在本文件上运行.
     from Neo4j.models import GraphRoot, KnowledgeBlock, placeholder
 
-def csv_loader(file, name:str = None):
+def csv_loader(file, name:str = None, intro:str = None):
     '''
     将csv文件加载为新的知识图谱。认为每行的第一个元素是该节点的课程名称，每行后面的元素是该节点指向的其它课程节点名称.
-    认为不包含课程。这个函数也不会去爬取课程，形成的图是没有课程的.    
+    认为不包含课程。这个函数也不会去爬取课程，形成的图是没有课程的.  
+    注意，这里只做加载，**不做爬取**！
     para: 
     file: 一个文件对象或者文件名称.  
     name: 这张图的名字.
     return:
-    root(GraphRoot)的uid.
+    root(GraphRoot)本身.
 
-    严格来说，root应该连接图里的所有分支，这里暂且做不到.  
+    TODO: (并查集)严格来说，root应该连接图里的所有分支，这里暂且做不到.  
     如果输入的图不是连通的，会出问题.  
     '''
     should_close = False
@@ -40,7 +46,9 @@ def csv_loader(file, name:str = None):
         f = file
     root = GraphRoot()
     if name is not None:
-        root.graph_name = root
+        root.graph_name = name
+    if intro is not None:
+        root.introduction = intro
     root.save()
     reader = csv_reader(f)
     first_node = None
@@ -74,4 +82,4 @@ def csv_loader(file, name:str = None):
     if should_close:
         f.close()
 
-    return root.uid
+    return root

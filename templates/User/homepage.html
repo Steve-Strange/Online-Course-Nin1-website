@@ -30,5 +30,7 @@ Graph_List: list of GraphRoot instances. -->
 
 <h2>Graphs</h2>
 {% for graph_node in Graph_List %}
-    <p>{{graph_node.graph_name}}, uid: {{graph_node.uid}}</p>
+    <a href="{% url 'Neo4j:kgviewer' graph_node.uid %}">
+        {{graph_node.graph_name}}, uid: {{graph_node.uid}}
+    </a>
 {% endfor %}

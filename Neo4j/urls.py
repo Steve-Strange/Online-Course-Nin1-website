@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.urls import path
 
+from Neo4j import views
+
 
 urlpatterns = [
-
+    path("<str:uid>/", views.KnowledgeGraph.KnowledgegraphViewer, name="kgviewer"),
 ]

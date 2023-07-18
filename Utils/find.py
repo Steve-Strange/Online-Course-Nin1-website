@@ -38,7 +38,7 @@ def find_all_graphs(user:UserProfile):
      return [GraphRoot.nodes.get(uid = i.root_uid) for i in user.usergraphs_set.all()]
 
 
-def find_all_knowledge(root : GraphRoot):
+def find_all_knowledge_in_graph(root : GraphRoot):
      '''
      使用BFS找到root指向的所有知识点节点.只返回知识点节点!  
      返回：一个列表，里面是这个图中的所有知识点节点，暂时没有顺序要求，按照之后可视化的要求改！
@@ -59,3 +59,10 @@ def find_all_knowledge(root : GraphRoot):
                          continue
                     queue.append(node)
      return ret
+
+
+def find_all_courses_in_knowledge(knowledge:KnowledgeBlock):
+     '''
+     找到一个知识点节点的所有课程节点，返回一个列表[Course]
+     '''
+     return knowledge.rel_courses.all()

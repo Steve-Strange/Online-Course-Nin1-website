@@ -1,0 +1,18 @@
+<!-- 先暂时只把所有knowledge节点列出来. -->
+<!-- 需要的变量(暂时)：
+Knowledge_List: 这个图里所有knowledge节点的列表. -->
+
+<h1>这里是知识图谱视图</h1>
+<img width="50" height="50" src="{{user.profile_picture.url}}" alt="">
+<p>User: {{user.username}} </p>
+
+<h2>Neo4j可视化...</h2>
+{% for know_node in Knowledge_List %}
+    <h3>    Knowledge: {{know_node.name}}, uid: {{know_node.uid}}</h3>
+    <h4>        rel_knowledge:</h4>
+        {% for rel_node in know_node.rel_knowledge.all %}   <!--无法在模板中使用函数(除了字典的items) -->
+    <p>             {{rel_node.name}}</p>
+    {% endfor %}
+{% endfor %}
+
+<a href="{% url 'User:home' %}">返回主页</a>
