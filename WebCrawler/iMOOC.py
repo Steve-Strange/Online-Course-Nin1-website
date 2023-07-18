@@ -97,7 +97,7 @@ driver.quit()
 print("finish scrapping")
 
 if key == "0":
-    url_list.sort(key=lambda x: float(x[2] + (x[4] - 9) * 500), reverse=True)       # 默认，综合排序 播放量 + 100 * 弹幕数
+    url_list.sort(key=lambda x: float(x[2] + (x[4] - 9) * 500), reverse=True)       # 默认，综合排序
 elif key == "1":
     url_list.sort(key=lambda x: float(x[2]), reverse=True)   # 参与人数
 elif key == "2":
