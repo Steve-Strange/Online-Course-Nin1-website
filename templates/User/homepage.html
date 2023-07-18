@@ -1,5 +1,13 @@
 <!--TODO: 需要创建form: 头像上传文件.-->
 <!--TODO: 需要建立链接，Tags和Graphs.跳转到相应页面-->
+
+<!-- homepage.html context: 
+user: instance of UserProfile, means current user.
+GraphTag_List: list of GraphRoot instances.  
+KnowTag_List:  list of KnowledgeBlock instances.
+CourseTag_List:list of Course instances.
+Graph_List: list of GraphRoot instances. -->
+
 <h1>This is homepage...</h1>
 <img width="50" height="50" src="{{user.profile_picture.url}}" alt="">
 <p>User: {{user.username}} </p>
