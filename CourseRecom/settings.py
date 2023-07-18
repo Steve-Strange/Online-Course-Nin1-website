@@ -19,7 +19,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # neomodel连接.  
 from neomodel import config
 
-config.DATABASE_URL = 'bolt://neo4j:agent-watch-orbit-anatomy-biology-7138@localhost:7687/course-recom'  
+with open('developer_sign.txt', 'r') as f:
+    username = f.readline().strip()
+    pwd = f.readline().strip()
+
+config.DATABASE_URL = "bolt://"+username+":"+pwd+"@localhost:7687/course-recom"
+#config.DATABASE_URL = 'bolt://neo4j:agent-watch-orbit-anatomy-biology-7138@localhost:7687/course-recom'  
 config.MAX_CONNECTION_POOL_SIZE = 50
 config.AUTO_INSTALL_LABELS = False
 config.ENCRYPTED = False   # Neo4j默认不ENCRYPTED.
