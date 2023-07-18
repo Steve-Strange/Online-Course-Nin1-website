@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 
 def BiliBili(keyword, key):
 
+    href, name, cover, detail, play_num, comments_num, score, time, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
+    
     def ToNum(s):
         
         if(s.find("亿") != -1):
@@ -32,32 +34,48 @@ def BiliBili(keyword, key):
     url_list = []
 
     for element in video_elements:
-        
+        if(len(url_list) > 20):
+            break
         url = element.find('a')
         # print(url.get('href'), url.get_text(separator='\n'))
         
-        href = url.get('href')
+        cover = str(element.find(class_ = "v-img bili-video-card__cover")).split('><')[3].\
+            replace("@672w_378h_1c_!web-search-common-cover.webp\" type=\"image/webp\"", '').\
+                replace("source srcset=\"//", '')
+        
+        href = "https:" + url.get('href')
         text = url.get_text(separator=' ').split(' ')
         title = element.get_text()
         title = title[title.rfind(':')+3: len(title)].split(' · ')
+        name = title[0]
         if len(title[1]) <= 5:
-            title[1] = "2023-" + title[1]
+            time = "2023-" + title[1]
         
-        text[0] = ToNum(text[0])
-        text[1] = ToNum(text[1])
+        play_num = ToNum(text[0])
+        comments_num = ToNum(text[1])
+        if len(text[2]) == 5:
+            time_span = "00:" + text[2]
+        else:
+            time_span = text[2]
         
-        url_list.append([href, text, title])
-    
+        res = requests.get(href, headers=header)
+        soup2 = BeautifulSoup(res.text, "lxml")
+        detail = soup2.find(class_ = "desc-info-text").get_text().replace('\n', '').replace('\r', '')
+        
+        url_list.append([href, name, cover, detail, play_num, comments_num, score, time, time_span])
+
     if key == "0":
-        url_list.sort(key=lambda x: float(x[1][0] + x[1][1] * 100), reverse=True)       # 默认，综合排序
+        url_list.sort(key=lambda x: x[1], reverse=True)   # 名称排序
     elif key == "1":
-        url_list.sort(key=lambda x: float(x[1][0]), reverse=True)   # 播放量
+        url_list.sort(key=lambda x: float(x[4]), reverse=True)   # 播放量 / 参与用户数
     elif key == "2":
-        url_list.sort(key=lambda x: float(x[1][1]), reverse=True) # 弹幕数量
+        url_list.sort(key=lambda x: float(x[5]), reverse=True) # 评论数量
     elif key == "3":
-        url_list.sort(key=lambda x: x[1][2], reverse=True) # 视频总时长
+        url_list.sort(key=lambda x: float(x[6]), reverse=True) # 评分
+    elif key == "4":
+        url_list.sort(key=lambda x: x[7], reverse=True) # 视频发布日期
     else:
-        url_list.sort(key=lambda x: x[2][1], reverse=True) # 视频发布日期
+        url_list.sort(key=lambda x: x[8], reverse=True) # 视频时长
 
     if len(url_list) == 0:
         print("No results")
