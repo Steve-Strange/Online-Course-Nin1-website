@@ -10,6 +10,7 @@ from selenium.webdriver.common.keys import Keys
 def iCourse(keyword, key):
 
     url_list = []
+    href, name, cover, detail, play_num, comments_num, score, time, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
 
     js = "window.open('{}','_blank');"
     chrome_options = Options()
@@ -28,7 +29,7 @@ def iCourse(keyword, key):
     print("start scrapping")
 
     for i in range(1, 5):
-        if(len(url_list) > 50):     # 最大数量
+        if(len(url_list) > 20):     # 最大数量
             break
         print("scrapping page " + str(i))
         
@@ -38,7 +39,7 @@ def iCourse(keyword, key):
         time.sleep(0.1)
         
         for element in video_elements:
-            if(len(url_list) > 50):
+            if(len(url_list) > 20):
                 break
             url = element.find('a')
 
@@ -49,7 +50,6 @@ def iCourse(keyword, key):
             
             text = element.get_text().split('\n')
             name = text[9]
-            class_type = text[12]
             teacher = text[15]
             
             header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36", 
@@ -72,8 +72,7 @@ def iCourse(keyword, key):
             attend_num = int(class_info[class_info.index('学习人数:') + 1])
             comments_num = int(class_info[class_info.index('评论数:') + 1])
             
-            url_list.append([href, name, teacher, attend_num, comments_num])
-            
+            url_list.append([href, name, cover, detail, play_num, comments_num, score, time, time_span])
         
         try:
             if i == 1:
@@ -91,13 +90,23 @@ def iCourse(keyword, key):
         exit()
 
     if key == "0":
-        url_list.sort(key=lambda x: float(x[3] + 30 * x[4]), reverse=True)       # 默认，综合排序
+        url_list.sort(key=lambda x: x[1], reverse=True)   # 名称排序
     elif key == "1":
-        url_list.sort(key=lambda x: float(x[3]), reverse=True)  # 参与人数
+        url_list.sort(key=lambda x: float(x[4]), reverse=True)   # 播放量 / 参与用户数
+    elif key == "2":
+        url_list.sort(key=lambda x: float(x[5]), reverse=True) # 评论数量
+    elif key == "3":
+        url_list.sort(key=lambda x: float(x[6]), reverse=True) # 评分
+    elif key == "4":
+        url_list.sort(key=lambda x: x[7], reverse=True) # 视频发布日期
     else:
-        url_list.sort(key=lambda x: float(x[4]), reverse=True)  # 评论数
-    
-    for i in url_list:
-        print(i)
-        
+        url_list.sort(key=lambda x: x[8], reverse=True) # 视频时长
+
+    if len(url_list) == 0:
+        print("No results")
+        exit()
+
+    for elem in url_list:
+        print(elem)
+
 iCourse(input(), input())

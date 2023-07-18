@@ -10,10 +10,11 @@ from selenium.webdriver.common.keys import Keys
 def HDXol(keyword, key):
 
     url_list = []
+    href, name, cover, detail, play_num, comments_num, score, time, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
 
     js = "window.open('{}','_blank');"
     chrome_options = Options()
-    # chrome_options.add_argument('headless')
+    chrome_options.add_argument('headless')
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
 
@@ -24,7 +25,7 @@ def HDXol(keyword, key):
     print("start scrapping")
     
     for i in range(1, 5):
-        if(len(url_list) > 50):     # 最大数量
+        if(len(url_list) > 20):     # 最大数量
             break
         print("scrapping page " + str(i))
         
@@ -34,7 +35,7 @@ def HDXol(keyword, key):
         time.sleep(0.5)
         
         for element in video_elements:
-            if(len(url_list) > 50):
+            if(len(url_list) > 20):
                 break
             url = element.find('a')
 
@@ -78,11 +79,17 @@ def HDXol(keyword, key):
     print("finish scrapping")
     
     if key == "0":
-        url_list.sort(key=lambda x: float(x[1] + x[2] * 30), reverse=True)       # 默认，综合排序
+        url_list.sort(key=lambda x: x[1], reverse=True)   # 名称排序
     elif key == "1":
-        url_list.sort(key=lambda x: float(x[1]), reverse=True)   # 参与人数
+        url_list.sort(key=lambda x: float(x[4]), reverse=True)   # 播放量 / 参与用户数
+    elif key == "2":
+        url_list.sort(key=lambda x: float(x[5]), reverse=True) # 评论数量
+    elif key == "3":
+        url_list.sort(key=lambda x: float(x[6]), reverse=True) # 评分
+    elif key == "4":
+        url_list.sort(key=lambda x: x[7], reverse=True) # 视频发布日期
     else:
-        url_list.sort(key=lambda x: float(x[2]), reverse=True) # 收藏人数
+        url_list.sort(key=lambda x: x[8], reverse=True) # 视频时长
 
     if len(url_list) == 0:
         print("No results")
