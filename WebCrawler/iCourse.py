@@ -42,15 +42,17 @@ def iCourse(keyword, key):
             if(len(url_list) > 20):
                 break
             url = element.find('a')
-
+            
             href = url.get('href')
             
             if(href.find("icourse163") != -1):      # 中国慕课的。。
                 continue;
             
+            cover = element.find('img').get('src')
+            
             text = element.get_text().split('\n')
             name = text[9]
-            teacher = text[15]
+        
             
             header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36", 
             "Cookie": "your cookie"} 
@@ -64,13 +66,17 @@ def iCourse(keyword, key):
             res.encoding = res.apparent_encoding
             soup2 = BeautifulSoup(res.text, "lxml")
             
+            detail = soup2.find(class_ = "course-text").get_text().strip()
+            
             try:
                 class_info = soup2.find(class_="course-information boxstyle").get_text().split('\n')
             except Exception:
                 continue;
             
-            attend_num = int(class_info[class_info.index('学习人数:') + 1])
+            play_num = int(class_info[class_info.index('学习人数:') + 1])
             comments_num = int(class_info[class_info.index('评论数:') + 1])
+            time_span = class_info[class_info.index('课程学时:') + 1][:-2] + "小时"
+            
             
             url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
         

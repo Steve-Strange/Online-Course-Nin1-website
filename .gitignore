@@ -138,3 +138,4 @@ dmypy.json
 cython_debug/
 
 /developer_sign.txt
+output.txt

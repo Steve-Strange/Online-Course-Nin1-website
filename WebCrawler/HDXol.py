@@ -37,13 +37,16 @@ def HDXol(keyword, key):
             if(len(url_list) > 20):
                 break
             url = element.find('a')
-
+        
             courseid = url.get('courseid')
             courseopenid = url.get('courseopenid')
             
             href = 'https://www.cnmooc.org/portal/course/' + courseid + '/' + courseopenid + '.mooc'
             
-            attend_num = int(element.find(class_ = 'progressbar-text').get_text().split(' ')[0])
+            name = element.find(class_ = "view-title substr").get_text().replace('\n', '').replace('\t', '')[:40].replace(' ','')
+            
+            play_num = int(element.find(class_ = 'progressbar-text').get_text().split(' ')[0])
+            cover = element.find('img').get('src')
             
             header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36", 
             "Cookie": "your cookie"} 
@@ -57,14 +60,17 @@ def HDXol(keyword, key):
             res.encoding = res.apparent_encoding
             soup2 = BeautifulSoup(res.text, "lxml")
             
+            detail = soup2.find(class_ = "para-row").get_text().strip()
             class_info = soup2.find(class_ ="view-favor subFavorite").get_text().replace('\r', '').split('\n')
-            
+            time_start = soup2.find(class_ = "view-time").get_text().strip().replace('\t', '')
+            time_start = time_start[time_start.find('—') - 11 : time_start.find('—') -1]
+
             try:
-                favor_num = int(class_info[1][:-2])
+                comments_num = int(class_info[1][:-2])
             except ValueError:
                 continue
             
-            url_list.append([href, attend_num, favor_num])
+            url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
             
         try:
             click_place = driver.find_element(By.CLASS_NAME, "page-next")

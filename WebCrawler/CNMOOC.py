@@ -12,7 +12,7 @@ def CNMOOC(keyword, key):
 
     js = "window.open('{}','_blank');"
     chrome_options = Options()
-    chrome_options.add_argument('headless')
+    # chrome_options.add_argument('headless')
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
 
@@ -35,7 +35,7 @@ def CNMOOC(keyword, key):
             ActionChains(driver).move_to_element(click_place).click(click_place).perform()
         except Exception:
             continue
-        time.sleep(0.5)
+        time.sleep(0.3)
 
         html = driver.page_source
         soup = BeautifulSoup(html, "lxml")
@@ -44,31 +44,25 @@ def CNMOOC(keyword, key):
             f.write(soup.prettify())
 
         video_elements = soup.find_all(class_="u-clist f-bgw f-cb f-pr j-href ga-click")
-        time.sleep(0.1)
 
         for element in video_elements:
             if(len(url_list) > 20):
                 break
             url = element.find('a')
 
-            href = url.get('href')
+            href = 'https:' + url.get('href')
             if href.find("kaoyan") != -1 or href.find("undefined") != -1:
                 continue
             
-            name = url.get_text(separator=' ')
-            text_detail = element.find("span", class_ = "p5 brief f-ib f-f0 f-cb").get_text()
-            
-            if name.find(keyword) == -1 and text_detail.find(keyword) == -1:        # 筛选是否有关键词 （同义词问题）
-                continue
-
+            name = url.get_text()
             price_element = element.find("span", class_="price")
             attendance_element = element.find("span", class_="hot")
-            attendance_num = int(attendance_element.get_text()[0:-3])
+            play_num = int(attendance_element.get_text()[0:-3])
             
             if price_element is not None and price_element.get_text() != "免费":
                 continue
-
-            print(href)
+            
+            cover = element.find('img').get('src')
             
             driver.execute_script(js.format(href))
             driver.switch_to.window(driver.window_handles[-1])
@@ -78,10 +72,18 @@ def CNMOOC(keyword, key):
                 ActionChains(driver).move_to_element(click_place).click(click_place).perform()
             except Exception:
                 continue
-            time.sleep(0.1)
             html_class = driver.page_source
             soup_class = BeautifulSoup(html_class, "lxml")
 
+            detail = soup_class.find(class_ ="category-content j-cover-overflow").get_text().replace('\xa0','').strip()
+            time_start = soup_class.find(class_ ="course-enroll-info_course-info_term-info_term-time").get_text().strip().split('\n')[1][0:11]
+            print(time_start)
+
+            if name.find(keyword) == -1 and detail.find(keyword) == -1:        # 筛选是否有关键词 （同义词问题）
+                driver.close()
+                driver.switch_to.window(driver.window_handles[0])
+                continue
+            
             comments_element = soup_class.find(class_ = "ux-mooc-comment-course-comment_head")
 
             if comments_element == None:
@@ -92,7 +94,7 @@ def CNMOOC(keyword, key):
             comments = comments_element.get_text().replace('\n','')
             
             try:
-                comments_score = float(comments[0: 3])
+                score = float(comments[0: 3])
             except Exception:
                 driver.close()
                 driver.switch_to.window(driver.window_handles[0])
@@ -105,6 +107,7 @@ def CNMOOC(keyword, key):
                 driver.switch_to.window(driver.window_handles[0])
                 continue
             
+            print(href)
             url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
             
             driver.close()
