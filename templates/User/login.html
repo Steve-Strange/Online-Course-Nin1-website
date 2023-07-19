@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -6,21 +6,13 @@
 </head>
 <body>
     <h1>登录</h1>
-    <!-- <form action="{% url 'User:login' %}" method="post">
-        {% csrf_token %} 
-        <p>用户名:<input type="text" name="username"> </p>
-        <p>密码:<input type="password" name="pwd"> </p>
-        <input type="submit">
-    </form> -->
     <form action="{% url 'User:login' %}" method="post">
         {% csrf_token %} 
         <div>
-            <!--用户名-->
             <label for="username">用户名</label>
             {{form.username}}<span>{{form.username.errors.0}}</span>
         </div>
         <div>
-            <!--密码-->
             <label for="password">密码</label>
             {{form.password}}<span>{{pwd_err}}</span>
         </div>
@@ -29,4 +21,95 @@
     <a href="{% url 'User:register' %}">注册</a>
 
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Probably the most complete UI kit out there. Multiple functionalities and controls added,  extended color palette and beautiful typography, designed as its own extended version of Bootstrap at  the highest level of quality.                             ">
+    <meta name="author" content="Webpixels">
+    <title>Login</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+    <!-- Theme CSS -->
+    <link type="text/css" href="/static/boomerang/assets/css/theme.css" rel="stylesheet">
+    <!-- Demo CSS - No need to use these in your project -->
+    <link type="text/css" href="/static/boomerang/assets/css/demo.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-transparent navbar-dark bg-dark py-4">
+      <div class="container">
+        <h5 class="navbar-brand"><strong>Boomerang</strong> UI Kit</h5> <!--**在这里修改左上角标题 -->
+      </div>
+    </nav>
+    <main class="main">
+      <section class="py-xl bg-cover bg-size--cover" style="background-image: url('/static/boomerang/assets/images/backgrounds/img-1.jpg')"> <!--在这修改背景图片.-->
+        <span class="mask bg-primary alpha-6"></span>
+        <div class="container d-flex align-items-center no-padding">
+          <div class="col">
+            <div class="row justify-content-center">
+              <div class="col-lg-4">
+                <div class="card bg-primary text-white">
+                  <div class="card-body">
+                    <button type="button" class="btn btn-primary btn-nobg btn-zoom--hover mb-5">
+                      <span class="btn-inner--icon"><i class="fas fa-arrow-left"></i></span>
+                    </button>
+                    <span class="clearfix"></span>
+                    <img src="/static/boomerang/assets/images/brand/icon.png" style="width: 50px;"> <!--在这里修改上面的图标!-->
+                    <h4 class="heading h3 text-white pt-3 pb-5">欢迎,<br>
+                      请登录</h4>
+                    <form class="form-primary" action="{% url 'User:login' %}" method="post">
+                      {% csrf_token %}
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="input-username" name="username" placeholder="用户名">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" id="input-password" name="password" placeholder="密码">
+                      </div>
+                      <div class="text-right mt-4"><a href="{% url 'User:register' %}" class="text-white">注册</a></div>
+                      <button type="submit" class="btn btn-block btn-lg bg-white mt-4">登录</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="pt-5 pb-3 footer  footer-dark bg-tertiary">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <div class="pr-lg-5">
+              <h1 class="heading h6 text-uppercase font-weight-700 mb-3"><strong>Boomerang</strong> UI Kit</h1>
+              <p>添加简介</p>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="d-flex align-items-center">
+          <span class="">
+            2023夏python大作业  署名
+          </span>
+        </div>
+      </div>
+    </footer>
+    <!-- Core -->
+    <script src="static/boomerang/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="static/boomerang/assets/vendor/popper/popper.min.js"></script>
+    <script src="static/boomerang/assets/js/bootstrap/bootstrap.min.js"></script>
+    <!-- FontAwesome 5 -->
+    <script src="static/boomerang/assets/vendor/fontawesome/js/fontawesome-all.min.js" defer></script>
+    <!-- Page plugins -->
+    <script src="static/boomerang/assets/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="static/boomerang/assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+    <script src="static/boomerang/assets/vendor/input-mask/input-mask.min.js"></script>
+    <script src="static/boomerang/assets/vendor/nouislider/js/nouislider.min.js"></script>
+    <script src="static/boomerang/assets/vendor/textarea-autosize/textarea-autosize.min.js"></script>
+    <!-- Theme JS -->
+    <script src="static/boomerang/assets/js/theme.js"></script>
+  </body>
 </html>
