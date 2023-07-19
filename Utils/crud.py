@@ -99,4 +99,5 @@ class Deleter:
     @staticmethod
     def delete_course(course:Course):
         uid = course.uid
+        course.delete()
         return uid
