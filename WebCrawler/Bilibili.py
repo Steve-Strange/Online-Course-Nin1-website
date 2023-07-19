@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 def BiliBili(keyword, key):
 
-    href, name, cover, detail, play_num, comments_num, score, time, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
+    href, name, cover, detail, play_num, comments_num, score, time_start, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
     
     def ToNum(s):
         
@@ -62,7 +62,7 @@ def BiliBili(keyword, key):
         soup2 = BeautifulSoup(res.text, "lxml")
         detail = soup2.find(class_ = "desc-info-text").get_text().replace('\n', '').replace('\r', '')
         
-        url_list.append([href, name, cover, detail, play_num, comments_num, score, time, time_span])
+        url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
 
     if key == "0":
         url_list.sort(key=lambda x: x[1], reverse=True)   # 名称排序

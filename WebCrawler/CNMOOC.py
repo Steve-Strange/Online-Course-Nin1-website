@@ -8,7 +8,7 @@ from selenium.webdriver import ActionChains
 def CNMOOC(keyword, key):
 
     url_list = []
-    href, name, cover, detail, play_num, comments_num, score, time, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
+    href, name, cover, detail, play_num, comments_num, score, time_start, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
 
     js = "window.open('{}','_blank');"
     chrome_options = Options()
@@ -105,7 +105,7 @@ def CNMOOC(keyword, key):
                 driver.switch_to.window(driver.window_handles[0])
                 continue
             
-            url_list.append([href, name, cover, detail, play_num, comments_num, score, time, time_span])
+            url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
             
             driver.close()
             driver.switch_to.window(driver.window_handles[0])
