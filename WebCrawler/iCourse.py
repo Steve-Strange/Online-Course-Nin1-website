@@ -10,7 +10,7 @@ from selenium.webdriver.common.keys import Keys
 def iCourse(keyword, key):
 
     url_list = []
-    href, name, cover, detail, play_num, comments_num, score, time, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
+    href, name, cover, detail, play_num, comments_num, score, time_start, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
 
     js = "window.open('{}','_blank');"
     chrome_options = Options()
@@ -72,7 +72,7 @@ def iCourse(keyword, key):
             attend_num = int(class_info[class_info.index('学习人数:') + 1])
             comments_num = int(class_info[class_info.index('评论数:') + 1])
             
-            url_list.append([href, name, cover, detail, play_num, comments_num, score, time, time_span])
+            url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
         
         try:
             if i == 1:

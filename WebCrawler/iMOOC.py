@@ -8,19 +8,17 @@ from selenium.webdriver import ActionChains
 def iMOOC(keyword, key):
 
     url_list = []
-    href, name, cover, detail, play_num, comments_num, score, time, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
-    keyword = input()
-    key = input()
+    # href, name, cover, detail, play_num, comments_num, score, time_start, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
 
     js = "window.open('{}','_blank');"
     chrome_options = Options()
-    chrome_options.add_argument('headless')
+    # chrome_options.add_argument('headless')
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
 
     search_url = "https://www.imooc.com/search/?type=course&words=" + keyword
     driver.get(search_url)
-    time.sleep(0.1)
+    time.sleep(0.5)
 
     try:
         click_place = driver.find_element(By.XPATH, "/html/body/div[5]/div/div[3]/div[1]/div[1]/div[3]/div[1]/p")
@@ -28,7 +26,7 @@ def iMOOC(keyword, key):
         time.sleep(0.1)
         click_place = driver.find_element(By.XPATH, "/html/body/div[5]/div/div[3]/div[1]/div[1]/div[3]/div[1]/div/ul/li[3]")
         ActionChains(driver).move_to_element(click_place).click(click_place).perform()
-        time.sleep(0.1)
+        time.sleep(0.3)
     except Exception:
         print("No results")
         exit()
@@ -44,7 +42,7 @@ def iMOOC(keyword, key):
             ActionChains(driver).move_to_element(click_place).click(click_place).perform()
         except Exception:
             continue
-        time.sleep(0.1)
+        time.sleep(0.3)
         
         html = driver.page_source
         soup = BeautifulSoup(html, "lxml")
@@ -53,7 +51,7 @@ def iMOOC(keyword, key):
             f.write(soup.prettify())
 
         video_elements = soup.find_all(class_="search-item js-search-item clearfix")
-        time.sleep(0.3)
+        time.sleep(0.1)
 
         for element in video_elements:
             if(len(url_list) > 20):
@@ -62,33 +60,33 @@ def iMOOC(keyword, key):
             href = "https://www.imooc.com/learn/" + url.get('href')[6:]
             print(href)
             
+            cover = element.find('img').get('src')
+            
             text = element.get_text()[8:-2].split(' ')
             
             name = text[0]
-            detail = text[3]
-            level = text[-3][-2:]
-            dict_level = {'基础': 1, '初阶': 2, '进阶': 3, '高阶': 4}
-            attendance_num = int(text[-1])
+            # level = text[-3][-2:]
+            # dict_level = {'基础': 1, '初阶': 2, '进阶': 3, '高阶': 4}
+            play_num = int(text[-1])
             
             driver.execute_script(js.format(href))
             driver.switch_to.window(driver.window_handles[-1])
-
-            try:
-                click_place = driver.find_element(By.XPATH, "/html/body/div[5]/div[2]/div/ul/li[4]/a")
-                ActionChains(driver).move_to_element(click_place).click(click_place).perform()
-            except Exception:
-                continue
-            html_class = driver.page_source
-            soup_class = BeautifulSoup(html_class, "lxml")
-
-            try:
-                comments = float(soup_class.find(class_ = "evaluation-score l").get_text().replace(" ", "").replace("\n", ""))
-            except Exception:
-                driver.close()
-                driver.switch_to.window(driver.window_handles[0])
-                continue
             
-            url_list.append([href, name, cover, detail, play_num, comments_num, score, time, time_span])
+            html_class = driver.page_source
+            time.sleep(0.3)
+            soup_class = BeautifulSoup(html_class, "lxml")
+            
+            detail = soup_class.find(class_ = "course-description course-wrap").get_text().replace(' ', '').replace('\n', '')
+            
+            info = soup_class.find_all(class_ = "static-item l")
+            
+            time_span = info[1].get_text().replace('\n', '')[2:]
+            play_num = info[2].get_text().replace('\n', '')[4:]
+            score = soup_class.find(class_ = "static-item l score-btn").get_text().replace('\n','')[4:9]
+            
+            print(detail, time_span, play_num, score)
+            
+            # url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
             
             driver.close()
             driver.switch_to.window(driver.window_handles[0])
