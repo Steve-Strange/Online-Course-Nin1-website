@@ -62,12 +62,21 @@
                       请登录</h4>
                     <form class="form-primary" action="{% url 'User:login' %}" method="post">
                       {% csrf_token %}
+                      {% if form.errors or pwd_err %} <!--有错-->
+                      <div class="form-group">
+                        <input type="text" class="form-control is-invalid" id="input-username" name="username" placeholder="{{form.username.errors.0}}">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control is-invalid" id="input-password" name="password" placeholder="{{pwd_err}}">
+                      </div>
+                      {% else %}
                       <div class="form-group">
                         <input type="text" class="form-control" id="input-username" name="username" placeholder="用户名">
                       </div>
                       <div class="form-group">
                         <input type="password" class="form-control" id="input-password" name="password" placeholder="密码">
                       </div>
+                      {% endif %}
                       <div class="text-right mt-4"><a href="{% url 'User:register' %}" class="text-white">注册</a></div>
                       <button type="submit" class="btn btn-block btn-lg bg-white mt-4">登录</button>
                     </form>
