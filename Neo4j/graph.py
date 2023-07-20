@@ -2,6 +2,8 @@
 Neo4j Graph类，包含一些操作.
 '''
 import json
+from django.conf import settings
+from os.path import join
 
 from Neo4j.models import GraphRoot, KnowledgeBlock, Course, TagEdge
 from Utils.file_operators import csv_loader, DisjointSets
@@ -108,3 +110,50 @@ class Graph:
             self.root.rel_knowledge.connect(i)
         UserGraphs(root_uid = self.root.uid, user = self.user).save()
         # 结束.
+
+    def export_json(self, save_to_file:bool=True):
+        '''
+        将该图导出为json文件.保存到固定目录，文件名为graph的uid.json  
+        如果save_to_file为false，就只返回字典.如果是True, 返回导出的json文件路径.
+        '''
+        knows_dicts = [dict]
+        edges_dicts = [dict]
+        courses_dicts = [dict]
+        knows = find_all_knowledge_in_graph(self.root)
+        for i in range(len(knows)):
+            knows_dicts.append({
+                "name":knows[i].name,
+                "tag":knows[i].tag,
+                "introduction":knows[i].introduction,
+            })
+            for relknow in knows[i].rel_knowledge.all():
+                rel = knows[i].rel_knowledge.relationship(relknow)
+                edges_dicts.append({
+                    "from":i,
+                    "to":knows.index(relknow),
+                    "tag":rel.tag,
+                })
+            for course in find_all_courses_in_knowledge(knows[i]):
+                courses_dicts.append({
+                    "knowledge":i,
+                    "tag":course.tag,
+                    "name" : course.name,
+                    "web" : course.web,
+                    "source" : course.source,
+                    "duration" : course.duration,
+                    "viewer_num" : course.viewer_num,
+                    "introduction" : course.introduction,
+                })
+        
+        ret = {
+            "knowledges":knows_dicts,
+            "edges":edges_dicts,
+            "courses":courses_dicts,
+        }
+        if not save_to_file:
+            return ret
+        else:
+            p = join(settings.GRAPH_JSON_DIR, "{}.json".format(self.root.uid))
+            with open(join(p,'w')) as f:
+                json.dump(ret, f)
+            return p
