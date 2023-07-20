@@ -28,6 +28,7 @@ class Graph:
         '''
         如果格式有误，会抛出异常.
         导入json格式的数据库. 总的格式: {
+            "name":...
             "knowledges":[
                 {
                     "name":...
@@ -105,7 +106,11 @@ class Graph:
             UserTags(tag_uid = rel.tag, user = self.user).save()
         # TODO: 给边加tag!
         # 注册给用户.
-        self.root = GraphRoot().save()
+        self.root = GraphRoot()
+        graph_name = jf.get("name", None)
+        if graph_name is not None:
+            self.root.graph_name = graph_name
+        self.root.save()
         for i in ds.get_roots():
             self.root.rel_knowledge.connect(i)
         UserGraphs(root_uid = self.root.uid, user = self.user).save()
@@ -146,6 +151,7 @@ class Graph:
                 })
         
         ret = {
+            "name":self.root.graph_name,
             "knowledges":knows_dicts,
             "edges":edges_dicts,
             "courses":courses_dicts,
@@ -155,5 +161,5 @@ class Graph:
         else:
             p = join(settings.GRAPH_JSON_DIR, "{}.json".format(self.root.uid))
             with open(join(p,'w')) as f:
-                json.dump(ret, f)
+                json.dump(ret, f, ensure_ascii=False)
             return p
