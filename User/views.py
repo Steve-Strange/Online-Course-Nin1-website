@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from User.models import UserProfile
 from User.forms import LoginForm, MyUserCreationForm
 from Utils.find import find_all_graphs, find_all_tags
+from Neo4j.graph import Graph
 
 # Create your views here.
 class Login(View):
@@ -38,6 +39,8 @@ class Register(View):
     注册用。用auth自带的UserCreationForm表单实现.  
     UserCreationField有三个fields: username(of User model), password1, password2.
     '''
+    default_graph_path = "static/graphs/example.json"
+
     def get(self, request:HttpRequest):
         form = MyUserCreationForm()
         return render(request, 'User/register.html', {'form':form})
@@ -47,8 +50,9 @@ class Register(View):
         if form.is_valid():
             user = form.save(commit=False)   # 创建新用户了.
             # TODO: 初始化第一张默认图!
-            #user.graph_roots = bytearray([0x00])
             user.save()
+            default_graph = Graph(user)
+            default_graph.import_json(Register.default_graph_path)  # 保证默认图没错.
             return redirect('/register/success/')
         else:
             return render(request, 'User/register.html', {'form':form})

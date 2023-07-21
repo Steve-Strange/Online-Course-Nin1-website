@@ -11,6 +11,7 @@
 '''
 from copy import copy
 from csv import reader as csv_reader
+
 if __name__=='__main__':
     # 在本文件上运行.
     from ..Neo4j.models import GraphRoot, KnowledgeBlock, placeholder
@@ -30,6 +31,7 @@ class DisjointSets:
     def __init__(self, init_set:list) -> None:
         '''
         需要给定初始的不相交集，即所有节点的列表或元组.需保证无重复.
+        init_set指定之后应该不能再修改!
         '''
         self.elem = init_set
         self.sets = (-1 for i in range(len(init_set)))  #-1表示为根.
@@ -141,3 +143,7 @@ def csv_loader(file, name:str = None, intro:str = None):
         f.close()
 
     return root
+
+
+def json_expoter(root:GraphRoot):
+    pass
