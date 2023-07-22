@@ -121,7 +121,7 @@ class Graph:
 
     
     @db.read_transaction
-    def export_json(self, save_to_file:bool=True):
+    def export_json(self, save_to_file:bool=True, get_tag:bool = False):
         '''
         将该图导出为json文件.保存到固定目录，文件名为graph的uid.json  
         如果save_to_file为false，就只返回字典.如果是True, 返回导出的json文件路径.
@@ -133,7 +133,7 @@ class Graph:
         for i in range(len(knows)):
             knows_dicts.append({
                 "name":knows[i].name,
-                "tag":knows[i].tag,
+                "tag":knows[i].tag if get_tag else "",
                 "introduction":knows[i].introduction,
             })
             for relknow in knows[i].rel_knowledge.all():
@@ -141,12 +141,12 @@ class Graph:
                 edges_dicts.append({
                     "from":i,
                     "to":knows.index(relknow),
-                    "tag":rel.tag,
+                    "tag":rel.tag if get_tag else "",
                 })
             for course in find_all_courses_in_knowledge(knows[i]):
                 courses_dicts.append({
                     "knowledge":i,
-                    "tag":course.tag,
+                    "tag":course.tag if get_tag else "",
                     "name" : course.name,
                     "web" : course.web,
                     "source" : course.source,
@@ -157,6 +157,8 @@ class Graph:
         
         ret = {
             "name":self.root.graph_name,
+            "introduction":self.root.introduction,
+            "tag":self.root.tag if get_tag else "",
             "knowledges":knows_dicts,
             "edges":edges_dicts,
             "courses":courses_dicts,
