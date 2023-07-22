@@ -1,7 +1,9 @@
 '''
 Neo4j Graph类，包含一些操作.
 '''
+from neomodel import db
 import json
+from jsonschema import validate, draft7_format_checker
 from django.conf import settings
 from os.path import join
 
@@ -12,6 +14,8 @@ from User.models import UserProfile, UserGraphs, UserTags
 
 
 class Graph:
+    with open("static/graphs/schema.json", "r", encoding="utf-8") as f:
+        schema = json.load(f)
     '''
     对完整的图进行操作，包括导入导出、创建等.
     '''
@@ -22,7 +26,7 @@ class Graph:
         self.user = user
         self.root = root
         self.knowledges = find_all_knowledge_in_graph(self.root) if self.root is not None else [KnowledgeBlock]
-        self.courses = [Course]
+    
     
     def import_json(self,json_file:str):
         '''
@@ -56,26 +60,36 @@ class Graph:
         '''
         with open(json_file, "r", encoding="utf-8") as f:
             jf = json.load(f)  #jf是dict.
+        validate(instance=jf, schema=Graph.schema, format_checker=draft7_format_checker)
+        # 如果验证失败会直接抛出异常.
+        # 通过了之后能直接进行下面的语句.
         knows = jf["knowledges"]
         edges = jf["edges"]
-        courses = jf.get("courses", None)
-        self.knowledges = [KnowledgeBlock]
-        self.courses = [Course]
-        tag_edge = [TagEdge]
-        for know in knows:
+        courses = jf["courses"]
+        self.knowledges = [None for i in range(len(knows))]
+        for i in range(len(knows)):
+            know = knows[i]
             # 根据后面对数据库的更改相应添加.
-            node = KnowledgeBlock(name=know["name"], introduction=know["introduction"], tag=know["tag"])
-            self.knowledges.append(node)
-        ds = DisjointSets(self.knowledges)
+            self.knowledges[i] = KnowledgeBlock(name=know["name"], introduction=know["introduction"], tag=know["tag"]).save()
+            # 刚创建的node可以通过.uid访问它的字符串，但是append到node之后就无效了,只有内存中的obj地址了!
+            #self.knowledges.append(KnowledgeBlock.nodes.get(uid=node.uid))
+            #self.knowledges.append(node)   # 应该是复制的锅.
+            # neomodel原本创建的节点能用neomodel的transcation处理,但是复制之后的节点不能.
+            # 要么直接在数组中创建，要么保留引用.
+            if self.knowledges[i].tag:
+                UserTags(tag_uid = self.knowledges[i].uid, user = self.user).save()
+        ds = DisjointSets(range(len(self.knowledges)))
         for edge in edges:
             from_node = edge["from"]
             to_node = edge["to"]
-            rel = self.knowledges[from_node].rel_knowledge.connect(self.knowledges[to_node])
-            rel.tag = edge["tag"]
+            # start = KnowledgeBlock.nodes.get(uid=self.knowledges[from_node].uid)
+            # end = KnowledgeBlock.nodes.get(uid=self.knowledges[to_node].uid)
+            # rel = start.rel_knowledge.connect(end, tag = edge['tag'])
+            rel = self.knowledges[from_node].rel_knowledge.connect(self.knowledges[to_node], {"tag":edge["tag"],})
             if rel.tag:
-                tag_edge.append(rel)
-            ds.union(self.knowledges[to_node], self.knowledges[from_node])
-        if courses is not None:
+                UserTags(tag_uid = rel.uid, user = self.user).save()
+            ds.union(from_node, to_node)
+        if courses:
             # 有课程，不爬取.
             for course in courses:
                 node = Course(
@@ -86,36 +100,27 @@ class Graph:
                     viewer_num = course["viewer_num"],
                     introduction = course["introduction"],
                     tag = course['tag'],
-                )
+                ).save()
                 self.knowledges[course["knowledge"]].rel_courses.connect(node)
-                self.courses.append(node)
+                if node.tag:
+                    UserTags(tag_uid = node.uid, user = self.user).save()
         else:
             # TODO, 爬取课程.
             pass
 
-        # 能到这一步说明较为正常.保存.
-        for i in self.knowledges:
-            i.save()
-            if i.tag:
-                UserTags(tag_uid = i.uid, user = self.user).save()
-        for i in self.courses:
-            i.save()
-            if i.tag:
-                UserTags(tag_uid = i.uid, user=self.user).save()
-        for rel in tag_edge:
-            UserTags(tag_uid = rel.tag, user = self.user).save()
-        # TODO: 给边加tag!
         # 注册给用户.
         self.root = GraphRoot()
         graph_name = jf.get("name", None)
-        if graph_name is not None:
+        if graph_name is not None and graph_name != "":
             self.root.graph_name = graph_name
         self.root.save()
         for i in ds.get_roots():
-            self.root.rel_knowledge.connect(i)
+            self.root.rel_knowledge.connect(self.knowledges[i])
         UserGraphs(root_uid = self.root.uid, user = self.user).save()
         # 结束.
 
+    
+    @db.read_transaction
     def export_json(self, save_to_file:bool=True):
         '''
         将该图导出为json文件.保存到固定目录，文件名为graph的uid.json  

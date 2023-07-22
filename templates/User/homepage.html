@@ -15,17 +15,17 @@ Graph_List: list of GraphRoot instances. -->
 <h2>Tags</h2>
 <h3>GraphTags</h3>
 {% for graph_node in GraphTag_List %}
-    <p>{{graph_node.graph_name}} : {{graph_node.tag}}</p>
+    <p>{{graph_node.uid}}--{{graph_node.graph_name}} : {{graph_node.tag}}</p>
 {% endfor %}
 
 <h3>KnowledgeTags</h3>
 {% for know_node in KnowTag_List %}
-    <p>{{know_node.name}} : {{know_node.tag}}</p>
+    <p>{{know_node.uid}}--{{know_node.name}} : {{know_node.tag}}</p>
 {% endfor %}
 
 <h3>CourseTags</h3>
 {% for course_node in CourseTag_List %}
-    <p>{{course_node.name}} : {{course_node.tag}}</p>
+    <p>{{course_node.uid}}--{{course_node.name}} : {{course_node.tag}}</p>
 {% endfor %}
 
 <h2>Graphs</h2>

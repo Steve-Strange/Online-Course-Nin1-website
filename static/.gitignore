@@ -140,3 +140,5 @@ cython_debug/
 /media
 /boomerang
 /graphs/*
+!/graphs/example.json
+!/graphs/schema.json

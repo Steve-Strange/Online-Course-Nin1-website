@@ -48,11 +48,14 @@ class Register(View):
     def post(self, request:HttpRequest):
         form = MyUserCreationForm(request.POST)
         if form.is_valid():
-            user = form.save(commit=False)   # 创建新用户了.
+            user = form.save(commit=True)   # 创建新用户了.
             # TODO: 初始化第一张默认图!
-            user.save()
             default_graph = Graph(user)
-            default_graph.import_json(Register.default_graph_path)  # 保证默认图没错.
+            try:
+                default_graph.import_json(Register.default_graph_path)  # 保证默认图没错.
+            except Exception as e:
+                user.delete()
+                raise e
             return redirect('/register/success/')
         else:
             return render(request, 'User/register.html', {'form':form})
@@ -90,6 +93,3 @@ class Homepage:
             'Graph_List': graphs,
         }
         return render(request, "User/homepage.html", ctx)
-
-
-    
