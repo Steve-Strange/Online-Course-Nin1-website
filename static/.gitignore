@@ -142,3 +142,8 @@ cython_debug/
 /graphs/*
 !/graphs/example.json
 !/graphs/schema.json
+/echarts/*
+!/echarts/echarts.min.js
+!/echarts/echarts.js
+!/echarts/echarts.js.map
+!/walden.js
