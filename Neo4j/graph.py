@@ -170,3 +170,59 @@ class Graph:
             with open(join(p,'w')) as f:
                 json.dump(ret, f, ensure_ascii=False)
             return p
+        
+    @db.read_transaction
+    def get_str(self):
+        '''
+        获得echarts所需格式的两个字符串,返回
+        node_datas, edge_datas.
+        '''
+        node_datas = "[\n"
+        edge_datas = "[\n"
+        for know in self.knowledges:
+            node_str = \
+            '''
+            {{
+                name:"{}",
+                uid:"{}",
+                intro:"{}"
+            }},\n
+            '''.format(know.name, know.uid, know.introduction)
+            node_datas += node_str
+            for rel_node in know.rel_knowledge.all():
+                edge_str = \
+                '''
+                {{
+                    source:"{}",
+                    target:"{}"
+                }},\n
+                '''.format(know.name, rel_node.name)
+                edge_datas += edge_str
+        
+        node_datas += "]"
+        edge_datas += "]"
+        return node_datas, edge_datas
+    
+
+    @db.write_transaction
+    def create_node(self, name:str, introduction:str):
+        newknow = KnowledgeBlock(name = name, introduction = introduction).save()
+        self.root.rel_knowledge.connect(newknow)
+        self.knowledges += [newknow]
+        # TODO: 执行爬虫!
+        return newknow
+    
+
+    @db.write_transaction
+    def delete_node(self, knowledge:KnowledgeBlock):
+        '''
+        删除这个节点以及所有相关的课程.
+        这里不做检查了..
+        返回被删除的节点原本的uid.
+        '''
+        # 先删除所有相关课程.
+        for course in knowledge.rel_courses.all():
+            course.delete()
+        uid = knowledge.uid
+        knowledge.delete()
+        return uid

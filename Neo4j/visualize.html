@@ -17,7 +17,7 @@
     var app = {};
     var option;
     myChart.showLoading();
-$.getJSON('echarts-format.json', function (graph) {
+$.getJSON('sampleFormat.json', function (graph) {
   myChart.hideLoading();
   graph.nodes.forEach(function (node) {
     node.label = {
