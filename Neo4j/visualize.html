@@ -81,7 +81,27 @@ $.getJSON('sampleFormat.json', function (graph) {
   };
   myChart.setOption(option);
 });
-
+//对点击事件的监听
+  myChart.on('click', function(params) 
+{
+  if (params.seriesType === 'graph') 
+  {
+      if (params.dataType === 'edge') 
+      {
+        // 点击到了 graph 的 edge（边）上。
+      } 
+      else 
+      {
+        // 点击到了 graph 的 node（节点）上。
+        //console.log(params.name);
+        if(params.name == "p1")
+        {
+          window.open('https://www.baidu.com/')
+        }
+      }
+    }
+  
+});
     if (option && typeof option === 'object') {
       myChart.setOption(option);
     }
