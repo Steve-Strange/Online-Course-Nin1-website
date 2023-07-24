@@ -102,7 +102,7 @@ def NetEase(keyword, key):
         print("No results")
         exit()
 
-    for elem in url_list:
-        print(elem)
-        
-NetEase(input(), input())
+    return url_list
+
+final_list = NetEase(input(), input())
+print(final_list)

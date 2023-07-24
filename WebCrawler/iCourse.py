@@ -111,7 +111,7 @@ def iCourse(keyword, key):
         print("No results")
         exit()
 
-    for elem in url_list:
-        print(elem)
+    return url_list
 
-iCourse(input(), input())
+final_list = iCourse(input(), input())
+print(final_list)

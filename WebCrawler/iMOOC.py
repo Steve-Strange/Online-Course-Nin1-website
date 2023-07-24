@@ -114,8 +114,8 @@ def iMOOC(keyword, key):
     if len(url_list) == 0:
         print("No results")
         exit()
+    
+    return url_list
 
-    for elem in url_list:
-        print(elem)
-        
-iMOOC(input(), input())
+final_list = iMOOC(input(), input())
+print(final_list)

@@ -133,7 +133,7 @@ def CNMOOC(keyword, key):
         print("No results")
         exit()
 
-    for elem in url_list:
-        print(elem)
+    return url_list
 
-CNMOOC(input(), input())
+final_list = CNMOOC(input(), input())
+print(final_list)

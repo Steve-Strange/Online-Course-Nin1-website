@@ -99,8 +99,8 @@ def HDXol(keyword, key):
     if len(url_list) == 0:
         print("No results")
         exit()
+    
+    return url_list
 
-    for elem in url_list:
-        print(elem)
-        
-HDXol(input(), input())
+final_list = HDXol(input(), input())
+print(final_list)

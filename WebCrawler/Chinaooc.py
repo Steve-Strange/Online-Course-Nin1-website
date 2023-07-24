@@ -94,7 +94,7 @@ def Chinaooc(keyword, key):
         print("No results")
         exit()
 
-    for elem in url_list:
-        print(elem)
-        
-Chinaooc(input(), input())
+    return url_list
+
+final_list = Chinaooc(input(), input())
+print(final_list)

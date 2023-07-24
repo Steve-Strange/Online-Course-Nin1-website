@@ -81,7 +81,7 @@ def BiliBili(keyword, key):
         print("No results")
         exit()
 
-    for elem in url_list:
-        print(elem)
-        
-BiliBili(input(), input())
+    return url_list
+
+final_list = BiliBili(input(), input())
+print(final_list)

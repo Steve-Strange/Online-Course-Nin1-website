@@ -12,7 +12,7 @@ def XTol(keyword, key):
 
     js = "window.open('{}','_blank');"
     chrome_options = Options()
-    # chrome_options.add_argument('headless')
+    chrome_options.add_argument('headless')
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
 
@@ -75,7 +75,7 @@ def XTol(keyword, key):
         print("No results")
         exit()
 
-    for elem in url_list:
-        print(elem)
+    return url_list
 
-XTol(input(), input())
+final_list = XTol(input(), input())
+print(final_list)
