@@ -123,6 +123,8 @@
 
     var status = 0;   //0-正常, 1-删除节点, 2-连接状态.
 
+    var edge_1 = undefined, edge_2 = undefined;
+
     // toolbox 添加节点的回调函数.
     function addNodeCallback() {
         if(status==0){
@@ -133,7 +135,82 @@
         }
     }
 
-    // toolbox 删除节点的回调函数, 只做切换状态.
+    // toolbox 连接节点的回调函数, 做切换状态、修改标题.
+    function linkNodeCallback() {
+        if(status==0){
+            status = 2;
+            let opt = {
+                title: {
+                    text: "{{graph.graph_name}}" + ": 连接模式",  //改成当前知识图谱的名称.
+                },
+            };
+            myChart.setOption(opt);
+        }
+        else if(status==2){
+            status = 0;
+            let opt = {
+                title: {
+                    text: "{{graph.graph_name}}",  //改成当前知识图谱的名称.
+                },
+            };
+            myChart.setOption(opt);
+            edge_1 = edge_2 = undefined;
+        }
+        else{
+            alert("请先关闭删除模式");
+        }
+    }
+
+    function do_link(uid1, name1, uid2, name2) {
+        // 除了发送请求外，还修改标题、更新数据.
+        // 其实有点耦合了，应该只发送请求..
+        // 发送请求.
+        $.ajax({
+            cache: false,
+            url: "{% url 'Neo4j:kgviewer' graph.uid  %}",
+            type: "POST",
+            headers: { 'X-CSRFTOKEN': `${token}` },
+            dataType: "text", //没有用.
+            data:{
+                "submitType": "linkNode",
+                "uid1": uid1,
+                "uid2": uid2
+            },
+            success: function (result, status, xhr) {
+                let opt = {
+                    title: {
+                        text: "{{graph.graph_name}}" + ": 连接模式",  //改成当前知识图谱的名称.
+                    },
+                };
+                if(result=="successed"){
+                    // 成功，往edge_datas中增加一条边.
+                    let new_edge = [{
+                        "source": name1,
+                        "target": name2,
+                    },];
+                    edge_datas = edge_datas.concat(new_edge);
+                    opt.series = [{links:edge_datas,},];
+                }
+                else{
+                    alert("连接失败, "+result);
+                }
+                edge_1 = edge_2 = undefined;
+                myChart.setOption(opt);
+            },
+            error: function (xhr, status, error) {
+                let opt = {
+                    title: {
+                        text: "{{graph.graph_name}}" + ": 连接模式",  //改成当前知识图谱的名称.
+                    },
+                };
+                edge_1 = edge_2 = undefined;
+                alert("连接失败。报错: " + error);
+                myChart.setOption(opt);
+            }
+        })
+    }
+
+    // toolbox 删除节点的回调函数, 只做切换状态、修改标题.
     function deleteNodeCallback() {
         if(status==0){
             status = 1;
@@ -154,6 +231,9 @@
             myChart.setOption(opt);
         }
         // 如果是2， 连接模式，则什么也不做.
+        else{
+            alert("请先关闭连接模式");
+        }
     }
 
     // 发送请求、执行删除的callback.
@@ -169,7 +249,7 @@
                 "uid": uid,
             },
             success: function (result, status, xhr) {
-                if(result=="successfully delete"){
+                if(result=="successed"){
                     // 成功，从node_datas中删除数据，在edge_datas中删除和它相连的边.
                     for (let i = 0; i < node_datas.length; i++) {
                         const element = node_datas[i];
@@ -202,13 +282,44 @@
         $('#deleteNode').modal('hide');
     }
 
+    // 导出文件用的回调函数.
+    function downloadCallback() {
+        $.ajax({
+            cache: false,
+            url: "{% url 'Neo4j:kgviewer' graph.uid  %}",
+            type: "POST",
+            headers: { 'X-CSRFTOKEN': `${token}` },
+            dataType: "json",
+            data:{
+                "submitType": "download",
+            },
+            success: function (result, status, xhr) {
+                let filename = "{{graph.graph_name}}"+".json";
+                ret_str = JSON.stringify(result, null, 4);
+                let blob = new Blob([ret_str], {type: 'text/json;charset=utf-8'});
+                // 动态创建按钮的方式进行.
+                let btn = document.createElement("a");
+                let url = URL.createObjectURL(blob);
+                btn.setAttribute("href", url);
+                btn.setAttribute("download", filename);
+                btn.style.visibility = "hidden";
+                document.body.appendChild(btn);
+                btn.click();
+                document.body.removeChild(btn);
+                
+            },
+            error: function (xhr, status, error) {
+                alert("下载失败。报错: " + error);
+            }
+        })
+    }
+
 
     // 点击图中节点的回调函数.
     function clickNodeCallback(para){
         // click.data 是node_datas中的某个object.
         if(status==0){
-            alert("click " + para.data.name);
-            // TODO: 正常状态点击，要新建页面跳转!
+            window.open("{% url 'Neo4j:kgviewer' graph.uid %}" + `${para.data.uid}/`);
         }
         else if(status==1){
             // 删除状态，弹出删除询问框并且设置确定删除按钮的回调函数(含参数.)
@@ -217,6 +328,28 @@
                 do_delete(para.data.uid, para.data.name);
             }  //用了一种很蠢的方法(有点像lambda函数)动态设置参数.
             $('#deleteNode').modal('show');
+        }
+        else if(status==2){
+            // 连接状态.
+            if (typeof(edge_1) == "undefined"){
+                edge_1 = {
+                    uid: para.data.uid,
+                    name: para.data.name,
+                }
+                let opt = {
+                    title: {
+                        text: "{{graph.graph_name}}" + ": 连接模式; 从 " + edge_1.name + " 到...",
+                    },
+                };
+                myChart.setOption(opt);
+            }
+            else{
+                edge_2 = {
+                    uid: para.data.uid,
+                    name: para.data.name,
+                }
+                do_link(edge_1.uid, edge_1.name, edge_2.uid, edge_2.name);
+            }
         }
     }
     
@@ -255,10 +388,7 @@
                     show:true,
                     title:'连接节点',
                     icon: "image:///static/icons/link.svg",
-                    onclick: function () {
-                        alert("switch to link mode");
-                        // TODO: 变为静态，然后拖拽两个节点完成连接(联系后台).
-                    }
+                    onclick: linkNodeCallback,
                 },
                 myToolDelete:{
                     show:true,
@@ -270,10 +400,7 @@
                     show:true,
                     title:'导出',
                     icon:"image:///static/icons/cloud-download.svg", //记得改回相对路径.
-                    onclick: function () {
-                        alert("export this knowledge's json file");
-                        // TODO: 请求下载文件.
-                    }
+                    onclick: downloadCallback,
                 },
             }
         },
@@ -284,16 +411,9 @@
             roam: true, // 是否开启鼠标缩放和平移漫游。默认不开启。如果只想要开启缩放或者平移,可以设置成 'scale' 或者 'move'。设置成 true 为都开启
             edgeSymbol: ['circle', 'arrow'],
             edgeSymbolSize: [2, 10],
-            // edgeLabel: {
-            //     normal: {
-            //         textStyle: {
-            //             fontSize: 20
-            //         }
-            //     }
-            // },
             force: {
                 repulsion: 2500,
-                edgeLength: [15, 60]
+                edgeLength: [15, 100]
             },
             draggable: true,
             lineStyle: {
@@ -302,14 +422,6 @@
                     color: '#4b565b',
                 }
             },
-            // edgeLabel: {
-            //     normal: {
-            //         show: true,
-            //         formatter: function (x) {
-            //             return x.data.name;
-            //         }
-            //     }
-            // },
             label: {
                 formatter:'{b}',
                 normal: {

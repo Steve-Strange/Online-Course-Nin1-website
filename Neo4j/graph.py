@@ -1,6 +1,7 @@
 '''
 Neo4j Graph类，包含一些操作.
 '''
+from typing import Any
 from neomodel import db
 import json
 from jsonschema import validate, draft7_format_checker
@@ -11,6 +12,13 @@ from Neo4j.models import GraphRoot, KnowledgeBlock, Course, TagEdge
 from Utils.file_operators import csv_loader, DisjointSets
 from Utils.find import find_all_knowledge_in_graph, find_all_courses_in_knowledge, find_all_knowledge_from_knowledge
 from User.models import UserProfile, UserGraphs, UserTags
+
+
+class MyGraphJsonEncoder(json.JSONEncoder):
+    def default(self, o: Any) -> Any:
+        if isinstance(o, bytes):
+            return str(o, encoding="utf-8")
+        return super().default(o)
 
 
 class Graph:
@@ -38,6 +46,8 @@ class Graph:
         self.user = user
         self.root = root
         self.knowledges = find_all_knowledge_in_graph(self.root) if self.root is not None else [KnowledgeBlock]
+        for know in self.knowledges:
+            print(know.name)
     
     
     def import_json(self,json_file:str):
@@ -132,45 +142,45 @@ class Graph:
         # 结束.
 
     
-    @db.read_transaction
+    #@db.read_transaction
     def export_json(self, save_to_file:bool=True, get_tag:bool = False):
         '''
         将该图导出为json文件.保存到固定目录，文件名为graph的uid.json  
         如果save_to_file为false，就只返回字典.如果是True, 返回导出的json文件路径.
         '''
-        knows_dicts = [dict]
-        edges_dicts = [dict]
-        courses_dicts = [dict]
+        knows_dicts = []
+        edges_dicts = []
+        courses_dicts = []
         knows = find_all_knowledge_in_graph(self.root)
         for i in range(len(knows)):
             knows_dicts.append({
-                "name":knows[i].name,
-                "tag":knows[i].tag if get_tag else "",
-                "introduction":knows[i].introduction,
+                "name":str(knows[i].name),
+                "tag":str(knows[i].tag) if get_tag else "",
+                "introduction":str(knows[i].introduction),
             })
             for relknow in knows[i].rel_knowledge.all():
                 rel = knows[i].rel_knowledge.relationship(relknow)
                 edges_dicts.append({
                     "from":i,
                     "to":knows.index(relknow),
-                    "tag":rel.tag if get_tag else "",
+                    "tag":str(rel.tag) if get_tag else "",
                 })
             for course in find_all_courses_in_knowledge(knows[i]):
                 courses_dicts.append({
                     "knowledge":i,
-                    "tag":course.tag if get_tag else "",
-                    "name" : course.name,
-                    "web" : course.web,
-                    "source" : course.source,
-                    "duration" : course.duration,
-                    "viewer_num" : course.viewer_num,
-                    "introduction" : course.introduction,
+                    "tag":str(course.tag) if get_tag else "",
+                    "name" : str(course.name),
+                    "web" : str(course.web),
+                    "source" : str(course.source),
+                    "duration" : str(course.duration),
+                    "viewer_num" : str(course.viewer_num),
+                    "introduction" : str(course.introduction),
                 })
         
         ret = {
-            "name":self.root.graph_name,
-            "introduction":self.root.introduction,
-            "tag":self.root.tag if get_tag else "",
+            "name":str(self.root.graph_name),
+            "introduction":str(self.root.introduction),
+            "tag":str(self.root.tag) if get_tag else "",
             "knowledges":knows_dicts,
             "edges":edges_dicts,
             "courses":courses_dicts,
@@ -258,6 +268,9 @@ class Graph:
         return uid
     
     def delete_node_via_uid(self, know_uid:str):
+        '''
+        返回被删除的节点的uid，就是know_uid.
+        '''
         target = None
         for know in self.knowledges:
             if know.uid == know_uid:
@@ -266,3 +279,29 @@ class Graph:
         if target is None:
             raise "KnowledgeBlock does not exist in this graph"
         return self.delete_node(target, False)
+    
+    def link_nodes(self, source:KnowledgeBlock, target:KnowledgeBlock, validate:bool = True):
+        if validate:
+            valid = 0
+            for know in self.knowledges:
+                if know == source or know == target:
+                    valid += 1
+                if valid == 2:
+                    break
+            if valid != 2:
+                raise "DontExistError"
+        source.rel_knowledge.connect(target)
+        if self.root.rel_knowledge.is_connected(target):
+            self.root.rel_knowledge.disconnect(target)
+
+    def link_nodes_via_uid(self, source:str, target:str):
+        s = None
+        t = None
+        for know in self.knowledges:
+            if know.uid == source:
+                s = know
+            elif know.uid == target:
+                t = know
+        if s is None or t is None:
+            raise "DnotExistError"
+        self.link_nodes(s, t, False)

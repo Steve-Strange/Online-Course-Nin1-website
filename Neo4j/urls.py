@@ -20,5 +20,6 @@ from Neo4j import views
 
 
 urlpatterns = [
-    path("<str:uid>/", views.KnowledgeGraph.KnowledgegraphViewer, name="kgviewer"),    
+    path("<str:uid>/", views.KnowledgeGraph.KnowledgegraphViewer, name="kgviewer"),
+    path("<str:graph_uid>/<str:knowledge_uid>/", views.KnowledgeGraph.CoursesViewer, name="courses"),
 ]

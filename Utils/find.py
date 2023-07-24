@@ -72,10 +72,13 @@ def find_all_knowledge_in_graph(root : GraphRoot):
     queue = []  # for BFS.
     for branch in root.rel_knowledge.all():
         # branch是每个分支中的一个节点.
+        if branch in ret or branch in queue:
+            continue
         queue.append(branch)
         while len(queue) > 0:
             curnode = queue.pop(0)
             ret.append(curnode)
+            print("ret add node: "+curnode.name)
             # 一步BFS.找与它直接相连的点(方向随意).
             definition = dict(
                  node_class = KnowledgeBlock,
