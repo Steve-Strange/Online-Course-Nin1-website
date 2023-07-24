@@ -1,8 +1,10 @@
 from neomodel import Traversal
 from neomodel.match import EITHER, OUTGOING
+from neomodel import db
 from User.models import UserProfile, UserGraphs, UserTags
 from Neo4j.models import TagNode, KnowledgeBlock, GraphRoot, Course, TagEdge
 
+@db.read_transaction
 def find_all_tags(user : UserProfile):
         '''
         找到这个User的所有有tag的节点。返回：  
@@ -31,6 +33,7 @@ def find_all_tags(user : UserProfile):
         return ret
 
 
+@db.read_transaction
 def find_all_graphs(user:UserProfile):
     '''
     寻找这个用户所拥有的所有知识图谱，返回：  
@@ -40,6 +43,7 @@ def find_all_graphs(user:UserProfile):
     return [GraphRoot.nodes.get(uid = i.root_uid) for i in user.usergraphs_set.all()]
 
 
+@db.read_transaction
 def find_all_knowledge_from_knowledge(source:KnowledgeBlock, dual_direction:bool = True, lazy:bool = False):
     '''
     以souce为中心，找到所有与source直接相连的KnowledgeBlock节点.  
@@ -49,14 +53,14 @@ def find_all_knowledge_from_knowledge(source:KnowledgeBlock, dual_direction:bool
     definition = dict(
         node_class = KnowledgeBlock,
         direction = EITHER if dual_direction else OUTGOING,
-        relation_type = KnowledgeBlock.rel_knowledge.__label__,
+        relation_type = None,
         model = TagEdge,
     )
     traversal = Traversal(source, KnowledgeBlock.__label__, definition)
     return traversal.all(lazy)
 
 
-
+@db.read_transaction
 def find_all_knowledge_in_graph(root : GraphRoot):
     '''
     使用BFS找到root指向的所有知识点节点.只返回知识点节点!  
@@ -76,7 +80,8 @@ def find_all_knowledge_in_graph(root : GraphRoot):
             definition = dict(
                  node_class = KnowledgeBlock,
                  direction = EITHER,
-                 relation_type = KnowledgeBlock.rel_knowledge.__label__,
+                 #relation_type = KnowledgeBlock.rel_knowledge,
+                 relation_type = None,
                  model = TagEdge,
             )   # 定义双向Traversal.
             dual_traversal = Traversal(curnode, KnowledgeBlock.__label__, definition)
@@ -88,6 +93,7 @@ def find_all_knowledge_in_graph(root : GraphRoot):
     return ret
 
 
+@db.read_transaction
 def find_all_courses_in_knowledge(knowledge:KnowledgeBlock):
     '''
     找到一个知识点节点的所有课程节点，返回一个列表[Course]

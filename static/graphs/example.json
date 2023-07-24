@@ -1,0 +1,65 @@
+{
+    "name":"Test Example Graph",
+    "introduction":"This is an example graph for test",
+    "knowledges":[
+        {
+            "name":"TestKnowledge 0",
+            "tag":"user tag for knowledge 0",
+            "introduction":"This is the knowledge 0 of test graph"
+        },
+        {
+            "name":"TestKnowledge 1",
+            "tag":"",
+            "introduction":"This is the knowledge 1 of test graph"
+        }
+    ],
+    "edges":[
+        {
+            "from":0,
+            "to":1,
+            "tag":""
+        }
+    ],
+    "courses":[
+        {
+            "knowledge":0,
+            "tag":"tag of test course 0",
+            "name":"bilibili",
+            "web":"https://www.bilibili.com",
+            "source":"bilibili",
+            "duration":-1,
+            "viewer_num":100,
+            "introduction":"This is the course 0 of knowledge 0"
+        },
+        {
+            "knowledge":0,
+            "tag":"",
+            "name":"django-docs",
+            "web":"https://docs.djangoproject.com/zh-hans/4.2/",
+            "source":"django",
+            "duration":-1,
+            "viewer_num":10000,
+            "introduction":"This is django's official documents"
+        },
+        {
+            "knowledge":1,
+            "tag":"tag of test course 2",
+            "name":"菜鸟教程-django",
+            "web":"https://www.runoob.com/django/django-tutorial.html",
+            "source":"菜鸟教程",
+            "duration":-1,
+            "viewer_num":1000,
+            "introduction":"菜鸟教程上的django教程"
+        },
+        {
+            "knowledge":1,
+            "tag":"",
+            "name":"菜鸟教程-bootstrap5",
+            "web":"https://www.runoob.com/bootstrap5/bootstrap5-tutorial.html",
+            "source":"菜鸟教程",
+            "duration":-1,
+            "viewer_num":500,
+            "introduction":"菜鸟教程上的bootstrap5教程"
+        }
+    ]
+}

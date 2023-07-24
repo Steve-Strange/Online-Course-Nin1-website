@@ -1,0 +1,1095 @@
+<html class="nprogress-busy">
+ <head>
+  <title>
+   XuetangX: Online Courses from Top Universities
+  </title>
+  <link href="https://www.xuetangx.com/global" hreflang="en" rel="alternate"/>
+  <link href="https://www.xuetangx.com/" hreflang="x-default" rel="alternate"/>
+  <meta charset="utf-8"/>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+  <meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" name="viewport"/>
+  <meta content="telephone=no,email=no,address=no" name="format-detection"/>
+  <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="webkit" name="renderer"/>
+  <meta content="notranslate" name="google"/>
+  <meta content="no" name="msapplication-tap-highlight"/>
+  <meta content="on" http-equiv="x-dns-prefetch-control"/>
+  <meta content="no-cache" http-equiv="Pragma"/>
+  <meta content="no-transform " http-equiv="Cache-Control"/>
+  <meta content="no-siteapp" http-equiv="Cache-Control"/>
+  <meta content="no-cache" http-equiv="Cache-Control"/>
+  <meta content="0" http-equiv="Expires"/>
+  <meta content="XuetangX Online-National Excellent Online Course Learning Platform, Online Learning, Online Education, Live Online, Online Courses, Online Open Courses, Open Video Courses, Open University Courses, Computer, Artificial Intelligence, Data Science, English, Business, Economics, Training Camp, Tsinghua certification, economics, equivalent education, micro-degree, prestigious school courses, Tsinghua University, China MOOC, the first batch of national quality online open courses, courses" itemprop="keywords" name="keywords"/>
+  <meta content="XuetangX is a MOOC platform launched by Tsinghua University in October 2013. It is a research exchange and achievement application platform of the Online Education Research Center of the Ministry of Education. It is the country's first batch of double-creation demonstration base projects in 2016. The deputy secretary-general unit of the Educational Integration Research Branch is also an online education platform for the UNESCO International Engineering Education Center (ICEE). At present, the school runs more than 2,300 quality courses from Tsinghua University, Peking University, Fudan University, University of Science and Technology of China, as well as first-class universities at home and abroad, including MIT, Stanford University, University of California, Berkeley, covering 13 university subjects ." itemprop="description" name="description"/>
+  <meta content="XuetangX" itemprop="author" name="author"/>
+  <meta content="XuetangX: Online Courses from Top Universities" itemprop="name" name="title"/>
+  <meta content="XuetangX: Online Courses from Top Universities" property="og:title"/>
+  <meta content="XuetangX is a MOOC platform launched by Tsinghua University in October 2013. It is a research exchange and achievement application platform of the Online Education Research Center of the Ministry of Education. It is the country's first batch of double-creation demonstration base projects in 2016. The deputy secretary-general unit of the Educational Integration Research Branch is also an online education platform for the UNESCO International Engineering Education Center (ICEE). At present, the school runs more than 2,300 quality courses from Tsinghua University, Peking University, Fudan University, University of Science and Technology of China, as well as first-class universities at home and abroad, including MIT, Stanford University, University of California, Berkeley, covering 13 university subjects ." property="og:description"/>
+  <meta content="XuetangX" property="og:site_name"/>
+  <link href="//static-cdn.xuetangx.com" rel="dns-prefetch"/>
+  <link href="//qn-next.xuetangx.com" rel="dns-prefetch"/>
+  <link href="//s.xuetangx.com" ref="dns-prefetch"/>
+  <link href="//storagecdn.xuetangx.com" rel="dns-prefetch"/>
+  <link href="//cdn.mathjax.org" rel="dns-prefetch"/>
+  <link href="/en-opensearch.xml?v=1.0" rel="search" title="XuetangX" type="application/opensearchdescription+xml"/>
+  <link href="https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/0329/logo.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link href="https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/0329/logo.ico" rel="icon" type="image/x-icon"/>
+  <script cid="500679396" name="MTAH5" sid="500676615" src="//pingjs.qq.com/h5/stats.js?v2.0.4">
+  </script>
+  <script async="" src="https://www.google-analytics.com/analytics.js" type="text/javascript">
+  </script>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KP0T1CRY4S&amp;l=dataLayer&amp;cx=c" type="text/javascript">
+  </script>
+  <script async="" id="beacon-aplus" src="https://d.alicdn.com/alilog/mlog/aplus/204458013.js">
+  </script>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-164784773-1">
+  </script>
+  <script charset="UTF-8" src="https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/090202/head_template.min.js">
+  </script>
+  <script src="https://ssl.captcha.qq.com/TCaptcha.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   MathJax = {"options":{"enableMenu":false},"tex":{"inlineMath":[["$","$"],["\\(","\\)"],["[mathjaxinline]","[/mathjaxinline]"]],"displayMath":[["$$","$$"],["\\[","\\]"],["[mathjax]","[/mathjax]"]]}}
+  </script>
+  <script src="https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/tex-chtml.js" type="text/javascript">
+  </script>
+  <script charset="UTF-8" src="https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/0809/gzxtzx.js">
+  </script>
+  <link as="style" href="https://fe-static-yuketang.rainclassroom.com/fe/static/xt/1.6.235/xtassets/0.8efccf3b1876364ff26a.css" rel="preload"/>
+  <link as="script" href="https://fe-static-yuketang.rainclassroom.com/fe/static/xt/1.6.235/xtassets/0_8efccf3b1876364ff26a.js" rel="preload"/>
+  <link as="script" href="https://fe-static-yuketang.rainclassroom.com/fe/static/xt/1.6.235/xtassets/10_6fefd1fee7ec78862a95.js" rel="preload"/>
+  <link as="style" href="https://fe-static-yuketang.rainclassroom.com/fe/static/xt/1.6.235/xtassets/207.2f9d0ae48c5f965692d1.css" rel="preload"/>
+  <link as="script" href="https://fe-static-yuketang.rainclassroom.com/fe/static/xt/1.6.235/xtassets/207_2f9d0ae48c5f965692d1.js" rel="preload"/>
+  <link as="script" href="https://fe-static-yuketang.rainclassroom.com/fe/static/xt/1.6.235/xtassets/manifest_b11ad4688cca8049bc7d.js" rel="preload"/>
+  <link href="https://fe-static-yuketang.rainclassroom.com/fe/static/xt/1.6.235/xtassets/0.8efccf3b1876364ff26a.css" rel="stylesheet"/>
+  <link href="https://fe-static-yuketang.rainclassroom.com/fe/static/xt/1.6.235/xtassets/207.2f9d0ae48c5f965692d1.css" rel="stylesheet"/>
+  <script async="" src="https://captcha.gtimg.com/1/tcaptcha-frame.7f61d9f7.js" type="text/javascript">
+  </script>
+  <style type="text/css">
+   .CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+  </style>
+  <style type="text/css">
+   .CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+  </style>
+  <style type="text/css">
+   .CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+  </style>
+  <script src="https://web-stat.jiguang.cn/web-janalytics/scripts/janalytics-web.min.js" type="text/javascript">
+  </script>
+  <script charset="utf-8" src="https://fe-static-yuketang.rainclassroom.com/fe/static/xt/1.6.235/xtassets/32_d53f2581c07520278530.js">
+  </script>
+  <script charset="utf-8" src="https://fe-static-yuketang.rainclassroom.com/fe/static/xt/1.6.235/xtassets/56_802dc5572666141e3e24.js">
+  </script>
+  <link href="https://fe-static-yuketang.rainclassroom.com/fe/static/xt/1.6.235/xtassets/118.33d06f5b7f27fee73cfc.css" rel="stylesheet" type="text/css"/>
+  <script charset="utf-8" src="https://fe-static-yuketang.rainclassroom.com/fe/static/xt/1.6.235/xtassets/118_33d06f5b7f27fee73cfc.js">
+  </script>
+  <style type="text/css">
+   @keyframes animate_dots{0%{opacity:1}to{opacity:0}}@-webkit-keyframes animate_dots{0%{opacity:1}to{opacity:0}}.dot0,.dot1{animation:animate_dots .9s infinite;-moz-animation:animate_dots .9s infinite;-webkit-animation:animate_dots .9s infinite;-o-animation:animate_dots .9s infinite}.dot1{animation-delay:.2s;-webkit-animation-delay:.2s}.dot2{animation:animate_dots .9s infinite;-moz-animation:animate_dots .9s infinite;-webkit-animation:animate_dots .9s infinite;-o-animation:animate_dots .9s infinite;animation-delay:.4s;-webkit-animation-delay:.4s}.dots_item{display:inline-block;margin-right:5px;width:10px;height:10px;border-radius:50%;background:#4886ff}.verify-icon{position:absolute;width:100%;margin-top:70px;text-align:center}.t-embed-loading{position:relative;width:300px;height:230px;background-color:#fff}.t-embed-dots{position:absolute;left:50%;top:50%;margin-left:-22.5px;margin-top:-5px}.t-embed-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;background:#4886ff}.t-mask{width:100%;height:100%;position:fixed;_position:absolute;left:0;top:0;background:#000;opacity:.5;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);z-index:2000000000}
+  </style>
+  <style id="MJX-CHTML-styles">
+   mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/072302/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+  </style>
+  <script src="https://js.hcaptcha.com/1/api.js?hl=en" type="text/javascript">
+  </script>
+ </head>
+ <body ondragstart="return!1">
+  <div id="app">
+   <div class="main view en" data-v-082be817="">
+    <!-- -->
+    <div data-v-082be817="">
+     <div class="header_con" data-v-082be817="" data-v-4bcffa0d="" style="position: fixed;">
+      <div class="header" data-v-4bcffa0d="">
+       <div class="h_flex" data-v-4bcffa0d="">
+        <img class="h_logo" data-v-4bcffa0d="" src="https://qn-st0.yuketang.cn/15866569103344.png"/>
+        <ul class="h_menus" data-v-4bcffa0d="">
+         <li data-v-4bcffa0d="">
+          <a class="" data-v-4bcffa0d="" href="/?channel=i.area.navigation_bar">
+           Home
+          </a>
+         </li>
+         <li data-v-4bcffa0d="">
+          <a class="active" data-v-4bcffa0d="" href="/search?query=&amp;channel=i.area.navigation_bar">
+           Courses
+          </a>
+         </li>
+         <li data-v-4bcffa0d="">
+          <div class="corner" data-v-4bcffa0d="">
+           <a class="" data-v-4bcffa0d="" href="/page/hdixlkc" target="_blank">
+            HDI
+            <!-- -->
+           </a>
+          </div>
+         </li>
+         <li data-v-4bcffa0d="" style="margin-right: 0px !important;">
+          <span data-v-4bcffa0d="">
+           <div aria-hidden="true" class="el-popover el-popper" id="el-popover-5320" role="tooltip" style="width: 280px; display: none;" tabindex="0">
+            <!-- -->
+            <ul class="more_menu_ul" data-v-4bcffa0d="">
+             <li data-v-4bcffa0d="">
+              <div class="corner" data-v-4bcffa0d="">
+               <a class="" data-v-4bcffa0d="" href="/page/zjkcgjjllm" target="_blank">
+                IVEC
+                <!-- -->
+               </a>
+              </div>
+             </li>
+             <li data-v-4bcffa0d="">
+              <div class="corner" data-v-4bcffa0d="">
+               <a class="" data-v-4bcffa0d="" href="https://www.xuetangx.com/page/qhqqgkk" target="_blank">
+                GOC
+                <!-- -->
+               </a>
+              </div>
+             </li>
+             <li data-v-4bcffa0d="">
+              <div class="corner" data-v-4bcffa0d="">
+               <a class="" data-v-4bcffa0d="" href="https://www.xuetangx.com/page/xtzxyynhz" target="_blank">
+                ICE Institute
+                <!-- -->
+               </a>
+              </div>
+             </li>
+             <li data-v-4bcffa0d="">
+              <div class="corner" data-v-4bcffa0d="">
+               <a class="" data-v-4bcffa0d="" href="https://www.xuetangx.com/page/CTVEA" target="_blank">
+                CTVEA
+                <!-- -->
+               </a>
+              </div>
+             </li>
+            </ul>
+           </div>
+           <span class="el-popover__reference-wrapper">
+            <div aria-describedby="el-popover-5320" class="el-popover__reference" data-v-4bcffa0d="" tabindex="0">
+             <span class="more_menu" data-v-4bcffa0d="">
+              More
+              <i class="el-icon-arrow-down el-icon--right" data-v-4bcffa0d="">
+              </i>
+             </span>
+            </div>
+           </span>
+          </span>
+         </li>
+        </ul>
+        <!-- -->
+        <div class="h_search" data-v-4bcffa0d="">
+         <span data-v-4bcffa0d="">
+          <div aria-hidden="true" class="el-popover el-popper seach_prediction_con" id="el-popover-6524" role="tooltip" style="width: 322px; display: none;" tabindex="0">
+           <!-- -->
+          </div>
+          <span class="el-popover__reference-wrapper">
+           <div aria-describedby="el-popover-6524" class="header-search-body el-popover__reference" data-v-4bcffa0d="" tabindex="0">
+            <form action="" data-v-4bcffa0d="">
+             <input autocomplete="off" class="search-txt" data-v-4bcffa0d="" id="pc-search-input" placeholder="Search" type="text"/>
+            </form>
+            <i class="iconfont iconfont-search" data-v-4bcffa0d="">
+             
+            </i>
+            <div class="clear" data-v-4bcffa0d="" style="">
+             <i class="iconfont" data-v-4bcffa0d="">
+              
+             </i>
+            </div>
+           </div>
+          </span>
+         </span>
+        </div>
+        <!-- -->
+        <a class="h_appdown" data-v-4bcffa0d="" href="/app/download">
+         <div class="appdown-popover" data-v-4bcffa0d="">
+          <div class="appdown-popover-inner" data-v-4bcffa0d="">
+           <img class="appdown-qrcode" data-v-4bcffa0d="" src="data:image/png;base64,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"/>
+           <div class="appdown-popover-tip" data-v-4bcffa0d="">
+            <div class="tips" data-v-4bcffa0d="">
+             <span class="tip-h" data-v-4bcffa0d="">
+              XuetangX Mobile App
+             </span>
+             <!-- -->
+            </div>
+            <div class="tips" data-v-4bcffa0d="">
+             <span class="tip-t" data-v-4bcffa0d="">
+              iPhone｜Android｜iPad
+             </span>
+             <span class="tip-t" data-v-4bcffa0d="">
+              Scan QR code to download
+             </span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </a>
+        <!-- -->
+        <div class="h_login" data-v-4bcffa0d="">
+         <div data-v-4bcffa0d="">
+          <span class="h_login_login" data-v-4bcffa0d="">
+           Login
+          </span>
+          <button class="el-button h_login_register el-button--primary el-button--medium is-round" data-v-4bcffa0d="" type="button">
+           <!-- -->
+           <!-- -->
+           <span>
+            Register
+           </span>
+          </button>
+         </div>
+         <i class="iconfont icon_menu" data-v-4bcffa0d="">
+          
+         </i>
+        </div>
+       </div>
+       <!-- -->
+      </div>
+      <!-- -->
+     </div>
+    </div>
+    <div class="app-main_ appMain" data-v-082be817="" data-v-0e4b0658="" style="min-height: calc(100vh - 308px);">
+     <div class="courseSearch" data-v-0e4b0658="" data-v-630ae8d8="">
+      <div class="content" data-v-630ae8d8="">
+       <div class="leftSearch" data-v-630ae8d8="">
+        <p class="title" data-v-630ae8d8="">
+         Filter By
+        </p>
+        <div class="leftCon" data-v-630ae8d8="">
+         <div class="typeCon" data-v-630ae8d8="">
+          <div data-v-630ae8d8="">
+           <p class="t1" data-v-630ae8d8="">
+            Availability
+           </p>
+           <span class="t3" data-v-630ae8d8="">
+            All
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Upcoming
+           </span>
+           <span class="t3 active" data-v-630ae8d8="">
+            Current
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Archived
+           </span>
+          </div>
+         </div>
+         <div class="typeCon" data-v-630ae8d8="">
+          <div data-v-630ae8d8="">
+           <p class="t1" data-v-630ae8d8="">
+            Subjects
+           </p>
+           <span class="t3 active" data-v-630ae8d8="">
+            All
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            IT
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Economics
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Agriculture, forestry and gardening
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Medicine and health care
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Science
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            History
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Law
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Literature and culture
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Philosophy
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Art and design
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Languages and cultures
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Curriculum or pedagogy
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Management
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Engineering
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Others
+           </span>
+          </div>
+         </div>
+         <div class="typeCon" data-v-630ae8d8="">
+          <div data-v-630ae8d8="">
+           <p class="t1" data-v-630ae8d8="">
+            Products
+           </p>
+           <span class="t3 active" data-v-630ae8d8="">
+            All
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Micro degree
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Live lesson
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            School certification
+           </span>
+          </div>
+         </div>
+         <div class="typeCon" data-v-630ae8d8="">
+          <div data-v-630ae8d8="">
+           <p class="t1" data-v-630ae8d8="">
+            Schools &amp; Partners
+           </p>
+           <span class="t3 active" data-v-630ae8d8="">
+            All
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Tsinghua University
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Peking University
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            St Petersburg University
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Cornell University
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Fudan University
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Renmin University of China
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Zhejiang University
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Shanghai Jiao Tong University
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Nanjing University
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Wuhan University
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Sun Yat-sen University
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            JiLin University
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Huazhong University of Science And Technology
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            TianjinUniversity
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Sichuan University
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            University of Science and Technology of China
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Nankai University
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Beijing Normal University
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Xi'an Jiaotong University
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Harbin Institute of Technology
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Central South University
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Shandong University
+           </span>
+           <span class="t3" data-v-630ae8d8="">
+            Xiamen University
+           </span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="rightReault" data-v-630ae8d8="" style="padding-bottom: 85px;">
+        <!-- -->
+        <div class="result" data-v-630ae8d8="">
+         <div class="resulttitle" data-v-630ae8d8="">
+          计算机
+          <!-- -->
+          <!-- -->
+          <span class="title1" data-v-630ae8d8="">
+          </span>
+          <!-- -->
+         </div>
+         <!-- -->
+         <!-- -->
+        </div>
+        <!-- -->
+       </div>
+       <div class="topSearch" data-v-630ae8d8="">
+        <div class="trans" data-v-630ae8d8="" style="display: none;">
+        </div>
+        <div class="titleCon" data-v-630ae8d8="">
+         <span class="title activeText" data-v-630ae8d8="">
+          <span class="t" data-v-630ae8d8="">
+           Current
+          </span>
+          <i class="iconfont" data-v-630ae8d8="">
+           
+          </i>
+         </span>
+         <span class="title" data-v-630ae8d8="">
+          <span class="t" data-v-630ae8d8="">
+           Subject
+          </span>
+          <i class="iconfont" data-v-630ae8d8="">
+           
+          </i>
+         </span>
+         <span class="title" data-v-630ae8d8="">
+          <span class="t" data-v-630ae8d8="">
+           Type
+          </span>
+          <i class="iconfont" data-v-630ae8d8="">
+           
+          </i>
+         </span>
+         <span class="title" data-v-630ae8d8="">
+          <span class="t" data-v-630ae8d8="">
+           Schools &amp; Partners
+          </span>
+          <i class="iconfont" data-v-630ae8d8="">
+           
+          </i>
+         </span>
+        </div>
+        <!-- -->
+       </div>
+      </div>
+      <div class="swimbox bigbb icontext" data-v-630ae8d8="" id="swimbox">
+       <!-- -->
+       <!-- -->
+       <!-- -->
+       <!-- -->
+       <!-- -->
+       <!-- -->
+      </div>
+     </div>
+     <div class="loginWrap en" data-v-0e4b0658="" data-v-56ccd8a0="">
+      <!-- -->
+      <div class="el-dialog__wrapper" data-v-56ccd8a0="" style="display: none;">
+       <div aria-label="dialog" aria-modal="true" class="el-dialog" role="dialog" style="margin-top: 15vh;">
+        <div class="el-dialog__header">
+         <span class="el-dialog__title">
+         </span>
+         <button aria-label="Close" class="el-dialog__headerbtn" type="button">
+          <i class="el-dialog__close el-icon el-icon-close">
+          </i>
+         </button>
+        </div>
+        <!-- -->
+        <!-- -->
+       </div>
+      </div>
+      <div class="el-dialog__wrapper" data-v-56ccd8a0="" style="display: none;">
+       <div aria-label="账号注销中" aria-modal="true" class="el-dialog el-dialog--center logoutDialog" role="dialog" style="margin-top: 15vh; width: 275px;">
+        <div class="el-dialog__header">
+         <span class="el-dialog__title">
+          账号注销中
+         </span>
+         <button aria-label="Close" class="el-dialog__headerbtn" type="button">
+          <i class="el-dialog__close el-icon el-icon-close">
+          </i>
+         </button>
+        </div>
+        <!-- -->
+        <div class="el-dialog__footer">
+         <span class="dialog-footer" data-v-56ccd8a0="">
+          <button class="el-button el-button--default el-button--medium" data-v-56ccd8a0="" type="button">
+           <!-- -->
+           <!-- -->
+           <span>
+            Close
+           </span>
+          </button>
+          <button class="el-button el-button--primary el-button--medium" data-v-56ccd8a0="" type="button">
+           <!-- -->
+           <!-- -->
+           <span>
+            取消注销
+           </span>
+          </button>
+         </span>
+        </div>
+       </div>
+      </div>
+      <!-- -->
+     </div>
+     <!-- -->
+    </div>
+    <div class="footer other" data-v-082be817="" data-v-746b6f83="" id="footer">
+     <div class="footer-body" data-v-746b6f83="">
+      <div class="container" data-v-746b6f83="">
+       <div class="row" data-v-746b6f83="">
+        <div class="col-md-12 footer-body--links" data-v-746b6f83="">
+         <ul class="list-inline" data-v-746b6f83="">
+          <li class="language" data-v-746b6f83="">
+           <span class="current-lang-text" data-v-746b6f83="">
+            English
+           </span>
+           <span class="border-line" data-v-746b6f83="">
+            |
+           </span>
+           <i class="arrow el-icon-arrow-down" data-v-746b6f83="">
+           </i>
+           <ul class="lang-list" data-v-746b6f83="" style="display: none;">
+            <li class="each-item" data-v-746b6f83="">
+             中文
+            </li>
+            <li class="each-item" data-v-746b6f83="">
+             English
+            </li>
+            <li class="each-item" data-v-746b6f83="">
+             Русский язык
+            </li>
+            <li class="each-item" data-v-746b6f83="">
+             Español
+            </li>
+           </ul>
+          </li>
+          <li data-v-746b6f83="" style="float: left;">
+           <a data-v-746b6f83="" href="/admission">
+            Course admission
+           </a>
+          </li>
+          <li data-v-746b6f83="" style="float: left;">
+           <a data-v-746b6f83="" href="/about">
+            About Us
+           </a>
+          </li>
+          <li data-v-746b6f83="" style="float: left;">
+           <a data-v-746b6f83="" href="/about?anchor=linkus">
+            Contact Us
+           </a>
+          </li>
+          <li data-v-746b6f83="" style="float: left;">
+           <a data-v-746b6f83="" href="https://company.zhaopin.com/CZ643347520.html">
+            Jobs
+           </a>
+          </li>
+          <li data-v-746b6f83="" style="float: left;">
+           <a data-v-746b6f83="" href="/app/protocol" target="_blank">
+            User service agreement and privacy policy of XuetangX
+           </a>
+          </li>
+          <!-- -->
+          <!-- -->
+         </ul>
+        </div>
+       </div>
+       <div class="row" data-v-746b6f83="" style="margin-bottom: 40px;">
+        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" data-v-746b6f83="">
+         <ul class="list-unstyled" data-v-746b6f83="">
+          <li data-v-746b6f83="" style="font-size: 24px; margin-top: 40px;">
+           New Education, New World
+          </li>
+          <li data-v-746b6f83="">
+           创新教育 改变世界
+          </li>
+          <li data-v-746b6f83="" style="font-size: 12px; margin-top: 40px;">
+           <ul class="list-inline" data-v-746b6f83="">
+            <li data-v-746b6f83="">
+             <span data-v-746b6f83="">
+              Copyright 2013-2023 北京慕华信息科技有限公司
+             </span>
+            </li>
+            <li data-v-746b6f83="">
+             <span data-v-746b6f83="">
+              <a data-v-746b6f83="" href="https://beian.miit.gov.cn" target="_blank">
+               京ICP备14019655号
+              </a>
+              |
+              <a data-v-746b6f83="" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802033054" target="_blank">
+               <img data-v-746b6f83="" src="https://static-cdn.xuetangx.com/xtassets/xtassets/copyright/copyright-icon.png" style="position: relative; display: inline-block; margin-left: 5px; margin-right: 5px; width: 20px;"/>
+               京公网安备 11010802033054号
+              </a>
+             </span>
+            </li>
+            <li data-v-746b6f83="">
+             <span data-v-746b6f83="">
+              <a data-v-746b6f83="" href="https://static-cdn.xuetangx.com/xtassets/xtassets/broadcast-permission.pdf" target="_blank">
+               广播电视节目制作经营许可证（京）字第05791号
+              </a>
+             </span>
+            </li>
+           </ul>
+          </li>
+          <li data-v-746b6f83="" style="font-size: 12px;">
+           Add：7th floor, Kejian building, Tsinghua Science Park, Haidian District, Beijing
+          </li>
+         </ul>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-right" data-v-746b6f83="">
+         <div class="hidden-xs" data-v-746b6f83="" style="width: 128px; float: right;">
+          <ul class="list-unstyled" data-v-746b6f83="">
+           <li data-v-746b6f83="">
+            <div class="qrborder" data-v-746b6f83="">
+             <img data-v-746b6f83="" src="https://storagecdn.xuetangx.com/public_assets/xuetangx/xuetangX2018/76e93bdd5f6f357e58ab16c0a4433abb.qrcode.png" style="width: 100%;"/>
+            </div>
+           </li>
+           <li data-v-746b6f83="" style="text-align: center; margin-top: 16px;">
+            XuetangX Customer Service in Wechat
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- -->
+    <!-- -->
+    <!-- -->
+   </div>
+   <!-- -->
+  </div>
+  <div class="h-captcha" data-sitekey="50f6f060-c606-4e3b-b6e8-ca3b706b61e1" data-size="compact" data-theme="dark" style="display:none">
+   <iframe data-hcaptcha-response="" data-hcaptcha-widget-id="0jd2gafhtof" frameborder="0" scrolling="no" src="https://newassets.hcaptcha.com/captcha/v1/3b58cd9/static/hcaptcha.html#frame=checkbox&amp;id=0jd2gafhtof&amp;host=www.xuetangx.com&amp;sentry=true&amp;reportapi=https%3A%2F%2Faccounts.hcaptcha.com&amp;recaptchacompat=true&amp;custom=false&amp;hl=en&amp;tplinks=on&amp;sitekey=50f6f060-c606-4e3b-b6e8-ca3b706b61e1&amp;theme=dark&amp;size=compact&amp;origin=https%3A%2F%2Fwww.xuetangx.com" style="width: 164px; height: 144px;" tabindex="0" title="Widget containing checkbox for hCaptcha security challenge">
+   </iframe>
+   <textarea id="g-recaptcha-response-0jd2gafhtof" name="g-recaptcha-response" style="display: none;"></textarea>
+   <textarea id="h-captcha-response-0jd2gafhtof" name="h-captcha-response" style="display: none;"></textarea>
+  </div>
+  <script charset="UTF-8" src="https://proxt-cdn.xuetangx.com/fe-proxtassets/xuetangX/08181/body_template.min.js?BrowseEvent=index">
+  </script>
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js" type="text/javascript">
+  </script>
+  <script src="https://fe-static-yuketang.rainclassroom.com/fe/static/xt/1.6.235/xtassets/manifest_b11ad4688cca8049bc7d.js">
+  </script>
+  <script src="https://fe-static-yuketang.rainclassroom.com/fe/static/xt/1.6.235/xtassets/0_8efccf3b1876364ff26a.js">
+  </script>
+  <script src="https://fe-static-yuketang.rainclassroom.com/fe/static/xt/1.6.235/xtassets/10_6fefd1fee7ec78862a95.js">
+  </script>
+  <script src="https://fe-static-yuketang.rainclassroom.com/fe/static/xt/1.6.235/xtassets/207_2f9d0ae48c5f965692d1.js">
+  </script>
+  <div id="nprogress">
+   <div class="bar" role="bar" style="transform: translate3d(-92%, 0px, 0px); transition: all 200ms ease 0s;">
+    <div class="peg">
+    </div>
+   </div>
+  </div>
+  <iframe id="jiguang_iframe" src="https://web-stat.jpush.cn/web/report/html/janalytics.html" style="display: none;">
+  </iframe>
+  <div aria-hidden="true" style="background-color: rgb(255, 255, 255); border: 1px solid rgb(215, 215, 215); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 4px; border-radius: 4px; left: auto; top: -10000px; z-index: -2147483648; position: absolute; transition: opacity 0.15s ease-out 0s; opacity: 0; visibility: hidden;">
+   <div style="position: relative; z-index: 1;">
+    <iframe frameborder="0" scrolling="no" src="https://newassets.hcaptcha.com/captcha/v1/3b58cd9/static/hcaptcha.html#frame=challenge&amp;id=0jd2gafhtof&amp;host=www.xuetangx.com&amp;sentry=true&amp;reportapi=https%3A%2F%2Faccounts.hcaptcha.com&amp;recaptchacompat=true&amp;custom=false&amp;hl=en&amp;tplinks=on&amp;sitekey=50f6f060-c606-4e3b-b6e8-ca3b706b61e1&amp;theme=dark&amp;size=compact&amp;origin=https%3A%2F%2Fwww.xuetangx.com" style="border: 0px; z-index: 2000000000; position: relative;" title="Main content of the hCaptcha challenge">
+    </iframe>
+   </div>
+   <div style="width: 100%; height: 100%; position: fixed; pointer-events: none; top: 0px; left: 0px; z-index: 0; background-color: rgb(255, 255, 255); opacity: 0.05;">
+   </div>
+   <div style="border-width: 11px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 1; right: 100%;">
+    <div style="border-width: 10px; border-style: solid; border-color: transparent rgb(255, 255, 255) transparent transparent; position: relative; top: 10px; z-index: 1;">
+    </div>
+    <div style="border-width: 11px; border-style: solid; border-color: transparent rgb(215, 215, 215) transparent transparent; position: relative; top: -11px; z-index: 0;">
+    </div>
+   </div>
+  </div>
+  <div id="tcaptcha_transform_dy" style="opacity: 0; position: absolute; transition: opacity 0.3s linear 0s; top: -1e+06px;">
+   <iframe border="0" frameborder="0" id="tcaptcha_iframe_dy" marginheight="0" marginwidth="0" name="https://t.captcha.qq.com" scrolling="no" src="https://captcha.gtimg.com/1/template/drag_ele.html">
+   </iframe>
+  </div>
+ </body>
+</html>

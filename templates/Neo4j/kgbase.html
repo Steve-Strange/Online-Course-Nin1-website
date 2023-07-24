@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>知识图谱</title>
+    <meta charset="utf-8">
+    <script src="static/echarts/echarts.min.js"></script>
+    <!-- <script src="static/echarts/echarts.min.js"></script> -->
+     <!-- Fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+     <!-- Theme CSS -->
+     <link type="text/css" href="/static/boomerang/assets/css/theme.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="main" style="width:1000px;height:800px"></div>
+<script type="text/javascript">
+    // TODO: 在这里执行一些回调函数的状态切换等.
+    var myChart = echarts.init(document.getElementById('main'));
+    // node的定义：
+    // {
+    //     name: 知识点名称
+    //     uid: 知识点uid
+    //     intro: 知识点introduction
+    //     (暂时没有纳入课程)
+    // }
+    // edge的定义:
+    // {
+    //         source: 起点名称,
+    //         target: 终点名称,
+    // }
+
+    // 节点数据, 后面用 {{...}} 括起来.
+    var node_datas = 
+    [{
+                name: '临时知识点1',
+                intro: '初次尝试的知识点1',
+                uid:"假装有uid",
+                symbolSize:50,
+            }, {
+                name: '临时知识点2',
+                intro: '初次尝试的知识点2',
+                uid:"假装有uid",
+            },
+            ];
+
+    var edge_datas = 
+    [{
+                source: '临时知识点1',
+                target: '临时知识点2',
+            }, 
+            ];
+    
+    option = {
+        // 图的标题
+        title: {
+            text: 'KnowledgeGraph'  //改成当前知识图谱的名称.
+        },
+        // 提示框的配置
+        tooltip: {
+            trigger:'item',
+            formatter: function (x) {
+                const node = x.data;
+                if(typeof(node.name)=="undefined"){
+                    // 一定是边.
+                    return `${node.source} --> ${node.target}`
+                }
+                return `<h5>${node.name}</h5><hr>介绍：${node.intro}`
+            }
+        },
+        // 工具箱
+        toolbox: {
+            // 显示工具箱
+            show: true,
+            itemSize: 20,
+            itemGap: 12,
+            feature: {
+                // TODO: 寻找设置图标.
+                myToolAdd:{
+                    show:true,
+                    title:'添加节点',
+                    icon:"image://static/icons/node-plus.svg",
+                    onclick: function () {
+                        alert("show a modal blanket and add nodes");
+                        // TODO: 显示一个模态框收集信息，然后提交后台新建节点，重新显示.
+                    }
+                },
+                myToolLink:{
+                    show:true,
+                    title:'连接节点',
+                    icon: "image://static/icons/link.svg",
+                    onclick: function () {
+                        alert("switch to link mode");
+                        // TODO: 变为静态，然后拖拽两个节点完成连接(联系后台).
+                    }
+                },
+                myToolDelete:{
+                    show:true,
+                    title:'删除节点',
+                    icon: "image://static/icons/node-minus.svg",
+                    onclick: function () {
+                        alert("switch to delete mode");
+                        // TODO: 切换到删除模式，之后点击节点会弹出模态框询问删除，若是则联系后台删除.
+                    }
+                },
+                myToolExport:{
+                    show:true,
+                    title:'导出',
+                    icon:"image://static/icons/cloud-download.svg", //记得改回相对路径.
+                    onclick: function () {
+                        alert("export this knowledge's json file");
+                        // TODO: 请求下载文件.
+                    }
+                },
+            }
+        },
+        series: [{
+            type: 'graph', // 类型:关系图
+            layout: 'force', //图的布局，类型为力导图
+            symbolSize: 40, // 调整节点的大小
+            roam: true, // 是否开启鼠标缩放和平移漫游。默认不开启。如果只想要开启缩放或者平移,可以设置成 'scale' 或者 'move'。设置成 true 为都开启
+            edgeSymbol: ['circle', 'arrow'],
+            edgeSymbolSize: [2, 10],
+            // edgeLabel: {
+            //     normal: {
+            //         textStyle: {
+            //             fontSize: 20
+            //         }
+            //     }
+            // },
+            force: {
+                repulsion: 2500,
+                edgeLength: [15, 60]
+            },
+            draggable: true,
+            lineStyle: {
+                normal: {
+                    width: 2,
+                    color: '#4b565b',
+                }
+            },
+            // edgeLabel: {
+            //     normal: {
+            //         show: true,
+            //         formatter: function (x) {
+            //             return x.data.name;
+            //         }
+            //     }
+            // },
+            label: {
+                formatter:'{b}',
+                normal: {
+                    show: true,
+                    textStyle: {}
+                }
+            },
+ 
+            // 数据
+            data: node_datas,
+            links: edge_datas,
+        }]
+    };
+    myChart.setOption(option);
+</script>
+
+<!--返回按键-->
+<a href="{% url 'User:home' %}">返回主页</a>
+
+<!-- boomerang -->
+<!-- Core -->
+<script src="static/boomerang/assets/vendor/jquery/jquery.min.js"></script>
+<script src="static/boomerang/assets/vendor/popper/popper.min.js"></script>
+<script src="static/boomerang/assets/js/bootstrap/bootstrap.min.js"></script>
+<!-- FontAwesome 5 -->
+<script src="static/boomerang/assets/vendor/fontawesome/js/fontawesome-all.min.js" defer></script>
+<!-- Page plugins -->
+<script src="static/boomerang/assets/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+<script src="static/boomerang/assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+<script src="static/boomerang/assets/vendor/input-mask/input-mask.min.js"></script>
+<script src="static/boomerang/assets/vendor/nouislider/js/nouislider.min.js"></script>
+<script src="static/boomerang/assets/vendor/textarea-autosize/textarea-autosize.min.js"></script>
+<!-- Theme JS -->
+<script src="static/boomerang/assets/js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/jquery"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    var option;
+    myChart.showLoading();
+$.getJSON('sampleFormat.json', function (graph) {
+  myChart.hideLoading();
+  graph.nodes.forEach(function (node) {
+    node.label = {
+      show: node.symbolSize > 30
+    };
+  });
+  option = {
+    title: {
+      text: 'Les Miserables',
+      subtext: 'Default layout',
+      top: 'bottom',
+      left: 'right'
+    },
+    tooltip: {trigger: 'item',  
+                formatter: function(params) {
+                    // 获取当前鼠标悬停的节点信息
+                    const nodeData = params.data;
+                    const tooltipContent = `名称：${nodeData.name}<br/>类别：${nodeData.e}`;
+                    return tooltipContent;
+                }},
+    /*legend: [
+      {
+        //selectedMode: 'single',
+        data: graph.categories.map(function (a) {
+          return a.name;
+        })
+      }
+    ],*/
+    animationDuration: 1500,
+    animationEasingUpdate: 'quinticInOut',
+    series: [
+      {
+        name: 'Les Miserables',
+        type: 'graph',
+        layout: 'force',
+        force: {
+              // 自定义力引导布局的参数
+              repulsion: 500, // 节点之间的斥力，值越大节点之间的距离越远
+              edgeLength: 300, // 节点之间的默认边长度
+            },
+        data: graph.nodes,
+        links: graph.links,
+        /*categories: graph.categories,*/
+        roam: true,
+        label: {
+          position: 'right',
+          formatter: '{b}'
+        },
+        lineStyle: {
+          color: 'source',
+          curveness: 0
+        },
+        emphasis: {
+          focus: 'adjacency',
+          lineStyle: {
+            width: 10
+          }
+        }
+      }
+    ]
+  };
+  myChart.setOption(option);
+});
+//对点击事件的监听
+  myChart.on('click', function(params) 
+{
+  if (params.seriesType === 'graph') 
+  {
+      if (params.dataType === 'edge') 
+      {
+        // 点击到了 graph 的 edge（边）上。
+      } 
+      else 
+      {
+        // 点击到了 graph 的 node（节点）上。
+        //console.log(params.name);
+        if(params.name == "p1")
+        {
+          window.open('https://www.baidu.com/')
+        }
+      }
+    }
+  
+});
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

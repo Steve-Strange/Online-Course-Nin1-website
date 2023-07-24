@@ -34,7 +34,7 @@ class DisjointSets:
         init_set指定之后应该不能再修改!
         '''
         self.elem = init_set
-        self.sets = (-1 for i in range(len(init_set)))  #-1表示为根.
+        self.sets = [-1 for i in range(len(init_set))]  #-1表示为根.
     
     def get_id(self, obj):
         '''
@@ -88,6 +88,9 @@ class DisjointSets:
 
 def csv_loader(file, name:str = None, intro:str = None):
     '''
+    这个函数是错误的！弃用！
+    只用json吧！
+
     将csv文件加载为新的知识图谱。认为每行的第一个元素是该节点的课程名称，每行后面的元素是该节点指向的其它课程节点名称.
     认为不包含课程。这个函数也不会去爬取课程，形成的图是没有课程的.  
     注意，这里只做加载，**不做爬取**！
@@ -96,9 +99,7 @@ def csv_loader(file, name:str = None, intro:str = None):
     name: 这张图的名字.
     return:
     root(GraphRoot)本身.
-
-    TODO: (并查集)严格来说，root应该连接图里的所有分支，这里暂且做不到.  
-    如果输入的图不是连通的，会出问题.  
+ 
     '''
     # 因为neomodel支持双向查询，只需要弱连通分支即可.
     # 使用并查集，让GraphRoot指向每一个弱连通分支中的任一个节点.
@@ -143,7 +144,3 @@ def csv_loader(file, name:str = None, intro:str = None):
         f.close()
 
     return root
-
-
-def json_expoter(root:GraphRoot):
-    pass

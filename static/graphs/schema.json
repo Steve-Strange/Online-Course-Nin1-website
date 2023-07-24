@@ -1,0 +1,103 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "KGjsonSchema",
+    "description": "schema for our knowledge graph json file",
+    "type": "object",
+    "properties":{
+        "name":{
+            "title":"GraphName",
+            "description":"Name of the Graph",
+            "type":"string"
+        },
+        "introduction":{
+            "type":"string"
+        },
+        "tag":{
+            "type":"string"
+        },
+        "knowledges":{
+            "title": "knowledges",
+            "description": "KnowledgeBolck",
+            "type": "array",
+            "items":{
+                "type":"object",
+                "properties":{
+                    "name":{
+                        "type":"string"
+                    },
+                    "tag":{
+                        "type":"string"
+                    },
+                    "introduction":{
+                        "type":"string"
+                    }
+                }
+            },
+            "required":[
+                "name","tag","introduction"
+            ]
+        },
+        "edges":{
+            "title":"edges",
+            "description":"edges between 2 KnowledgeBlocks",
+            "type":"array",
+            "items":{
+                "type":"object",
+                "properties":{
+                    "from":{
+                        "type":"integer"
+                    },
+                    "to":{
+                        "type":"integer"
+                    },
+                    "tag":{
+                        "type":"string"
+                    }
+                },
+                "required":[
+                    "from","to","tag"
+                ]
+            }
+        },
+        "courses":{
+            "title":"courses",
+            "description":"courses of each KnowledgeBlock",
+            "type":"array",
+            "items":{
+                "type":"object",
+                "properties":{
+                    "knowledge":{
+                        "type":"integer"
+                    },
+                    "tag":{
+                        "type":"string"
+                    },
+                    "name":{
+                        "type":"string"
+                    },
+                    "web":{
+                        "type":"string"
+                    },
+                    "source":{
+                        "type":"string"
+                    },
+                    "duration":{
+                        "type":"integer"
+                    },
+                    "viewer_num":{
+                        "type":"integer"
+                    },
+                    "introduction":{
+                        "type":"string"
+                    }
+                },
+                "required":[
+                    "knowledge","tag","name","web","source","duration","viewer_num","introduction"
+                ]
+            }
+        }
+    },
+    "required": [
+        "knowledges", "edges", "courses"
+    ]
+}
