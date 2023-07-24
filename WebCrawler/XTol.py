@@ -48,7 +48,7 @@ def XTol(keyword, key):
             
             name = soup_class.find(class_="title f32 c_f").get_text()     
             detail = soup_class.find(class_="f14 c_6 lh23").get_text()
-            play_num = soup_class.find(class_="f16 fl").get_text().split(' ')[0]
+            play_num = int(soup_class.find(class_="f16 fl").get_text().split(' ')[0])
             
             time_start = soup_class.find(class_="list list1").get_text().replace('\t', '').replace('\n', '').strip()[-10:]  
             
