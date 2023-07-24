@@ -4,8 +4,8 @@
 
 - 8个网站，每个网站文件中的函数就是文件名
 - from xxx import *
-- class_list = xxx(input(), input())
-- 两个输入分别是关键词和排序方式的序号从0-5，可以再添加，但需要设置字典对应等
+- class_list = xxx(input(), input())，两个输入分别是关键词和排序方式
+- 排序方式的序号为0-5，可以再添加，但需要设置字典等对应
 
     ```python
         if key == "0":
