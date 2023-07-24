@@ -1,13 +1,13 @@
 from bs4 import BeautifulSoup
-import time
 import requests
+import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 
-def NetEase(keyword, key):
+def Chinaooc(keyword, key):
 
     def ToNum(s):
         
@@ -29,17 +29,14 @@ def NetEase(keyword, key):
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
 
-    search_url = "https://open.163.com/newview/search/" + keyword
+    search_url = 'https://www.chinaooc.com.cn/search?keyword=' + keyword
     driver.get(search_url)
-    driver.execute_script('window.scrollBy(0,5000)')
-    time.sleep(0.1)
-    driver.execute_script('window.scrollBy(0,5000)')
-    time.sleep(0.1)
-    driver.execute_script('window.scrollBy(0,5000)')
-    time.sleep(0.1)
-    driver.execute_script('window.scrollBy(0,5000)')
     time.sleep(0.1)
     
+    click_place = driver.find_element(By.XPATH, "/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/button")
+    ActionChains(driver).move_to_element(click_place).click(click_place).perform()
+    time.sleep(0.1)
+
     print("start scrapping")
     
     html = driver.page_source
@@ -48,43 +45,38 @@ def NetEase(keyword, key):
     with open("output.txt", 'w', encoding='utf-8') as f:
         f.write(soup.prettify())
 
-    video_elements = soup.find_all(class_="type-card video-collection-card")
+    video_elements = soup.find_all(class_="border-b border-gray-300")
     
     time.sleep(0.1)
-    
     for element in video_elements:
         if(len(url_list) > 20):
             break
-        href = "https://open.163.com" + element.find('a').get('href')
+        href = "https://www.chinaooc.com.cn" + element.find('a').get('href')
         print(href)
         
-        name = element.find(class_ = "subname").get_text()[:-5]
+        name = element.find(class_ = "inline-block font-bold text-link").get_text()
         cover = element.find('img').get('src')
-        text = element.get_text().split(' ')
-        play_num = ToNum(text[-1][:-3])
-        time_span = text[-2]
+        detail = element.find(class_ = "text-xs text-gray-500 mt-3 leading-5").get_text().strip()
+        play_num = element.find(class_ = "align-bottom mr-5").get_text().replace("+", '').replace("少于", '')[:-3]
+        play_num = ToNum(play_num)
+        # print(name, cover, detail, play_num)
 
         driver.execute_script(js.format(href))
         driver.switch_to.window(driver.window_handles[-1])
         time.sleep(0.2)
         html_class = driver.page_source
         soup_class = BeautifulSoup(html_class, "lxml")
+
+        time_start = soup_class.find_all(class_ = "table-td")[4].get_text().strip()[:10]
         
-        
-        try:
-            comments_num = soup_class.find_all(class_ = "comment-container__title")[1].get_text().strip()[5:-1]
-        except Exception:
-            driver.close()
-            driver.switch_to.window(driver.window_handles[0])
-            continue
-        
+        print(time_start)
         url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
         driver.close()
         driver.switch_to.window(driver.window_handles[0])
     driver.quit()
 
     print("finish scrapping")
-
+    
     if key == "0":
         url_list.sort(key=lambda x: x[1], reverse=True)   # 名称排序
     elif key == "1":
@@ -105,4 +97,4 @@ def NetEase(keyword, key):
     for elem in url_list:
         print(elem)
         
-NetEase(input(), input())
+Chinaooc(input(), input())
