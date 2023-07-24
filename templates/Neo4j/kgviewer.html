@@ -38,7 +38,7 @@
 <!-- modal - add node -->
 <form class="form" action="{% url 'Neo4j:kgviewer' graph.uid %}" method="post">
     {% csrf_token %}
-    <div class="modal fade" id="addNode" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="addNode" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="addNodeLabel" aria-hidden="true">
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -67,9 +67,52 @@
     </div>
 </form>
 
+<!--modal - delete node. 询问是否确定删除-->
+<div class="modal modal-danger fade" id="deleteNode" tabindex="-1" role="dialog" aria-labelledby="deleteNode" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_title_6">确定要删除吗</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="py-3 text-center">
+                    <i class="fas fa-exclamation-circle fa-4x"></i>
+                    <h4 class="heading mt-4">是否永久删除此节点</h4>
+                    <p>
+                        该操作将无法恢复
+                    </p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-sm btn-primary" id="do_delete">删除</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--获取cookie-->
+<script type="text/javascript">
+    function getCookie(name) {
+        const cookieList = document.cookie.split(';');
+        for (let i = 0; i < cookieList.length; i++) {
+            const element = cookieList[i].trim().split('=');
+            if(element[0] == name){
+                return element[1];
+            }
+        }
+        return "";
+    }
+</script>
 
 <!--echarts脚本-->
 <script type="text/javascript">
+    // csrf token
+    var token = "{{csrf_token}}";
     // TODO: 在这里执行一些回调函数的状态切换等.
     var myChart = echarts.init(document.getElementById('main'));
 
@@ -82,7 +125,99 @@
 
     // toolbox 添加节点的回调函数.
     function addNodeCallback() {
-        $('#addNode').modal('show');
+        if(status==0){
+            $('#addNode').modal('show');
+        }
+        else{
+            alert("请先关闭删除或者连接功能");
+        }
+    }
+
+    // toolbox 删除节点的回调函数, 只做切换状态.
+    function deleteNodeCallback() {
+        if(status==0){
+            status = 1;
+            let opt = {
+                title: {
+                    text: "{{graph.graph_name}}" + ": 删除模式",  //改成当前知识图谱的名称.
+                },
+            };
+            myChart.setOption(opt);
+        }
+        else if(status==1){
+            status = 0;
+            let opt = {
+                title: {
+                    text: "{{graph.graph_name}}",  //改成当前知识图谱的名称.
+                },
+            };
+            myChart.setOption(opt);
+        }
+        // 如果是2， 连接模式，则什么也不做.
+    }
+
+    // 发送请求、执行删除的callback.
+    function do_delete(uid, name) {
+        // 发送请求.
+        $.ajax({
+            cache: false,
+            url: "{% url 'Neo4j:kgviewer' graph.uid  %}",
+            type: "DELETE",
+            headers: { 'X-CSRFTOKEN': `${token}` },
+            dataType: "text", //没有用.
+            data:{
+                "uid": uid,
+            },
+            success: function (result, status, xhr) {
+                if(result=="successfully delete"){
+                    // 成功，从node_datas中删除数据，在edge_datas中删除和它相连的边.
+                    for (let i = 0; i < node_datas.length; i++) {
+                        const element = node_datas[i];
+                        if(element.uid==uid){
+                            node_datas.splice(i,1);
+                            break
+                        }                        
+                    }
+                    edge_datas = edge_datas.filter(function (item) {
+                        return item.source!=name && item.target!=name;
+                    })
+                    // 刷新myChart.
+                    let opt = {
+                        series: [{
+                            data:node_datas,
+                            links:edge_datas,
+                        }],
+                    }
+                    myChart.setOption(opt);
+                }
+                else{
+                    alert("删除失败, "+result);
+                }
+            },
+            error: function (xhr, status, error) {
+                alert("删除失败。报错: " + error);
+            }
+        })
+        // 模态框消失.
+        $('#deleteNode').modal('hide');
+    }
+
+
+    // 点击图中节点的回调函数.
+    function clickNodeCallback(para){
+        // click.data 是node_datas中的某个object.
+        if(status==0){
+            alert("click " + para.data.name);
+            // TODO: 正常状态点击，要新建页面跳转!
+        }
+        else if(status==1){
+            // 删除状态，弹出删除询问框并且设置确定删除按钮的回调函数(含参数.)
+            var button = document.getElementById("do_delete");
+            button.onclick = function () {
+                do_delete(para.data.uid, para.data.name);
+            }  //用了一种很蠢的方法(有点像lambda函数)动态设置参数.
+            $('#deleteNode').modal('show');
+        }
     }
     
     option = {
@@ -129,10 +264,7 @@
                     show:true,
                     title:'删除节点',
                     icon: "image:///static/icons/node-minus.svg",
-                    onclick: function () {
-                        alert("switch to delete mode");
-                        // TODO: 切换到删除模式，之后点击节点会弹出模态框询问删除，若是则联系后台删除.
-                    }
+                    onclick: deleteNodeCallback,
                 },
                 myToolExport:{
                     show:true,
@@ -192,6 +324,7 @@
         }]
     };
     myChart.setOption(option);
+    myChart.on('click', { dataType: 'node' }, clickNodeCallback);
 </script>
 
 <!-- boomerang -->

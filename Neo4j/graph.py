@@ -9,7 +9,7 @@ from os.path import join
 
 from Neo4j.models import GraphRoot, KnowledgeBlock, Course, TagEdge
 from Utils.file_operators import csv_loader, DisjointSets
-from Utils.find import find_all_knowledge_in_graph, find_all_courses_in_knowledge
+from Utils.find import find_all_knowledge_in_graph, find_all_courses_in_knowledge, find_all_knowledge_from_knowledge
 from User.models import UserProfile, UserGraphs, UserTags
 
 
@@ -19,6 +19,18 @@ class Graph:
     '''
     对完整的图进行操作，包括导入导出、创建等.
     '''
+    @staticmethod
+    def validate(user:UserProfile, root_uid:str):
+        '''
+        检查这个图(uid)是否属于这个用户.
+        '''
+        try:
+            tmp = user.usergraphs_set.get(root_uid = root_uid)
+        except:
+            return False
+        return True
+    
+
     def __init__(self, user:UserProfile, root:GraphRoot = None) -> None:
         '''
         指定图的根，或者不指定表示空图，将要进行创建等操作.
@@ -206,6 +218,9 @@ class Graph:
 
     @db.write_transaction
     def create_node(self, name:str, introduction:str):
+        for know in self.knowledges:
+            if know.name == name:
+                return know   # 有重名的就不创建新的了.
         newknow = KnowledgeBlock(name = name, introduction = introduction).save()
         self.root.rel_knowledge.connect(newknow)
         self.knowledges += [newknow]
@@ -213,16 +228,41 @@ class Graph:
         return newknow
     
 
-    @db.write_transaction
-    def delete_node(self, knowledge:KnowledgeBlock):
+    # @db.write_transaction
+    def delete_node(self, knowledge:KnowledgeBlock, validate:bool=True):
         '''
         删除这个节点以及所有相关的课程.
         这里不做检查了..
         返回被删除的节点原本的uid.
         '''
-        # 先删除所有相关课程.
+        # 检验确实有这个节点.
+        if validate:
+            valid = False
+            for know in self.knowledges:
+                if know.uid == knowledge.uid:
+                    valid = True
+                    break
+            if not valid:
+                raise "KnowledgeBlock does not exist in this graph"
+        # 从graph当前节点中删除.
+        ind = self.knowledges.index(knowledge)
+        self.knowledges.pop(ind)
+        # 删除所有相关课程.
         for course in knowledge.rel_courses.all():
             course.delete()
+        # 把与这个knowledge相关的所有节点和root相连.防止删除之后不再连通.
+        for rel_know in find_all_knowledge_from_knowledge(knowledge):
+            self.root.rel_knowledge.connect(rel_know)
         uid = knowledge.uid
         knowledge.delete()
         return uid
+    
+    def delete_node_via_uid(self, know_uid:str):
+        target = None
+        for know in self.knowledges:
+            if know.uid == know_uid:
+                target = know
+                break
+        if target is None:
+            raise "KnowledgeBlock does not exist in this graph"
+        return self.delete_node(target, False)
