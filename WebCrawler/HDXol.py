@@ -59,15 +59,19 @@ def HDXol(keyword, key):
             res = requests.get(href, headers=header)
             res.encoding = res.apparent_encoding
             soup2 = BeautifulSoup(res.text, "lxml")
+            time.sleep(0.1)
             
             detail = soup2.find(class_ = "para-row").get_text().strip()
             class_info = soup2.find(class_ ="view-favor subFavorite").get_text().replace('\r', '').split('\n')
-            time_start = soup2.find(class_ = "view-time").get_text().strip().replace('\t', '')
-            time_start = time_start[time_start.find('—') - 11 : time_start.find('—') -1]
-
+            try:
+                time_start = soup2.find(class_ = "view-time").get_text().strip().replace('\t', '')
+                time_start = time_start[time_start.find('—') - 11 : time_start.find('—') -1]
+            except Exception:
+                continue
+            
             try:
                 comments_num = int(class_info[1][:-2])
-            except ValueError:
+            except Exception:
                 continue
             
             url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
