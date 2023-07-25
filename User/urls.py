@@ -20,6 +20,7 @@ from django.urls import path
 from User import views
 
 urlpatterns = [
+    path('', views.main_page.as_view(),name="main"),
     path('login/', views.Login.as_view(), name="login"),
     path('register/', views.Register.as_view(), name='register'),
     path('register/success/', views.RegisterSuccess.as_view(), name='register_success'),
