@@ -1,6 +1,6 @@
 from django.db import models
 from neomodel import (StructuredNode, StructuredRel, StringProperty, IntegerProperty, RelationshipTo,
-                      UniqueIdProperty)
+                      UniqueIdProperty, FloatProperty, BooleanProperty)
 
 # 这个字符串表示这个节点是空的，是无效的.
 # 如果节点的名称是这个的话，就不要对它爬取内容了.
@@ -61,11 +61,21 @@ class GraphRoot(TagNode):
 class Course(TagNode):
     '''
     网课的条目.
+    source, 来源.
+
+    href, name, cover, detail, play_num, comments_num, score, time_start, time_span
+
+    web, name, cover, introduction, viewer_num, comments_num, score, time_start, duration
     '''
     name = StringProperty(required = True)
     web = StringProperty(required = True)
     source = StringProperty(default = "unknown")  # 来源，尽量用xx大学来表示.  
-    duration = IntegerProperty(default=-1)  #-1表示缺少该信息.
-    viewer_num = IntegerProperty(default=-1)# 观看/学习人数.
+    duration = StringProperty(default = "")
+    viewer_num = IntegerProperty(default=0)# 观看/学习人数.
     introduction = StringProperty(default = "")  # 简介.
     # 封面图片...等等其它可以爬到的.
+    cover = StringProperty(default="/media/image/default_course_cover.jpeg")
+    comments_num = IntegerProperty(default=0)
+    time_start = StringProperty(default="")
+    score = FloatProperty(default=0.0)
+    favor = BooleanProperty(default=False)

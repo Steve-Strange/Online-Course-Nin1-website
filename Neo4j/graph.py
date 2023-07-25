@@ -12,13 +12,7 @@ from Neo4j.models import GraphRoot, KnowledgeBlock, Course, TagEdge
 from Utils.file_operators import csv_loader, DisjointSets
 from Utils.find import find_all_knowledge_in_graph, find_all_courses_in_knowledge, find_all_knowledge_from_knowledge
 from User.models import UserProfile, UserGraphs, UserTags
-
-
-class MyGraphJsonEncoder(json.JSONEncoder):
-    def default(self, o: Any) -> Any:
-        if isinstance(o, bytes):
-            return str(o, encoding="utf-8")
-        return super().default(o)
+from WebCrawler.crawler import SourceList, crawl_courses, INDEX
 
 
 class Graph:
@@ -39,15 +33,59 @@ class Graph:
         return True
     
 
+    # 给节点爬取课程.
+    @staticmethod
+    def crawlCoursesForKnowledge(knowledge:KnowledgeBlock):
+        '''
+        给knowledge节点爬取课程并且保存到数据库. 这里不做任何检查.
+        '''
+        courses = crawl_courses(knowledge.name)
+        for src in SourceList:
+            cList = courses[src]
+            for course in cList:
+                node = Course(name = course[INDEX.name], web = course[INDEX.web], source = src).save()
+                if course[INDEX.comments_num]!=0 and not course[INDEX.comments_num]:
+                    node.comments_num = course[INDEX.comments_num]
+                if course[INDEX.cover]!=0 and not course[INDEX.cover]:
+                    node.cover = course[INDEX.cover]
+                if course[INDEX.duration]!=0 and not course[INDEX.duration]:
+                    node.duration = course[INDEX.duration]
+                if course[INDEX.introduction]!=0 and not course[INDEX.introduction]:
+                    node.introduction = course[INDEX.introduction]
+                if course[INDEX.score]!=0 and not course[INDEX.score]:
+                    node.score = course[INDEX.score]
+                if course[INDEX.time_start]!=0 and not course[INDEX.time_start]:
+                    node.time_start = course[INDEX.time_start]
+                if course[INDEX.viewer_num]!=0 and not course[INDEX.viewer_num]:
+                    node.viewer_num = course[INDEX.viewer_num]
+                node.save()
+                knowledge.rel_courses.connect(node)
+    
+
     def __init__(self, user:UserProfile, root:GraphRoot = None) -> None:
         '''
         指定图的根，或者不指定表示空图，将要进行创建等操作.
         '''
         self.user = user
         self.root = root
-        self.knowledges = find_all_knowledge_in_graph(self.root) if self.root is not None else [KnowledgeBlock]
+        self.knowledges = find_all_knowledge_in_graph(self.root) if self.root is not None else []
         for know in self.knowledges:
             print(know.name)
+
+
+    def create_empty_graph(self, name:str, intro:str):
+        '''
+        用来创建一个空图，仅有一个Empty节点，不爬取课程
+        返回新图的GraphRoot uid
+        '''
+        if not name:
+            name = "unnamed"
+        self.root = GraphRoot(graph_name = name, introduction = intro).save()
+        usergraph = UserGraphs(root_uid = self.root.uid, user = self.user).save()
+        emptyknow = KnowledgeBlock(name = "Empty").save()
+        self.root.rel_knowledge.connect(emptyknow)
+        self.knowledges += [emptyknow]
+        return self.root.uid
     
     
     def import_json(self,json_file:str):
@@ -87,7 +125,7 @@ class Graph:
         # 通过了之后能直接进行下面的语句.
         knows = jf["knowledges"]
         edges = jf["edges"]
-        courses = jf["courses"]
+        courses = jf["courses"]  # 可以为空.
         self.knowledges = [None for i in range(len(knows))]
         for i in range(len(knows)):
             know = knows[i]
@@ -122,13 +160,21 @@ class Graph:
                     viewer_num = course["viewer_num"],
                     introduction = course["introduction"],
                     tag = course['tag'],
+                    cover = course['cover'],
+                    comments_num = course['comments_num'],
+                    time_start = course['time_start'],
+                    score = course['score']
                 ).save()
+                if course['cover']:
+                    node.cover = course['cover']
+                node.save()
                 self.knowledges[course["knowledge"]].rel_courses.connect(node)
                 if node.tag:
                     UserTags(tag_uid = node.uid, user = self.user).save()
         else:
-            # TODO, 爬取课程.
-            pass
+            # 给知识节点爬取课程.
+            for know in self.knowledges:
+                Graph.crawlCoursesForKnowledge(know)
 
         # 注册给用户.
         self.root = GraphRoot()
@@ -175,6 +221,10 @@ class Graph:
                     "duration" : str(course.duration),
                     "viewer_num" : str(course.viewer_num),
                     "introduction" : str(course.introduction),
+                    "cover" : str(course.cover),
+                    "comments_num" : str(course.comments_num),
+                    "time_start" : str(course.time_start),
+                    "score" : str(course.score),
                 })
         
         ret = {
@@ -234,7 +284,7 @@ class Graph:
         newknow = KnowledgeBlock(name = name, introduction = introduction).save()
         self.root.rel_knowledge.connect(newknow)
         self.knowledges += [newknow]
-        # TODO: 执行爬虫!
+        Graph.crawlCoursesForKnowledge(newknow)
         return newknow
     
 

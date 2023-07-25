@@ -1,4 +1,5 @@
 '''
+基本弃用.
 对数据库create, read, updata, delete operations.
 基本就是create, delete.
 '''

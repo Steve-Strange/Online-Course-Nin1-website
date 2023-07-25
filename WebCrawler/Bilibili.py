@@ -83,5 +83,6 @@ def BiliBili(keyword, key):
 
     return url_list
 
-final_list = BiliBili(input(), input())
-print(final_list)
+if __name__=="__main__":
+    final_list = BiliBili(input(), input())
+    print(final_list)

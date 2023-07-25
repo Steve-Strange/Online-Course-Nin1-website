@@ -38,3 +38,11 @@ class UserTags(models.Model):
     '''
     tag_uid = models.CharField(max_length=200)
     user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+
+
+class UserFavorites(models.Model):
+    '''
+    用户所收藏的所有课程.
+    '''
+    course_uid = models.CharField(max_length=200)
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)

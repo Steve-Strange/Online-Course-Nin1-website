@@ -77,5 +77,6 @@ def XTol(keyword, key):
 
     return url_list
 
-final_list = XTol(input(), input())
-print(final_list)
+if __name__=="main":
+    final_list = XTol(input(), input())
+    print(final_list)

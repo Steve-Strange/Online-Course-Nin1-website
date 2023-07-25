@@ -27,9 +27,13 @@
             "name":"bilibili",
             "web":"https://www.bilibili.com",
             "source":"bilibili",
-            "duration":-1,
+            "duration":"",
             "viewer_num":100,
-            "introduction":"This is the course 0 of knowledge 0"
+            "introduction":"This is the course 0 of knowledge 0",
+            "cover":"",
+            "comments_num":0,
+            "time_start":"",
+            "score":0
         },
         {
             "knowledge":0,
@@ -37,9 +41,13 @@
             "name":"django-docs",
             "web":"https://docs.djangoproject.com/zh-hans/4.2/",
             "source":"django",
-            "duration":-1,
+            "duration":"",
             "viewer_num":10000,
-            "introduction":"This is django's official documents"
+            "introduction":"This is django's official documents",
+            "cover":"",
+            "comments_num":0,
+            "time_start":"",
+            "score":0
         },
         {
             "knowledge":1,
@@ -47,9 +55,13 @@
             "name":"菜鸟教程-django",
             "web":"https://www.runoob.com/django/django-tutorial.html",
             "source":"菜鸟教程",
-            "duration":-1,
+            "duration":"",
             "viewer_num":1000,
-            "introduction":"菜鸟教程上的django教程"
+            "introduction":"菜鸟教程上的django教程",
+            "cover":"",
+            "comments_num":0,
+            "time_start":"",
+            "score":0
         },
         {
             "knowledge":1,
@@ -57,9 +69,13 @@
             "name":"菜鸟教程-bootstrap5",
             "web":"https://www.runoob.com/bootstrap5/bootstrap5-tutorial.html",
             "source":"菜鸟教程",
-            "duration":-1,
+            "duration":"",
             "viewer_num":500,
-            "introduction":"菜鸟教程上的bootstrap5教程"
+            "introduction":"菜鸟教程上的bootstrap5教程",
+            "cover":"",
+            "comments_num":0,
+            "time_start":"",
+            "score":0
         }
     ]
 }

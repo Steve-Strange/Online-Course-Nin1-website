@@ -113,5 +113,6 @@ def iCourse(keyword, key):
 
     return url_list
 
-final_list = iCourse(input(), input())
-print(final_list)
+if __name__=="main":
+    final_list = iCourse(input(), input())
+    print(final_list)

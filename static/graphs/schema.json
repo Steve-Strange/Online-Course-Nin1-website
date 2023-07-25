@@ -82,17 +82,30 @@
                         "type":"string"
                     },
                     "duration":{
-                        "type":"integer"
+                        "type":"string"
                     },
                     "viewer_num":{
                         "type":"integer"
                     },
                     "introduction":{
                         "type":"string"
+                    },
+                    "cover":{
+                        "type":"string"
+                    },
+                    "comments_num":{
+                        "type":"integer"
+                    },
+                    "time_start":{
+                        "type":"string"
+                    },
+                    "score":{
+                        "type":"number"
                     }
                 },
                 "required":[
-                    "knowledge","tag","name","web","source","duration","viewer_num","introduction"
+                    "knowledge","tag","name","web","source","duration","viewer_num","introduction",
+                    "cover","comments_num","time_start","score"
                 ]
             }
         }

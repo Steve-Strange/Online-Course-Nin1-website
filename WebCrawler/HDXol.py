@@ -102,5 +102,6 @@ def HDXol(keyword, key):
     
     return url_list
 
-final_list = HDXol(input(), input())
-print(final_list)
+if __name__=="main":
+    final_list = HDXol(input(), input())
+    print(final_list)

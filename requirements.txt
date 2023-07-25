@@ -4,3 +4,4 @@ Django
 requests
 lxml
 neomodel
+jsonschema

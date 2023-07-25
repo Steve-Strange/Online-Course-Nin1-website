@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 
 from Neo4j.models import TagNode, KnowledgeBlock, GraphRoot, Course
-from Neo4j.graph import Graph, MyGraphJsonEncoder
+from Neo4j.graph import Graph
 from User.models import UserProfile, UserGraphs
 from Utils.find import find_all_knowledge_in_graph
 
@@ -64,4 +64,4 @@ class KnowledgeGraph:
 
     @login_required
     def CoursesViewer(request:HttpRequest, graph_uid:str, knowledge_uid:str):
-        return render(request, "Neo4j/courses.html")
+        return render(request, "Neo4j/courseList.html")
