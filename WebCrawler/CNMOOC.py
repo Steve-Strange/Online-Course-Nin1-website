@@ -13,6 +13,7 @@ def CNMOOC(keyword, key):
     js = "window.open('{}','_blank');"
     chrome_options = Options()
     chrome_options.add_argument('headless')
+    chrome_options.page_load_strategy = 'eager'
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
 

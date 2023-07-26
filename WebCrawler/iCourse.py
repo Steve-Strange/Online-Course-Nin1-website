@@ -14,6 +14,7 @@ def iCourse(keyword, key):
 
     chrome_options = Options()
     chrome_options.add_argument('headless')
+    chrome_options.page_load_strategy = 'eager'
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
 
@@ -28,7 +29,7 @@ def iCourse(keyword, key):
     print("start scrapping")
 
     for i in range(1, 5):
-        if(len(url_list) > 20):     # 最大数量
+        if(len(url_list) >= 20):     # 最大数量
             break
         print("scrapping page " + str(i))
         
@@ -38,7 +39,7 @@ def iCourse(keyword, key):
         time.sleep(0.1)
         
         for element in video_elements:
-            if(len(url_list) > 20):
+            if(len(url_list) >= 20):
                 break
             url = element.find('a')
             
