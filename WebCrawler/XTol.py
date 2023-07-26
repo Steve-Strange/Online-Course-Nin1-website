@@ -42,12 +42,13 @@ def XTol(keyword, key):
             time.sleep(0.1)
             cover = covers[j].find_elements(By.TAG_NAME, "img")[-1].get_attribute("src")      
             ActionChains(driver).move_to_element(click_place).click().perform()
-            time.sleep(0.1)
+            time.sleep(0.6)
             href = driver.current_url
             html_class = driver.page_source
             soup_class = BeautifulSoup(html_class, "lxml")
             if(href.find("training") != -1):
                 continue
+            
             print(href)
             try:
                 name = soup_class.find(class_="title f32 c_f").get_text()     
@@ -59,7 +60,7 @@ def XTol(keyword, key):
                 continue
             
             url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
-            
+            print(len(url_list))
 
     print("finish scrapping")
 
