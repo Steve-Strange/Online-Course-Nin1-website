@@ -6,6 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
 
 def Bilibili(keyword, key):
 
@@ -25,7 +26,6 @@ def Bilibili(keyword, key):
     js = "window.open('{}','_blank');"
     chrome_options = Options()
     chrome_options.add_argument('headless')
-    chrome_options.page_load_strategy = 'eager'
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
 
@@ -33,13 +33,16 @@ def Bilibili(keyword, key):
     driver.get(search_url)
     time.sleep(0.1)
     
+    print("start scrapping")
+    
     html = driver.page_source
     soup = BeautifulSoup(html, "lxml")
 
     with open("output.txt", 'w', encoding='utf-8') as f:
         f.write(soup.prettify())
 
-    video_elements = soup.find_all(class_ = "bili-video-card__wrap __scale-wrap" )
+    video_elements = soup.find(class_ = "video i_wrapper search-all-list").find_all(class_ = "bili-video-card__wrap __scale-wrap" )
+    time.sleep(0.1)
     # find_class = soup.find(attrs={'class':'item-1'})
 
     url_list = []
@@ -49,38 +52,49 @@ def Bilibili(keyword, key):
             break
         url = element.find('a')
         
-        cover = str(element.find(class_ = "v-img bili-video-card__cover")).split('><')[3].\
-            replace("@672w_378h_1c_!web-search-common-cover.webp\" type=\"image/webp\"", '').\
-                replace("source srcset=\"//", '')
-        
         href = "https:" + url.get('href')
         print(href)
+        cover = "https:" + element.find('img').get('src')
         text = url.get_text(separator=' ').split(' ')
-        title = element.get_text()
-        title = title[title.rfind(':')+3: len(title)].split(' · ')
-        name = title[0]
-        if len(title[1]) <= 5:
-            time_start = "2023-" + title[1]
-        
-        play_num = ToNum(text[0])
-        comments_num = ToNum(text[1])
-        if len(text[2]) == 5:
-            time_span = "00:" + text[2]
+        if len(text[-1]) == 5:
+            time_span = "00:" + text[-1]
         else:
-            time_span = text[2]
+            time_span = text[-1]
         
         driver.execute_script(js.format(href))
         time.sleep(0.5)
         driver.switch_to.window(driver.window_handles[-1])
+        time.sleep(0.1)
+        driver.execute_script('window.scrollBy(0,1000)')
+        time.sleep(0.5)
         html_class = driver.page_source
         soup_class = BeautifulSoup(html_class, "lxml")
 
-        detail = soup_class.find(class_ = "desc-info-text").get_text().replace('\n', '').replace('\r', '')
+        wait_time = 2
+        while wait_time > 0:
+            try:
+                name = soup_class.find(class_ = "video-title").get_text().strip()
+                detail = soup_class.find(class_ = "desc-info-text").get_text().strip()
+                play_num = ToNum(soup_class.find(class_ = "view item").get_text().strip().replace("\n", ""))
+                comments_num = ToNum(soup_class.find(class_ = "total-reply").get_text())
+                time_start = soup_class.find(class_ = "pubdate-text").get_text().strip()
+                break
+            except Exception:
+                wait_time -= 0.1
+                time.sleep(0.1)
+                continue
         
+        try:
+            detail = soup_class.find(class_ = "desc-info-text").get_text().replace('\n', '').replace('\r', '')
+        except Exception:
+            detail = ""
+
         url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
         driver.close()
         driver.switch_to.window(driver.window_handles[0])
     driver.quit()
+    
+    print("finish scrapping")
 
     if key == "0":
         url_list.sort(key=lambda x: x[1], reverse=True)   # 名称排序
@@ -97,7 +111,6 @@ def Bilibili(keyword, key):
 
     if len(url_list) == 0:
         print("No results")
-        exit()
 
     return url_list
 

@@ -19,7 +19,7 @@ def CNMOOC(keyword, key):
 
     search_url = "https://www.icourse163.org/search.htm?search=" + keyword
     driver.get(search_url)
-    time.sleep(0.1)
+    time.sleep(0.3)
     click_place = driver.find_element(By.XPATH, "/html/body/div[4]/div[2]/div[2]/div[2]/div/div[6]/div[1]/ul/li[2]")
     ActionChains(driver).move_to_element(click_place).click(click_place).perform()
     time.sleep(0.1)
@@ -78,12 +78,6 @@ def CNMOOC(keyword, key):
 
             detail = soup_class.find(class_ ="category-content j-cover-overflow").get_text().replace('\xa0','').strip()
             time_start = soup_class.find(class_ ="course-enroll-info_course-info_term-info_term-time").get_text().strip().split('\n')[1][0:11]
-            print(time_start)
-
-            if name.find(keyword) == -1 and detail.find(keyword) == -1:        # 筛选是否有关键词 （同义词问题）
-                driver.close()
-                driver.switch_to.window(driver.window_handles[0])
-                continue
             
             comments_element = soup_class.find(class_ = "ux-mooc-comment-course-comment_head")
 
@@ -97,16 +91,12 @@ def CNMOOC(keyword, key):
             try:
                 score = float(comments[0: 3])
             except Exception:
-                driver.close()
-                driver.switch_to.window(driver.window_handles[0])
-                continue
+                comments_num = float(0)
         
             try:
                 comments_num = int(comments[5: -4])
             except Exception:
-                driver.close()
-                driver.switch_to.window(driver.window_handles[0])
-                continue
+                comments_num = int(0)
             
             print(href)
             url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
@@ -132,7 +122,6 @@ def CNMOOC(keyword, key):
 
     if len(url_list) == 0:
         print("No results")
-        exit()
 
     return url_list
 

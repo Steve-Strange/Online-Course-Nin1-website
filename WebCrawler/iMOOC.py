@@ -13,13 +13,12 @@ def iMOOC(keyword, key):
     js = "window.open('{}','_blank');"
     chrome_options = Options()
     chrome_options.add_argument('headless')
-    chrome_options.page_load_strategy = 'eager'
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
 
     search_url = "https://www.imooc.com/search/?type=course&words=" + keyword
     driver.get(search_url)
-    time.sleep(0.1)
+    time.sleep(0.3)
 
     try:
         click_place = driver.find_element(By.XPATH, "/html/body/div[5]/div/div[3]/div[1]/div[1]/div[3]/div[1]/p")
@@ -42,7 +41,8 @@ def iMOOC(keyword, key):
             click_place = driver.find_element(By.XPATH, "/html/body/div[5]/div/div[3]/div[1]/div[4]/a[" + str(i) + "]")
             ActionChains(driver).move_to_element(click_place).click(click_place).perform()
         except Exception:
-            continue
+            if i != 3:
+                continue
         time.sleep(0.1)
         
         html = driver.page_source
@@ -114,7 +114,6 @@ def iMOOC(keyword, key):
 
     if len(url_list) == 0:
         print("No results")
-        exit()
     
     return url_list
 

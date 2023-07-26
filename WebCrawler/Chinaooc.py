@@ -34,9 +34,13 @@ def Chinaooc(keyword, key):
     driver.get(search_url)
     time.sleep(0.3)
     
-    click_place = driver.find_element(By.XPATH, "/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/button")
-    ActionChains(driver).move_to_element(click_place).click(click_place).perform()
-    time.sleep(0.1)
+    try:
+        click_place = driver.find_element(By.XPATH, "/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/button")
+        ActionChains(driver).move_to_element(click_place).click(click_place).perform()
+        time.sleep(0.1)
+    except Exception:
+        print("No results")
+        return url_list
 
     print("start scrapping")
     
@@ -69,8 +73,7 @@ def Chinaooc(keyword, key):
         soup_class = BeautifulSoup(html_class, "lxml")
 
         time_start = soup_class.find_all(class_ = "table-td")[4].get_text().strip()[:10]
-        
-        print(time_start)
+
         url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
         driver.close()
         driver.switch_to.window(driver.window_handles[0])
@@ -93,7 +96,6 @@ def Chinaooc(keyword, key):
 
     if len(url_list) == 0:
         print("No results")
-        exit()
 
     return url_list
 
