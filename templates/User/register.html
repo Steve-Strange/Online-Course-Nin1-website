@@ -1,132 +1,247 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>注册</title>
-</head>
-<body>
-    <h1>注册</h1>
-    <form action="{% url 'User:register' %}" method="post">
-        {% csrf_token %} 
-        <div>
-            <label for="username">用户名</label>
-            {{form.username}}<span>{{form.username.errors.0}}</span>
-        </div>
-        <div>
-            <label for="password1">密码</label>
-            {{form.password1}}<span>{{form.password1.errors.0}}</span>
-        </div>
-        <div>
-            <label for="password2">再次输入密码</label>
-            {{form.password2}}<span>{{form.password2.errors.0}}</span>
-        </div>
-        <input type="submit">
-    </form>
-
-</body>
-</html> -->
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Probably the most complete UI kit out there. Multiple functionalities and controls added,  extended color palette and beautiful typography, designed as its own extended version of Bootstrap at  the highest level of quality.                             ">
-    <meta name="author" content="Webpixels">
-    <title>Rigister</title>
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
-    <!-- Theme CSS -->
-    <link type="text/css" href="/static/boomerang/assets/css/theme.css" rel="stylesheet">
-    <!-- Demo CSS - No need to use these in your project -->
-    <link type="text/css" href="/static/boomerang/assets/css/demo.css" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-transparent navbar-dark bg-dark py-4">
-      <div class="container">
-        <h5 class="navbar-brand"><strong>Boomerang</strong> UI Kit</h5> <!--**在这里修改左上角标题 -->
-      </div>
-    </nav>
-    <main class="main">
-      <section class="py-xl bg-cover bg-size--cover" style="background-image: url('/static/boomerang/assets/images/backgrounds/img-1.jpg')"> <!--在这修改背景图片.-->
-        <span class="mask bg-primary alpha-6"></span>
-        <div class="container d-flex align-items-center no-padding">
-          <div class="col">
-            <div class="row justify-content-center">
-              <div class="col-lg-4">
-                <div class="card bg-primary text-white">
-                  <div class="card-body">
-                    <button type="button" class="btn btn-primary btn-nobg btn-zoom--hover mb-5">
-                      <span class="btn-inner--icon"><i class="fas fa-arrow-left"></i></span>
-                    </button>
-                    <span class="clearfix"></span>
-                    <img src="/static/boomerang/assets/images/brand/icon.png" style="width: 50px;"> <!--在这里修改上面的图标!-->
-                    <h4 class="heading h3 text-white pt-3 pb-5">注册</h4>
-                    <form class="form-primary" action="{% url 'User:register' %}" method="post">
-                      {% csrf_token %}
-                      {% if form.errors %} <!--有错-->
-                      <div class="form-group">
-                        <input type="text" class="form-control is-invalid" id="input-username" name="username" placeholder="{{form.username.errors.0}}">
-                      </div>
-                      <div class="form-group">
-                        <input type="password" class="form-control is-invalid" id="input-password1" name="password1" placeholder="{{form.password1.errors.0}}">
-                      </div>
-                      <div class="form-group">
-                        <input type="password" class="form-control is-invalid" id="input-password2" name="password2" placeholder="{{form.password2.errors.0}}">
-                      </div>
-                      {% else %}
-                      <div class="form-group">
-                        <input type="text" class="form-control" id="input-username" name="username" placeholder="请输入用户名">
-                      </div>
-                      <div class="form-group">
-                        <input type="password" class="form-control" id="input-password" name="password1" placeholder="请输入密码">
-                      </div>
-                      <div class="form-group">
-                        <input type="password" class="form-control" id="input-password" name="password2" placeholder="请再次输入密码">
-                      </div>
-                      {% endif %}
-                      <div class="text-right mt-4"><a href="{% url 'User:login' %}" class="text-white">返回</a></div>
-                      <button type="submit" class="btn btn-block btn-lg bg-white mt-4">注册</button>
-                    </form>
-                  </div>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description"
+              content="Probably the most complete UI kit out there. Multiple functionalities and controls added,  extended color palette and beautiful typography, designed as its own extended version of Bootstrap at  the highest level of quality.                             ">
+        <meta name="author" content="Webpixels">
+
+        <title>Course Recommendation System</title>
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+        <!-- Theme CSS -->
+        <link type="text/css" href="/static/boomerang/assets/css/theme.css" rel="stylesheet">
+        <!-- Demo CSS - No need to use these in your project -->
+        <link type="text/css" href="/static/boomerang/assets/css/demo.css" rel="stylesheet">
+        <link type="text/css" href="/static/media/plugins/bootstrap-5.3.0-dist/css/bootstrap.css" rel="stylesheet">
+        <link type="text/css" href="static/media/plugins/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+        <style>
+    body {
+      background-color: #000066;
+      color: #fff;
+    }
+    .theme-dark {
+        background-color:dark;
+        text-color:white;
+        font-color:white;
+    }
+    .theme-white {
+        background-color:white;
+        text-color:dark;
+        font-color:dark;
+    }
+    .button-style {
+        font-size:10px;
+        width:20px;
+        height:15px;
+    }
+    a {
+        text-decoration:none;
+    }
+    a:hover {
+        text-decoration:none;
+    }
+    .nav-link-custom {
+        font-family: "Your Font", sans-serif;
+        font-size: inherit;
+        /* 其他你想要的样式设置 */
+        text-decoration: none; /* 去掉超链接的下划线 */
+        color: inherit; /* 继承父元素的颜色 */
+    }
+    .fade-in {
+            animation: fadeInAnimation ease 8s;
+            animation-iteration-count: 1; /*设置动画播放次数*/
+            animation-fill-mode: forwards; /*设置样式以在动画不播放时应用元素。forward是设置动画结束后，使用元素的结束属性值*/
+    }
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0; /*设置不透明度*/
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+
+
+        </style>
+    </head>
+
+    <body>
+        <!-- 导航栏 -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand bg-dark" name="word" href="#" id="nav"><strong>Course Recommendation
+                    System</strong></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbar_1_dropdown_1" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Theme</a>
+                            <div class="dropdown-menu" style="margin-left:-32.5px;padding-left:32.5px"
+                                 aria-labelledby="navbar_1_dropdown_1">
+                                <div class="dropdown-item form-check">
+                                    <input class="form-check-input" type="radio" name="theme" id="theme-dark"
+                                           value="dark" checked>
+                                    <label class="form-check-label" for="theme-dark">Deep Theme</label>
+                                </div>
+                                <div class="dropdown-item form-check">
+                                    <input class="form-check-input" type="radio" name="theme" id="theme-light"
+                                           value="light">
+                                    <label class="form-check-label" for="theme-light">Light Theme</label>
+                                </div>
+                                <div class="dropdown-divider"></div>
+                                <span><a class="dropdown-item" href="#">More Theme</a></span>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Account Setting</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link javascript:void(0) nav-link-custom" href="#" onclick="goBottom()">About
+                                Us</a>
+                        </li>
+                    </ul>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="pt-5 pb-3 footer  footer-dark bg-tertiary">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-4">
-            <div class="pr-lg-5">
-              <h1 class="heading h6 text-uppercase font-weight-700 mb-3"><strong>Boomerang</strong> UI Kit</h1>
-              <p>添加简介</p>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <div class="d-flex align-items-center">
+        </nav>
+
+        <main class="main">
+            <section class="py-xl bg-cover bg-size--cover"
+                     style="background-image: url('/static/boomerang/assets/images/backgrounds/img-1.jpg')">
+                <!--在这修改背景图片.-->
+                <span class="mask bg-primary alpha-6"></span>
+                <div class="container d-flex align-items-center no-padding">
+                    <div class="col">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4" style="margin-top:-30px;">
+                                <div class="card bg-primary text-white" style="padding:40px;margin-top:-50px;opacity: 0.8;">
+                                    <div class="card-body">
+                                        <button type="button" class="btn btn-primary btn-nobg btn-zoom--hover mb-5">
+                                            <span class="btn-inner--icon"><i class="fas fa-arrow-left"></i></span>
+                                        </button>
+                                        <span class="clearfix"></span>
+                                        <img src="/static/media/image/buaa_logo_withoutbg.png" style="width: 222px;margin-top:-120px;"/>
+                                        <!--在这里修改上面的图标!-->
+                                        <h4 class="heading h3 text-white pt-3 pb-5">注册</h4>
+                                        <form class="form-primary" action="{% url 'User:register' %}" method="post">
+                                            {% csrf_token %}
+                                            {% if form.errors %} <!--有错-->
+                                            <div class="form-group">
+                                                <input type="text" class="form-control is-invalid" id="input-username"
+                                                       name="username" placeholder="{{form.username.errors.0}}">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control is-invalid"
+                                                       id="input-password1" name="password1"
+                                                       placeholder="{{form.password1.errors.0}}">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control is-invalid"
+                                                       id="input-password2" name="password2"
+                                                       placeholder="{{form.password2.errors.0}}">
+                                            </div>
+                                            {% else %}
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="input-username"
+                                                       name="username" placeholder="请输入用户名">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" id="input-password"
+                                                       name="password1" placeholder="请输入密码">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control" id="input-password"
+                                                       name="password2" placeholder="请再次输入密码">
+                                            </div>
+                                            {% endif %}
+                                            <div class="text-right mt-4"><a href="{% url 'User:login' %}"
+                                                                            class="text-white">返回</a></div>
+                                            <button type="submit" class="btn btn-block btn-lg bg-white mt-4">注册
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <footer class="pt-5 pb-3 footer  footer-dark bg-tertiary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="pr-lg-5">
+                            <h1 class="heading h6 text-uppercase font-weight-700 mb-3">python暑期课程<br>课程推荐系统
+                            </h1>
+                            <p>网站简介：<br>当代用户们渴望更加便捷和个性化的学习体验，这也是我们的网课推荐网站的关键特点。我们热衷于帮助用户们找到最适合他们的课程，通过根据用户提供的知识图谱和选课要素权重，为他们量身定制个性化的课程清单。<br>
+                                我们的网站设计简洁清晰，页面布局合理，使用户们能够轻松地浏览和使用。我们对颜色和图标的选择也考虑到了年轻用户的兴趣和喜好，给人一种温暖而有活力的感觉。<br>
+                                我们的网站拥有一个智能算法，通过分析用户的知识图谱和选课要素权重，能够推荐出最符合用户需求和兴趣的课程。我们也提供了丰富多样的课程种类，以满足不同用户的学习需求和兴趣爱好。<br>
+                                除了个性化推荐功能，我们的网站还提供了课程评价和讨论功能，让用户们可以与其他用户交流和分享学习经验。这种社交性质的功能使得用户们能够更好地互相激励和支持，创造出更积极的学习氛围。<br>
+                                我们相信，通过我们个性化设计的网课推荐网站，用户们将能够轻松找到适合自己的课程，实现个人学习目标，并且享受到更好的学习体验。无论是通过我们的智能算法或者与其他用户的互动，我们都致力于为用户们提供最优质的在线学习平台。<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex align-items-center">
           <span class="">
             2023夏python大作业  署名
           </span>
-        </div>
-      </div>
-    </footer>
-    <!-- Core -->
-    <script src="/static/boomerang/assets/vendor/jquery/jquery.min.js"></script>
-    <script src="/static/boomerang/assets/vendor/popper/popper.min.js"></script>
-    <script src="/static/boomerang/assets/js/bootstrap/bootstrap.min.js"></script>
-    <!-- FontAwesome 5 -->
-    <script src="/static/boomerang/assets/vendor/fontawesome/js/fontawesome-all.min.js" defer></script>
-    <!-- Page plugins -->
-    <script src="/static/boomerang/assets/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
-    <script src="/static/boomerang/assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
-    <script src="/static/boomerang/assets/vendor/input-mask/input-mask.min.js"></script>
-    <script src="/static/boomerang/assets/vendor/nouislider/js/nouislider.min.js"></script>
-    <script src="/static/boomerang/assets/vendor/textarea-autosize/textarea-autosize.min.js"></script>
-    <!-- Theme JS -->
-    <script src="/static/boomerang/assets/js/theme.js"></script>
-  </body>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Core -->
+        <script src="static/boomerang/assets/vendor/jquery/jquery.min.js"></script>
+        <script src="static/boomerang/assets/vendor/popper/popper.min.js"></script>
+        <script src="static/boomerang/assets/js/bootstrap/bootstrap.min.js"></script>
+        <script src="static/media/plugins/bootstrap-5.3.0-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="static/media/js/jquery.js"></script>
+        <!--↑重复引入？-->
+        <!-- FontAwesome 5 -->
+        <script src="static/boomerang/assets/vendor/fontawesome/js/fontawesome-all.min.js" defer></script>
+        <!-- Page plugins -->
+        <script src="static/boomerang/assets/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+        <script src="static/boomerang/assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+        <script src="static/boomerang/assets/vendor/input-mask/input-mask.min.js"></script>
+        <script src="static/boomerang/assets/vendor/nouislider/js/nouislider.min.js"></script>
+        <script src="static/boomerang/assets/vendor/textarea-autosize/textarea-autosize.min.js"></script>
+        <!-- Theme JS -->
+        <script src="static/boomerang/assets/js/theme.js"></script>
+
+        <script>
+            // 主题设置的JavaScript代码
+            const themeDarkRadio = document.getElementById('theme-dark');
+            const themeLightRadio = document.getElementById('theme-light');
+
+            themeDarkRadio.addEventListener('change', () => {
+              $(".main #background span").removeClass('bg-default');
+              $(".main #background span").addClass('bg-primary');
+            });
+
+            themeLightRadio.addEventListener('change', () => {
+              $(".main #background span").removeClass('bg-primary');
+              $(".main #background span").addClass('bg-default');
+            });
+
+            function goBottom() {
+            window.scrollTo(0, document.documentElement.scrollHeight-document.documentElement.clientHeight);
+            }
+
+
+        </script>
+    </body>
+
 </html>

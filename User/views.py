@@ -10,6 +10,21 @@ from Utils.find import find_all_graphs, find_all_tags
 from Neo4j.graph import Graph
 
 # Create your views here.
+
+class main_page(View):
+
+    def get(self, request: HttpRequest):
+        return render(request, "User/main.html", )
+
+    def post(self, request: HttpRequest):
+        return render(request, "User/login.html", )
+        # fm = LoginForm()
+        # if "login" in request.POST:
+        #     return render(request, "User/login.html", {'form':fm, 'pwd_err':""})
+        # elif "register" in request.POST:
+        #     return render(request, "User/register.html", {'form': fm, 'pwd_err': ""})
+
+
 class Login(View):
     def get(self, request : HttpRequest):
         fm = LoginForm()

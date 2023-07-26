@@ -30,7 +30,7 @@ def XTol(keyword, key):
             
             search_url = "https://www.xuetangx.com/search?query=" + keyword + "&classify=&type=&status=2&ss=manual_search&page=" + str(i)
             driver.get(search_url)
-            time.sleep(0.5)
+            time.sleep(0.3)
             html = driver.page_source
             soup = BeautifulSoup(html, "lxml")
             
@@ -39,16 +39,15 @@ def XTol(keyword, key):
             click_places = driver.find_elements(By.CLASS_NAME, "resultListCon")
             click_place = click_places[j]
             ActionChains(driver).move_to_element(click_place).click().perform()
-            time.sleep(1)
+            time.sleep(0.6)
             href = driver.current_url
             html_class = driver.page_source
             soup_class = BeautifulSoup(html_class, "lxml")
-            
             print(href)
             
             name = soup_class.find(class_="title f32 c_f").get_text()     
             detail = soup_class.find(class_="f14 c_6 lh23").get_text()
-            play_num = int(soup_class.find(class_="f16 fl").get_text().split(' ')[0])
+            play_num = int(soup_class.find(class_="entry-count").get_text().split(' ')[0][:-4])
             
             time_start = soup_class.find(class_="list list1").get_text().replace('\t', '').replace('\n', '').strip()[-10:]  
             
