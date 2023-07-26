@@ -104,5 +104,6 @@ def NetEase(keyword, key):
 
     return url_list
 
-final_list = NetEase(input(), input())
-print(final_list)
+if __name__ == "__main__":
+    final_list = NetEase(input(), input())
+    print(final_list)

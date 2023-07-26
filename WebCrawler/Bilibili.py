@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 
-def BiliBili(keyword, key):
+def Bilibili(keyword, key):
 
     href, name, cover, detail, play_num, comments_num, score, time_start, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
     
@@ -24,7 +24,7 @@ def BiliBili(keyword, key):
 
     js = "window.open('{}','_blank');"
     chrome_options = Options()
-    # chrome_options.add_argument('headless')
+    chrome_options.add_argument('headless')
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
 
@@ -69,7 +69,7 @@ def BiliBili(keyword, key):
             time_span = text[2]
         
         driver.execute_script(js.format(href))
-        time.sleep(0.3)
+        time.sleep(0.5)
         driver.switch_to.window(driver.window_handles[-1])
         html_class = driver.page_source
         soup_class = BeautifulSoup(html_class, "lxml")
@@ -100,5 +100,6 @@ def BiliBili(keyword, key):
 
     return url_list
 
-final_list = BiliBili(input(), input())
-print(final_list)
+if __name__ == "__main__":
+    final_list = Bilibili(input(), input())
+    print(final_list)

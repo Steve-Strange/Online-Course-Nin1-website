@@ -135,5 +135,6 @@ def CNMOOC(keyword, key):
 
     return url_list
 
-final_list = CNMOOC(input(), input())
-print(final_list)
+if __name__ == "__main__":
+    final_list = CNMOOC(input(), input())
+    print(final_list)

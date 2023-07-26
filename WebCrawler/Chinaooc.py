@@ -31,7 +31,7 @@ def Chinaooc(keyword, key):
 
     search_url = 'https://www.chinaooc.com.cn/search?keyword=' + keyword
     driver.get(search_url)
-    time.sleep(0.1)
+    time.sleep(0.3)
     
     click_place = driver.find_element(By.XPATH, "/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/button")
     ActionChains(driver).move_to_element(click_place).click(click_place).perform()
@@ -96,5 +96,6 @@ def Chinaooc(keyword, key):
 
     return url_list
 
-final_list = Chinaooc(input(), input())
-print(final_list)
+if __name__ == "__main__":
+    final_list = Chinaooc(input(), input())
+    print(final_list)
