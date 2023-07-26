@@ -1,3 +1,25 @@
+<!--
+  变量：
+  know, 当前KnowledgeBlock节点.
+  courseList, 课程列表，没想好是否包含所有来源，还是根据来源动态更新.
+  source, 字符串，当前页面的课程来源.
+  order, 按照那个东西排序.
+    name 名称,
+    score 评分,
+    viewer_num 播放量, 
+    comments_num 评论数, 
+    duration 时长,(长到短)
+    time_start 更新时间,
+
+  发送给后端的事件：
+  modifyTag, 刷新
+  modifyIntro, 刷新
+  modifyFavor, 不刷新
+  crawlCourse, 刷新
+  changeSource, 刷新
+  changeOrder, 刷新
+-->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,7 +27,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Probably the most complete UI kit out there. Multiple functionalities and controls added,  extended color palette and beautiful typography, designed as its own extended version of Bootstrap at  the highest level of quality.                             ">
     <meta name="author" content="Webpixels">
-    <title>Login</title>
+    <title>课程列表</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
     <!-- Theme CSS -->
@@ -33,108 +55,165 @@
   </head>
   <body>
         
-    <nav class="navbar navbar-expand-lg navbar-transparent navbar-dark bg-dark py-4">
+    <!-- <nav class="navbar navbar-expand-lg navbar-transparent navbar-dark bg-dark py-4">
       <div class="container">
-        <h5 class="navbar-brand"><strong>课程网站</strong> </h5> <!--**在这里修改左上角标题 -->
+        <h5 class="navbar-brand"><strong>课程网站</strong> </h5> 
       </div>
-    </nav>
+    </nav> -->
     <main class="main">
-      <section class="py-xl bg-cover bg-size--cover" style="background-image: url('/static/boomerang/assets/images/backgrounds/img-1.jpg')"> <!--在这修改背景图片.-->
-        <span class="mask bg-primary alpha-6"></span>
-        
-        
-      <div class="custom-table">
-      <table class="table table-hover align-items-center">
-        <thead>
-            <tr>
-               
-                <th scope="col">Node</th>
-                <th scope="col">Title</th>
-                <!-- <th scope="col">Introduction</th> -->
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="bg-white" scope="row">
-               
-                <td>
-                    <div class="media align-items-center">  
-                        <div class="media-body">
-                            <h6 class="h5 font-weight-normal mb-0">Node 1dsgfsdgfdsgsdgdsf</h6>
-                            
-                        </div>
-                    </div>
-                </td>
-                <td>titlsgsdfdsfdsfsdfsdfsdfsdfdshfdsgfdsgfdsgfdsgfdgdfse</td>
-                <!-- <td>introduction</td> -->
-            </tr>     
-        </tbody>
-      </table>
-      <table class="table table-hover table-cards align-items-center">
-        <thead>
-            <tr>
-                <th scope="col">Introduction</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="bg-white">
-                <th scope="row">
-                    <div class="media align-items-center">
-                        <div class="media-body">
-                            <h6 class="h5 font-weight-normal mb-0">1231231232132131</h6>
-                            
-                        </div>
-                    </div>
-                </th>
-             
-            </tr>
-            <tr class="table-divider"></tr>
-        </tbody>
-      </table>
-      </div>
-      
+      <section class="py-xl bg-cover bg-size--cover" style="background-image: url('/static/boomerang/assets/images/backgrounds/img-1.jpg')"> <!--在这修改背景图片. -->
+        <div class="page-header">
+          <h2>&emsp;&emsp; {{know.name}} <small>课程列表</small></h2>
+          <hr>
+          <div onclick="modifyIntro()">
+            <p style="color: black;">&emsp;&emsp;&emsp;&emsp;&emsp;<small>简介: </small><strong>{{know.introduction}}</strong></p>
+          </div>
+          <hr>
+          <div onclick="modifyTag()">
+            &emsp;&emsp;&emsp;&emsp;&emsp;
+            <span class="font-weight-normal text-muted"><i class="fas fa-bookmark"></i></span>  
+            <p style="color: black;">&emsp;&emsp;&emsp;&emsp;&emsp; <strong>{{know.tag}}</strong></p>
+          </div>
+        </div>
+        <!-- <span class="mask bg-secondary alpha-6"></span>-->
 
         <div class="container">
           <div class="row">
-              <h1 class="custom-heading">课程列表</h1>
+              
               <div class="col">
+                <h5 style="color:white;"><small>来源: </small>{{source}};&emsp; <small>排序: </small> {{order}}</h5>  <!--直接在这里修改查询的状态.-->
                   <div style="display: grid; place-items: center;">
                       <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-secondary">w1</button>
-                          <button type="button" class="btn btn-secondary">w2</button>
-                          <button type="button" class="btn btn-secondary">w3</button>
-                          <button type="button" class="btn btn-secondary">w4</button>
-                          <button type="button" class="btn btn-secondary">w5</button>
-                          <button type="button" class="btn btn-secondary">w6</button>
-                          <button type="button" class="btn btn-secondary">w7</button>
+                          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="来源:BiliBili" onclick="changeSource('BiliBili')">BiliBili</button>
+                          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="来源:国家高等教育智慧教育平台" onclick="changeSource('Chinaooc')">Chinaooc</button>
+                          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="来源:中国大学MOOC" onclick="changeSource('CNMOOC')">CNMOOC</button>
+                          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="来源:好大学在线" onclick="changeSource('HDXol')">HDXol</button>
+                          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="来源:爱课程" onclick="changeSource('iCourse')">iCourse</button>
+                          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="来源:慕课网" onclick="changeSource('iMOOC')">iMOOC</button>
+                          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="来源:网易公开课" onclick="changeSource('NetEase')">NetEase</button>
+                          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="来源:学堂在线" onclick="changeSource('XTol')">XTol</button>
+                          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="收藏" onclick="changeSource('Favor')">Favor</button>
                       </div>
                   </div>
               </div>
   
-             
-              <div class="col-md-2">
-                  <select class="selectpicker" title="排序方法" data-live-search="false" data-live-search-placeholder="查找 ...">
-                      <option>默认</option>
-                      <option>方法一</option>
-                      <option>方法二</option>
-                      <option>方法三</option>
-                      <option>方法四</option>
-                      <option>方法五</option>
+              <!--TODO: 改成按钮式下拉菜单-->
+              <!--不知道为什么，html(html)之后第一次会失效...-->
+              <!-- <div class="col-md-2">
+                  <select class="selectpicker" title="排序方法" data-live-search="false" data-live-search-placeholder="查找 ..." onchange="changeOrder(this.value)">
+                      <option>名称</option>
+                      <option>评分</option>
+                      <option>播放量</option>
+                      <option>评论数</option>
+                      <option>时长</option>
+                      <option>更新时间</option>
                   </select>
+              </div> -->
+              <div class="dropdown">
+                <button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    排序方法
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#" onclick="changeOrder('名称')">名称</a>
+                    <a class="dropdown-item" href="#" onclick="changeOrder('评分')">评分</a>
+                    <a class="dropdown-item" href="#" onclick="changeOrder('播放量')">播放量</a>
+                    <a class="dropdown-item" href="#" onclick="changeOrder('评论数')">评论数</a>
+                    <a class="dropdown-item" href="#" onclick="changeOrder('时长')">时长</a>
+                    <a class="dropdown-item" href="#" onclick="changeOrder('更新时间')">更新时间</a>
+                </div>
               </div>
           </div>
       </div>
 
-      
-        
-        <div class="container">
-          <!-- <h1 class="custom-heading">课程列表</h1> -->
-          <ul class="list-group" id="courseList">
-  
-          </ul>
-        </div>
+      <!--课程列表.-->
+      <table class="table table-cards align-items-center">
+        <thead>
+            <tr class="bg-white">
+                <th scope="col">课程名</th>
+                <th scope="col">简介</th>
+                <th scope="col">链接</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for course in courseList %}
+            <tr class="bg-white">
+              <th scope="row">
+                  <div class="media align-items-center">
+                      <img src="{{course.cover}}" width="100" height="80">
+                      <div class="media-body">
+                          <h5 class="h5 font-weight-normal mb-0">&emsp; {{course.name}} &emsp;<small>{{course.score}}</small></h5>
+                          <span class="font-weight-normal text-muted">
+                            &emsp;
+                            <i class="fas fa-eye"></i> {{course.viewer_num}}
+                          </span>
+                          <br>
+                          <span class="font-weight-normal text-muted">
+                            &emsp; <i class="fas fa-comment"></i> {{course.comments_num}}
+                          </span>  
+                          <br>
+                          <div>
+                            <span class="font-weight-normal text-muted">
+                              &emsp;
+                              <i class="bi bi-heart-fill" {% if course.favor %} style="color: red;" {% endif %}  onclick="function changeColor(){
+                                if(this.style.color != 'red'){
+                                  this.style.color = 'red'
+                                }
+                                else{
+                                  this.style.color = '#adb5bd';
+                                }
+                                $.ajax({
+                                  cache: false,
+                                  url: window.location.href,
+                                  type: 'POST',
+                                  headers: { 'X-CSRFTOKEN': `${token}` },
+                                  dataType: 'text', //没有用.
+                                  data:{
+                                      'submitType': 'modifyFavor',
+                                      'uid': '{{course.uid}}',
+                                  },
+                                  error: function (xhr, status, error) {
+                                      $('#onCrawling').modal('hide');
+                                  }
+                                });
+                              }"></i>
+                              <!--先不给course加tag了..-->
+                            </span>
+                          </div>  
+                      </div>
+                  </div>
+              </th>
+              <td width="55%">{{course.introduction}}</td>
+              <td width="15%">
+                <button type="button" class="btn btn-primary btn-animated btn-animated-y" onclick="jumpToCourse('{{course.web}}')">
+                    <span class="btn-inner--hidden">Go!</span>
+                    <span class="btn-inner--visible"><i class="fas fa-link"></i></span>
+                </button>
+              </td>
+            </tr>
+            <tr class="table-divider"></tr>
+            {% empty %}
+            <tr class="bg-white">
+              <td width="25%"><h5>暂无课程</h5></td>
+              <td width="55%">
+                {% if source != "Favor" %}
+                <button type="button" class="btn btn-primary btn-animated btn-animated-y" onclick="crawlCourse()">
+                  <span class="btn-inner--hidden">Start!</span>
+                  <span class="btn-inner--visible"><h5>立即获取课程</h5></span>
+                </button>
+                {% else %}
+                <h5>暂无课程</h5>
+                {% endif %}
+              </td>
+              <td width="20%"><h6>暂无课程</h6></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
         
       </section>
     </main>
+
+    <!--下方的黑框.-->
     <footer class="pt-5 pb-3 footer  footer-dark bg-tertiary">
       <div class="container">
         <div class="row">
@@ -154,56 +233,235 @@
       </div>
     </footer>
 
+
+    <!--模态框-->
+    <!-- modal - modify intro -->
+    <form class="form"  method="post"> <!--缺省action, 交给自己-->
+      {% csrf_token %}
+      <div class="modal fade" id="modifyIntro" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modifyIntroLabel" aria-hidden="true">
+          <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+              <h5 class="modal-title" id="modifyIntroLabel">修改简介</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+              </div>
+              <div class="modal-body">
+                  <input type="text" name="source" value="{{source}}" hidden>
+                  <input type="text" name="order" value="{{order}}" hidden>
+                  <div class="form-group">
+                      <label>简介</label>
+                      <textarea class="form-control" id="knowledge_introduction" name="introduction" rows="4">{{know.introduction}}
+                      </textarea>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                  <button type="submit" class="btn btn-primary" name="submitType" value="modifyIntro">提交</button>
+                  <!--submit不能 data-dismiss! 否则表单交不出去..-->
+              </div>
+          </div>
+          </div>
+      </div>
+    </form>
+
+    <!--修改tag的模态框.-->
+    <form class="form"  method="post"> <!--缺省action, 交给自己-->
+      {% csrf_token %}
+      <div class="modal fade" id="modifyTag" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modifyTagLabel" aria-hidden="true">
+          <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+              <h5 class="modal-title" id="modifyTagLabel">Add Notes</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+              </div>
+              <div class="modal-body">
+                  <input type="text" name="source" value="{{source}}" hidden>
+                  <input type="text" name="order" value="{{order}}" hidden>
+                  <div class="form-group">
+                      <label>Notes</label>
+                      <textarea class="form-control" id="knowledge_introduction" name="tag" rows="4">{{know.tag}}
+                      </textarea>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                  <button type="submit" class="btn btn-primary" name="submitType" value="modifyTag">提交</button>
+                  <!--submit不能 data-dismiss! 否则表单交不出去..-->
+              </div>
+          </div>
+          </div>
+      </div>
+    </form>
+
+    <!--显示正在爬取-->
+    <div class="modal fade" id="onCrawling" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="onCrawling" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="modal_title_6">正在爬取</h5>
+              </div>
+              <div class="modal-body">
+                  <div class="py-3 text-center">
+                      <i class="fas fa-exclamation-circle fa-4x"></i>
+                      <h4 class="heading mt-4">正在爬取课程，请耐心等待...</h4>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+
+      <!--JQ获取到整个页面后，重新设置html，但是js脚本不会运行，所以获取之后就没有添加监听函数!-->
       <!-- 网站切换监听 --> 
-      <script>
+      <!-- <script>
         const buttons = document.querySelectorAll('.btn-secondary');
         buttons.forEach(button => {
             button.addEventListener('click', function(event) {
               const buttonText = event.target.textContent;
-              console.log('点击的按钮是:', buttonText);
+              // alert('点击的按钮是:' + buttonText);
+              // 修改来源.
+              $.ajax({
+                cache: false,
+                url: window.location.href,
+                type: "POST",
+                headers: { 'X-CSRFTOKEN': `${token}` },
+                dataType: "html", //没有用.
+                data:{
+                    "submitType": "changeSource",
+                    "source": buttonText,  //要修改为这个Source.
+                    "order": "{{order}}",
+                },
+                success: function (html) {
+                  $('body').html(html);
+                  //document.write(html);
+                },
+                error: function (xhr, status, error) {
+                  alert("切换来源失败");
+                }
+              });
             });
         });
-      </script>
+      </script> -->
     
       <!-- 排序方法监听 --> 
-      <script>
+      <!-- <script>
       const selectElement = document.querySelector('.selectpicker');
       selectElement.addEventListener('change', function(event) {
           const selectedValue = event.target.value;
-          console.log('选中的方法是：', selectedValue);
-          
+          // alert('选中的方法是：'+ selectedValue);
+          $.ajax({
+                cache: false,
+                url: window.location.href,
+                type: "POST",
+                headers: { 'X-CSRFTOKEN': `${token}` },
+                dataType: "html",
+                data:{
+                    "submitType": "changeOrder",
+                    "source": "{{source}}",  
+                    "order": selectedValue,  //要修改为这个顺序.
+                },
+                success: function html(html) {
+                  $('body').html(html);
+                },
+                error: function (xhr, status, error) {
+                  alert("切换排序方法失败");
+                }
+              });
       });
-      </script>
+      </script> -->
+
+      <!--各种回调函数-->
       <script>
-      //课程数组courses，每个元素包含name和url属性
-      const courses = [
-          { name: '课程1', url: 'http://baidu.com' },
-          { name: '课程2', url: 'http://hao123.com' },   
-          { name: '课程3', url: 'http://bilibili.com' },
-          { name: '课程3', url: 'http://bilibili.com' },
-          { name: '课程3', url: 'http://bilibili.com' },
-          { name: '课程3', url: 'http://bilibili.com' },
-          { name: '课程3', url: 'http://bilibili.com' },
-          { name: '课程3', url: 'http://bilibili.com' },
-          { name: '课程3', url: 'http://bilibili.com' },
-          { name: '课程33333333333', url: 'http://bilibili.com' },
-          // 添加更多课程...
-      ];
-      document.addEventListener('DOMContentLoaded', function() {          
-          const courseList = document.getElementById('courseList');
-          courses.forEach(function(course) {
-              const listItem = document.createElement('li');
-              listItem.className = 'list-group-item';
+        var token = "{{csrf_token}}";
 
-              const link = document.createElement('a');
-              link.href = course.url;
-              link.textContent = course.name;
+        // 切换来源.
+        function changeSource(newsrc) {
+          $.ajax({
+                cache: false,
+                url: window.location.href,
+                type: "POST",
+                headers: { 'X-CSRFTOKEN': `${token}` },
+                dataType: "html",
+                data:{
+                    "submitType": "changeSource",
+                    "source": newsrc,  //要修改为这个Source.
+                    "order": "{{order}}",
+                },
+                success: function (html) {
+                  $('body').html(html);
+                },
+                error: function (xhr, status, error) {
+                  alert("切换来源失败" + error);
+                }
+              });
+        }
 
-              listItem.appendChild(link);
-              courseList.appendChild(listItem);
+        function changeOrder(neworder) {
+          $.ajax({
+                cache: false,
+                url: window.location.href,
+                type: "POST",
+                headers: { 'X-CSRFTOKEN': `${token}` },
+                dataType: "html",
+                data:{
+                    "submitType": "changeOrder",
+                    "source": "{{source}}",  
+                    "order": neworder,  //要修改为这个顺序.
+                },
+                success: function html(html) {
+                  $('body').html(html);
+                },
+                error: function (xhr, status, error) {
+                  alert("切换排序方法失败" + error);
+                }
+              });
+        }
+
+        // 跳转到课程网页.
+        function jumpToCourse(url) {
+          window.open(url);
+        }
+
+        // 爬取课程.
+        function crawlCourse() {
+          const cururl = window.location.href;
+          $.ajax({
+            cache: false,
+            url: cururl,
+            type: "POST",
+            headers: { 'X-CSRFTOKEN': `${token}` },
+            dataType: "html",
+            data:{
+                "submitType": "crawlCourse",
+                "source": "{{source}}",
+                "order": "{{order}}",
+            },
+            success: function (html) {
+                $('body').html(html);
+            },
+            error: function (xhr, status, error) {
+                $('#onCrawling').modal("hide");
+                alert('失败 '+error);
+            }
           });
-      });
-    </script>
+          $("#onCrawling").modal("show");
+        }
+
+        // 修改简介.
+        function modifyIntro() {
+          $('#modifyIntro').modal('show');          
+        }
+
+        // 修改tag
+        function modifyTag(){
+          $('#modifyTag').modal('show');
+        }
+      </script>
+    
     <!-- Core -->
     <script src="/static/boomerang/assets/vendor/jquery/jquery.min.js"></script>
     <script src="/static/boomerang/assets/vendor/popper/popper.min.js"></script>

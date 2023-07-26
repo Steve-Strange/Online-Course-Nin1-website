@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 
 def BiliBili(keyword, key):
 
+    print("开始爬取: BiliBili, " + keyword)
+
     href, name, cover, detail, play_num, comments_num, score, time_start, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
     
     def ToNum(s):

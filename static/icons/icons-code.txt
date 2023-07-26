@@ -1,0 +1,16 @@
+实心爱心：
+<i class="fa-solid fa-heart"></i>
+空心爱心：
+<i class="fa-regular fa-heart"></i>
+实心五角星：
+<i class="fa-solid fa-star"></i>
+空心五角星：
+<i class="fa-regular fa-star"></i>
+评论：
+<i class="fa-sharp fa-light fa-comment-lines"></i>
+实心书签：
+<i class="fa-solid fa-bookmark"></i>
+空心书签：
+<i class="fa-regular fa-bookmark"></i>
+竖起大拇指：
+<i class="fa-regular fa-thumbs-up"></i>

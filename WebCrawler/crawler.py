@@ -22,12 +22,16 @@ class INDEX:
 SourceList = ["BiliBili", "Chinaooc", "CNMOOC", "HDXol", "iCourse", "iMOOC", "NetEase", "XTol"]
 FuncList = [BiliBili, Chinaooc, CNMOOC, HDXol, iCourse, iMOOC, NetEase, XTol]
 
-def crawl_courses(keyword):
+def crawl_courses(keyword, src:str = None):
     '''
     爬取所有网站的课程.
     返回: dict{"source name": courseList...}
     '''
     ret = {}
-    for i in range(len(SourceList)):
-        ret[SourceList[i]] = FuncList[i](keyword, 1)
+    if src is None:
+        # 全部爬
+        for i in range(len(SourceList)):
+            ret[SourceList[i]] = FuncList[i](keyword, 1)
+    else:
+        ret[src] = FuncList[SourceList.index(src)](keyword, 1)
     return ret

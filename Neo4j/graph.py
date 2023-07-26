@@ -35,12 +35,16 @@ class Graph:
 
     # 给节点爬取课程.
     @staticmethod
-    def crawlCoursesForKnowledge(knowledge:KnowledgeBlock):
+    def crawlCoursesForKnowledge(knowledge:KnowledgeBlock, src:str = None):
         '''
         给knowledge节点爬取课程并且保存到数据库. 这里不做任何检查.
         '''
-        courses = crawl_courses(knowledge.name)
-        for src in SourceList:
+        courses = crawl_courses(knowledge.name, src)
+        if src is None:
+            srcarray = SourceList
+        else:
+            srcarray = [src]
+        for src in srcarray:
             cList = courses[src]
             for course in cList:
                 node = Course(name = course[INDEX.name], web = course[INDEX.web], source = src).save()
@@ -88,7 +92,7 @@ class Graph:
         return self.root.uid
     
     
-    def import_json(self,json_file:str):
+    def import_json(self,json_file:str, crawl:bool=False):
         '''
         如果格式有误，会抛出异常.
         导入json格式的数据库. 总的格式: {
@@ -171,7 +175,8 @@ class Graph:
                 self.knowledges[course["knowledge"]].rel_courses.connect(node)
                 if node.tag:
                     UserTags(tag_uid = node.uid, user = self.user).save()
-        else:
+        elif crawl:
+            # 源文件没有课程，并且需要爬取.
             # 给知识节点爬取课程.
             for know in self.knowledges:
                 Graph.crawlCoursesForKnowledge(know)
@@ -259,7 +264,7 @@ class Graph:
                 uid:"{}",
                 intro:"{}"
             }},\n
-            '''.format(know.name, know.uid, know.introduction)
+            '''.format(str(know.name).strip(), str(know.uid).strip(), str(know.introduction).strip())
             node_datas += node_str
             for rel_node in know.rel_knowledge.all():
                 edge_str = \
@@ -268,7 +273,7 @@ class Graph:
                     source:"{}",
                     target:"{}"
                 }},\n
-                '''.format(know.name, rel_node.name)
+                '''.format(str(know.name).strip(), str(rel_node.name).strip())
                 edge_datas += edge_str
         
         node_datas += "]"
@@ -277,14 +282,15 @@ class Graph:
     
 
     @db.write_transaction
-    def create_node(self, name:str, introduction:str):
+    def create_node(self, name:str, introduction:str, crawl:bool = False):
         for know in self.knowledges:
             if know.name == name:
                 return know   # 有重名的就不创建新的了.
         newknow = KnowledgeBlock(name = name, introduction = introduction).save()
         self.root.rel_knowledge.connect(newknow)
         self.knowledges += [newknow]
-        Graph.crawlCoursesForKnowledge(newknow)
+        if crawl:  # 需要爬取.
+            Graph.crawlCoursesForKnowledge(newknow)
         return newknow
     
 
