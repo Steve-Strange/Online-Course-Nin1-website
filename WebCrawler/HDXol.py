@@ -13,17 +13,34 @@ def HDXol(keyword, key):
     href, name, cover, detail, play_num, comments_num, score, time_start, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
 
     chrome_options = Options()
-    chrome_options.add_argument('headless')
+    chrome_options.add_argument("--window-size=1920,1080")
+    chrome_options.add_argument("--disable-extensions")
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--disable-software-rasterizer")
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--ignore-certificate-errors')
+    chrome_options.add_argument('--allow-running-insecure-content')
+    chrome_options.add_argument("blink-settings=imagesEnabled=false")
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+    driver = webdriver.Chrome(options=chrome_options)
+    chrome_options.page_load_strategy = 'eager'
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
 
     search_url = 'https://www.cnmooc.org/portal/frontCourseIndex/course.mooc?k=' + keyword
     driver.get(search_url)
-    time.sleep(0.1)
+    time.sleep(0.5)
 
     print("start scrapping")
     
     for i in range(1, 5):
+        try:
+            click_place = driver.find_element(By.XPATH, "/html/body/div[3]/div[2]/div[2]/div/ul/li[" + str(i+2) + "]/a")
+            ActionChains(driver).move_to_element(click_place).click(click_place).perform()
+        except Exception:
+            continue
+        time.sleep(0.5)
         if(len(url_list) > 20):     # 最大数量
             break
         print("scrapping page " + str(i))
@@ -31,7 +48,7 @@ def HDXol(keyword, key):
         html = driver.page_source
         soup = BeautifulSoup(html, "lxml")
         video_elements = soup.find_all(class_="view-item")
-        time.sleep(0.5)
+        time.sleep(0.3)
         
         for element in video_elements:
             if(len(url_list) > 20):
@@ -45,8 +62,11 @@ def HDXol(keyword, key):
             
             name = element.find(class_ = "view-title substr").get_text().replace('\n', '').replace('\t', '')[:40].replace(' ','')
             
-            play_num = int(element.find(class_ = 'progressbar-text').get_text().split(' ')[0])
-            cover = element.find('img').get('src')
+            try:
+                play_num = int(element.find(class_ = 'progressbar-text').get_text().split(' ')[0])
+                cover = element.find('img').get('src')
+            except Exception:
+                continue
             
             header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36", 
             "Cookie": "your cookie"} 
@@ -54,36 +74,24 @@ def HDXol(keyword, key):
             if(href.find('https:') == -1):
                 href = "https:" + href
             
-            print(href)
-            
             res = requests.get(href, headers=header)
             res.encoding = res.apparent_encoding
             soup2 = BeautifulSoup(res.text, "lxml")
             time.sleep(0.1)
-            
-            detail = soup2.find(class_ = "para-row").get_text().strip()
-            class_info = soup2.find(class_ ="view-favor subFavorite").get_text().replace('\r', '').split('\n')
             try:
+                detail = soup2.find(class_ = "para-row").get_text().strip()
+            except Exception:
+                continue
+            try:
+                time.sleep(0.1)
                 time_start = soup2.find(class_ = "view-time").get_text().strip().replace('\t', '')
                 time_start = time_start[time_start.find('—') - 11 : time_start.find('—') -1]
             except Exception:
-                continue
-            
-            try:
-                comments_num = int(class_info[1][:-2])
-            except Exception:
-                continue
+                time_start = ""
+            print(href)
             
             url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
-            
-        try:
-            click_place = driver.find_element(By.CLASS_NAME, "page-next")
-            ActionChains(driver).move_to_element(click_place).click(click_place).perform()
-        except Exception:
-            continue
         
-        time.sleep(0.5)
-
     driver.quit()
     print("finish scrapping")
     
@@ -102,10 +110,9 @@ def HDXol(keyword, key):
 
     if len(url_list) == 0:
         print("No results")
-        exit()
     
     return url_list
 
-if __name__=="main":
+if __name__ == "__main__":
     final_list = HDXol(input(), input())
     print(final_list)

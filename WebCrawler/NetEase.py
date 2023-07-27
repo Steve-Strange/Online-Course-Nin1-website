@@ -25,7 +25,15 @@ def NetEase(keyword, key):
 
     js = "window.open('{}','_blank');"
     chrome_options = Options()
-    chrome_options.add_argument('headless')
+    chrome_options.add_argument("--window-size=1920,1080")
+    chrome_options.add_argument("--disable-extensions")
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--disable-software-rasterizer")
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--ignore-certificate-errors')
+    chrome_options.add_argument('--allow-running-insecure-content')
+    chrome_options.add_argument("blink-settings=imagesEnabled=false")
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
 
@@ -56,7 +64,6 @@ def NetEase(keyword, key):
         if(len(url_list) > 20):
             break
         href = "https://open.163.com" + element.find('a').get('href')
-        print(href)
         
         name = element.find(class_ = "subname").get_text()[:-5]
         cover = element.find('img').get('src')
@@ -70,14 +77,11 @@ def NetEase(keyword, key):
         html_class = driver.page_source
         soup_class = BeautifulSoup(html_class, "lxml")
         
-        
         try:
             comments_num = soup_class.find_all(class_ = "comment-container__title")[1].get_text().strip()[5:-1]
         except Exception:
-            driver.close()
-            driver.switch_to.window(driver.window_handles[0])
-            continue
-        
+            comments_num = int(0)
+        print(href)
         url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
         driver.close()
         driver.switch_to.window(driver.window_handles[0])
@@ -100,10 +104,9 @@ def NetEase(keyword, key):
 
     if len(url_list) == 0:
         print("No results")
-        exit()
 
     return url_list
 
-if __name__=="main":
+if __name__ == "__main__":
     final_list = NetEase(input(), input())
     print(final_list)

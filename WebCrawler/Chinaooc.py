@@ -25,18 +25,27 @@ def Chinaooc(keyword, key):
 
     js = "window.open('{}','_blank');"
     chrome_options = Options()
-    chrome_options.add_argument('headless')
+    chrome_options.add_argument("--disable-extensions")
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--disable-software-rasterizer")
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--ignore-certificate-errors')
+    chrome_options.add_argument('--allow-running-insecure-content')
+    chrome_options.add_argument("blink-settings=imagesEnabled=false")
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
 
     search_url = 'https://www.chinaooc.com.cn/search?keyword=' + keyword
     driver.get(search_url)
-    time.sleep(0.1)
+    time.sleep(0.8)
     
-    click_place = driver.find_element(By.XPATH, "/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/button")
-    ActionChains(driver).move_to_element(click_place).click(click_place).perform()
-    time.sleep(0.1)
-
+    try:
+        click_place = driver.find_element(By.XPATH, "/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/button")
+        ActionChains(driver).move_to_element(click_place).click(click_place).perform()
+        time.sleep(0.2)
+    except Exception:
+        a = 0
     print("start scrapping")
     
     html = driver.page_source
@@ -68,8 +77,7 @@ def Chinaooc(keyword, key):
         soup_class = BeautifulSoup(html_class, "lxml")
 
         time_start = soup_class.find_all(class_ = "table-td")[4].get_text().strip()[:10]
-        
-        print(time_start)
+
         url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
         driver.close()
         driver.switch_to.window(driver.window_handles[0])
@@ -92,10 +100,9 @@ def Chinaooc(keyword, key):
 
     if len(url_list) == 0:
         print("No results")
-        exit()
 
     return url_list
 
-if __name__=="main":
+if __name__ == "__main__":
     final_list = Chinaooc(input(), input())
     print(final_list)

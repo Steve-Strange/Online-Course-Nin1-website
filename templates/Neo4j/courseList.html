@@ -153,29 +153,12 @@
                           <br>
                           <div>
                             <span class="font-weight-normal text-muted">
-                              &emsp;
-                              <i class="bi bi-heart-fill" {% if course.favor %} style="color: red;" {% endif %}  onclick="function changeColor(){
-                                if(this.style.color != 'red'){
-                                  this.style.color = 'red'
-                                }
-                                else{
-                                  this.style.color = '#adb5bd';
-                                }
-                                $.ajax({
-                                  cache: false,
-                                  url: window.location.href,
-                                  type: 'POST',
-                                  headers: { 'X-CSRFTOKEN': `${token}` },
-                                  dataType: 'text', //没有用.
-                                  data:{
-                                      'submitType': 'modifyFavor',
-                                      'uid': '{{course.uid}}',
-                                  },
-                                  error: function (xhr, status, error) {
-                                      $('#onCrawling').modal('hide');
-                                  }
-                                });
-                              }"></i>
+                              {% if course.favor %}
+                              <!--filter: drop-shadow(1000px 0 0 red); transform: translate(-1000px);-->
+                              &emsp; <img src="/static/icons/heart-fill.svg" onclick="modifyFavor(this, '{{course.uid}}')" />
+                              {% else %}
+                              &emsp; <img src="/static/icons/heart.svg" onclick="modifyFavor(this, '{{course.uid}}')" />
+                              {% endif %}
                               <!--先不给course加tag了..-->
                             </span>
                           </div>  
@@ -401,6 +384,7 @@
         }
 
         function changeOrder(neworder) {
+          // <a>的回调函数似乎需要有返回值.
           $.ajax({
                 cache: false,
                 url: window.location.href,
@@ -419,6 +403,31 @@
                   alert("切换排序方法失败" + error);
                 }
               });
+        }
+
+        function modifyFavor(heart_icon, uid) {
+          if(heart_icon.src.search('/static/icons/heart-fill.svg') != -1){
+            // 现在要取消收藏的.
+            heart_icon.src = '/static/icons/heart.svg';
+          }
+          else{
+            heart_icon.src = '/static/icons/heart-fill.svg';
+          }
+          $.ajax({
+            cache: false,
+            url: window.location.href,
+            type: 'POST',
+            headers: { 'X-CSRFTOKEN': `${token}` },
+            dataType: 'text', //没有用.
+            data:{
+                'submitType': 'modifyFavor',
+                'uid': uid,
+            },
+            error: function (xhr, status, error) {
+                alert("收藏失败："+error);
+            }
+          });
+          return false;
         }
 
         // 跳转到课程网页.

@@ -13,7 +13,18 @@ def iCourse(keyword, key):
     href, name, cover, detail, play_num, comments_num, score, time_start, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
 
     chrome_options = Options()
-    chrome_options.add_argument('headless')
+    chrome_options.add_argument("--window-size=1920,1080")
+    chrome_options.add_argument("--disable-extensions")
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--disable-software-rasterizer")
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--ignore-certificate-errors')
+    chrome_options.add_argument('--allow-running-insecure-content')
+    chrome_options.add_argument("blink-settings=imagesEnabled=false")
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+    driver = webdriver.Chrome(options=chrome_options)
+    chrome_options.page_load_strategy = 'eager'
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
 
@@ -28,21 +39,23 @@ def iCourse(keyword, key):
     print("start scrapping")
 
     for i in range(1, 5):
-        if(len(url_list) > 20):     # 最大数量
+        if(len(url_list) >= 20):     # 最大数量
             break
         print("scrapping page " + str(i))
         
         html = driver.page_source
         soup = BeautifulSoup(html, "lxml")
         video_elements = soup.find_all(class_="icourse-item-modulebox")
-        time.sleep(0.1)
+        time.sleep(0.3)
         
         for element in video_elements:
-            if(len(url_list) > 20):
+            if(len(url_list) >= 20):
                 break
             url = element.find('a')
             
             href = url.get('href')
+            if(href.find('https:') == -1):
+                href = "https:" + href
             
             if(href.find("icourse163") != -1):      # 中国慕课的。。
                 continue;
@@ -51,15 +64,9 @@ def iCourse(keyword, key):
             
             text = element.get_text().split('\n')
             name = text[9]
-        
             
             header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36", 
             "Cookie": "your cookie"} 
-
-            if(href.find('https:') == -1):
-                href = "https:" + href
-            
-            print(href)
             
             res = requests.get(href, headers=header)
             res.encoding = res.apparent_encoding
@@ -76,7 +83,7 @@ def iCourse(keyword, key):
             comments_num = int(class_info[class_info.index('评论数:') + 1])
             time_span = class_info[class_info.index('课程学时:') + 1][:-2] + "小时"
             
-            
+            print(href)
             url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
         
         try:
@@ -89,10 +96,7 @@ def iCourse(keyword, key):
             continue
         
         time.sleep(0.1)
-
-    if len(url_list) == 0:
-        print("No results")
-        exit()
+    driver.quit()
 
     if key == "0":
         url_list.sort(key=lambda x: x[1], reverse=True)   # 名称排序
@@ -108,11 +112,10 @@ def iCourse(keyword, key):
         url_list.sort(key=lambda x: x[8], reverse=True) # 视频时长
 
     if len(url_list) == 0:
-        print("No results")
-        exit()
-
+        print("No results or all from CNMOOC")
+        
     return url_list
 
-if __name__=="main":
+if __name__ == "__main__":
     final_list = iCourse(input(), input())
     print(final_list)

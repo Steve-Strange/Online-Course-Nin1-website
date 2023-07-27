@@ -12,13 +12,23 @@ def CNMOOC(keyword, key):
 
     js = "window.open('{}','_blank');"
     chrome_options = Options()
-    chrome_options.add_argument('headless')
+    chrome_options.add_argument("--window-size=1920,1080")
+    chrome_options.add_argument("--disable-extensions")
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--disable-software-rasterizer")
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--ignore-certificate-errors')
+    chrome_options.add_argument('--allow-running-insecure-content')
+    chrome_options.add_argument("blink-settings=imagesEnabled=false")
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+    driver = webdriver.Chrome(options=chrome_options)
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
 
     search_url = "https://www.icourse163.org/search.htm?search=" + keyword
     driver.get(search_url)
-    time.sleep(0.1)
+    time.sleep(0.3)
     click_place = driver.find_element(By.XPATH, "/html/body/div[4]/div[2]/div[2]/div[2]/div/div[6]/div[1]/ul/li[2]")
     ActionChains(driver).move_to_element(click_place).click(click_place).perform()
     time.sleep(0.1)
@@ -51,9 +61,8 @@ def CNMOOC(keyword, key):
             url = element.find('a')
 
             href = 'https:' + url.get('href')
-            if href.find("kaoyan") != -1 or href.find("undefined") != -1:
+            if href.find("kaoyan") != -1 or href.find("undefined") != -1 or href.find("ke.study") != -1:
                 continue
-            
             name = url.get_text()
             price_element = element.find("span", class_="price")
             attendance_element = element.find("span", class_="hot")
@@ -77,12 +86,6 @@ def CNMOOC(keyword, key):
 
             detail = soup_class.find(class_ ="category-content j-cover-overflow").get_text().replace('\xa0','').strip()
             time_start = soup_class.find(class_ ="course-enroll-info_course-info_term-info_term-time").get_text().strip().split('\n')[1][0:11]
-            print(time_start)
-
-            if name.find(keyword) == -1 and detail.find(keyword) == -1:        # 筛选是否有关键词 （同义词问题）
-                driver.close()
-                driver.switch_to.window(driver.window_handles[0])
-                continue
             
             comments_element = soup_class.find(class_ = "ux-mooc-comment-course-comment_head")
 
@@ -96,16 +99,12 @@ def CNMOOC(keyword, key):
             try:
                 score = float(comments[0: 3])
             except Exception:
-                driver.close()
-                driver.switch_to.window(driver.window_handles[0])
-                continue
+                comments_num = float(0)
         
             try:
                 comments_num = int(comments[5: -4])
             except Exception:
-                driver.close()
-                driver.switch_to.window(driver.window_handles[0])
-                continue
+                comments_num = int(0)
             
             print(href)
             url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
@@ -131,11 +130,9 @@ def CNMOOC(keyword, key):
 
     if len(url_list) == 0:
         print("No results")
-        exit()
 
     return url_list
 
-
-if __name__=="main":
+if __name__ == "__main__":
     final_list = CNMOOC(input(), input())
     print(final_list)

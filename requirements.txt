@@ -5,3 +5,5 @@ requests
 lxml
 neomodel
 jsonschema
+bilibili_api
+asyncio
