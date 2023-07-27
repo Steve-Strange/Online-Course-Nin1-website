@@ -12,7 +12,7 @@ keyword = input()
 key = input()
 
 def main():
-    print(Bilibili(keyword, key))
+    print(Bilibili(keyword,key))
     print(Chinaooc(keyword, key))
     print(CNMOOC(keyword, key))
     print(HDXol(keyword, key))

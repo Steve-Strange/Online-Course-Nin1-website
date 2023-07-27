@@ -25,23 +25,27 @@ def Chinaooc(keyword, key):
 
     js = "window.open('{}','_blank');"
     chrome_options = Options()
-    chrome_options.add_argument('headless')
-    chrome_options.page_load_strategy = 'eager'
+    chrome_options.add_argument("--disable-extensions")
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--disable-software-rasterizer")
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--ignore-certificate-errors')
+    chrome_options.add_argument('--allow-running-insecure-content')
+    chrome_options.add_argument("blink-settings=imagesEnabled=false")
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
 
     search_url = 'https://www.chinaooc.com.cn/search?keyword=' + keyword
     driver.get(search_url)
-    time.sleep(0.3)
+    time.sleep(0.8)
     
     try:
         click_place = driver.find_element(By.XPATH, "/html/body/div/div/div/div[2]/div[2]/div/div[2]/div/div[3]/div[2]/button")
         ActionChains(driver).move_to_element(click_place).click(click_place).perform()
-        time.sleep(0.1)
+        time.sleep(0.2)
     except Exception:
-        print("No results")
-        return url_list
-
+        a = 0
     print("start scrapping")
     
     html = driver.page_source

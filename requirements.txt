@@ -4,3 +4,5 @@ Django
 requests
 lxml
 neomodel
+bilibili_api
+asyncio

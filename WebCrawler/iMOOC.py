@@ -29,7 +29,6 @@ def iMOOC(keyword, key):
         time.sleep(0.5)
     except Exception:
         print("No results")
-        exit()
 
     print("start scrapping")
 

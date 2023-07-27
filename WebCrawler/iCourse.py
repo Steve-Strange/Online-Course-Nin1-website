@@ -13,7 +13,17 @@ def iCourse(keyword, key):
     href, name, cover, detail, play_num, comments_num, score, time_start, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
 
     chrome_options = Options()
-    chrome_options.add_argument('headless')
+    chrome_options.add_argument("--window-size=1920,1080")
+    chrome_options.add_argument("--disable-extensions")
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-gpu")
+    chrome_options.add_argument("--disable-software-rasterizer")
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--ignore-certificate-errors')
+    chrome_options.add_argument('--allow-running-insecure-content')
+    chrome_options.add_argument("blink-settings=imagesEnabled=false")
+    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+    driver = webdriver.Chrome(options=chrome_options)
     chrome_options.page_load_strategy = 'eager'
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
@@ -47,8 +57,6 @@ def iCourse(keyword, key):
             if(href.find('https:') == -1):
                 href = "https:" + href
             
-            print(href)
-            
             if(href.find("icourse163") != -1):      # 中国慕课的。。
                 continue;
             
@@ -75,7 +83,7 @@ def iCourse(keyword, key):
             comments_num = int(class_info[class_info.index('评论数:') + 1])
             time_span = class_info[class_info.index('课程学时:') + 1][:-2] + "小时"
             
-            
+            print(href)
             url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
         
         try:
