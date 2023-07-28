@@ -102,3 +102,7 @@ def find_all_courses_in_knowledge(knowledge:KnowledgeBlock):
     找到一个知识点节点的所有课程节点，返回一个列表[Course]
     '''
     return knowledge.rel_courses.all()
+
+
+def find_all_favor_courses(user:UserProfile):
+    return user.userfavorites_set.all()

@@ -7,6 +7,7 @@
     //     name: 知识点名称
     //     uid: 知识点uid
     //     intro: 知识点introduction
+    //     tag: 知识点tag，显示为notes
     //     (暂时没有纳入课程)
     // }
     // edge的定义:
@@ -365,9 +366,9 @@
                 const node = x.data;
                 if(typeof(node.name)=="undefined"){
                     // 一定是边.
-                    return `${node.source} --> ${node.target}`
+                    return `${node.source} --> ${node.target}`;
                 }
-                return `<h5>${node.name}</h5><hr>介绍：${node.intro}`
+                return `<h5>${node.name}</h5><hr>介绍：${node.intro}<hr>note: ${node.tag}`;
             }
         },
         // 工具箱

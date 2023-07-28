@@ -262,9 +262,10 @@ class Graph:
             {{
                 name:"{}",
                 uid:"{}",
-                intro:"{}"
+                intro:"{}",
+                tag:"{}"
             }},\n
-            '''.format(str(know.name).strip(), str(know.uid).strip(), str(know.introduction).strip())
+            '''.format(str(know.name).strip(), str(know.uid).strip(), str(know.introduction).strip(), str(know.tag).strip())
             node_datas += node_str
             for rel_node in know.rel_knowledge.all():
                 edge_str = \

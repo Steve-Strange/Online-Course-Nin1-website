@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 from User.models import UserProfile
 from User.forms import LoginForm, MyUserCreationForm
-from Utils.find import find_all_graphs, find_all_tags
+from Utils.find import find_all_graphs, find_all_tags, find_all_favor_courses
 from Neo4j.graph import Graph
 
 # Create your views here.
@@ -100,11 +100,13 @@ class Homepage:
         thisuser = UserProfile.objects.get(id = request.user.id)
         tags = find_all_tags(thisuser)
         graphs = find_all_graphs(thisuser)
+        favors = find_all_favor_courses(thisuser)
         ctx = {
             'user': thisuser,
             'GraphTag_List': tags['GraphTags'],
             'KnowTag_List': tags['KnowTags'],
             'CourseTag_List': tags['CourseTags'],
             'Graph_List': graphs,
+            'FavorCourses_List': favors
         }
         return render(request, "User/homepage.html", ctx)
