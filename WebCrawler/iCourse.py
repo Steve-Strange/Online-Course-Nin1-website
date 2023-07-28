@@ -57,7 +57,7 @@ def iCourse(keyword, key):
             if(href.find('https:') == -1):
                 href = "https:" + href
             
-            if(href.find("icourse163") != -1):      # 中国慕课的。。
+            if(href.find("icourse163") != -1 or href.find("videoDetail") != -1):      # 中国慕课的。。
                 continue;
             
             cover = element.find('img').get('src')
