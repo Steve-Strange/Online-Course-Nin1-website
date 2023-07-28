@@ -7,33 +7,27 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
-import asyncio
-from bilibili_api import video
 
-async def Bilibili_async(keyword, key):
-
-    print("开始爬取: BiliBili, " + keyword)
+def Bilibili(keyword, key):
 
     href, name, cover, detail, play_num, comments_num, score, time_start, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
+    
+    def ToNum(s):
+        
+        if(s.find("亿") != -1):
+            s = int(float(s[0:len(s)-1]) * 100000000)
+        elif(s.find("万") != -1):
+            s = int(float(s[0:len(s)-1]) * 10000)
+        else:
+            s = int(s)
+
+        return s
 
     js = "window.open('{}','_blank');"
     chrome_options = Options()
-    chrome_options.add_argument("--window-size=1920,1080")
-    chrome_options.add_argument("--disable-extensions")
-    chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--disable-gpu")
-    chrome_options.add_argument("--disable-software-rasterizer")
-    chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--ignore-certificate-errors')
-    chrome_options.add_argument('--allow-running-insecure-content')
-    chrome_options.add_argument("blink-settings=imagesEnabled=false")
+    chrome_options.add_argument('headless')
     chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=chrome_options)
-    chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
-    driver = webdriver.Chrome(options=chrome_options)
-    driver.execute_cdp_cmd("Network.setBlockedURLs",{
-        "urls":["*.flv*","*.png","*.jpg*","*.jepg*","*.gif*"]
-    })
 
     search_url = 'https://search.bilibili.com/all?keyword=' + keyword
     driver.get(search_url)
@@ -50,40 +44,54 @@ async def Bilibili_async(keyword, key):
     video_elements = soup.find(class_ = "video i_wrapper search-all-list").find_all(class_ = "bili-video-card__wrap __scale-wrap" )
     time.sleep(0.1)
     # find_class = soup.find(attrs={'class':'item-1'})
-    
+
     url_list = []
 
     for element in video_elements:
-        if(len(url_list) > 20):
+        if(len(url_list) > 5):
             break
         url = element.find('a')
         
         href = "https:" + url.get('href')
+        print(href)
+        cover = "https:" + element.find('img').get('src')
         text = url.get_text(separator=' ').split(' ')
         if len(text[-1]) == 5:
             time_span = "00:" + text[-1]
         else:
             time_span = text[-1]
-            
-        time_start = element.find(class_ = "bili-video-card__info--date").get_text().strip()[2:]
-        if (time_start == "昨天"):
-            time_start = time.strftime("%Y-%m-%d", time.localtime(time.time() - 86400))
-        if (time_start.find("前") != -1):
-            continue
-        if len(time_start) <= 5:
-            time_start = "2023-" + time_start
         
-        v = video.Video(bvid = str(href.split('/')[-2]))
-        info = await v.get_info()
+        driver.execute_script(js.format(href))
+        time.sleep(0.5)
+        driver.switch_to.window(driver.window_handles[-1])
+        time.sleep(0.1)
+        driver.execute_script('window.scrollBy(0,1000)')
+        time.sleep(0.5)
+        html_class = driver.page_source
+        soup_class = BeautifulSoup(html_class, "lxml")
 
-        name = info['title']
-        cover = info['pic']
-        detail = info['desc']
-        play_num = info['stat']['view']
-        comments_num = info['stat']['reply']
+        wait_time = 2
+        while wait_time > 0:
+            try:
+                name = soup_class.find(class_ = "video-title").get_text().strip()
+                detail = soup_class.find(class_ = "desc-info-text").get_text().strip()
+                play_num = ToNum(soup_class.find(class_ = "view item").get_text().strip().replace("\n", ""))
+                comments_num = ToNum(soup_class.find(class_ = "total-reply").get_text())
+                time_start = soup_class.find(class_ = "pubdate-text").get_text().strip()
+                break
+            except Exception:
+                wait_time -= 0.1
+                time.sleep(0.1)
+                continue
         
-        print(href)
+        try:
+            detail = soup_class.find(class_ = "desc-info-text").get_text().replace('\n', '').replace('\r', '')
+        except Exception:
+            detail = ""
+
         url_list.append([href, name, cover, detail, play_num, comments_num, score, time_start, time_span])
+        driver.close()
+        driver.switch_to.window(driver.window_handles[0])
     driver.quit()
     
     print("finish scrapping")
@@ -106,10 +114,6 @@ async def Bilibili_async(keyword, key):
 
     return url_list
 
-def Bilibili(keyword, key):
-    return asyncio.get_event_loop().run_until_complete(Bilibili_async(keyword, key))
-
 if __name__ == "__main__":
     final_list = Bilibili(input(), input())
-    
     print(final_list)
