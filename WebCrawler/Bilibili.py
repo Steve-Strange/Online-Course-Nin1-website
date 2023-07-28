@@ -48,7 +48,7 @@ def Bilibili(keyword, key):
     url_list = []
 
     for element in video_elements:
-        if(len(url_list) > 5):
+        if(len(url_list) > 20):
             break
         url = element.find('a')
         
