@@ -3,6 +3,7 @@ from django.http import HttpRequest
 from django.views import View
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
 
 from User.models import UserProfile
 from User.forms import LoginForm, MyUserCreationForm
@@ -47,6 +48,11 @@ class Login(View):
                 path = request.GET.get('next') or '/home/'
                 # TODO: 
                 return redirect(path)
+            
+class Logout(View):
+    def get(self, request:HttpRequest):
+        logout(request)
+        return redirect('/login/')
             
 
 class Register(View):
@@ -98,6 +104,19 @@ class Homepage:
         Graph_List: list of GraphRoot instances.
         '''
         thisuser = UserProfile.objects.get(id = request.user.id)
+        if request.method == "POST":
+            t = request.POST.get("submitType")
+            if t == "modifyHeadProfile":
+                file = request.POST.get("pic")
+                filename = thisuser.username + "_profile.jpg"
+                p = "%s/image/%s"%(settings.MEDIA_ROOT, filename)
+                content = file.chunks()
+                with open(p, 'wb') as f:
+                    for i in content:
+                        f.write(i)
+                thisuser.profile_picture = 'image/%s'%(filename)
+                thisuser.save()
+
         tags = find_all_tags(thisuser)
         graphs = find_all_graphs(thisuser)
         favors = find_all_favor_courses(thisuser)

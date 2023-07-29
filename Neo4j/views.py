@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.http import HttpRequest, QueryDict, JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
+from django.views.decorators.clickjacking import xframe_options_exempt
 
 from Neo4j.models import TagNode, KnowledgeBlock, GraphRoot, Course
 from Neo4j.graph import Graph
@@ -15,6 +16,22 @@ from WebCrawler.crawler import crawl_courses, SourceList
 class KnowledgeGraph:
     @login_required
     def KnowledgegraphViewer(request:HttpRequest, uid:str):
+        if not Graph.validate(request.user, uid):
+            return redirect(reverse("User:home"))
+        graph_root = GraphRoot.nodes.get(uid = uid)
+        if request.method == "POST":
+            t = request.POST.get('submitType')
+            if t == 'modifyIntro':
+                graph_root.introduction = request.POST.get('introduction')
+                graph_root.save()
+            elif t == 'modifyTag':
+                modifyTag(request.user, graph_root, request.POST.get('tag'))
+
+        return render(request, "Neo4j/kgviewer.html", {'graph': graph_root})
+
+    @login_required
+    @xframe_options_exempt  # 允许跨站iframe请求.
+    def KnowledgegraphViewerBase(request:HttpRequest, uid:str):
         if not Graph.validate(request.user, uid):
             # 该用户没有所查询的这个图.
             # TODO: 这里可能给个message比较好.
@@ -61,7 +78,7 @@ class KnowledgeGraph:
             "node_datas":node_datas_str,
             "edge_datas":edge_datas_str,
         }
-        return render(request, "Neo4j/kgviewer.html", ctx)
+        return render(request, "Neo4j/kgbase.html", ctx)
     
 
     @login_required

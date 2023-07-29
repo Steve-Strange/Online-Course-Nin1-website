@@ -30,14 +30,125 @@
 </head>
 
 <body>
-<div id="main" style="width:1000px;height:800px"></div>
 
-<!--返回按键-->
-<a href="{% url 'User:home' %}">返回主页</a>
+<!-- 导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand bg-dark" name="word" href="#" id="nav"><strong>{{graph.graph_name}}</strong></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" href="#modifyIntro">简介</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" href="#modifyTag">Notes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'User:home' %}">返回主页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link javascript:void(0) nav-link-custom" href="#" onclick="goBottom()">About
+                        Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="main" style="background-size:cover;padding-top:25px; background: url(/static/media/image/snowmount3.jfif);">
+
+            <!-- <div id="main" style="width:100%;height:800px"></div> -->
+            <div id="data_img_1">
+                <iframe frameborder=0 src="{% url 'Neo4j:kgviewerbase' graph.uid %}" width="100%" height="800"></iframe>
+            </div>
+
+</main>
+
+<footer class="pt-5 pb-3 footer  footer-dark bg-tertiary">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="pr-lg-5">
+                    <h1 class="heading h6 text-uppercase font-weight-700 mb-3">python暑期课程<br>课程推荐系统
+                    </h1>
+                    <p>网站简介：<br>简介...<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex align-items-center">
+  <span class="">
+    2023夏python大作业  署名
+  </span>
+        </div>
+    </div>
+</footer>
+
+
+<!--modal 修改intro.-->
+<form class="form"  method="post"> <!--缺省action, 交给自己-->
+    {% csrf_token %}
+    <div class="modal fade" id="modifyIntro" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modifyIntroLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="modifyIntroLabel">简介</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>简介</label>
+                    <textarea class="form-control" id="knowledge_introduction" name="introduction" rows="4">{{graph.introduction}}</textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                <button type="submit" class="btn btn-primary" name="submitType" value="modifyIntro">确定</button>
+                <!--submit不能 data-dismiss! 否则表单交不出去..-->
+            </div>
+        </div>
+        </div>
+    </div>
+</form>
+
+<!--modal 修改notes(tag).-->
+<form class="form"  method="post"> <!--缺省action, 交给自己-->
+    {% csrf_token %}
+    <div class="modal fade" id="modifyTag" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modifyTagLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="modifyTagLabel">Notes</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>notes</label>
+                    <textarea class="form-control" id="knowledge_introduction" name="tag" rows="4">{{graph.tag}}</textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                <button type="submit" class="btn btn-primary" name="submitType" value="modifyTag">确定</button>
+                <!--submit不能 data-dismiss! 否则表单交不出去..-->
+            </div>
+        </div>
+        </div>
+    </div>
+</form>
 
 
 <!-- modal - add node -->
-<form class="form" action="{% url 'Neo4j:kgviewer' graph.uid %}" method="post">
+<!-- <form class="form" action="{% url 'Neo4j:kgviewer' graph.uid %}" method="post">
     {% csrf_token %}
     <div class="modal fade" id="addNode" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="addNodeLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -61,15 +172,15 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
                 <button type="submit" class="btn btn-primary" name="submitType" value="addNode">提交</button>
-                <!--submit不能 data-dismiss! -->
+                submit不能 data-dismiss!
             </div>
         </div>
         </div>
     </div>
-</form>
+</form> -->
 
 <!--modal - delete node. 询问是否确定删除-->
-<div class="modal modal-warning fade" id="deleteNode" tabindex="-1" role="dialog" aria-labelledby="deleteNode" aria-hidden="true">
+<!-- <div class="modal modal-warning fade" id="deleteNode" tabindex="-1" role="dialog" aria-labelledby="deleteNode" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -93,7 +204,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
 <!--获取cookie-->
@@ -111,7 +222,7 @@
 </script>
 
 <!--echarts脚本-->
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     // csrf token
     var token = "{{csrf_token}}";
     // TODO: 在这里执行一些回调函数的状态切换等.
@@ -366,7 +477,7 @@
                 const node = x.data;
                 if(typeof(node.name)=="undefined"){
                     // 一定是边.
-                    return `${node.source} --> ${node.target}`;
+                    return `${node.source} -> ${node.target}`;
                 }
                 return `<h5>${node.name}</h5><hr>介绍：${node.intro}<hr>note: ${node.tag}`;
             }
@@ -438,7 +549,7 @@
     };
     myChart.setOption(option);
     myChart.on('click', { dataType: 'node' }, clickNodeCallback);
-</script>
+</script> -->
 
 <!-- boomerang -->
 
