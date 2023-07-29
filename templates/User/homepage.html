@@ -109,6 +109,71 @@
                 z-index:1050;
             }
 
+            .avatar_my2 {
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              background-color: #ccc;
+              cursor: pointer;
+            }
+            .modal_my2 {
+              display: none;
+              position: fixed;
+              z-index: 1;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              overflow: auto;
+              background-color: rgba(0, 0, 0, 0.4);
+            }
+            .modal-content_my2 {
+              background-color: #fefefe;
+              margin: 15% auto;
+              padding: 20px;
+              border: 1px solid #888;
+              width: 80%;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+            .close_my2 {
+              color: #aaa;
+              float: right;
+              font-size: 28px;
+              font-weight: bold;
+              cursor: pointer;
+            }
+            .close_my2:hover,
+            .close_my2:focus {
+              color: black;
+              text-decoration: none;
+              cursor: pointer;
+            }
+            .modal-header_my2 {
+              padding-bottom: 10px;
+              border-bottom: 1px solid #ccc;
+            }
+            .modal-title_my2 {
+              margin: 0;
+            }
+            .modal-body_my2 {
+              padding: 20px 0;
+            }
+            .modal-footer_my2 {
+              text-align: right;
+              padding-top: 10px;
+              border-top: 1px solid #ccc;
+            }
+            .modal-footer_my2 button {
+              padding: 8px 12px;
+              background-color: #4CAF50;
+              color: white;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+            .modal-footer_my2 button:hover {
+              background-color: #45a049;
+            }
         </style>
     </head>
     <body>
@@ -232,7 +297,29 @@
                 <div class="dropdown" style="margin-bottom:20px;margin-left:25px;">
                     <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
                        id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img width="35px" height="35px" src="{{user.profile_picture.url}}" alt="">
+                        <div onclick="openModal_my2()">
+                            <img width="35px" height="35px" src="{{user.profile_picture.url}}" alt="头像">
+                        </div>
+                        <div id="myModal_my2" class="modal_my2">
+                            <div class="modal-content_my2">
+                                <div class="modal-header_my2">
+                                    <span class="close_my2" onclick="closeModal_my2()">&times;</span>
+                                    <h2 class="modal-title_my2">选择图片</h2>
+                                </div>
+                                <div class="modal-body_my2">
+                                    <form action="homepage" method="post" enctype="multipart/form-data">
+                                        <input type="hidden" name="submitType" value="modifyHeadProfile">
+                                        <!--modifHeadProfile?后端如何命名的-->
+                                        <input type="file" name="pic">
+                                        <br><br>
+                                        <input type="submit" value="提交">
+                                    </form>
+                                </div>
+                                <div class="modal-footer_my2">
+                                    <button onclick="closeModal_my2()">Close</button>
+                                </div>
+                            </div>
+                        </div>
                         <span style="margin-left:20px;"><strong>{{user.username}}</strong></span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
@@ -378,7 +465,13 @@
           }
         }
 
+        function openModal_my2() {
+          document.getElementById("myModal_my2").style.display = "block";
+        }
 
+        function closeModal_my2() {
+          document.getElementById("myModal_my2").style.display = "none";
+        }
 
 
         </script>
