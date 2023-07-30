@@ -67,7 +67,7 @@ class Graph:
                 knowledge.rel_courses.connect(node)
     
 
-    def __init__(self, user:UserProfile, root:GraphRoot | str = None) -> None:
+    def __init__(self, user:UserProfile, root: str = None) -> None:
         '''
         指定图的根，或者不指定表示空图，将要进行创建等操作.
         root 是根的uid或者GraphRoot对象.

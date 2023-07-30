@@ -64,18 +64,19 @@
 
 ## 二、已完成任务
 
-### 必做任务完成情况（3/3）
+### 必做任务完成情况（4/4）
 
-1. 使用Django完成网页前后端开发和UI设计
-2. 使用Python网络爬虫工具BeautifulSoup, requests, Selenium获取共八个网站的课程资源，将其导入neo4j知识图谱，视频可以根据六个维度的信息进行排序。
+1. 使用Python网络爬虫工具BeautifulSoup, requests, Selenium获取共八个网站的课程资源，将其导入neo4j知识图谱，视频可以根据六个维度的信息进行排序。
+2. 导入初始化 neo4j 知识图谱文件并进行可视化。另外，提供一种删除现有知识图谱节点的方法
 3. 用户界面设计简单美观，易于使用。
+4. 
 
 ### 选做任务完成情况（已完成数量/3）
 
 选做任务自行设计的部分，请标名自定义。
 
 1. 爬取额外三个网站的课程，包括[网易公开课](https://open.163.com/)，[国家高等教育智慧教育平台](https://www.chinaooc.com.cn/)以及[学堂在线](https://www.xuetangx.com/)。
-2. 为知识图谱实现 CRUD（创建、读取、更新、删除）操作和书签功能。
+2. 为知识图谱实现 CRUD（创建、读取、更新、删除）操作和收藏与书签功能。
 3. ...
 
 ## 三、总体设计方案
@@ -102,15 +103,13 @@
    - 初次打开默认用户名密码都是neo4j，之后会要求修改。
    - 新建一个叫 course-recom 的数据库。
    - 保持neo4j在后台运行。
-4. 静态文件
-   - 将根目录boomerang，移动到static文件夹下。
-5. Django项目
+4. Django项目
    - 新建一个course-recom/developer_sign.txt，第一行为自己neo4j的用户名，第二行为密码。
    - 在course-recom的文件夹处，打开命令行，运行 `python manage.py migrate`，创建用户数据库。
    - 再使用命令：`neomodel_install_labels Neo4j.py Neo4j.models --db bolt://用户名:密码@localhost:7687/course-recom`在neo4j数据库中创建节点和边的定义，注意用户名和密码改成个人注册所填的。
    - 运行`python manage.py runserver`，在本地打开我们的网页的服务器。
    - 访问 <localhost:8000> 进入首页。
-6. 开始使用：
+5. 开始使用：
    - 首先注册、登录账号。
    - 点击知识图谱中的节点，查看推荐的相关课程资源。
    - 根据需求查看其他功能，如删除知识图谱节点、添加书签等。
