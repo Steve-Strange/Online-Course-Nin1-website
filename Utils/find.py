@@ -105,4 +105,4 @@ def find_all_courses_in_knowledge(knowledge:KnowledgeBlock):
 
 
 def find_all_favor_courses(user:UserProfile):
-    return user.userfavorites_set.all()
+    return [Course.nodes.get(uid = i.course_uid) for i in user.userfavorites_set.all()]
