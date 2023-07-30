@@ -103,16 +103,15 @@
    - 新建一个叫 course-recom 的数据库。
    - 保持neo4j在后台运行。
 4. 静态文件
-   - 将根目录boomerang，移动到static文件夹下
+   - 将根目录boomerang，移动到static文件夹下。
 5. Django项目
    - 新建一个course-recom/developer_sign.txt，第一行为自己neo4j的用户名，第二行为密码。
-   - 在course-recom的文件夹处，打开命令行，运行 python manage.py migrate，创建用户数据库。
-   - 使用命令：$ neomodel_install_labels Neo4j.py Neo4j.models --db bolt://用户名:密码@localhost:7687/course-recom在neo4j数据库中创建节点和边的定义，注意用户名和密码改成个人注册所填的。
-   - 找到Neo4j/tmp.py，运行这个脚本，在neo4j数据库中创建简单的测试用的几个节点。
-   - 运行python manage.py runserver 0.0.0.0:8000，在本地打开我们的网页的服务器
-   - 访问 localhost:8000/login进入登录页面。
-6. 按照具体的操作步骤进行项目的运行，比如：
-   - 进入用户系统，注册或登录账号。
+   - 在course-recom的文件夹处，打开命令行，运行 `python manage.py migrate`，创建用户数据库。
+   - 再使用命令：`neomodel_install_labels Neo4j.py Neo4j.models --db bolt://用户名:密码@localhost:7687/course-recom`在neo4j数据库中创建节点和边的定义，注意用户名和密码改成个人注册所填的。
+   - 运行`python manage.py runserver`，在本地打开我们的网页的服务器。
+   - 访问 <localhost:8000> 进入首页。
+6. 开始使用：
+   - 首先注册、登录账号。
    - 点击知识图谱中的节点，查看推荐的相关课程资源。
    - 根据需求查看其他功能，如删除知识图谱节点、添加书签等。
 
