@@ -91,7 +91,7 @@
 2. 安装Python依赖库
    - `pip install -r requirements.txt`
 3. 安装Neo4j数据库
-   - Neo4j官网下载桌面版desktop。
+   - Neo4j官网下载桌面版desktop：<https://neo4j.com/download/neo4j-desktop/?edition=desktop&flavour=windows&release=1.5.8&offline=true>
    - 运行neo4j，访问 localhost:7474，能打开说明成功。
    - 初次打开默认用户名密码都是neo4j，之后会要求修改。
    - 新建一个叫 course-recom 的数据库。
@@ -99,7 +99,6 @@
 4. 静态文件
    - 将根目录boomerang，移动到static文件夹下
 5. Django项目
-   - git clone从gitee仓库拉取项目
    - 新建一个course-recom/developer_sign.txt，第一行为自己neo4j的用户名，第二行为密码。
    - 在course-recom的文件夹处，打开命令行，运行 python manage.py migrate，创建用户数据库。
    - 使用命令：$ neomodel_install_labels yourapp.py someapp.models --db bolt://用户名:密码@localhost:7687/course-recom在neo4j数据库中创建节点和边的定义，注意用户名和密码改成你自己的。

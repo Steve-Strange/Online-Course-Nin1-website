@@ -12,7 +12,7 @@ from bilibili_api import video
 
 async def Bilibili_async(keyword, key):
 
-    print("开始爬取: BiliBili, " + keyword)
+    print("开始爬取: Bilibili, " + keyword)
 
     href, name, cover, detail, play_num, comments_num, score, time_start, time_span = 0, 0, 0, 0, 0, 0, 0, 0, 0
 
@@ -106,10 +106,13 @@ async def Bilibili_async(keyword, key):
 
     return url_list
 
-def Bilibili(keyword, key):
-    return asyncio.get_event_loop().run_until_complete(Bilibili_async(keyword, key))
+def Bilibili_pro(keyword, key):
+    new_loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(new_loop)
+    loop = asyncio.get_event_loop()
+    return loop.run_until_complete(Bilibili_async(keyword, key))
 
 if __name__ == "__main__":
-    final_list = Bilibili(input(), input())
-    
+    final_list = Bilibili_pro(input(), input())
+
     print(final_list)
