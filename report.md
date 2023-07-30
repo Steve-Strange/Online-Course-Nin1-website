@@ -86,18 +86,20 @@
 
 ## 四、项目运行过程
 
-1. 安装Python依赖库
+1. 克隆仓库
+   - `git clone https://gitee.com/Jiaheng-Li/course-recom.git`
+2. 安装Python依赖库
    - `pip install -r requirements.txt`
-2. 安装Neo4j数据库
-   - 官网，下载桌面版desktop
-   - 运行neo4j桌面版，访问 localhost:7474，能打开说明成功
+3. 安装Neo4j数据库
+   - Neo4j官网下载桌面版desktop。
+   - 运行neo4j，访问 localhost:7474，能打开说明成功。
    - 初次打开默认用户名密码都是neo4j，之后会要求修改。
-   - 新建一个叫 course-recom 的数据库
-   - 保持neo4j在后台运行
-3. 静态文件
+   - 新建一个叫 course-recom 的数据库。
+   - 保持neo4j在后台运行。
+4. 静态文件
    - 从<https://www.bootmb.com/themes/boomerang/#>下载boomerang。
    - 全部解压，根目录boomerang...重命名为boomerang，然后将整个目录复制到static/下。
-4. Django项目
+5. Django项目
    - git clone从gitee仓库拉取项目
    - 新建一个course-recom/developer_sign.txt，第一行为自己neo4j的用户名，第二行为密码。
    - 在course-recom的文件夹处，打开命令行，运行 python manage.py migrate，创建用户数据库。
@@ -105,7 +107,7 @@
    - 找到Neo4j/tmp.py，运行这个脚本，在neo4j数据库中创建简单的测试用的几个节点。
    - 运行python manage.py runserver 0.0.0.0:8000，在本地打开我们的网页的服务器
    - 访问 localhost:8000/login进入登录页面。现在localhost:8000没东西，没有设置默认跳转，所以访问不了。
-5. 然后按照具体的操作步骤进行项目的运行，比如：
+6. 然后按照具体的操作步骤进行项目的运行，比如：
    - 进入用户系统，注册或登录账号。
    - 点击知识图谱中的节点，查看推荐的相关课程资源。
    - 根据需求查看其他功能，如删除知识图谱节点、添加书签等。
@@ -127,7 +129,11 @@
 
 ## 七、主要参考资料
 
-- 
+- 爬虫模块
+  - Beautiful Soup 文档: https://beautifulsoup.cn/
+  - Selenium 文档: https://www.selenium.dev/zh-cn/documentation/
+  - Python requests 模块 | 菜鸟教程: https://www.runoob.com/python3/python-requests.html
+  - bilibili-api · PyPI: https://pypi.org/project/bilibili-api/
 
 ## 八、项目功能实际展示视频（不超过5min）
 
