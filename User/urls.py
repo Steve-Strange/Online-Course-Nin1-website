@@ -25,4 +25,5 @@ urlpatterns = [
     path('register/', views.Register.as_view(), name='register'),
     path('register/success/', views.RegisterSuccess.as_view(), name='register_success'),
     path('home/', views.Homepage.homepage, name='home'),
+    path('logout/', views.Login.as_view(), name="logout")
 ]
