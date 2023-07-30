@@ -6,3 +6,5 @@ lxml
 neomodel
 jsonschema
 Pillow
+asyncio
+bilibili-api
