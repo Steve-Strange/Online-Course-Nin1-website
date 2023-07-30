@@ -1,184 +1,460 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>知识图谱</title>
-    <meta charset="utf-8">
-    <script src="static/echarts/echarts.min.js"></script>
-    <!-- <script src="static/echarts/echarts.min.js"></script> -->
-     <!-- Fonts -->
-     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
-     <!-- Theme CSS -->
-     <link type="text/css" href="/static/boomerang/assets/css/theme.css" rel="stylesheet">
-</head>
-
-<body>
-<div id="main" style="width:1000px;height:800px"></div>
-<script type="text/javascript">
-    // TODO: 在这里执行一些回调函数的状态切换等.
-    var myChart = echarts.init(document.getElementById('main'));
+<!--需要后端传入的变量:
+    graph, GraphRoot
+    node_datas, string.
+    edge_datas, string.
     // node的定义：
     // {
     //     name: 知识点名称
     //     uid: 知识点uid
     //     intro: 知识点introduction
+    //     tag: 知识点tag，显示为notes
     //     (暂时没有纳入课程)
     // }
     // edge的定义:
     // {
     //         source: 起点名称,
     //         target: 终点名称,
-    // }
+    // } -->
 
-    // 节点数据, 后面用 {{...}} 括起来.
-    var node_datas = 
-    [{
-                name: '临时知识点1',
-                intro: '初次尝试的知识点1',
-                uid:"假装有uid",
-                symbolSize:50,
-            }, {
-                name: '临时知识点2',
-                intro: '初次尝试的知识点2',
-                uid:"假装有uid",
-            },
-            ];
-
-    var edge_datas = 
-    [{
-                source: '临时知识点1',
-                target: '临时知识点2',
-            }, 
-            ];
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>知识图谱</title>
+        <meta charset="utf-8">
+        <script src="/static/echarts/echarts.min.js"></script>
+        <!-- <script src="static/echarts/echarts.min.js"></script> -->
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet">
+        <!-- Theme CSS -->
+        <link type="text/css" href="/static/boomerang/assets/css/theme.css" rel="stylesheet">
+    </head>
     
-    option = {
-        // 图的标题
-        title: {
-            text: 'KnowledgeGraph'  //改成当前知识图谱的名称.
-        },
-        // 提示框的配置
-        tooltip: {
-            trigger:'item',
-            formatter: function (x) {
-                const node = x.data;
-                if(typeof(node.name)=="undefined"){
-                    // 一定是边.
-                    return `${node.source} --> ${node.target}`
+    <body>
+        
+    <!-- echarts 容器 -->
+    <div id="main" style="width:100%; height:800px; background: url(/static/media/image/snowmount3.jfif);"></div>  
+    
+    <!-- modal - add node -->
+    <form class="form" action="{% url 'Neo4j:kgviewerbase' graph.uid %}" method="post">
+        {% csrf_token %}
+        <div class="modal fade" id="addNode" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="addNodeLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="addNodeLabel">添加节点</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                        <div class="form-group">
+                            <label>节点名称*</label>
+                            <input type="text" class="form-control" id="knowledge_name" name="name" placeholder="节点名称(必须)...">
+                        </div>
+                        <div class="form-group">
+                            <label>简介</label>
+                            <textarea class="form-control" id="knowledge_introduction" name="introduction" placeholder="请输入简介(非必须)..." rows="3"></textarea>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary" name="submitType" value="addNode">提交</button>
+                    <!--submit不能 data-dismiss! -->
+                </div>
+            </div>
+            </div>
+        </div>
+    </form>
+    
+    <!--modal - delete node. 询问是否确定删除-->
+    <div class="modal modal-warning fade" id="deleteNode" tabindex="-1" role="dialog" aria-labelledby="deleteNode" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal_title_6">确定要删除吗</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="py-3 text-center">
+                        <i class="fas fa-exclamation-circle fa-4x"></i>
+                        <h4 class="heading mt-4">是否永久删除此节点</h4>
+                        <p>
+                            该操作将无法恢复
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-sm btn-primary" id="do_delete">删除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!--获取cookie-->
+    <script type="text/javascript">
+        function getCookie(name) {
+            const cookieList = document.cookie.split(';');
+            for (let i = 0; i < cookieList.length; i++) {
+                const element = cookieList[i].trim().split('=');
+                if(element[0] == name){
+                    return element[1];
                 }
-                return `<h5>${node.name}</h5><hr>介绍：${node.intro}`
             }
-        },
-        // 工具箱
-        toolbox: {
-            // 显示工具箱
-            show: true,
-            itemSize: 20,
-            itemGap: 12,
-            feature: {
-                // TODO: 寻找设置图标.
-                myToolAdd:{
-                    show:true,
-                    title:'添加节点',
-                    icon:"image://static/icons/node-plus.svg",
-                    onclick: function () {
-                        alert("show a modal blanket and add nodes");
-                        // TODO: 显示一个模态框收集信息，然后提交后台新建节点，重新显示.
-                    }
-                },
-                myToolLink:{
-                    show:true,
-                    title:'连接节点',
-                    icon: "image://static/icons/link.svg",
-                    onclick: function () {
-                        alert("switch to link mode");
-                        // TODO: 变为静态，然后拖拽两个节点完成连接(联系后台).
-                    }
-                },
-                myToolDelete:{
-                    show:true,
-                    title:'删除节点',
-                    icon: "image://static/icons/node-minus.svg",
-                    onclick: function () {
-                        alert("switch to delete mode");
-                        // TODO: 切换到删除模式，之后点击节点会弹出模态框询问删除，若是则联系后台删除.
-                    }
-                },
-                myToolExport:{
-                    show:true,
-                    title:'导出',
-                    icon:"image://static/icons/cloud-download.svg", //记得改回相对路径.
-                    onclick: function () {
-                        alert("export this knowledge's json file");
-                        // TODO: 请求下载文件.
-                    }
-                },
+            return "";
+        }
+    </script>
+    
+    <!--echarts脚本-->
+    <script type="text/javascript">
+        // csrf token
+        var token = "{{csrf_token}}";
+        // TODO: 在这里执行一些回调函数的状态切换等.
+        var myChart = echarts.init(document.getElementById('main'), 'walden');
+    
+        // 节点数据, 后面用 {{...}} 括起来.
+        var node_datas = {{node_datas|safe}};  //必须用safe防止django进行转义使字符失效.
+    
+        var edge_datas = {{edge_datas|safe}};
+    
+        var status = 0;   //0-正常, 1-删除节点, 2-连接状态.
+    
+        var edge_1 = undefined, edge_2 = undefined;
+    
+        // toolbox 添加节点的回调函数.
+        function addNodeCallback() {
+            if(status==0){
+                $('#addNode').modal('show');
             }
-        },
-        series: [{
-            type: 'graph', // 类型:关系图
-            layout: 'force', //图的布局，类型为力导图
-            symbolSize: 40, // 调整节点的大小
-            roam: true, // 是否开启鼠标缩放和平移漫游。默认不开启。如果只想要开启缩放或者平移,可以设置成 'scale' 或者 'move'。设置成 true 为都开启
-            edgeSymbol: ['circle', 'arrow'],
-            edgeSymbolSize: [2, 10],
-            // edgeLabel: {
-            //     normal: {
-            //         textStyle: {
-            //             fontSize: 20
-            //         }
-            //     }
-            // },
-            force: {
-                repulsion: 2500,
-                edgeLength: [15, 60]
+            else{
+                alert("请先关闭删除或者连接功能");
+            }
+        }
+    
+        // toolbox 连接节点的回调函数, 做切换状态、修改标题.
+        function linkNodeCallback() {
+            if(status==0){
+                status = 2;
+                let opt = {
+                    title: {
+                        text: "{{graph.graph_name}}" + ": 连接模式",  //改成当前知识图谱的名称.
+                    },
+                };
+                myChart.setOption(opt);
+            }
+            else if(status==2){
+                status = 0;
+                let opt = {
+                    title: {
+                        text: "{{graph.graph_name}}",  //改成当前知识图谱的名称.
+                    },
+                };
+                myChart.setOption(opt);
+                edge_1 = edge_2 = undefined;
+            }
+            else{
+                alert("请先关闭删除模式");
+            }
+        }
+    
+        function do_link(uid1, name1, uid2, name2) {
+            // 除了发送请求外，还修改标题、更新数据.
+            // 其实有点耦合了，应该只发送请求..
+            // 发送请求.
+            $.ajax({
+                cache: false,
+                url: "{% url 'Neo4j:kgviewerbase' graph.uid %}",
+                type: "POST",
+                headers: { 'X-CSRFTOKEN': `${token}` },
+                dataType: "text", //没有用.
+                data:{
+                    "submitType": "linkNode",
+                    "uid1": uid1,
+                    "uid2": uid2
+                },
+                success: function (result, status, xhr) {
+                    let opt = {
+                        title: {
+                            text: "{{graph.graph_name}}" + ": 连接模式",  //改成当前知识图谱的名称.
+                        },
+                    };
+                    if(result=="successed"){
+                        // 成功，往edge_datas中增加一条边.
+                        let new_edge = [{
+                            "source": name1,
+                            "target": name2,
+                        },];
+                        edge_datas = edge_datas.concat(new_edge);
+                        opt.series = [{links:edge_datas,},];
+                    }
+                    else{
+                        alert("连接失败, "+result);
+                    }
+                    edge_1 = edge_2 = undefined;
+                    myChart.setOption(opt);
+                },
+                error: function (xhr, status, error) {
+                    let opt = {
+                        title: {
+                            text: "{{graph.graph_name}}" + ": 连接模式",  //改成当前知识图谱的名称.
+                        },
+                    };
+                    edge_1 = edge_2 = undefined;
+                    alert("连接失败。报错: " + error);
+                    myChart.setOption(opt);
+                }
+            })
+        }
+    
+        // toolbox 删除节点的回调函数, 只做切换状态、修改标题.
+        function deleteNodeCallback() {
+            if(status==0){
+                status = 1;
+                let opt = {
+                    title: {
+                        text: "{{graph.graph_name}}" + ": 删除模式",  //改成当前知识图谱的名称.
+                    },
+                };
+                myChart.setOption(opt);
+            }
+            else if(status==1){
+                status = 0;
+                let opt = {
+                    title: {
+                        text: "{{graph.graph_name}}",  //改成当前知识图谱的名称.
+                    },
+                };
+                myChart.setOption(opt);
+            }
+            // 如果是2， 连接模式，则什么也不做.
+            else{
+                alert("请先关闭连接模式");
+            }
+        }
+    
+        // 发送请求、执行删除的callback.
+        function do_delete(uid, name) {
+            // 发送请求.
+            $.ajax({
+                cache: false,
+                url: "{% url 'Neo4j:kgviewerbase' graph.uid  %}",
+                type: "DELETE",
+                headers: { 'X-CSRFTOKEN': `${token}` },
+                dataType: "text", //没有用.
+                data:{
+                    "uid": uid,
+                },
+                success: function (result, status, xhr) {
+                    if(result=="successed"){
+                        // 成功，从node_datas中删除数据，在edge_datas中删除和它相连的边.
+                        for (let i = 0; i < node_datas.length; i++) {
+                            const element = node_datas[i];
+                            if(element.uid==uid){
+                                node_datas.splice(i,1);
+                                break
+                            }                        
+                        }
+                        edge_datas = edge_datas.filter(function (item) {
+                            return item.source!=name && item.target!=name;
+                        })
+                        // 刷新myChart.
+                        let opt = {
+                            series: [{
+                                data:node_datas,
+                                links:edge_datas,
+                            }],
+                        }
+                        myChart.setOption(opt);
+                    }
+                    else{
+                        alert("删除失败, "+result);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert("删除失败。报错: " + error);
+                }
+            })
+            // 模态框消失.
+            $('#deleteNode').modal('hide');
+        }
+    
+        // 导出文件用的回调函数.
+        function downloadCallback() {
+            $.ajax({
+                cache: false,
+                url: "{% url 'Neo4j:kgviewerbase' graph.uid  %}",
+                type: "POST",
+                headers: { 'X-CSRFTOKEN': `${token}` },
+                dataType: "json",
+                data:{
+                    "submitType": "download",
+                },
+                success: function (result, status, xhr) {
+                    let filename = "{{graph.graph_name}}"+".json";
+                    ret_str = JSON.stringify(result, null, 4);
+                    let blob = new Blob([ret_str], {type: 'text/json;charset=utf-8'});
+                    // 动态创建按钮的方式进行.
+                    let btn = document.createElement("a");
+                    let url = URL.createObjectURL(blob);
+                    btn.setAttribute("href", url);
+                    btn.setAttribute("download", filename);
+                    btn.style.visibility = "hidden";
+                    document.body.appendChild(btn);
+                    btn.click();
+                    document.body.removeChild(btn);
+                    
+                },
+                error: function (xhr, status, error) {
+                    alert("下载失败。报错: " + error);
+                }
+            })
+        }
+    
+    
+        // 点击图中节点的回调函数.
+        function clickNodeCallback(para){
+            // click.data 是node_datas中的某个object.
+            if(status==0){
+                window.open("{% url 'Neo4j:kgviewer' graph.uid %}" + `${para.data.uid}/`);
+            }
+            else if(status==1){
+                // 删除状态，弹出删除询问框并且设置确定删除按钮的回调函数(含参数.)
+                var button = document.getElementById("do_delete");
+                button.onclick = function () {
+                    do_delete(para.data.uid, para.data.name);
+                }  //用了一种很蠢的方法(有点像lambda函数)动态设置参数.
+                $('#deleteNode').modal('show');
+            }
+            else if(status==2){
+                // 连接状态.
+                if (typeof(edge_1) == "undefined"){
+                    edge_1 = {
+                        uid: para.data.uid,
+                        name: para.data.name,
+                    }
+                    let opt = {
+                        title: {
+                            text: "{{graph.graph_name}}" + ": 连接模式; 从 " + edge_1.name + " 到...",
+                        },
+                    };
+                    myChart.setOption(opt);
+                }
+                else{
+                    edge_2 = {
+                        uid: para.data.uid,
+                        name: para.data.name,
+                    }
+                    do_link(edge_1.uid, edge_1.name, edge_2.uid, edge_2.name);
+                }
+            }
+        }
+        
+        var option = {
+            // 图的标题
+            title: {
+                text: '{{graph.graph_name}}'  //改成当前知识图谱的名称.
             },
-            draggable: true,
-            lineStyle: {
-                normal: {
-                    width: 2,
-                    color: '#4b565b',
+            // 提示框的配置
+            tooltip: {
+                trigger:'item',
+                formatter: function (x) {
+                    const node = x.data;
+                    if(typeof(node.name)=="undefined"){
+                        // 一定是边.
+                        return `${node.source} --> ${node.target}`;
+                    }
+                    return `<h5>${node.name}</h5><hr>介绍：${node.intro}<hr>note: ${node.tag}`;
                 }
             },
-            // edgeLabel: {
-            //     normal: {
-            //         show: true,
-            //         formatter: function (x) {
-            //             return x.data.name;
-            //         }
-            //     }
-            // },
-            label: {
-                formatter:'{b}',
-                normal: {
-                    show: true,
-                    textStyle: {}
+            // 工具箱
+            toolbox: {
+                // 显示工具箱
+                show: true,
+                itemSize: 20,
+                itemGap: 12,
+                feature: {
+                    // TODO: 寻找设置图标.
+                    myToolAdd:{
+                        show:true,
+                        title:'添加节点',
+                        icon:"image:///static/icons/node-plus.svg",
+                        onclick: addNodeCallback,
+                    },
+                    myToolLink:{
+                        show:true,
+                        title:'连接节点',
+                        icon: "image:///static/icons/link.svg",
+                        onclick: linkNodeCallback,
+                    },
+                    myToolDelete:{
+                        show:true,
+                        title:'删除节点',
+                        icon: "image:///static/icons/node-minus.svg",
+                        onclick: deleteNodeCallback,
+                    },
+                    myToolExport:{
+                        show:true,
+                        title:'导出',
+                        icon:"image:///static/icons/cloud-download.svg", //记得改回相对路径.
+                        onclick: downloadCallback,
+                    },
                 }
             },
- 
-            // 数据
-            data: node_datas,
-            links: edge_datas,
-        }]
-    };
-    myChart.setOption(option);
-</script>
+            series: [{
+                type: 'graph', // 类型:关系图
+                layout: 'force', //图的布局，类型为力导图
+                symbolSize: 50, // 调整节点的大小
+                roam: true, // 是否开启鼠标缩放和平移漫游。默认不开启。如果只想要开启缩放或者平移,可以设置成 'scale' 或者 'move'。设置成 true 为都开启
+                edgeSymbol: ['circle', 'arrow'],
+                edgeSymbolSize: [2, 10],
+                force: {
+                    repulsion: 2500,
+                    edgeLength: [15, 100]
+                },
+                draggable: true,
+                lineStyle: {
+                    normal: {
+                        width: 2,
+                        color: '#4b565b',
+                    }
+                },
+                label: {
+                    formatter:'{b}',
+                    normal: {
+                        show: true,
+                        textStyle: {}
+                    }
+                },
+     
+                // 数据
+                data: node_datas,
+                links: edge_datas,
+            }]
+        };
+        myChart.setOption(option);
+        myChart.on('click', { dataType: 'node' }, clickNodeCallback);
+    </script>
+    
+    <!-- boomerang -->
+    
+    <script src="/static/boomerang/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/boomerang/assets/vendor/popper/popper.min.js"></script>
+    <script src="/static/boomerang/assets/js/bootstrap/bootstrap.min.js"></script>
+    
+    <script src="/static/boomerang/assets/vendor/fontawesome/js/fontawesome-all.min.js" defer></script>
+    
+    <script src="/static/boomerang/assets/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="/static/boomerang/assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+    <script src="/static/boomerang/assets/vendor/input-mask/input-mask.min.js"></script>
+    <script src="/static/boomerang/assets/vendor/nouislider/js/nouislider.min.js"></script>
+    <script src="/static/boomerang/assets/vendor/textarea-autosize/textarea-autosize.min.js"></script>
+    
+    <script src="/static/boomerang/assets/js/theme.js"></script>
 
-<!--返回按键-->
-<a href="{% url 'User:home' %}">返回主页</a>
-
-<!-- boomerang -->
-<!-- Core -->
-<script src="static/boomerang/assets/vendor/jquery/jquery.min.js"></script>
-<script src="static/boomerang/assets/vendor/popper/popper.min.js"></script>
-<script src="static/boomerang/assets/js/bootstrap/bootstrap.min.js"></script>
-<!-- FontAwesome 5 -->
-<script src="static/boomerang/assets/vendor/fontawesome/js/fontawesome-all.min.js" defer></script>
-<!-- Page plugins -->
-<script src="static/boomerang/assets/vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
-<script src="static/boomerang/assets/vendor/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
-<script src="static/boomerang/assets/vendor/input-mask/input-mask.min.js"></script>
-<script src="static/boomerang/assets/vendor/nouislider/js/nouislider.min.js"></script>
-<script src="static/boomerang/assets/vendor/textarea-autosize/textarea-autosize.min.js"></script>
-<!-- Theme JS -->
-<script src="static/boomerang/assets/js/theme.js"></script>
-</body>
-</html>
+    <!--echarts主题-->
+    <script src="/static/echarts/walden.js"></script>
+    </body>
+    </html>

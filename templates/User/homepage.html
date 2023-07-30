@@ -323,14 +323,15 @@
                         <span style="margin-left:20px;"><strong>{{user.username}}</strong></span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                        <li><a class="dropdown-item" href="#">New project...</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#" style="color: black;">New project...</a></li>
+                        <li><a class="dropdown-item" href="#" style="color: black;">Settings</a></li>
+                        <li><a class="dropdown-item" data-toggle="modal" href="#modifyHeadProfile" style="color: black;">Profile</a></li>
+                        <!--直接这样似乎无法触发模态框。-->
                         <li>
                             <hr class="dropdown-divider">
                         </li>
                         <li>
-                            <a href="{% url 'User:login' %}" class="dropdown-item">
+                            <a href="{% url 'User:logout' %}" class="dropdown-item" style="color: black;">
                                 Sign out
                             </a>
                         </li>
@@ -433,6 +434,33 @@
             </div>
         </footer>
 
+        <!--获取头像图片的模态框.-->
+        <form class="form"  method="post"> <!--缺省action, 交给自己-->
+            {% csrf_token %}
+            <div class="modal fade" id="modifyHeadProfile" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modifyHeadProfileLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="modifyHeadProfileLabel">更改头像</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>选择新头像</label>
+                            <input type="file" name="pic">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                        <button type="submit" class="btn btn-primary" name="submitType" value="modifyHeadProfile">确定</button>
+                        <!--submit不能 data-dismiss! 否则表单交不出去..-->
+                    </div>
+                </div>
+                </div>
+            </div>
+        </form>
 
         <!--        <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>-->
         <script src="/static/media/js/jquery.js"></script>
