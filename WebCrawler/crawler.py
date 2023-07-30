@@ -1,3 +1,4 @@
+from WebCrawler import Bilibili_pro
 from WebCrawler.Bilibili import Bilibili
 from WebCrawler.Chinaooc import Chinaooc
 from WebCrawler.CNMOOC import CNMOOC
@@ -19,8 +20,8 @@ class INDEX:
     time_start = 7
     duration = 8
 
-SourceList = ["Bilibili", "Chinaooc", "CNMOOC", "HDXol", "iCourse", "iMOOC", "NetEase", "XTol"]
-FuncList = [Bilibili, Chinaooc, CNMOOC, HDXol, iCourse, iMOOC, NetEase, XTol]
+SourceList = ["Bilibili_pro", "Chinaooc", "CNMOOC", "HDXol", "iCourse", "iMOOC", "NetEase", "XTol"]
+FuncList = [Bilibili_pro, Chinaooc, CNMOOC, HDXol, iCourse, iMOOC, NetEase, XTol]
 
 def crawl_courses(keyword, src:str = None):
     '''
