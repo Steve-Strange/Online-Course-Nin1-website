@@ -97,8 +97,7 @@
    - 新建一个叫 course-recom 的数据库。
    - 保持neo4j在后台运行。
 4. 静态文件
-   - 从<https://www.bootmb.com/themes/boomerang/#>下载boomerang。
-   - 全部解压，根目录boomerang...重命名为boomerang，然后将整个目录复制到static/下。
+   - 将根目录boomerang，移动到static文件夹下
 5. Django项目
    - git clone从gitee仓库拉取项目
    - 新建一个course-recom/developer_sign.txt，第一行为自己neo4j的用户名，第二行为密码。
