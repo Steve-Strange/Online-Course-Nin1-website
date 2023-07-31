@@ -48,21 +48,12 @@ class Graph:
         for src in srcarray:
             cList = courses[src]
             for course in cList:
-                node = Course(name = course[INDEX.name], web = course[INDEX.web], source = src).save()
-                if course[INDEX.comments_num]!=0 and not course[INDEX.comments_num]:
-                    node.comments_num = course[INDEX.comments_num]
-                if course[INDEX.cover]!=0 and not course[INDEX.cover]:
-                    node.cover = course[INDEX.cover]
-                if course[INDEX.duration]!=0 and not course[INDEX.duration]:
-                    node.duration = course[INDEX.duration]
-                if course[INDEX.introduction]!=0 and not course[INDEX.introduction]:
-                    node.introduction = course[INDEX.introduction]
-                if course[INDEX.score]!=0 and not course[INDEX.score]:
-                    node.score = course[INDEX.score]
-                if course[INDEX.time_start]!=0 and not course[INDEX.time_start]:
-                    node.time_start = course[INDEX.time_start]
-                if course[INDEX.viewer_num]!=0 and not course[INDEX.viewer_num]:
-                    node.viewer_num = course[INDEX.viewer_num]
+                if course[INDEX.introduction] == "0":
+                    course[INDEX.introduction] = "暂无简介"
+                node = Course(name = course[INDEX.name], web = course[INDEX.web], source = src, 
+                              cover = course[INDEX.cover], introduction = course[INDEX.introduction],
+                              comments_num = course[INDEX.comments_num], duration = course[INDEX.duration], 
+                              score = course[INDEX.score], time_start = course[INDEX.time_start], viewer_num = course[INDEX.viewer_num])
                 node.save()
                 knowledge.rel_courses.connect(node)
     
