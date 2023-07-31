@@ -95,7 +95,10 @@
 
 1. 爬取额外三个网站的课程，包括[网易公开课](https://open.163.com/)，[国家高等教育智慧教育平台](https://www.chinaooc.com.cn/)以及[学堂在线](https://www.xuetangx.com/)。
 2. 为知识图谱实现 CRUD（创建、读取、更新、删除）操作和书签功能。
-3. ...
+3. 完成感兴趣课程的收藏和对应的查看功能（**自定义**）。
+4. 完成用户头像及用户名个性化自定义选择并展示的功能（**自定义**）。
+5. 完成用户界面主题个性化自定义功能：用户可根据喜好或时间自行选择使用深色主题或者浅色主题（**自定义**）。
+6. 完成并完善用户对我们工作的了解渠道：点击页面上面: “About Us”键可以跳转到项目设计团队的介绍栏目（**自定义**）。
 
 ## 三、总体设计方案与实现
 
@@ -112,7 +115,32 @@
 ![网站运行流程](pics/%E6%80%BB%E4%BD%93%E5%8A%9F%E8%83%BD.png)
 
 ### 3.2 实现效果图
-**(在此处补充每个页面的截图以及相应的讲解，点哪里有什么功能等)**
+#### 3.2.1 导航主界面
+1.呈现简洁美观、用户友好的主引导界面，鼠标放置在sign-in sign-up按钮上会呈现交互式效果。
+![main.html](pics/main.png)
+2.点击导航栏中Theme选项框可以切换主题，从深色主题和浅色主题中随心切换，如下图所示。 
+![main.html](pics/main_theme2.png)
+3.点击导航栏中About_us可以自动移动到页面底端，向用户展示本站点的设计目标、引导逻辑和具体功能，用户友好。
+![main.html](pics/about_us.png)
+#### 3.2.2 登录注册界面
+1.登录效果。
+![login.html](pics/login.png)
+2.注册效果，注册成功则跳转至注册成功界面。
+![register.html](pics/register.png)
+#### 3.2.3 用户主界面
+1.呈现简洁美观、用户友好的用户主界面，功能分区明确，色调自然；可以查看自己的所有知识图谱。
+![homepage.html](pics/homepage.png)
+2.其中左侧功能分区，点击My Account可以进入侧边栏功能栏目，可以通过侧边栏的工具栏方便地切换至需要的界面、汇总性查看自己图谱的tags、查看自己的收藏内容。
+![homepage.html](pics/sidebar.png)
+3.点击知识图谱右上角能够实现删除功能，点击下方add new graph则可以导入自己的知识图谱文件。
+![homepage.html](pics/add_graph.png)
+#### 3.2.4 知识图谱界面
+1.右上角功能栏可以实现对图节点的添加、连接、删除，以及对整个知识图谱的导出；其中添加节点可以自定义节点名称以及节点简介、节点备注等等。
+2.点击知识图谱图标，可以进入该知识图谱对应的课程界面。
+![graph.html](pics/graph.png)
+#### 3.2.5 课程界面
+1.先后选择课程来源网站、排序顺序，等待片刻，即可享用属于自己的私人定制课程推荐清单啦。
+![kg.html](pics/course.png)
 
 ### 3.3 核心功能与实现  
 #### 3.3.1 数据库  
@@ -447,6 +475,12 @@ def get_str(self):
   - Selenium 文档: https://www.selenium.dev/zh-cn/documentation/
   - Python requests 模块 | 菜鸟教程: https://www.runoob.com/python3/python-requests.html
   - bilibili-api · PyPI: https://pypi.org/project/bilibili-api/
+- 前端模块
+  - Boomerang 素材：https://www.bootmb.com/themes/boomerang/
+  - Bootstrapv3 素材：https://v3.bootcss.com/components/
+  - CSS 菜鸟教程：https://www.runoob.com/css/css-tutorial.html
+  - HTML 菜鸟教程：https://www.runoob.com/tags/html-reference.html
+  - JavaScript 菜鸟教程：https://www.runoob.com/js/js-tutorial.html
 
 ## 八、项目功能实际展示视频（不超过5min）
 
