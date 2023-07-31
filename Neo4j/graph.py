@@ -48,7 +48,7 @@ class Graph:
         for src in srcarray:
             cList = courses[src]
             for course in cList:
-                if course[INDEX.introduction] == "0":
+                if course[INDEX.introduction] == 0:
                     course[INDEX.introduction] = "暂无简介"
                 node = Course(name = course[INDEX.name], web = course[INDEX.web], source = src, 
                               cover = course[INDEX.cover], introduction = course[INDEX.introduction],

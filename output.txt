@@ -18,7 +18,7 @@
         padding-top: 56.25%
       }
   </style>
-  <style class="ariareader ariareader--user-agent" data-for="result" id="aria5zr1nrz1jw4" isaria="true" media="screen">
+  <style class="ariareader ariareader--user-agent" data-for="result" id="ariafvsp2gnvdr4" isaria="true" media="screen">
    .ariafocus{outline:none;}body.useOldFixed [aria-fixedOldHidden=true],.ariaHide{display:none !important;}:focus{outline:none !important;}
   </style>
   <title>
@@ -45,7 +45,7 @@
   <link as="script" href="//open-image.ws.126.net/open-cmsnuxtapp/1cf454e1b2b716849b4f.js" rel="preload"/>
   <link as="script" href="//open-image.ws.126.net/open-cmsnuxtapp/b3adda8d7fd7f944e037.js" rel="preload"/>
   <link as="script" href="//open-image.ws.126.net/open-cmsnuxtapp/efc1e661c60365fcca63.js" rel="preload"/>
-  <style data-vue-ssr-id="54c08a18:0 cb46bfd2:0 214fd65c:0 0bdc6f04:0 eb8a8e42:0 074ab063:0 a44b2bba:0 46fd80f0:0 5efac65d:0 48e51e8f:0 eee69a5a:0 983ed8b0:0">
+  <style data-vue-ssr-id="54c08a18:0 cb46bfd2:0 214fd65c:0 0bdc6f04:0 eb8a8e42:0 074ab063:0 a44b2bba:0 46fd80f0:0 5efac65d:0 48e51e8f:0 983ed8b0:0">
    .g-bd{border-radius:0}.g-bd .m-header{padding:0;height:43px;background:#277c4b;background-image:-ms-linear-gradient(103deg,#20673f 0,#277c4b 71%,#2e9057 100%)}.g-bd .m-header .headimg{line-height:43px;background:none;height:43px;color:#fff;text-align:center;font-size:22px;width:100%;font-family:Microsoft YaHei Light,Microsoft YaHei,"\5fae\8f6f\96c5\9ed1",sans-serif}.g-bd .m-header .headimg:before{content:"\7f51\6613\516c\5f00\8bfe"}.g-bd .m-cnt{margin-top:26px;margin-bottom:18px}.g-bd .m-cnt .ckimg,.g-bd .m-cnt .inputbox{height:32px;line-height:32px}.g-bd .m-cnt .m-country .country{top:-5px;background-color:transparent}.g-bd .m-cnt .m-country input{height:32px}.g-bd .m-cnt .u-logo{display:none}.g-bd .m-cnt .u-input input{height:30px;line-height:30px}.g-bd .m-cnt #login-form .m-sug{left:-1px;top:32px}.g-bd .m-cnt #login-form .m-sug .itm{padding-left:8px}.g-bd .m-cnt .u-success{margin-top:6px}.g-bd .m-cnt .pcbtn a{height:34px;line-height:34px;background:#6f9e83}.g-bd .u-closebtn{top:6px;right:8px}.g-bd .btncolor,.g-bd .btncolor:hover{background:#277c4b;background-image:-ms-linear-gradient(103deg,#20673f 0,#277c4b 71%,#2e9057 100%);color:#fff;border-radius:4px;transition:.5s}.g-bd .btndisabled,.g-bd .btndisabled:hover{background:#6f9e83;color:#fff;cursor:default}.g-bd .m-footer{padding:12px 50px 10px}.g-bd .m-footer .u-regbtn{position:absolute;bottom:26px;right:50px}.fur-item.fur-agree{padding-bottom:2em}
 .swiper-container{margin-left:auto;margin-right:auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1}.swiper-container-no-flexbox .swiper-slide{float:left}.swiper-container-vertical>.swiper-wrapper{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-transition-property:-webkit-transform;transition-property:-webkit-transform;-o-transition-property:transform;transition-property:transform;transition-property:transform,-webkit-transform;-webkit-box-sizing:content-box;box-sizing:content-box}.swiper-container-android .swiper-slide,.swiper-wrapper{-webkit-transform:translateZ(0);transform:translateZ(0)}.swiper-container-multirow>.swiper-wrapper{-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.swiper-container-free-mode>.swiper-wrapper{-webkit-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out;margin:0 auto}.swiper-slide{-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;width:100%;height:100%;position:relative;-webkit-transition-property:-webkit-transform;transition-property:-webkit-transform;-o-transition-property:transform;transition-property:transform;transition-property:transform,-webkit-transform}.swiper-slide-invisible-blank{visibility:hidden}.swiper-container-autoheight,.swiper-container-autoheight .swiper-slide{height:auto}.swiper-container-autoheight .swiper-wrapper{-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start;-webkit-transition-property:height,-webkit-transform;transition-property:height,-webkit-transform;-o-transition-property:transform,height;transition-property:transform,height;transition-property:transform,height,-webkit-transform}.swiper-container-3d{-webkit-perspective:1200px;perspective:1200px}.swiper-container-3d .swiper-cube-shadow,.swiper-container-3d .swiper-slide,.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top,.swiper-container-3d .swiper-wrapper{-webkit-transform-style:preserve-3d;transform-style:preserve-3d}.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-container-3d .swiper-slide-shadow-left{background-image:-webkit-gradient(linear,right top,left top,from(rgba(0,0,0,.5)),to(transparent));background-image:-webkit-linear-gradient(right,rgba(0,0,0,.5),transparent);background-image:-o-linear-gradient(right,rgba(0,0,0,.5),transparent);background-image:linear-gradient(270deg,rgba(0,0,0,.5),transparent)}.swiper-container-3d .swiper-slide-shadow-right{background-image:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(transparent));background-image:-webkit-linear-gradient(left,rgba(0,0,0,.5),transparent);background-image:-o-linear-gradient(left,rgba(0,0,0,.5),transparent);background-image:linear-gradient(90deg,rgba(0,0,0,.5),transparent)}.swiper-container-3d .swiper-slide-shadow-top{background-image:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.5)),to(transparent));background-image:-webkit-linear-gradient(bottom,rgba(0,0,0,.5),transparent);background-image:-o-linear-gradient(bottom,rgba(0,0,0,.5),transparent);background-image:linear-gradient(0deg,rgba(0,0,0,.5),transparent)}.swiper-container-3d .swiper-slide-shadow-bottom{background-image:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.5)),to(transparent));background-image:-webkit-linear-gradient(top,rgba(0,0,0,.5),transparent);background-image:-o-linear-gradient(top,rgba(0,0,0,.5),transparent);background-image:linear-gradient(180deg,rgba(0,0,0,.5),transparent)}.swiper-container-wp8-horizontal,.swiper-container-wp8-horizontal>.swiper-wrapper{-ms-touch-action:pan-y;touch-action:pan-y}.swiper-container-wp8-vertical,.swiper-container-wp8-vertical>.swiper-wrapper{-ms-touch-action:pan-x;touch-action:pan-x}.swiper-button-next,.swiper-button-prev{position:absolute;top:50%;width:27px;height:44px;margin-top:-22px;z-index:10;cursor:pointer;background-size:27px 44px;background-position:50%;background-repeat:no-repeat}.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}.swiper-button-prev,.swiper-container-rtl .swiper-button-next{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0 22L22 0l2.1 2.1L4.2 22l19.9 19.9L22 44 0 22z' fill='%23007aff'/%3E%3C/svg%3E");left:10px;right:auto}.swiper-button-next,.swiper-container-rtl .swiper-button-prev{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M27 22L5 44l-2.1-2.1L22.8 22 2.9 2.1 5 0l22 22z' fill='%23007aff'/%3E%3C/svg%3E");right:10px;left:auto}.swiper-button-prev.swiper-button-white,.swiper-container-rtl .swiper-button-next.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0 22L22 0l2.1 2.1L4.2 22l19.9 19.9L22 44 0 22z' fill='%23fff'/%3E%3C/svg%3E")}.swiper-button-next.swiper-button-white,.swiper-container-rtl .swiper-button-prev.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M27 22L5 44l-2.1-2.1L22.8 22 2.9 2.1 5 0l22 22z' fill='%23fff'/%3E%3C/svg%3E")}.swiper-button-prev.swiper-button-black,.swiper-container-rtl .swiper-button-next.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0 22L22 0l2.1 2.1L4.2 22l19.9 19.9L22 44 0 22z'/%3E%3C/svg%3E")}.swiper-button-next.swiper-button-black,.swiper-container-rtl .swiper-button-prev.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M27 22L5 44l-2.1-2.1L22.8 22 2.9 2.1 5 0l22 22z'/%3E%3C/svg%3E")}.swiper-button-lock{display:none}.swiper-pagination{position:absolute;text-align:center;-webkit-transition:opacity .3s;-o-transition:.3s opacity;transition:opacity .3s;-webkit-transform:translateZ(0);transform:translateZ(0);z-index:10}.swiper-pagination.swiper-pagination-hidden{opacity:0}.swiper-container-horizontal>.swiper-pagination-bullets,.swiper-pagination-custom,.swiper-pagination-fraction{bottom:10px;left:0;width:100%}.swiper-pagination-bullets-dynamic{overflow:hidden;font-size:0}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{-webkit-transform:scale(.33);-ms-transform:scale(.33);transform:scale(.33);position:relative}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active,.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev{-webkit-transform:scale(.66);-ms-transform:scale(.66);transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev{-webkit-transform:scale(.33);-ms-transform:scale(.33);transform:scale(.33)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next{-webkit-transform:scale(.66);-ms-transform:scale(.66);transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next{-webkit-transform:scale(.33);-ms-transform:scale(.33);transform:scale(.33)}.swiper-pagination-bullet{width:8px;height:8px;display:inline-block;border-radius:100%;background:#000;opacity:.2}button.swiper-pagination-bullet{border:none;margin:0;padding:0;-webkit-box-shadow:none;box-shadow:none;-webkit-appearance:none;-moz-appearance:none;appearance:none}.swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}.swiper-pagination-bullet-active{opacity:1;background:#007aff}.swiper-container-vertical>.swiper-pagination-bullets{right:10px;top:50%;-webkit-transform:translate3d(0,-50%,0);transform:translate3d(0,-50%,0)}.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin:6px 0;display:block}.swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);width:8px}.swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{display:inline-block;-webkit-transition:top .2s,-webkit-transform .2s;transition:top .2s,-webkit-transform .2s;-o-transition:.2s transform,.2s top;transition:transform .2s,top .2s;transition:transform .2s,top .2s,-webkit-transform .2s}.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 4px}.swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);white-space:nowrap}.swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{-webkit-transition:left .2s,-webkit-transform .2s;transition:left .2s,-webkit-transform .2s;-o-transition:.2s transform,.2s left;transition:transform .2s,left .2s;transition:transform .2s,left .2s,-webkit-transform .2s}.swiper-container-horizontal.swiper-container-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{-webkit-transition:right .2s,-webkit-transform .2s;transition:right .2s,-webkit-transform .2s;-o-transition:.2s transform,.2s right;transition:transform .2s,right .2s;transition:transform .2s,right .2s,-webkit-transform .2s}.swiper-pagination-progressbar{background:rgba(0,0,0,.25);position:absolute}.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{background:#007aff;position:absolute;left:0;top:0;width:100%;height:100%;-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);-webkit-transform-origin:left top;-ms-transform-origin:left top;transform-origin:left top}.swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{-webkit-transform-origin:right top;-ms-transform-origin:right top;transform-origin:right top}.swiper-container-horizontal>.swiper-pagination-progressbar,.swiper-container-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{width:100%;height:4px;left:0;top:0}.swiper-container-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,.swiper-container-vertical>.swiper-pagination-progressbar{width:4px;height:100%;left:0;top:0}.swiper-pagination-white .swiper-pagination-bullet-active{background:#fff}.swiper-pagination-progressbar.swiper-pagination-white{background:hsla(0,0%,100%,.25)}.swiper-pagination-progressbar.swiper-pagination-white .swiper-pagination-progressbar-fill{background:#fff}.swiper-pagination-black .swiper-pagination-bullet-active{background:#000}.swiper-pagination-progressbar.swiper-pagination-black{background:rgba(0,0,0,.25)}.swiper-pagination-progressbar.swiper-pagination-black .swiper-pagination-progressbar-fill{background:#000}.swiper-pagination-lock{display:none}.swiper-scrollbar{border-radius:10px;position:relative;-ms-touch-action:none;background:rgba(0,0,0,.1)}.swiper-container-horizontal>.swiper-scrollbar{position:absolute;left:1%;bottom:3px;z-index:50;height:5px;width:98%}.swiper-container-vertical>.swiper-scrollbar{position:absolute;right:3px;top:1%;z-index:50;width:5px;height:98%}.swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:rgba(0,0,0,.5);border-radius:10px;left:0;top:0}.swiper-scrollbar-cursor-drag{cursor:move}.swiper-scrollbar-lock{display:none}.swiper-zoom-container{width:100%;height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;text-align:center}.swiper-zoom-container>canvas,.swiper-zoom-container>img,.swiper-zoom-container>svg{max-width:100%;max-height:100%;-o-object-fit:contain;object-fit:contain}.swiper-slide-zoomed{cursor:move}.swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;-webkit-transform-origin:50%;-ms-transform-origin:50%;transform-origin:50%;-webkit-animation:swiper-preloader-spin 1s steps(12) infinite;animation:swiper-preloader-spin 1s steps(12) infinite}.swiper-lazy-preloader:after{display:block;content:"";width:100%;height:100%;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpath id='a' stroke='%236c6c6c' stroke-width='11' stroke-linecap='round' d='M60 7v20'/%3E%3C/defs%3E%3Cuse xlink:href='%23a' opacity='.27'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(30 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(60 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(90 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(120 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(150 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.37' transform='rotate(180 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.46' transform='rotate(210 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.56' transform='rotate(240 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.66' transform='rotate(270 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.75' transform='rotate(300 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.85' transform='rotate(330 60 60)'/%3E%3C/svg%3E");background-position:50%;background-size:100%;background-repeat:no-repeat}.swiper-lazy-preloader-white:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpath id='a' stroke='%23fff' stroke-width='11' stroke-linecap='round' d='M60 7v20'/%3E%3C/defs%3E%3Cuse xlink:href='%23a' opacity='.27'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(30 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(60 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(90 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(120 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(150 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.37' transform='rotate(180 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.46' transform='rotate(210 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.56' transform='rotate(240 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.66' transform='rotate(270 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.75' transform='rotate(300 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.85' transform='rotate(330 60 60)'/%3E%3C/svg%3E")}@-webkit-keyframes swiper-preloader-spin{to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes swiper-preloader-spin{to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}.swiper-container .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}.swiper-container-fade.swiper-container-free-mode .swiper-slide{-webkit-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}.swiper-container-fade .swiper-slide{pointer-events:none;-webkit-transition-property:opacity;-o-transition-property:opacity;transition-property:opacity}.swiper-container-fade .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide-active,.swiper-container-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-cube{overflow:visible}.swiper-container-cube .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1;visibility:hidden;-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;width:100%;height:100%}.swiper-container-cube .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-cube.swiper-container-rtl .swiper-slide{-webkit-transform-origin:100% 0;-ms-transform-origin:100% 0;transform-origin:100% 0}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-next,.swiper-container-cube .swiper-slide-next+.swiper-slide,.swiper-container-cube .swiper-slide-prev{pointer-events:auto;visibility:visible}.swiper-container-cube .swiper-slide-shadow-bottom,.swiper-container-cube .swiper-slide-shadow-left,.swiper-container-cube .swiper-slide-shadow-right,.swiper-container-cube .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-container-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0;width:100%;height:100%;background:#000;opacity:.6;-webkit-filter:blur(50px);filter:blur(50px);z-index:0}.swiper-container-flip{overflow:visible}.swiper-container-flip .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1}.swiper-container-flip .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-flip .swiper-slide-active,.swiper-container-flip .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-flip .swiper-slide-shadow-bottom,.swiper-container-flip .swiper-slide-shadow-left,.swiper-container-flip .swiper-slide-shadow-right,.swiper-container-flip .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-container-coverflow .swiper-wrapper{-ms-perspective:1200px}
 .nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#fff;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}
@@ -56,7 +56,6 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
 .s[data-v-33fd993c]{min-height:calc(100vh - 221px)}.s-container[data-v-33fd993c]{width:1200px;margin:0 auto}.s-main-tabs[data-v-33fd993c]{display:flex;flex-direction:row;flex-wrap:wrap;align-items:flex-start;justify-content:flex-start;padding:5px 0 0}.s-main-tabs[data-v-33fd993c]:before{content:"";display:block;position:absolute;left:0;right:0;min-width:1200px;height:43px;background:#fff;border-top:1px solid #f2f2f7;border-bottom:1px solid #f2f2f7;margin-top:-6px}.s-main-tabs .tab[data-v-33fd993c]{font-size:16px;display:flex;align-items:center;justify-content:center;min-width:100px;padding:10px;color:#888;cursor:pointer;position:relative}.s-main-tabs .tab[data-v-33fd993c]:hover{color:#333}.s-main-tabs .tab.active[data-v-33fd993c]{color:#333;cursor:default;font-weight:700}.s-main-tabs .tab.active span[data-v-33fd993c]{position:relative;z-index:2}.s-main-tabs .tab.active[data-v-33fd993c]:after{content:"";display:block;width:28px;height:4px;background:#48ce87;position:absolute;z-index:1;margin-top:10px;bottom:0}.s-result-list[data-v-33fd993c]{display:flex;flex-flow:row nowrap;align-items:flex-start}.s-result-left[data-v-33fd993c]{flex:1 1 auto}.s-result-right[data-v-33fd993c]{padding-top:23px;width:340px;flex:0 0 340px}.s-result-right .hkl-title[data-v-33fd993c]{height:14px;background:no-repeat 60px/66px;background-image:url(//open-image.ws.126.net/open-cmsnuxtapp/img/75e7d98.png)}.s-result-right .hkl-wrap[data-v-33fd993c]{padding:0 0 16px 56px}.s-result-right .hkl-row[data-v-33fd993c]{margin-top:16px;display:flex;flex-flow:row nowrap;color:#333;font-size:14px;line-height:16px}.s-result-right .hkl-row .row-index[data-v-33fd993c]{width:20px;flex:0 0 20px;text-align:center;margin-right:6px;color:#333;font-weight:700}.s-result-right .hkl-row:first-child .row-index[data-v-33fd993c],.s-result-right .hkl-row:nth-child(2) .row-index[data-v-33fd993c],.s-result-right .hkl-row:nth-child(3) .row-index[data-v-33fd993c]{color:#43b478}.s-result-right .hkl-row .row-title[data-v-33fd993c]{flex:1 1 auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.s-result-right .hkl-row[data-v-33fd993c]:hover{color:#43b478;cursor:pointer}.s-result-right .hkl-row:hover .row-index[data-v-33fd993c]{color:#43b478}
 .typelist{padding-bottom:30px}.typelist .msg-bar{font-size:16px;padding:20px 0;color:#666;font-weight:200}.typelist .msg-bar strong{color:#333}.typelist .msg-bar.center{text-align:center;padding:20px 0}.typelist .card-link{display:none}.typelist .type-card{padding:15px 0;position:relative;display:flex;flex-direction:row;justify-content:flex-start;align-items:flex-start}.typelist .type-card .type-card-avatar{display:none}.typelist .type-card .avatar{height:56px;width:100px;background:no-repeat 50%/cover;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08);border-radius:3px;position:relative;flex:0 auto}.typelist .type-card .square{width:100px;height:100px}.typelist .type-card .circle{width:100px;height:100px;border-radius:100%}.typelist .type-card .card-blur{opacity:.9}.typelist .type-card .qrcode{background:#fff;position:absolute;left:-10px;top:-10px;z-index:3;opacity:0;transform:scale(.85);transition:opacity .3s ease-out,transform .3s ease-out}.typelist .type-card .info{margin-left:20px;flex:1}.typelist .type-card .info .subname{margin-top:-5px;margin-bottom:-3px;text-align:left;color:#333;font-size:0}.typelist .type-card .info .subname>span{font-size:18px;line-height:24px;word-break:break-all}.typelist .type-card .info .subname:not(:first-child){padding-top:10px}.typelist .type-card .info .subname .type{display:inline-block;font-size:14px;line-height:20px;padding:0 6px;border-radius:2px;vertical-align:top}.typelist .type-card .info .subname .type:first-child{margin-right:5px;color:#fff;background:#d5b45c;margin-top:2px}.typelist .type-card .info .subname .type:not(:first-child){margin-left:10px;color:#999;box-shadow:inset 0 0 0 1px #999;margin-top:1px}.typelist .type-card .info .subname em{font-style:normal;color:#56b986}.typelist .type-card .info .subname .follow{font-size:14px;color:#999;display:inline-block}.typelist .type-card .info .subname .follow:not(:first-child){margin-left:10px}.typelist .type-card .info .subname:first-child .follow{vertical-align:top;margin-top:3px}.typelist .type-card .info .contents{font-size:14px}.typelist .type-card .info .contents .ctt-title{color:#666;margin-top:8px}.typelist .type-card .info .contents .more{display:flex;flex-direction:row;align-items:center;background:#ff5000;justify-content:center;padding:8px 10px;text-align:center;width:150px;position:absolute;border-radius:4px;top:120px;left:10px;z-index:4;opacity:0;margin-top:20px;transition:opacity .3s ease-out,margin-top .3s ease-out;box-shadow:2px 2px 3px rgba(0,0,0,.1);color:#fff;cursor:default}.typelist .type-card .info .contents .more:before{content:"";display:block;width:8px;height:8px;background:#ff5000;border-bottom-left-radius:3px;transform:rotate(135deg);position:absolute;left:35px;top:-4px}.typelist .type-card:not(:first-child){border-top:1px solid #f2f2f7}.typelist .type-card:hover{background:#fcfcfe}.typelist .type-card:hover .qrcode{opacity:1;transform:scale(1)}.typelist .type-card:hover .more{opacity:1!important;margin-top:10px!important}.typelist .type-card .collection{position:relative;transform:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.25);width:94px;height:53px;margin-bottom:6px;margin-right:6px}.typelist .type-card .collection:after,.typelist .type-card .collection:before{content:"";display:block;width:100%;height:100%;box-sizing:border-box;border:solid rgba(0,0,0,.25);border-width:0 1px 1px 0;position:absolute;z-index:2;top:3px;left:3px;border-radius:3px}.typelist .type-card .collection:after{margin:3px 0 0 3px}.typelist .type-card .collection.square{width:94px;height:94px;margin-right:6px}
 .video-collection-card{cursor:pointer;text-decoration:none;outline:none}.video-collection-card .avatar .card-blur{background:hsla(0,0%,100%,.1);height:100%}.video-collection-card .avatar .card-icon{height:100%;position:relative;transform:scale(.5)}.video-collection-card .avatar .card-icon:after,.video-collection-card .avatar .card-icon:before{content:"";display:block;position:absolute;box-sizing:border-box;left:50%;top:50%;-webkit-filter:drop-shadow(2px 2px 3px rgba(0,0,0,.5));filter:drop-shadow(2px 2px 3px rgba(0,0,0,.5))}.video-collection-card .avatar .card-icon:before{width:70px;height:70px;border:4px solid hsla(0,0%,100%,.85);border-radius:35px;margin:-35px 0 0 -35px}.video-collection-card .avatar .card-icon:after{width:26px;height:30px;border-left:26px solid hsla(0,0%,100%,.85);border-top:15px solid transparent;border-bottom:15px solid transparent;margin:-15px 0 0 -9px}
-.video-card{cursor:pointer;text-decoration:none;outline:none}.video-card .avatar{width:180px;height:100px;border-radius:3px}.video-card .avatar .card-blur{background:hsla(0,0%,100%,.1);height:100%}.video-card .avatar .card-icon{height:100%;position:relative;transform:scale(.5)}.video-card .avatar .card-icon:after,.video-card .avatar .card-icon:before{content:"";display:block;position:absolute;box-sizing:border-box;left:50%;top:50%;-webkit-filter:drop-shadow(2px 2px 3px rgba(0,0,0,.5));filter:drop-shadow(2px 2px 3px rgba(0,0,0,.5))}.video-card .avatar .card-icon:before{width:70px;height:70px;border:4px solid hsla(0,0%,100%,.85);border-radius:35px;margin:-35px 0 0 -35px}.video-card .avatar .card-icon:after{width:26px;height:30px;border-left:26px solid hsla(0,0%,100%,.85);border-top:15px solid transparent;border-bottom:15px solid transparent;margin:-15px 0 0 -9px}
 .open-footer[data-v-95673f9e]{border-top:1px solid #ddd;background:#e6e6e6;padding:20px 0;font-size:12px}.open-footer.isccjt[data-v-95673f9e],.open-footer.specialpage[data-v-95673f9e]{min-width:1360px}.open-footer__container[data-v-95673f9e]{width:1200px;margin:0 auto}.open-footer__container p[data-v-95673f9e]{margin:0;line-height:18px;color:#999}.open-footer__container p a[data-v-95673f9e]{color:#999;text-decoration:none}.open-footer__container p a[data-v-95673f9e]:hover{text-decoration:underline}.open-links[data-v-95673f9e]{line-height:16px;margin-bottom:12px;color:#999}.open-links ul[data-v-95673f9e]{overflow:hidden;margin:0}.open-links ul li[data-v-95673f9e]{list-style:none;float:left}.open-links a[data-v-95673f9e]{color:#666;text-decoration:none}.open-links a[data-v-95673f9e]:hover{text-decoration:underline}.open-links span[data-v-95673f9e]{padding:0 6px}
   </style>
   <style type="text/css">
@@ -79,6 +78,9 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
   </style>
   <style type="text/css">
    .video-card{cursor:pointer;text-decoration:none;outline:none}.video-card .avatar{width:180px;height:100px;border-radius:3px}.video-card .avatar .card-blur{background:hsla(0,0%,100%,.1);height:100%}.video-card .avatar .card-icon{height:100%;position:relative;transform:scale(.5)}.video-card .avatar .card-icon:after,.video-card .avatar .card-icon:before{content:"";display:block;position:absolute;box-sizing:border-box;left:50%;top:50%;-webkit-filter:drop-shadow(2px 2px 3px rgba(0,0,0,.5));filter:drop-shadow(2px 2px 3px rgba(0,0,0,.5))}.video-card .avatar .card-icon:before{width:70px;height:70px;border:4px solid hsla(0,0%,100%,.85);border-radius:35px;margin:-35px 0 0 -35px}.video-card .avatar .card-icon:after{width:26px;height:30px;border-left:26px solid hsla(0,0%,100%,.85);border-top:15px solid transparent;border-bottom:15px solid transparent;margin:-15px 0 0 -9px}.video-card .icon-from{display:inline-block;margin:0 2px 0 5px;width:16px;height:16px;background:no-repeat 50%/contain;vertical-align:text-bottom}.video-card .outside-from{font-size:14px;margin-top:18px;color:#999}
+  </style>
+  <style type="text/css">
+   .video-card{cursor:pointer;text-decoration:none;outline:none}.video-card .avatar{width:180px;height:100px;border-radius:3px}.video-card .avatar .card-blur{background:hsla(0,0%,100%,.1);height:100%}.video-card .avatar .card-icon{height:100%;position:relative;transform:scale(.5)}.video-card .avatar .card-icon:after,.video-card .avatar .card-icon:before{content:"";display:block;position:absolute;box-sizing:border-box;left:50%;top:50%;-webkit-filter:drop-shadow(2px 2px 3px rgba(0,0,0,.5));filter:drop-shadow(2px 2px 3px rgba(0,0,0,.5))}.video-card .avatar .card-icon:before{width:70px;height:70px;border:4px solid hsla(0,0%,100%,.85);border-radius:35px;margin:-35px 0 0 -35px}.video-card .avatar .card-icon:after{width:26px;height:30px;border-left:26px solid hsla(0,0%,100%,.85);border-top:15px solid transparent;border-bottom:15px solid transparent;margin:-15px 0 0 -9px}
   </style>
  </head>
  <body aria-basefontsize="12">
@@ -286,18 +288,18 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
          <div class="msg-bar" style="display: none;">
           没有找到与“
           <strong>
-           计算机视觉
+           程序设计
           </strong>
           ”相关的内容。
          </div>
          <div class="msg-bar">
           共找到
           <strong>
-           355
+           295
           </strong>
           条与“
           <strong>
-           计算机视觉
+           程序设计
           </strong>
           ”相关的内容：
          </div>
@@ -311,11 +313,11 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
           <!-- -->
           <div class="type-card video-collection-card">
            <div class="card-link">
-            <a href="/newview/movie/free?pid=VFTM1K654" title="计算机视觉">
-             <img alt="计算机视觉" src="https://open-image.ws.126.net/opimgae/325385dc135b40db9e0d31eef8a11d13.jpeg"/>
+            <a href="/newview/movie/free?pid=MEJ6H0HPG" title="北京大学公开课：程序设计与算法（一）C语言程序设计">
+             <img alt="北京大学公开课：程序设计与算法（一）C语言程序设计" src="https://open-image.ws.126.net/image/snapshot_movie/2019/7/4/9/5d57de97c1574cffa7c8ccb6717e2b49.jpg"/>
             </a>
            </div>
-           <div class="avatar collection" style='background-image: url("https://open-image.ws.126.net/opimgae/325385dc135b40db9e0d31eef8a11d13.jpeg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+           <div class="avatar collection" style='background-image: url("https://open-image.ws.126.net/image/snapshot_movie/2019/7/4/9/5d57de97c1574cffa7c8ccb6717e2b49.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
             <div class="card-blur">
              <div class="card-icon">
              </div>
@@ -326,11 +328,13 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
            <div class="info">
             <div class="subname">
              <span>
+              北京大学公开课：
               <em>
-               计算机
+               程序设计
               </em>
+              与算法（一）C语言
               <em>
-               视觉
+               程序设计
               </em>
              </span>
              <span class="type">
@@ -339,7 +343,54 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
             </div>
             <div class="subname">
              <div class="follow">
-              共94集
+              共51集
+             </div>
+             <div class="follow">
+              84万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=NF98GV0UH" title="北京大学公开课：程序设计与算法（一）C语言程序设计">
+             <img alt="北京大学公开课：程序设计与算法（一）C语言程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1001553023.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1001553023.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              北京大学公开课：
+              <em>
+               程序设计
+              </em>
+              与算法（一）C语言
+              <em>
+               程序设计
+              </em>
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共63集
              </div>
              <div class="follow">
               17万次播放
@@ -356,11 +407,11 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
           <!-- -->
           <div class="type-card video-collection-card">
            <div class="card-link">
-            <a href="/newview/movie/free?pid=EG14OMN7V" title="2021贺岁人工智能教程_计算机视觉智慧交通项目实战_黑马程序员">
-             <img alt="2021贺岁人工智能教程_计算机视觉智慧交通项目实战_黑马程序员" src="https://videoimg.ws.126.net/cover/20210205/z7YfjNQAV_cover.jpg"/>
+            <a href="/newview/movie/free?pid=MEL53E6UR" title="北京大学公开课：程序设计与算法（三）C++面向对象程序设计">
+             <img alt="北京大学公开课：程序设计与算法（三）C++面向对象程序设计" src="https://open-image.ws.126.net/image/snapshot_movie/2019/8/6/7/ce4eac3c97334e68a79ff07f4b4e8a67.jpg"/>
             </a>
            </div>
-           <div class="avatar collection" style='background-image: url("https://videoimg.ws.126.net/cover/20210205/z7YfjNQAV_cover.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+           <div class="avatar collection" style='background-image: url("https://open-image.ws.126.net/image/snapshot_movie/2019/8/6/7/ce4eac3c97334e68a79ff07f4b4e8a67.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
             <div class="card-blur">
              <div class="card-icon">
              </div>
@@ -371,14 +422,14 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
            <div class="info">
             <div class="subname">
              <span>
-              2021贺岁人工智能教程_
+              北京大学公开课：
               <em>
-               计算机
+               程序设计
               </em>
+              与算法（三）C++面向对象
               <em>
-               视觉
+               程序设计
               </em>
-              智慧交通项目实战_黑马程序员
              </span>
              <span class="type">
               视频合集
@@ -386,7 +437,748 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
             </div>
             <div class="subname">
              <div class="follow">
-              共66集
+              共52集
+             </div>
+             <div class="follow">
+              65万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=BEU0D1SI2" title="[Coursera]Matlab程序设计入门">
+             <img alt="[Coursera]Matlab程序设计入门" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/27001288_48_0.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/27001288_48_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              [Coursera]Matlab
+              <em>
+               程序设计
+              </em>
+              入门
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共48集
+             </div>
+             <div class="follow">
+              17万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=TETBJLU7T" title="C语言程序设计入门">
+             <img alt="C语言程序设计入门" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/19379108_77_0.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/19379108_77_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              C语言
+              <em>
+               程序设计
+              </em>
+              入门
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共77集
+             </div>
+             <div class="follow">
+              53万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=ZESPIDLHA" title="C++程序设计与算法">
+             <img alt="C++程序设计与算法" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/19035166_21_0.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/19035166_21_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              C++
+              <em>
+               程序设计
+              </em>
+              与算法
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共21集
+             </div>
+             <div class="follow">
+              8万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=OETE8V4PC" title="C语言程序设计——快速入门与提高">
+             <img alt="C语言程序设计——快速入门与提高" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/19731297_34_0.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/19731297_34_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              C语言
+              <em>
+               程序设计
+              </em>
+              ——快速入门与提高
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共34集
+             </div>
+             <div class="follow">
+              7万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=UEUNE4U6I" title="Windows程序设计——SOCKET网络通信">
+             <img alt="Windows程序设计——SOCKET网络通信" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/33522186_59_0.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/33522186_59_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              Windows
+              <em>
+               程序设计
+              </em>
+              ——SOCKET网络通信
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共59集
+             </div>
+             <div class="follow">
+              12万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=UEVBAHDSJ" title="Java程序设计">
+             <img alt="Java程序设计" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/12184548_43_0.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/12184548_43_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              Java
+              <em>
+               程序设计
+              </em>
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共73集
+             </div>
+             <div class="follow">
+              11万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=BEV6JK6TT" title="简单程序设计">
+             <img alt="简单程序设计" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/13759804_3_0.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/13759804_3_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              简单
+              <em>
+               程序设计
+              </em>
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共7集
+             </div>
+             <div class="follow">
+              2万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=SEV6JK0TR" title="菜单程序设计">
+             <img alt="菜单程序设计" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/13808400_9_0.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/13808400_9_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              菜单
+              <em>
+               程序设计
+              </em>
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共19集
+             </div>
+             <div class="follow">
+              3万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=OET3B3BAI" title="2018新版 Python语言程序设计">
+             <img alt="2018新版 Python语言程序设计" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/21049301_12_0.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/21049301_12_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              2018新版 Python语言
+              <em>
+               程序设计
+              </em>
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共11集
+             </div>
+             <div class="follow">
+              3万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=OHIN7OE8A" title="北京大学公开课：程序设计与算法（一）C语言程序设计">
+             <img alt="北京大学公开课：程序设计与算法（一）C语言程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1001553023.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1001553023.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              北京大学公开课：
+              <em>
+               程序设计
+              </em>
+              与算法（一）C语言
+              <em>
+               程序设计
+              </em>
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共109集
+             </div>
+             <div class="follow">
+              21万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=NGVDVO8J3" title="Java程序设计">
+             <img alt="Java程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1206455818.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1206455818.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              Java
+              <em>
+               程序设计
+              </em>
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共183集
+             </div>
+             <div class="follow">
+              28万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=BGVEA6DF0" title="汇编语言程序设计">
+             <img alt="汇编语言程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1206453816.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1206453816.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              汇编语言
+              <em>
+               程序设计
+              </em>
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共60集
+             </div>
+             <div class="follow">
+              13万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=CGVFPEU41" title="C语言程序设计">
+             <img alt="C语言程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1206704833.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1206704833.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              C语言
+              <em>
+               程序设计
+              </em>
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共95集
+             </div>
+             <div class="follow">
+              16万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=HFVNQSFL3" title="c#程序设计">
+             <img alt="c#程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1001663016.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1001663016.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              c#
+              <em>
+               程序设计
+              </em>
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共93集
+             </div>
+             <div class="follow">
+              24万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=GGUU5SQN3" title="实用Python程序设计">
+             <img alt="实用Python程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1460924165.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1460924165.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              实用Python
+              <em>
+               程序设计
+              </em>
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共116集
+             </div>
+             <div class="follow">
+              34万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=OGVDNGOJI" title="Python程序设计">
+             <img alt="Python程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1464633161.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1464633161.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              Python
+              <em>
+               程序设计
+              </em>
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共56集
+             </div>
+             <div class="follow">
+              10万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=IGVEFRDDG" title="游戏开发程序设计基础">
+             <img alt="游戏开发程序设计基础" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1450328379.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1450328379.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              游戏开发
+              <em>
+               程序设计
+              </em>
+              基础
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共65集
              </div>
              <div class="follow">
               9万次播放
@@ -403,11 +1195,11 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
           <!-- -->
           <div class="type-card video-collection-card">
            <div class="card-link">
-            <a href="/newview/movie/free?pid=PEVBEQTLN" title="计算机基础">
-             <img alt="计算机基础" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/19896637_6_0.jpg"/>
+            <a href="/newview/movie/free?pid=SFVCR8915" title="程序设计基础">
+             <img alt="程序设计基础" src="https://videocrawler.ws.126.net/special/mooc/course/cover/56001.jpg"/>
             </a>
            </div>
-           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/19896637_6_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/56001.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
             <div class="card-blur">
              <div class="card-icon">
              </div>
@@ -419,7 +1211,7 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
             <div class="subname">
              <span>
               <em>
-               计算机
+               程序设计
               </em>
               基础
              </span>
@@ -429,397 +1221,7 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
             </div>
             <div class="subname">
              <div class="follow">
-              共25集
-             </div>
-             <div class="follow">
-              94万次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-collection-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=XEU2J616N" title="计算机编程语言入门">
-             <img alt="计算机编程语言入门" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/41339892_132_0.jpg"/>
-            </a>
-           </div>
-           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/41339892_132_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              <em>
-               计算机
-              </em>
-              编程语言入门
-             </span>
-             <span class="type">
-              视频合集
-             </span>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              共132集
-             </div>
-             <div class="follow">
-              105万次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-collection-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=ZGVEHTNNC" title="大学计算机基础">
-             <img alt="大学计算机基础" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1206773802.jpg"/>
-            </a>
-           </div>
-           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1206773802.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              大学
-              <em>
-               计算机
-              </em>
-              基础
-             </span>
-             <span class="type">
-              视频合集
-             </span>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              共240集
-             </div>
-             <div class="follow">
-              87万次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-collection-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=DHKRT2FL8" title="【计算机专业】计算机应用基础//系统学习">
-             <img alt="【计算机专业】计算机应用基础//系统学习" src="https://videoimg.ws.126.net/cover/20220813/6w4eXb8ar_cover.jpg"/>
-            </a>
-           </div>
-           <div class="avatar collection" style='background-image: url("https://videoimg.ws.126.net/cover/20220813/6w4eXb8ar_cover.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              【
-              <em>
-               计算机
-              </em>
-              专业】
-              <em>
-               计算机
-              </em>
-              应用基础//系统学习
-             </span>
-             <span class="type">
-              视频合集
-             </span>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              共117集
-             </div>
-             <div class="follow">
-              36万次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=PHGRRT8H6&amp;mid=RHGURROLS" title="7.2 计算机视觉">
-             <img alt="7.2 计算机视觉" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1206896807.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1206896807.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              7.2
-              <em>
-               计算机
-              </em>
-              <em>
-               视觉
-              </em>
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 魔法财经
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              08' 01''
-             </div>
-             <div class="follow">
-              1398次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=HHSMLLNR1&amp;mid=SHSMLLNRL" title="opencv计算机视觉">
-             <img alt="opencv计算机视觉" src="https://videoimg.ws.126.net/cover/20230215/lSR4PKYwz_cover.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://videoimg.ws.126.net/cover/20230215/lSR4PKYwz_cover.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              opencv
-              <em>
-               计算机
-              </em>
-              <em>
-               视觉
-              </em>
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 亦孤饮
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              00' 09''
-             </div>
-             <div class="follow">
-              1283次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=SGVD5F1NK&amp;mid=NGVD5FCFK" title="2.1 计算机视觉概述">
-             <img alt="2.1 计算机视觉概述" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1461546165.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1461546165.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              2.1
-              <em>
-               计算机
-              </em>
-              <em>
-               视觉
-              </em>
-              概述
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 高校_北京联合大学
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              03' 46''
-             </div>
-             <div class="follow">
-              5156次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=SGVD5F1NK&amp;mid=HGVD5FGH7" title="2.6 计算机视觉实战演示">
-             <img alt="2.6 计算机视觉实战演示" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1461546165.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1461546165.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              2.6
-              <em>
-               计算机
-              </em>
-              <em>
-               视觉
-              </em>
-              实战演示
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 高校_北京联合大学
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              07' 32''
-             </div>
-             <div class="follow">
-              3028次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=MDGEPAQ4K&amp;mid=MDGETSH48" title="计算机视觉">
-             <img alt="计算机视觉" src="https://open-image.ws.126.net/image/snapshot_movie/2018/5/I/F/MDHD63VIF.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://open-image.ws.126.net/image/snapshot_movie/2018/5/I/F/MDHD63VIF.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              <em>
-               计算机
-              </em>
-              <em>
-               视觉
-              </em>
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 10分钟速成课
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              11' 09''
+              共54集
              </div>
              <div class="follow">
               7万次播放
@@ -834,13 +1236,13 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
           <!-- -->
           <!-- -->
           <!-- -->
-          <div class="type-card video-card">
+          <div class="type-card video-collection-card">
            <div class="card-link">
-            <a href="/newview/movie/free?pid=SGVD5F1NK&amp;mid=JGVD5FDTL" title="2.2 计算机视觉的发展简史">
-             <img alt="2.2 计算机视觉的发展简史" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1461546165.jpg"/>
+            <a href="/newview/movie/free?pid=WGV0DSMH2" title="JAVA语言程序设计">
+             <img alt="JAVA语言程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1207532809.jpg"/>
             </a>
            </div>
-           <div class="avatar" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1461546165.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1207532809.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
             <div class="card-blur">
              <div class="card-icon">
              </div>
@@ -851,30 +1253,21 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
            <div class="info">
             <div class="subname">
              <span>
-              2.2
+              JAVA语言
               <em>
-               计算机
+               程序设计
               </em>
-              <em>
-               视觉
-              </em>
-              的发展简史
              </span>
              <span class="type">
-              视频
+              视频合集
              </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 高校_北京联合大学
-             </div>
             </div>
             <div class="subname">
              <div class="follow">
-              03' 13''
+              共114集
              </div>
              <div class="follow">
-              2888次播放
+              15万次播放
              </div>
             </div>
            </div>
@@ -886,13 +1279,13 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
           <!-- -->
           <!-- -->
           <!-- -->
-          <div class="type-card video-card">
+          <div class="type-card video-collection-card">
            <div class="card-link">
-            <a href="/newview/movie/free?pid=XHMHJAAB7&amp;mid=DHMHJMGUH" title="3-计算机视觉任务">
-             <img alt="3-计算机视觉任务" src="https://videoimg.ws.126.net/cover/20221201/xSibktsIc_cover.jpg"/>
+            <a href="/newview/movie/free?pid=QHL56UBNL" title="高级语言程序设计">
+             <img alt="高级语言程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1205905819.jpg"/>
             </a>
            </div>
-           <div class="avatar" style='background-image: url("https://videoimg.ws.126.net/cover/20221201/xSibktsIc_cover.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1205905819.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
             <div class="card-blur">
              <div class="card-icon">
              </div>
@@ -903,30 +1296,21 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
            <div class="info">
             <div class="subname">
              <span>
-              3-
+              高级语言
               <em>
-               计算机
+               程序设计
               </em>
-              <em>
-               视觉
-              </em>
-              任务
              </span>
              <span class="type">
-              视频
+              视频合集
              </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 感情不能驭
-             </div>
             </div>
             <div class="subname">
              <div class="follow">
-              05' 48''
+              共97集
              </div>
              <div class="follow">
-              922次播放
+              9万次播放
              </div>
             </div>
            </div>
@@ -938,13 +1322,13 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
           <!-- -->
           <!-- -->
           <!-- -->
-          <div class="type-card video-card">
+          <div class="type-card video-collection-card">
            <div class="card-link">
-            <a href="/newview/movie/free?pid=IFJGJ7B0C&amp;mid=EFJH9C86C" title="3.1计算机视觉定义及概述">
-             <img alt="3.1计算机视觉定义及概述" src="https://open-image.ws.126.net/opimgae/c7072a5080f147398b0e6361c3ecf8d4.jpeg"/>
+            <a href="/newview/movie/free?pid=XHLAVBTGJ" title="JSP程序设计技术">
+             <img alt="JSP程序设计技术" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1003025006.jpg"/>
             </a>
            </div>
-           <div class="avatar" style='background-image: url("https://open-image.ws.126.net/opimgae/c7072a5080f147398b0e6361c3ecf8d4.jpeg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1003025006.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
             <div class="card-blur">
              <div class="card-icon">
              </div>
@@ -955,30 +1339,22 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
            <div class="info">
             <div class="subname">
              <span>
-              3.1
+              JSP
               <em>
-               计算机
+               程序设计
               </em>
-              <em>
-               视觉
-              </em>
-              定义及概述
+              技术
              </span>
              <span class="type">
-              视频
+              视频合集
              </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 大学留学驿站
-             </div>
             </div>
             <div class="subname">
              <div class="follow">
-              08' 54''
+              共30集
              </div>
              <div class="follow">
-              2920次播放
+              3万次播放
              </div>
             </div>
            </div>
@@ -990,13 +1366,13 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
           <!-- -->
           <!-- -->
           <!-- -->
-          <div class="type-card video-card">
+          <div class="type-card video-collection-card">
            <div class="card-link">
-            <a href="/newview/movie/free?pid=SGVD5F1NK&amp;mid=HGVD5FFSB" title="2.5 计算机视觉企业简介">
-             <img alt="2.5 计算机视觉企业简介" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1461546165.jpg"/>
+            <a href="/newview/movie/free?pid=IHKO5HBQ1" title="C语言程序设计(上)">
+             <img alt="C语言程序设计(上)" src="https://videocrawler.ws.126.net/special/mooc/course/cover/20019.jpg"/>
             </a>
            </div>
-           <div class="avatar" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1461546165.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/20019.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
             <div class="card-blur">
              <div class="card-icon">
              </div>
@@ -1007,30 +1383,22 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
            <div class="info">
             <div class="subname">
              <span>
-              2.5
+              C语言
               <em>
-               计算机
+               程序设计
               </em>
-              <em>
-               视觉
-              </em>
-              企业简介
+              (上)
              </span>
              <span class="type">
-              视频
+              视频合集
              </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 高校_北京联合大学
-             </div>
             </div>
             <div class="subname">
              <div class="follow">
-              06' 55''
+              共133集
              </div>
              <div class="follow">
-              3197次播放
+              19万次播放
              </div>
             </div>
            </div>
@@ -1042,13 +1410,13 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
           <!-- -->
           <!-- -->
           <!-- -->
-          <div class="type-card video-card">
+          <div class="type-card video-collection-card">
            <div class="card-link">
-            <a href="/newview/movie/free?pid=SGVD5F1NK&amp;mid=XGVD5FF5Q" title="2.4 计算机视觉的应用">
-             <img alt="2.4 计算机视觉的应用" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1461546165.jpg"/>
+            <a href="/newview/movie/free?pid=OGUUF7BOB" title="面向对象程序设计">
+             <img alt="面向对象程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1206155803.jpg"/>
             </a>
            </div>
-           <div class="avatar" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1461546165.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1206155803.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
             <div class="card-blur">
              <div class="card-icon">
              </div>
@@ -1059,30 +1427,21 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
            <div class="info">
             <div class="subname">
              <span>
-              2.4
+              面向对象
               <em>
-               计算机
+               程序设计
               </em>
-              <em>
-               视觉
-              </em>
-              的应用
              </span>
              <span class="type">
-              视频
+              视频合集
              </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 高校_北京联合大学
-             </div>
             </div>
             <div class="subname">
              <div class="follow">
-              08' 26''
+              共83集
              </div>
              <div class="follow">
-              3772次播放
+              11万次播放
              </div>
             </div>
            </div>
@@ -1094,13 +1453,13 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
           <!-- -->
           <!-- -->
           <!-- -->
-          <div class="type-card video-card">
+          <div class="type-card video-collection-card">
            <div class="card-link">
-            <a href="/newview/movie/free?pid=PHK53EUPM&amp;mid=WHK53F1GO" title="第一讲 计算机视觉（中）">
-             <img alt="第一讲 计算机视觉（中）" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/27139604_1_0.jpg"/>
+            <a href="/newview/movie/free?pid=HHK5O9JLB" title="菜单程序设计">
+             <img alt="菜单程序设计" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/13808400_9_0.jpg"/>
             </a>
            </div>
-           <div class="avatar" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/27139604_1_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/13808400_9_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
             <div class="card-blur">
              <div class="card-icon">
              </div>
@@ -1111,30 +1470,21 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
            <div class="info">
             <div class="subname">
              <span>
-              第一讲
+              菜单
               <em>
-               计算机
+               程序设计
               </em>
-              <em>
-               视觉
-              </em>
-              （中）
              </span>
              <span class="type">
-              视频
+              视频合集
              </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 小吴说人文
-             </div>
             </div>
             <div class="subname">
              <div class="follow">
-              18' 18''
+              共7集
              </div>
              <div class="follow">
-              1459次播放
+              8025次播放
              </div>
             </div>
            </div>
@@ -1146,13 +1496,13 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
           <!-- -->
           <!-- -->
           <!-- -->
-          <div class="type-card video-card">
+          <div class="type-card video-collection-card">
            <div class="card-link">
-            <a href="/newview/movie/free?pid=M7CTFJR3C&amp;mid=M7D5J51NR" title="计算机视觉辅助的好坏丑">
-             <img alt="计算机视觉辅助的好坏丑" src="https://open-image.ws.126.net/a9d0e92c31054e5c998133d70cb1c863.jpg"/>
+            <a href="/newview/movie/free?pid=QFVEMF9I0" title="高级语言程序设计">
+             <img alt="高级语言程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1205905819.jpg"/>
             </a>
            </div>
-           <div class="avatar" style='background-image: url("https://open-image.ws.126.net/a9d0e92c31054e5c998133d70cb1c863.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1205905819.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
             <div class="card-blur">
              <div class="card-icon">
              </div>
@@ -1163,29 +1513,21 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
            <div class="info">
             <div class="subname">
              <span>
+              高级语言
               <em>
-               计算机
+               程序设计
               </em>
-              <em>
-               视觉
-              </em>
-              辅助的好坏丑
              </span>
              <span class="type">
-              视频
+              视频合集
              </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 加利福尼亚大学
-             </div>
             </div>
             <div class="subname">
              <div class="follow">
-              47' 48''
+              共148集
              </div>
              <div class="follow">
-              13万次播放
+              19万次播放
              </div>
             </div>
            </div>
@@ -1197,13 +1539,13 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
           <!-- -->
           <!-- -->
           <!-- -->
-          <div class="type-card video-card">
+          <div class="type-card video-collection-card">
            <div class="card-link">
-            <a href="/newview/movie/free?pid=SGVD5F1NK&amp;mid=XGVD5FEEQ" title="2.3 计算机视觉的研究任务">
-             <img alt="2.3 计算机视觉的研究任务" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1461546165.jpg"/>
+            <a href="/newview/movie/free?pid=KHGR3O5PT" title="Python语言程序设计">
+             <img alt="Python语言程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1207179811.jpg"/>
             </a>
            </div>
-           <div class="avatar" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1461546165.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1207179811.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
             <div class="card-blur">
              <div class="card-icon">
              </div>
@@ -1214,30 +1556,21 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
            <div class="info">
             <div class="subname">
              <span>
-              2.3
+              Python语言
               <em>
-               计算机
+               程序设计
               </em>
-              <em>
-               视觉
-              </em>
-              的研究任务
              </span>
              <span class="type">
-              视频
+              视频合集
              </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 高校_北京联合大学
-             </div>
             </div>
             <div class="subname">
              <div class="follow">
-              06' 03''
+              共95集
              </div>
              <div class="follow">
-              4147次播放
+              11万次播放
              </div>
             </div>
            </div>
@@ -1249,13 +1582,13 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
           <!-- -->
           <!-- -->
           <!-- -->
-          <div class="type-card video-card">
+          <div class="type-card video-collection-card">
            <div class="card-link">
-            <a href="/newview/movie/free?pid=QHL47HDS7&amp;mid=LHL47HGBR" title="2.2 计算机视觉的发展简史（下）">
-             <img alt="2.2 计算机视觉的发展简史（下）" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1461546165.jpg"/>
+            <a href="/newview/movie/free?pid=UHL8SOD55" title="Python程序设计">
+             <img alt="Python程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1464633161.jpg"/>
             </a>
            </div>
-           <div class="avatar" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1461546165.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1464633161.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
             <div class="card-blur">
              <div class="card-icon">
              </div>
@@ -1266,30 +1599,21 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
            <div class="info">
             <div class="subname">
              <span>
-              2.2
+              Python
               <em>
-               计算机
+               程序设计
               </em>
-              <em>
-               视觉
-              </em>
-              的发展简史（下）
              </span>
              <span class="type">
-              视频
+              视频合集
              </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 魔法财经
-             </div>
             </div>
             <div class="subname">
              <div class="follow">
-              05' 34''
+              共4集
              </div>
              <div class="follow">
-              1278次播放
+              4529次播放
              </div>
             </div>
            </div>
@@ -1301,13 +1625,13 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
           <!-- -->
           <!-- -->
           <!-- -->
-          <div class="type-card video-card">
+          <div class="type-card video-collection-card">
            <div class="card-link">
-            <a href="/newview/movie/free?pid=FEUPOQ2C4&amp;mid=BEUPOQ2D8" title="-1 计算机视觉导学_bilibili">
-             <img alt="-1 计算机视觉导学_bilibili" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/51238267_1_0.jpg"/>
+            <a href="/newview/movie/free?pid=AHL8B90BB" title="程序设计基础">
+             <img alt="程序设计基础" src="https://videocrawler.ws.126.net/special/mooc/course/cover/56001.jpg"/>
             </a>
            </div>
-           <div class="avatar" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/51238267_1_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/56001.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
             <div class="card-blur">
              <div class="card-icon">
              </div>
@@ -1318,27 +1642,234 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
            <div class="info">
             <div class="subname">
              <span>
-              -1
               <em>
-               计算机
+               程序设计
               </em>
-              <em>
-               视觉
-              </em>
-              导学_bilibili
+              基础
              </span>
              <span class="type">
-              视频
+              视频合集
              </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 知识收录站
-             </div>
             </div>
             <div class="subname">
              <div class="follow">
-              08' 47''
+              共54集
+             </div>
+             <div class="follow">
+              5万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=PHL8J63TA" title="面向对象程序设计">
+             <img alt="面向对象程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1206155803.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1206155803.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              面向对象
+              <em>
+               程序设计
+              </em>
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共124集
+             </div>
+             <div class="follow">
+              12万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=ZEV6JJPP4" title="对话框程序设计">
+             <img alt="对话框程序设计" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/13824504_7_0.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/13824504_7_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              对话框
+              <em>
+               程序设计
+              </em>
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共11集
+             </div>
+             <div class="follow">
+              1万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=YGV8N7OSP" title="程序设计基础——发现计算之美">
+             <img alt="程序设计基础——发现计算之美" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1003771004.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1003771004.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              <em>
+               程序设计
+              </em>
+              基础——发现计算之美
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共126集
+             </div>
+             <div class="follow">
+              14万次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=LHKJM2Q62" title="函数式程序设计">
+             <img alt="函数式程序设计" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/14069285_4_0.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/14069285_4_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              函数式
+              <em>
+               程序设计
+              </em>
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共4集
+             </div>
+             <div class="follow">
+              3328次播放
+             </div>
+            </div>
+           </div>
+          </div>
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <!-- -->
+          <div class="type-card video-collection-card">
+           <div class="card-link">
+            <a href="/newview/movie/free?pid=PHGD6MNFH" title="Python程序设计基础">
+             <img alt="Python程序设计基础" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1461559170.jpg"/>
+            </a>
+           </div>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1461559170.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+            <div class="card-blur">
+             <div class="card-icon">
+             </div>
+            </div>
+           </div>
+           <div class="account">
+           </div>
+           <div class="info">
+            <div class="subname">
+             <span>
+              Python
+              <em>
+               程序设计
+              </em>
+              基础
+             </span>
+             <span class="type">
+              视频合集
+             </span>
+            </div>
+            <div class="subname">
+             <div class="follow">
+              共46集
              </div>
              <div class="follow">
               6万次播放
@@ -1353,13 +1884,13 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
           <!-- -->
           <!-- -->
           <!-- -->
-          <div class="type-card video-card">
+          <div class="type-card video-collection-card">
            <div class="card-link">
-            <a href="/newview/movie/free?pid=IFJGJ7B0C&amp;mid=AFJGJ7B15" title="3.2计算机视觉的主要研究内容">
-             <img alt="3.2计算机视觉的主要研究内容" src="https://open-image.ws.126.net/opimgae/3ac8ecb1443c400f9c8d9f1445768a26.jpeg"/>
+            <a href="/newview/movie/free?pid=EFVPKMNF4" title="VisualBasic6.0程序设计">
+             <img alt="VisualBasic6.0程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1001543001.jpg"/>
             </a>
            </div>
-           <div class="avatar" style='background-image: url("https://open-image.ws.126.net/opimgae/3ac8ecb1443c400f9c8d9f1445768a26.jpeg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1001543001.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
             <div class="card-blur">
              <div class="card-icon">
              </div>
@@ -1370,397 +1901,25 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
            <div class="info">
             <div class="subname">
              <span>
-              3.2
+              VisualBasic6.0
               <em>
-               计算机
+               程序设计
               </em>
-              <em>
-               视觉
-              </em>
-              的主要研究内容
              </span>
              <span class="type">
-              视频
+              视频合集
              </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 大学留学驿站
-             </div>
             </div>
             <div class="subname">
              <div class="follow">
-              08' 55''
+              共86集
              </div>
              <div class="follow">
-              2145次播放
+              14万次播放
              </div>
             </div>
            </div>
           </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=FEV171RPR&amp;mid=CEV17212A" title="-5 计算机视觉中的深度学习">
-             <img alt="-5 计算机视觉中的深度学习" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/44102210_91_0.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/44102210_91_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              -5
-              <em>
-               计算机
-              </em>
-              <em>
-               视觉
-              </em>
-              中的深度学习
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 不靠谱研究所
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              01' 49''
-             </div>
-             <div class="follow">
-              2800次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=SG10KG3C3&amp;mid=IG10L3DM2" title="03.计算机视觉定义与任务">
-             <img alt="03.计算机视觉定义与任务" src="https://videoimg.ws.126.net/cover/20210203/erPyExaVG_cover.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://videoimg.ws.126.net/cover/20210203/erPyExaVG_cover.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              03.
-              <em>
-               计算机
-              </em>
-              <em>
-               视觉
-              </em>
-              定义与任务
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 小文子测评
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              05' 07''
-             </div>
-             <div class="follow">
-              2029次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=MEAGFKACE&amp;mid=MEAGG5PVF" title="深扎产业纵深处玩转计算机视觉">
-             <img alt="深扎产业纵深处玩转计算机视觉" src="https://open-image.ws.126.net/image/snapshot_movie/2019/3/V/G/MEAGG5PVG.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://open-image.ws.126.net/image/snapshot_movie/2019/3/V/G/MEAGG5PVG.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              深扎产业纵深处玩转
-              <em>
-               计算机
-              </em>
-              <em>
-               视觉
-              </em>
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 极客公园
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              20' 01''
-             </div>
-             <div class="follow">
-              3760次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=XEK2PVS2O&amp;mid=OEK2PVS31" title="AI热潮降温 计算机视觉还能掀起多大波澜？">
-             <img alt="AI热潮降温 计算机视觉还能掀起多大波澜？" src="https://videoimg.ws.126.net/cover/20190725/WCvyf8Hd4_cover.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://videoimg.ws.126.net/cover/20190725/WCvyf8Hd4_cover.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              AI热潮降温
-              <em>
-               计算机
-              </em>
-              <em>
-               视觉
-              </em>
-              还能掀起多大波澜？
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 财视传播
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              04' 47''
-             </div>
-             <div class="follow">
-              1924次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=ZFTN7SDR8&amp;mid=FFTN8BO5I" title="[2]--2.基于计算机视觉和深度学习的现场安全管理">
-             <img alt="[2]--2.基于计算机视觉和深度学习的现场安全管理" src="https://open-image.ws.126.net/opimgae/a4733da8fd884f5fa22f41ca38d5c782.jpeg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://open-image.ws.126.net/opimgae/a4733da8fd884f5fa22f41ca38d5c782.jpeg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              [2]--2.基于
-              <em>
-               计算机
-              </em>
-              <em>
-               视觉
-              </em>
-              和深度学习的现场安全管理
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 小鱼
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              32' 23''
-             </div>
-             <div class="follow">
-              1973次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=OGT7BCFS6&amp;mid=JGT7BCFST" title="计算机视觉的应用，是一段追求真实的过程">
-             <img alt="计算机视觉的应用，是一段追求真实的过程" src="https://videoimg.ws.126.net/cover/20220119/wUijMx1VK_cover.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://videoimg.ws.126.net/cover/20220119/wUijMx1VK_cover.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              <em>
-               计算机
-              </em>
-              <em>
-               视觉
-              </em>
-              的应用，是一段追求真实的过程
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 一刻talks
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              04' 38''
-             </div>
-             <div class="follow">
-              1522次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=QHJOUV4PB&amp;mid=CHJOUVCSL" title="计算机-刘志强-07【计算机基础知识】（上）">
-             <img alt="计算机-刘志强-07【计算机基础知识】（上）" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/51796256_7_0.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/51796256_7_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              <em>
-               计算机
-              </em>
-              -刘志强-07【
-              <em>
-               计算机
-              </em>
-              基础知识】（上）
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 互联网密码
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              13' 02''
-             </div>
-             <div class="follow">
-              1803次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
           <!-- -->
           <!-- -->
           <!-- -->
@@ -1770,11 +1929,11 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
           <!-- -->
           <div class="type-card video-collection-card">
            <div class="card-link">
-            <a href="/newview/movie/free?pid=GGVE5640H" title="计算机组成原理">
-             <img alt="计算机组成原理" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1449787169.jpg"/>
+            <a href="/newview/movie/free?pid=UGVDBJ7H6" title="JSP程序设计技术">
+             <img alt="JSP程序设计技术" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1003025006.jpg"/>
             </a>
            </div>
-           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1449787169.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1003025006.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
             <div class="card-blur">
              <div class="card-icon">
              </div>
@@ -1785,10 +1944,11 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
            <div class="info">
             <div class="subname">
              <span>
+              JSP
               <em>
-               计算机
+               程序设计
               </em>
-              组成原理
+              技术
              </span>
              <span class="type">
               视频合集
@@ -1796,7 +1956,7 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
             </div>
             <div class="subname">
              <div class="follow">
-              共57集
+              共70集
              </div>
              <div class="follow">
               8万次播放
@@ -1810,433 +1970,14 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
           <!-- -->
           <!-- -->
           <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=DHKRT2FL8&amp;mid=HHKRTE5FT" title="【计算机专业】计算机应用基础//系统学习(09)（上）">
-             <img alt="【计算机专业】计算机应用基础//系统学习(09)（上）" src="https://videoimg.ws.126.net/cover/20220813/iq0egfFy3_cover.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://videoimg.ws.126.net/cover/20220813/iq0egfFy3_cover.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              【
-              <em>
-               计算机
-              </em>
-              专业】
-              <em>
-               计算机
-              </em>
-              应用基础//系统学习(09)（上）
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 耳边情感
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              26' 29''
-             </div>
-             <div class="follow">
-              2309次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=LHJOVU700&amp;mid=PHJOVU7UD" title="2005浙江大学计算机学院::计算机图形学（下）">
-             <img alt="2005浙江大学计算机学院::计算机图形学（下）" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/15445516_18_0.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/15445516_18_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              2005浙江大学
-              <em>
-               计算机
-              </em>
-              学院::
-              <em>
-               计算机
-              </em>
-              图形学（下）
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 阿娇说综艺
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              12' 44''
-             </div>
-             <div class="follow">
-              1246次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=AHDM7P5S8&amp;mid=BHDM838EI" title="【计算机专业】计算机应用基础//系统学习([二]16)">
-             <img alt="【计算机专业】计算机应用基础//系统学习([二]16)" src="https://videoimg.ws.126.net/cover/20220813/wqOHlGaWE_cover.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://videoimg.ws.126.net/cover/20220813/wqOHlGaWE_cover.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              【
-              <em>
-               计算机
-              </em>
-              专业】
-              <em>
-               计算机
-              </em>
-              应用基础//系统学习([二]16)
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 代嘉美
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              53' 21''
-             </div>
-             <div class="follow">
-              1286次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=DE9MNB3PD&amp;mid=ZE9MNB3PK" title="【知智一分钟】计算机视觉包含哪些任务？与计算机图形学的区别是什么？">
-             <img alt="【知智一分钟】计算机视觉包含哪些任务？与计算机图形学的区别是什么？" src="https://videoimg.ws.126.net/cover/20190318/iV7cGvX6k_cover.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://videoimg.ws.126.net/cover/20190318/iV7cGvX6k_cover.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              【知智一分钟】
-              <em>
-               计算机
-              </em>
-              <em>
-               视觉
-              </em>
-              包含哪些任务？与
-              <em>
-               计算机
-              </em>
-              图形学的区别是什么？
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 文艺生活全面指南
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              01' 40''
-             </div>
-             <div class="follow">
-              3367次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=EEUQ56VS8&amp;mid=ZEUQ570VD" title="计算机-刘志强-27【计算机网络与安全】">
-             <img alt="计算机-刘志强-27【计算机网络与安全】" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/50248019_27_0.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/50248019_27_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              <em>
-               计算机
-              </em>
-              -刘志强-27【
-              <em>
-               计算机
-              </em>
-              网络与安全】
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 野生念念君
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              24' 31''
-             </div>
-             <div class="follow">
-              4953次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=QHJOUV4PB&amp;mid=QHJOUVCE5" title="计算机-刘志强-20【计算机网络与安全】（下）">
-             <img alt="计算机-刘志强-20【计算机网络与安全】（下）" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/51796256_20_0.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/51796256_20_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              <em>
-               计算机
-              </em>
-              -刘志强-20【
-              <em>
-               计算机
-              </em>
-              网络与安全】（下）
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 互联网密码
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              12' 44''
-             </div>
-             <div class="follow">
-              976次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=KFTMH7Q9N&amp;mid=KFTNBKQD0" title="计算机文化基础(43)">
-             <img alt="计算机文化基础(43)" src="https://open-image.ws.126.net/opimgae/42fd6831bc034a89a09caf958988253c.jpeg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://open-image.ws.126.net/opimgae/42fd6831bc034a89a09caf958988253c.jpeg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              <em>
-               计算机
-              </em>
-              文化基础(43)
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 人工制障
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              06' 37''
-             </div>
-             <div class="follow">
-              605次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <div class="type-card video-card">
-           <div class="card-link">
-            <a href="/newview/movie/free?pid=EEUQ56VS8&amp;mid=NEUQ570CE" title="计算机-刘志强-13【计算机基础知识">
-             <img alt="计算机-刘志强-13【计算机基础知识" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/50248019_13_0.jpg"/>
-            </a>
-           </div>
-           <div class="avatar" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/50248019_13_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
-            <div class="card-blur">
-             <div class="card-icon">
-             </div>
-            </div>
-           </div>
-           <div class="account">
-           </div>
-           <div class="info">
-            <div class="subname">
-             <span>
-              <em>
-               计算机
-              </em>
-              -刘志强-13【
-              <em>
-               计算机
-              </em>
-              基础知识
-             </span>
-             <span class="type">
-              视频
-             </span>
-            </div>
-            <div class="contents">
-             <div class="ctt-title">
-              来自 野生念念君
-             </div>
-            </div>
-            <div class="subname">
-             <div class="follow">
-              45' 42''
-             </div>
-             <div class="follow">
-              8801次播放
-             </div>
-            </div>
-           </div>
-          </div>
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
-          <!-- -->
           <!-- -->
           <div class="type-card video-collection-card">
            <div class="card-link">
-            <a href="/newview/movie/free?pid=OEU0AG24R" title="计算机基础知识(计算机概述)">
-             <img alt="计算机基础知识(计算机概述)" src="https://videocrawler.ws.126.net/special/bilibili/video/cover/26905591_77_0.jpg"/>
+            <a href="/newview/movie/free?pid=YHL647QKI" title="汇编语言程序设计">
+             <img alt="汇编语言程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1206453816.jpg"/>
             </a>
            </div>
-           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/bilibili/video/cover/26905591_77_0.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1206453816.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
             <div class="card-blur">
              <div class="card-icon">
              </div>
@@ -2247,14 +1988,10 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
            <div class="info">
             <div class="subname">
              <span>
+              汇编语言
               <em>
-               计算机
+               程序设计
               </em>
-              基础知识(
-              <em>
-               计算机
-              </em>
-              概述)
              </span>
              <span class="type">
               视频合集
@@ -2262,10 +1999,10 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
             </div>
             <div class="subname">
              <div class="follow">
-              共77集
+              共54集
              </div>
              <div class="follow">
-              35万次播放
+              5万次播放
              </div>
             </div>
            </div>
@@ -2279,11 +2016,11 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
           <!-- -->
           <div class="type-card video-collection-card">
            <div class="card-link">
-            <a href="/newview/movie/free?pid=KGVDRQDQP" title="计算机绘图与CAD">
-             <img alt="计算机绘图与CAD" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1003047003.jpg"/>
+            <a href="/newview/movie/free?pid=HHL4DPI35" title="实用Python程序设计">
+             <img alt="实用Python程序设计" src="https://videocrawler.ws.126.net/special/mooc/course/cover/1460924165.jpg"/>
             </a>
            </div>
-           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1003047003.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
+           <div class="avatar collection" style='background-image: url("https://videocrawler.ws.126.net/special/mooc/course/cover/1460924165.jpg?imageView&amp;thumbnail=200y200&amp;quality=95");'>
             <div class="card-blur">
              <div class="card-icon">
              </div>
@@ -2294,10 +2031,10 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
            <div class="info">
             <div class="subname">
              <span>
+              实用Python
               <em>
-               计算机
+               程序设计
               </em>
-              绘图与CAD
              </span>
              <span class="type">
               视频合集
@@ -2305,10 +2042,10 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
             </div>
             <div class="subname">
              <div class="follow">
-              共162集
+              共60集
              </div>
              <div class="follow">
-              39万次播放
+              6万次播放
              </div>
             </div>
            </div>
@@ -2346,7 +2083,7 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
             3
            </div>
            <div class="row-title" data-v-33fd993c="">
-            数学
+            易经
            </div>
           </div>
           <div class="hkl-row" data-v-33fd993c="">
@@ -2354,7 +2091,7 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
             4
            </div>
            <div class="row-title" data-v-33fd993c="">
-            高中数学
+            小学
            </div>
           </div>
           <div class="hkl-row" data-v-33fd993c="">
@@ -2362,7 +2099,7 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
             5
            </div>
            <div class="row-title" data-v-33fd993c="">
-            曾仕强
+            王德峰
            </div>
           </div>
           <div class="hkl-row" data-v-33fd993c="">
@@ -2370,7 +2107,7 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
             6
            </div>
            <div class="row-title" data-v-33fd993c="">
-            可汗学院
+            小谢尔顿
            </div>
           </div>
           <div class="hkl-row" data-v-33fd993c="">
@@ -2378,7 +2115,7 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
             7
            </div>
            <div class="row-title" data-v-33fd993c="">
-            初中物理
+            日语
            </div>
           </div>
           <div class="hkl-row" data-v-33fd993c="">
@@ -2386,7 +2123,7 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
             8
            </div>
            <div class="row-title" data-v-33fd993c="">
-            小学语文
+            六年级下册语文
            </div>
           </div>
           <div class="hkl-row" data-v-33fd993c="">
@@ -2394,7 +2131,7 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
             9
            </div>
            <div class="row-title" data-v-33fd993c="">
-            日语
+            电力工程
            </div>
           </div>
           <div class="hkl-row" data-v-33fd993c="">
@@ -2402,7 +2139,7 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
             10
            </div>
            <div class="row-title" data-v-33fd993c="">
-            初中英语
+            新概念英语全集
            </div>
           </div>
          </div>
@@ -2516,7 +2253,7 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
    </div>
   </div>
   <script>
-   window.__NUXT__=(function(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H){return {layout:"default",data:[{serverload:l,loading:b,keyword:"计算机视觉",cursor:"wi%2F4Oa98zIRZuhDrqRgOWSWx14bpDe%2FmXjI2CVcobcUtj0hSqQCU5%2BMBcujt9Ydnk87P6yn81ickX2G7Wp1498m3rcArJhGOAF14PhRRtI0%3D",searchId:"90f147d6bdeb49c8a2bb89c2870d2173",total:355,courseList:[{contentId:G,type:e,title:F,subscribeName:"兔八哥",subscribeId:12959,image:"http:\u002F\u002Fopen-image.ws.126.net\u002Fopimgae\u002F325385dc135b40db9e0d31eef8a11d13.jpeg",quantity:"共94集",description:a,subscribeStatus:a,isPlan:a,playAmount:173070,commentCount:a,followerCount:a,plid:G,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a},{contentId:E,type:e,title:"2021贺岁人工智能教程_\u003Cem\u003E计算机\u003C\u002Fem\u003E\u003Cem\u003E视觉\u003C\u002Fem\u003E智慧交通项目实战_黑马程序员",subscribeName:"小文子测评",subscribeId:20477,image:"http:\u002F\u002Fvideoimg.ws.126.net\u002Fcover\u002F20210205\u002Fz7YfjNQAV_cover.jpg",quantity:"共66集",description:a,subscribeStatus:a,isPlan:a,playAmount:97264,commentCount:a,followerCount:a,plid:E,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a},{contentId:D,type:e,title:"\u003Cem\u003E计算机\u003C\u002Fem\u003E基础",subscribeName:"熊猫不吃竹子",subscribeId:5078,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fbilibili\u002Fvideo\u002Fcover\u002F19896637_6_0.jpg",quantity:"共25集",description:a,subscribeStatus:a,isPlan:a,playAmount:940710,commentCount:a,followerCount:a,plid:D,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a},{contentId:w,type:e,title:"\u003Cem\u003E计算机\u003C\u002Fem\u003E编程语言入门",subscribeName:"彩虹冰箱",subscribeId:5036,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fbilibili\u002Fvideo\u002Fcover\u002F41339892_132_0.jpg",quantity:"共132集",description:a,subscribeStatus:a,isPlan:a,playAmount:1056177,commentCount:a,followerCount:a,plid:w,authorName:a,sonList:a,tagList:[{fontColor:B,bgColor:A,tagName:"播放量较多",tagType:d,tagImg:c,tagTargetInfo:c}],showChangeSubtitle:b,link:c,externalVideo:a},{contentId:z,type:e,title:"大学\u003Cem\u003E计算机\u003C\u002Fem\u003E基础",subscribeName:"高校_郑州工程技术学院",subscribeId:70016,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fmooc\u002Fcourse\u002Fcover\u002F1206773802.jpg",quantity:"共240集",description:a,subscribeStatus:a,isPlan:a,playAmount:872332,commentCount:a,followerCount:a,plid:z,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a},{contentId:y,type:e,title:"【\u003Cem\u003E计算机\u003C\u002Fem\u003E专业】\u003Cem\u003E计算机\u003C\u002Fem\u003E应用基础\u002F\u002F系统学习",subscribeName:"耳边情感",subscribeId:128851,image:"http:\u002F\u002Fvideoimg.ws.126.net\u002Fcover\u002F20220813\u002F6w4eXb8ar_cover.jpg",quantity:"共117集",description:a,subscribeStatus:a,isPlan:a,playAmount:368225,commentCount:a,followerCount:a,plid:y,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a},{contentId:"RHGURROLS",type:f,title:"7.2 \u003Cem\u003E计算机\u003C\u002Fem\u003E\u003Cem\u003E视觉\u003C\u002Fem\u003E",subscribeName:C,subscribeId:H,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fmooc\u002Fcourse\u002Fcover\u002F1206896807.jpg",quantity:"08' 01''",description:a,subscribeStatus:a,isPlan:a,playAmount:1398,commentCount:a,followerCount:a,plid:"PHGRRT8H6",authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a},{contentId:"SHSMLLNRL",type:f,title:"opencv\u003Cem\u003E计算机\u003C\u002Fem\u003E\u003Cem\u003E视觉\u003C\u002Fem\u003E",subscribeName:"亦孤饮",subscribeId:113626,image:"http:\u002F\u002Fvideoimg.ws.126.net\u002Fcover\u002F20230215\u002FlSR4PKYwz_cover.jpg",quantity:"00' 09''",description:a,subscribeStatus:a,isPlan:a,playAmount:1283,commentCount:a,followerCount:a,plid:"HHSMLLNR1",authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a},{contentId:"NGVD5FCFK",type:f,title:"2.1 \u003Cem\u003E计算机\u003C\u002Fem\u003E\u003Cem\u003E视觉\u003C\u002Fem\u003E概述",subscribeName:i,subscribeId:j,image:h,quantity:"03' 46''",description:a,subscribeStatus:a,isPlan:a,playAmount:5156,commentCount:a,followerCount:a,plid:k,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a},{contentId:"HGVD5FGH7",type:f,title:"2.6 \u003Cem\u003E计算机\u003C\u002Fem\u003E\u003Cem\u003E视觉\u003C\u002Fem\u003E实战演示",subscribeName:i,subscribeId:j,image:h,quantity:"07' 32''",description:a,subscribeStatus:a,isPlan:a,playAmount:3028,commentCount:a,followerCount:a,plid:k,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a},{contentId:"MDGETSH48",type:f,title:F,subscribeName:"10分钟速成课",subscribeId:1646,image:"http:\u002F\u002Fopen-image.ws.126.net\u002Fimage\u002Fsnapshot_movie\u002F2018\u002F5\u002FI\u002FF\u002FMDHD63VIF.jpg",quantity:"11' 09''",description:a,subscribeStatus:a,isPlan:a,playAmount:72380,commentCount:a,followerCount:a,plid:"MDGEPAQ4K",authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a},{contentId:"JGVD5FDTL",type:f,title:"2.2 \u003Cem\u003E计算机\u003C\u002Fem\u003E\u003Cem\u003E视觉\u003C\u002Fem\u003E的发展简史",subscribeName:i,subscribeId:j,image:h,quantity:"03' 13''",description:a,subscribeStatus:a,isPlan:a,playAmount:2888,commentCount:a,followerCount:a,plid:k,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a},{contentId:"DHMHJMGUH",type:f,title:"3-\u003Cem\u003E计算机\u003C\u002Fem\u003E\u003Cem\u003E视觉\u003C\u002Fem\u003E任务",subscribeName:"感情不能驭",subscribeId:140730,image:"http:\u002F\u002Fvideoimg.ws.126.net\u002Fcover\u002F20221201\u002FxSibktsIc_cover.jpg",quantity:"05' 48''",description:a,subscribeStatus:a,isPlan:a,playAmount:922,commentCount:a,followerCount:a,plid:"XHMHJAAB7",authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a},{contentId:"EFJH9C86C",type:f,title:"3.1\u003Cem\u003E计算机\u003C\u002Fem\u003E\u003Cem\u003E视觉\u003C\u002Fem\u003E定义及概述",subscribeName:"大学留学驿站",subscribeId:11622,image:"http:\u002F\u002Fopen-image.ws.126.net\u002Fopimgae\u002Fc7072a5080f147398b0e6361c3ecf8d4.jpeg",quantity:"08' 54''",description:a,subscribeStatus:a,isPlan:a,playAmount:2920,commentCount:a,followerCount:a,plid:"IFJGJ7B0C",authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a},{contentId:"HGVD5FFSB",type:f,title:"2.5 \u003Cem\u003E计算机\u003C\u002Fem\u003E\u003Cem\u003E视觉\u003C\u002Fem\u003E企业简介",subscribeName:i,subscribeId:j,image:h,quantity:"06' 55''",description:a,subscribeStatus:a,isPlan:a,playAmount:3197,commentCount:a,followerCount:a,plid:k,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a},{contentId:"XGVD5FF5Q",type:f,title:"2.4 \u003Cem\u003E计算机\u003C\u002Fem\u003E\u003Cem\u003E视觉\u003C\u002Fem\u003E的应用",subscribeName:i,subscribeId:j,image:h,quantity:"08' 26''",description:a,subscribeStatus:a,isPlan:a,playAmount:3772,commentCount:a,followerCount:a,plid:k,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a},{contentId:"WHK53F1GO",type:f,title:"第一讲 \u003Cem\u003E计算机\u003C\u002Fem\u003E\u003Cem\u003E视觉\u003C\u002Fem\u003E（中）",subscribeName:"小吴说人文",subscribeId:129404,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fbilibili\u002Fvideo\u002Fcover\u002F27139604_1_0.jpg",quantity:"18' 18''",description:a,subscribeStatus:a,isPlan:a,playAmount:1459,commentCount:a,followerCount:a,plid:"PHK53EUPM",authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a},{contentId:"M7D5J51NR",type:f,title:"\u003Cem\u003E计算机\u003C\u002Fem\u003E\u003Cem\u003E视觉\u003C\u002Fem\u003E辅助的好坏丑",subscribeName:"加利福尼亚大学",subscribeId:237,image:"http:\u002F\u002Fopen-image.ws.126.net\u002Fa9d0e92c31054e5c998133d70cb1c863.jpg",quantity:"47' 48''",description:a,subscribeStatus:a,isPlan:a,playAmount:132870,commentCount:a,followerCount:a,plid:"M7CTFJR3C",authorName:a,sonList:a,tagList:[{fontColor:B,bgColor:A,tagName:"超10万播放",tagType:d,tagImg:c,tagTargetInfo:c}],showChangeSubtitle:b,link:c,externalVideo:a},{contentId:"XGVD5FEEQ",type:f,title:"2.3 \u003Cem\u003E计算机\u003C\u002Fem\u003E\u003Cem\u003E视觉\u003C\u002Fem\u003E的研究任务",subscribeName:i,subscribeId:j,image:h,quantity:"06' 03''",description:a,subscribeStatus:a,isPlan:a,playAmount:4147,commentCount:a,followerCount:a,plid:k,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a},{contentId:"LHL47HGBR",type:f,title:"2.2 \u003Cem\u003E计算机\u003C\u002Fem\u003E\u003Cem\u003E视觉\u003C\u002Fem\u003E的发展简史（下）",subscribeName:C,subscribeId:H,image:h,quantity:"05' 34''",description:a,subscribeStatus:a,isPlan:a,playAmount:x,commentCount:a,followerCount:a,plid:"QHL47HDS7",authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:c,externalVideo:a}],tabType:d,inKeyWords:b,hotKeywords:[{id:d,name:q,type:g,value:q,value1:a,value2:q,value3:a,value4:a,value5:a,value6:a,weight:4086,status:e,description:q,dbCreateTime:a,dbUpdateTime:a},{id:d,name:n,type:g,value:n,value1:a,value2:n,value3:a,value4:a,value5:a,value6:a,weight:4055,status:e,description:n,dbCreateTime:a,dbUpdateTime:a},{id:d,name:v,type:g,value:v,value1:a,value2:v,value3:a,value4:a,value5:a,value6:a,weight:3489,status:e,description:v,dbCreateTime:a,dbUpdateTime:a},{id:d,name:u,type:g,value:u,value1:a,value2:u,value3:a,value4:a,value5:a,value6:a,weight:2714,status:e,description:u,dbCreateTime:a,dbUpdateTime:a},{id:d,name:t,type:g,value:t,value1:a,value2:t,value3:a,value4:a,value5:a,value6:a,weight:2481,status:e,description:t,dbCreateTime:a,dbUpdateTime:a},{id:d,name:s,type:g,value:s,value1:a,value2:s,value3:a,value4:a,value5:a,value6:a,weight:1760,status:e,description:s,dbCreateTime:a,dbUpdateTime:a},{id:d,name:r,type:g,value:r,value1:a,value2:r,value3:a,value4:a,value5:a,value6:a,weight:1650,status:e,description:r,dbCreateTime:a,dbUpdateTime:a},{id:d,name:m,type:g,value:m,value1:a,value2:m,value3:a,value4:a,value5:a,value6:a,weight:1548,status:e,description:m,dbCreateTime:a,dbUpdateTime:a},{id:d,name:o,type:g,value:o,value1:a,value2:o,value3:a,value4:a,value5:a,value6:a,weight:x,status:e,description:o,dbCreateTime:a,dbUpdateTime:a},{id:d,name:p,type:g,value:p,value1:a,value2:p,value3:a,value4:a,value5:a,value6:a,weight:1196,status:e,description:p,dbCreateTime:a,dbUpdateTime:a}]}],fetch:[],error:a,state:{asyncData:{asyncDataError:{isError:l,code:d,message:"获取信息失败 [SERVER:ECODE_NOT_0]"}},ccjt:{isccjt:b},comment:{hotList:[],allList:[],hotNum:d,commentNum:d,contentId:a,type:a},cookie:{cookies:{__o_p_d_uuid:"__o_p_d_uuid=1b94bc34-5de4-fa17-ffaf-fd2fbf9aa07; Expires=Wed, 07 Jul 2123 03:06:55 GMT; Domain=.open.163.com; Path=\u002F",NTESOPENSI:"NTESOPENSI=1d679a9df6e646d5a07021dd69b8b7ac; Domain=c.open.163.com; Path=\u002F"}},login:{loginInfo:{}},movie:{mid:c,moiveList:[],liveChapter:{},subscribeInfo:{},isStore:b,showEndList:b,showShareMask:b,showDownload:b,buyOrNot:b,recommendList:[],isAutoPlay:l,playStatus:d,screen:{width:855,height:481,screenGrow:b,fullscreen:b}},specialpage:{isspecial:b,contentId:a},unitednations:{certImgFile:c}},serverRendered:l,routePath:"\u002Fsearch\u002F计算机视觉"}}(null,false,"",0,1,2,3,"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fmooc\u002Fcourse\u002Fcover\u002F1461546165.jpg","高校_北京联合大学",8276,"SGVD5F1NK",true,"小学语文","高等数学","日语","初中英语","初中数学","初中物理","可汗学院","曾仕强","高中数学","数学","XEU2J616N",1278,"DHKRT2FL8","ZGVEHTNNC","#0DF74343","#FFF74343","魔法财经","PEVBEQTLN","EG14OMN7V","\u003Cem\u003E计算机\u003C\u002Fem\u003E\u003Cem\u003E视觉\u003C\u002Fem\u003E","VFTM1K654",129229));
+   window.__NUXT__=(function(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U){return {layout:"default",data:[{serverload:g,loading:b,keyword:"程序设计",cursor:"wi%2F4Oa98zIRZuhDrqRgOWQVKanDNjivWz8qmDqsMdKM%2B%2FUmaVxlqXZX3pTXGOyKr2icO6OW8lGuLg6AMOYJRWMm3rcArJhGOAF14PhRRtI0%3D",searchId:"1c8def60ae824acfaafc4afcd8824b47",total:u,courseList:[{contentId:S,type:c,title:t,subscribeName:Q,subscribeId:u,image:"http:\u002F\u002Fopen-image.ws.126.net\u002Fimage\u002Fsnapshot_movie\u002F2019\u002F7\u002F4\u002F9\u002F5d57de97c1574cffa7c8ccb6717e2b49.jpg",quantity:"共51集",description:a,subscribeStatus:a,isPlan:a,playAmount:847837,commentCount:a,followerCount:a,plid:S,authorName:P,sonList:a,tagList:[{fontColor:"#FFF74343",bgColor:"#0DF74343",tagName:"播放量较多",tagType:e,tagImg:d,tagTargetInfo:d}],showChangeSubtitle:b,link:d,externalVideo:a},{contentId:O,type:c,title:t,subscribeName:s,subscribeId:r,image:L,quantity:"共63集",description:a,subscribeStatus:a,isPlan:a,playAmount:176231,commentCount:a,followerCount:a,plid:O,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:K,type:c,title:"北京大学公开课：\u003Cem\u003E程序设计\u003C\u002Fem\u003E与算法（三）C++面向对象\u003Cem\u003E程序设计\u003C\u002Fem\u003E",subscribeName:Q,subscribeId:u,image:"http:\u002F\u002Fopen-image.ws.126.net\u002Fimage\u002Fsnapshot_movie\u002F2019\u002F8\u002F6\u002F7\u002Fce4eac3c97334e68a79ff07f4b4e8a67.jpg",quantity:"共52集",description:a,subscribeStatus:a,isPlan:a,playAmount:658458,commentCount:a,followerCount:a,plid:K,authorName:P,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:x,type:c,title:"[Coursera]Matlab\u003Cem\u003E程序设计\u003C\u002Fem\u003E入门",subscribeName:"gakki的尾巴",subscribeId:5032,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fbilibili\u002Fvideo\u002Fcover\u002F27001288_48_0.jpg",quantity:"共48集",description:a,subscribeStatus:a,isPlan:a,playAmount:170972,commentCount:a,followerCount:a,plid:x,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:M,type:c,title:"C语言\u003Cem\u003E程序设计\u003C\u002Fem\u003E入门",subscribeName:"咸鱼小馆",subscribeId:5040,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fbilibili\u002Fvideo\u002Fcover\u002F19379108_77_0.jpg",quantity:"共77集",description:a,subscribeStatus:a,isPlan:a,playAmount:530814,commentCount:a,followerCount:a,plid:M,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:G,type:c,title:"C++\u003Cem\u003E程序设计\u003C\u002Fem\u003E与算法",subscribeName:"青青草园园长",subscribeId:5069,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fbilibili\u002Fvideo\u002Fcover\u002F19035166_21_0.jpg",quantity:"共21集",description:a,subscribeStatus:a,isPlan:a,playAmount:81822,commentCount:a,followerCount:a,plid:G,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:N,type:c,title:"C语言\u003Cem\u003E程序设计\u003C\u002Fem\u003E——快速入门与提高",subscribeName:"狼咩太妹",subscribeId:5094,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fbilibili\u002Fvideo\u002Fcover\u002F19731297_34_0.jpg",quantity:"共34集",description:a,subscribeStatus:a,isPlan:a,playAmount:77298,commentCount:a,followerCount:a,plid:N,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:R,type:c,title:"Windows\u003Cem\u003E程序设计\u003C\u002Fem\u003E——SOCKET网络通信",subscribeName:"汪星人俱乐部",subscribeId:5109,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fbilibili\u002Fvideo\u002Fcover\u002F33522186_59_0.jpg",quantity:"共59集",description:a,subscribeStatus:a,isPlan:a,playAmount:128374,commentCount:a,followerCount:a,plid:R,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:T,type:c,title:w,subscribeName:"一杯大红袍",subscribeId:5063,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fbilibili\u002Fvideo\u002Fcover\u002F12184548_43_0.jpg",quantity:"共73集",description:a,subscribeStatus:a,isPlan:a,playAmount:116258,commentCount:a,followerCount:a,plid:T,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:U,type:c,title:"简单\u003Cem\u003E程序设计\u003C\u002Fem\u003E",subscribeName:y,subscribeId:z,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fbilibili\u002Fvideo\u002Fcover\u002F13759804_3_0.jpg",quantity:"共7集",description:a,subscribeStatus:a,isPlan:a,playAmount:24514,commentCount:a,followerCount:a,plid:U,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:A,type:c,title:"菜单\u003Cem\u003E程序设计\u003C\u002Fem\u003E",subscribeName:y,subscribeId:z,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fbilibili\u002Fvideo\u002Fcover\u002F13808400_9_0.jpg",quantity:"共19集",description:a,subscribeStatus:a,isPlan:a,playAmount:36939,commentCount:a,followerCount:a,plid:A,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:B,type:c,title:"2018新版 Python语言\u003Cem\u003E程序设计\u003C\u002Fem\u003E",subscribeName:"你懂excelwordps吗",subscribeId:5111,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fbilibili\u002Fvideo\u002Fcover\u002F21049301_12_0.jpg",quantity:"共11集",description:a,subscribeStatus:a,isPlan:a,playAmount:35512,commentCount:a,followerCount:a,plid:B,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:C,type:c,title:t,subscribeName:"社会热点百态",subscribeId:129425,image:L,quantity:"共109集",description:a,subscribeStatus:a,isPlan:a,playAmount:210219,commentCount:a,followerCount:a,plid:C,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:D,type:c,title:w,subscribeName:"高校_江西财经大学",subscribeId:8297,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fmooc\u002Fcourse\u002Fcover\u002F1206455818.jpg",quantity:"共183集",description:a,subscribeStatus:a,isPlan:a,playAmount:282884,commentCount:a,followerCount:a,plid:D,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:E,type:c,title:"汇编语言\u003Cem\u003E程序设计\u003C\u002Fem\u003E",subscribeName:"高校_首都师范大学",subscribeId:9235,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fmooc\u002Fcourse\u002Fcover\u002F1206453816.jpg",quantity:"共60集",description:a,subscribeStatus:a,isPlan:a,playAmount:134341,commentCount:a,followerCount:a,plid:E,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:F,type:c,title:"C语言\u003Cem\u003E程序设计\u003C\u002Fem\u003E",subscribeName:"高校_郑州轻工业大学",subscribeId:70002,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fmooc\u002Fcourse\u002Fcover\u002F1206704833.jpg",quantity:"共95集",description:a,subscribeStatus:a,isPlan:a,playAmount:169650,commentCount:a,followerCount:a,plid:F,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:v,type:c,title:"c#\u003Cem\u003E程序设计\u003C\u002Fem\u003E",subscribeName:s,subscribeId:r,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fmooc\u002Fcourse\u002Fcover\u002F1001663016.jpg",quantity:"共93集",description:a,subscribeStatus:a,isPlan:a,playAmount:247193,commentCount:a,followerCount:a,plid:v,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:H,type:c,title:"实用Python\u003Cem\u003E程序设计\u003C\u002Fem\u003E",subscribeName:s,subscribeId:r,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fmooc\u002Fcourse\u002Fcover\u002F1460924165.jpg",quantity:"共116集",description:a,subscribeStatus:a,isPlan:a,playAmount:347046,commentCount:a,followerCount:a,plid:H,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:I,type:c,title:"Python\u003Cem\u003E程序设计\u003C\u002Fem\u003E",subscribeName:"高校_中国矿业大学",subscribeId:9011,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fmooc\u002Fcourse\u002Fcover\u002F1464633161.jpg",quantity:"共56集",description:a,subscribeStatus:a,isPlan:a,playAmount:107148,commentCount:a,followerCount:a,plid:I,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a},{contentId:J,type:c,title:"游戏开发\u003Cem\u003E程序设计\u003C\u002Fem\u003E基础",subscribeName:"高校_中国传媒大学",subscribeId:8787,image:"http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fmooc\u002Fcourse\u002Fcover\u002F1450328379.jpg",quantity:"共65集",description:a,subscribeStatus:a,isPlan:a,playAmount:94775,commentCount:a,followerCount:a,plid:J,authorName:a,sonList:a,tagList:a,showChangeSubtitle:b,link:d,externalVideo:a}],tabType:e,inKeyWords:b,hotKeywords:[{id:e,name:p,type:f,value:p,value1:a,value2:p,value3:a,value4:a,value5:a,value6:a,weight:4086,status:c,description:p,dbCreateTime:a,dbUpdateTime:a},{id:e,name:n,type:f,value:n,value1:a,value2:n,value3:a,value4:a,value5:a,value6:a,weight:4055,status:c,description:n,dbCreateTime:a,dbUpdateTime:a},{id:e,name:m,type:f,value:m,value1:a,value2:m,value3:a,value4:a,value5:a,value6:a,weight:2905,status:c,description:m,dbCreateTime:a,dbUpdateTime:a},{id:e,name:l,type:f,value:l,value1:a,value2:l,value3:a,value4:a,value5:a,value6:a,weight:2475,status:c,description:l,dbCreateTime:a,dbUpdateTime:a},{id:e,name:i,type:f,value:i,value1:a,value2:i,value3:a,value4:a,value5:a,value6:a,weight:1719,status:c,description:i,dbCreateTime:a,dbUpdateTime:a},{id:e,name:q,type:f,value:q,value1:a,value2:q,value3:a,value4:a,value5:a,value6:a,weight:1509,status:c,description:q,dbCreateTime:a,dbUpdateTime:a},{id:e,name:o,type:f,value:o,value1:a,value2:o,value3:a,value4:a,value5:a,value6:a,weight:1278,status:c,description:o,dbCreateTime:a,dbUpdateTime:a},{id:e,name:j,type:f,value:j,value1:a,value2:j,value3:a,value4:a,value5:a,value6:a,weight:963,status:c,description:j,dbCreateTime:a,dbUpdateTime:a},{id:e,name:h,type:f,value:h,value1:a,value2:h,value3:a,value4:a,value5:a,value6:a,weight:959,status:c,description:h,dbCreateTime:a,dbUpdateTime:a},{id:e,name:k,type:f,value:k,value1:a,value2:k,value3:a,value4:a,value5:a,value6:a,weight:922,status:c,description:k,dbCreateTime:a,dbUpdateTime:a}]}],fetch:[],error:a,state:{asyncData:{asyncDataError:{isError:g,code:e,message:"获取信息失败 [SERVER:ECODE_NOT_0]"}},ccjt:{isccjt:b},comment:{hotList:[],allList:[],hotNum:e,commentNum:e,contentId:a,type:a},cookie:{cookies:{__o_p_d_uuid:"__o_p_d_uuid=69a44b88-e6cf-ffaf-8bb5-a4b42a692b5; Expires=Wed, 07 Jul 2123 10:44:56 GMT; Domain=.open.163.com; Path=\u002F",NTESOPENSI:"NTESOPENSI=a805224641144f29914b098c1bd612fa; Domain=c.open.163.com; Path=\u002F"}},login:{loginInfo:{}},movie:{mid:d,moiveList:[],liveChapter:{},subscribeInfo:{},isStore:b,showEndList:b,showShareMask:b,showDownload:b,buyOrNot:b,recommendList:[],isAutoPlay:g,playStatus:e,screen:{width:855,height:481,screenGrow:b,fullscreen:b}},specialpage:{isspecial:b,contentId:a},unitednations:{certImgFile:d}},serverRendered:g,routePath:"\u002Fsearch\u002F程序设计"}}(null,false,1,"",0,3,true,"电力工程","王德峰","六年级下册语文","新概念英语全集","小学","易经","高等数学","日语","初中数学","小谢尔顿",8136,"高校_北京大学","北京大学公开课：\u003Cem\u003E程序设计\u003C\u002Fem\u003E与算法（一）C语言\u003Cem\u003E程序设计\u003C\u002Fem\u003E",295,"HFVNQSFL3","Java\u003Cem\u003E程序设计\u003C\u002Fem\u003E","BEU0D1SI2","全球精选演讲",5113,"SEV6JK0TR","OET3B3BAI","OHIN7OE8A","NGVDVO8J3","BGVEA6DF0","CGVFPEU41","ZESPIDLHA","GGUU5SQN3","OGVDNGOJI","IGVEFRDDG","MEL53E6UR","http:\u002F\u002Fvideocrawler.ws.126.net\u002Fspecial\u002Fmooc\u002Fcourse\u002Fcover\u002F1001553023.jpg","TETBJLU7T","OETE8V4PC","NF98GV0UH","郭炜","北京大学","UEUNE4U6I","MEJ6H0HPG","UEVBAHDSJ","BEV6JK6TT"));
   </script>
   <script defer="" src="//open-image.ws.126.net/open-cmsnuxtapp/640eff6d721576ba05e3.js">
   </script>
@@ -2530,6 +2267,10 @@ html{font-size:12px;line-height:1.15;-webkit-text-size-adjust:100%;font-family:M
   </script>
   <script async="" data-body="true" data-n-head="ssr" defer="" id="ariascripts" src="//static.ws.126.net/163/f2e/common/wza220424/aria.js?appid=a6655141bab6921b58446b4b806b9fbf">
   </script>
+  <div id="x-URS1690800295650.1592">
+  </div>
+  <div id="x-URS1690800295651.95">
+  </div>
   <script>
    (function() {
 var performance = window.performance || window.msPerformance || window.webkitPerformance;
@@ -2643,9 +2384,5 @@ var performance = window.performance || window.msPerformance || window.webkitPer
     }
   </script>
   <!-- NTM Html Injection End -->
-  <div id="x-URS1690772814542.9663">
-  </div>
-  <div id="x-URS1690772814543.4385">
-  </div>
  </body>
 </html>

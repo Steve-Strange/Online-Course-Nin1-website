@@ -1,6 +1,6 @@
 <!--
   变量：
-  know, 当前KnowledgeBlock节点.
+  know, owledgeBlock节点.
   courseList, 课程列表，没想好是否包含所有来源，还是根据来源动态更新.
   source, 字符串，当前页面的课程来源.
   order, 按照那个东西排序.
@@ -23,6 +23,28 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+          <a class="navbar-brand bg-dark" name="word" href="#" id="nav"><strong>{{know.name}} 课程列表</strong></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" data-toggle="modal" href="#modifyIntro">简介</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" data-toggle="modal" href="#modifyTag">Notes</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{% url 'User:home' %}">返回主页</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Probably the most complete UI kit out there. Multiple functionalities and controls added,  extended color palette and beautiful typography, designed as its own extended version of Bootstrap at  the highest level of quality.                             ">
@@ -66,7 +88,7 @@
           <h2>&emsp;&emsp; {{know.name}} <small>课程列表</small></h2>
           <hr>
           <div onclick="modifyIntro()">
-            <p style="color: black;">&emsp;&emsp;&emsp;&emsp;&emsp;<small>简介: </small><strong>{{know.introduction}}</strong></p>
+            <p style="color: black;">&emsp;&emsp;&emsp;&emsp;&emsp;简介: <strong>{{know.introduction}}</strong></p>
           </div>
           <hr>
           <div onclick="modifyTag()">
