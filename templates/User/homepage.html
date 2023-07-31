@@ -174,6 +174,13 @@
             .modal-footer_my2 button:hover {
               background-color: #45a049;
             }
+
+
+
+
+
+
+
         </style>
     </head>
     <body>
@@ -221,190 +228,196 @@
         </nav>
 
         <main class="main" style="background-size:cover;padding-top:25px;">
-
-            <span class="mask bg-default alpha-6" style="height:1000px;z-index:1;
+                <span class="mask bg-default alpha-6" style="height:1000px;z-index:1;
                   background-image: url('/static/boomerang/assets/images/backgrounds/img-1.jpg')"></span>
 
-
-            <div style="background-color: #ddffff!important;padding: 10px;z-index:100;
+                <div style="background-color: #ddffff!important;padding: 10px;z-index:100;
             border-left: 5px solid #ccc!important;border-color: #2196F3!important;height:60px;">
-                <button class="btn btn-default" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasExample"
-                        aria-controls="offcanvasExample">
-                    <img src="/static/media/image/list.png" height="20px"/>
-                    My Account
-                </button>
-            </div>
-
-            <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasExample"
-                 aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title text-light" style="text-color:white" id="offcanvasExampleLabel">My
-                        Account</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
-                            aria-label="Close"></button>
+                    <button class="btn btn-default" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasExample"
+                            aria-controls="offcanvasExample">
+                        <img src="/static/media/image/list.png" height="20px"/>
+                        My Account
+                    </button>
                 </div>
 
-                <div class="offcanvas-body">
-
-                    <div class="mt-3">
-                        <button class="btn btn-primary btn-primary" type="button" id="dropdownMenuButton1"
-                                data-bs-toggle="dropdown" style="width:250px">
-                            Home
-                        </button>
+                <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasExample"
+                     aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title text-light" style="text-color:white" id="offcanvasExampleLabel">My
+                            Account</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
                     </div>
 
-                    <div class="dropdown mt-3">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton2"
-                                data-bs-toggle="dropdown" style="width:250px">
-                            Notes
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width:250px">
-                            {% for graph in GraphTag_List %}
-                                <li style="padding-left:10px">
-                                    <a href="#">
-                                        <img class="inline" width="16px" height="16px"
-                                            src="/static/icons/diagram-3.svg" alt="">
-                                    </a>
-                                    <a class="inline dropdown-item" href="{% url 'Neo4j:kgviewer' graph.uid %}" style="margin-left:20px">{{graph.name}} {{graph.tag}}</a>
-                                </li>
-                            {% endfor %}
-                            <li role="separator" class="divider"></li>
-                            {% for know in KnowTag_List %}
-                                <li style="padding-left:10px">
-                                    <a href="#">
-                                        <img class="inline" width="16px" height="16px"
-                                            src="/static/icons/circle-fill.svg" alt="">
-                                    </a>
-                                    <a class="inline dropdown-item" href="#" style="margin-left:20px">{{know.name}} {{know.tag}}</a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
+                    <div class="offcanvas-body">
 
-
-                    <div class="dropdown mt-3">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton3"
-                                data-bs-toggle="dropdown" style="width:250px">
-                            Favor
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width:250px">
-                            {% for course in FavorCourses_List %}
-                            <li><a class="dropdown-item" href="{{course.web}}">{{course.name}}: {{course.web}}</a></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="dropdown-divider"></div>
-
-                <div class="dropdown" style="margin-bottom:20px;margin-left:25px;">
-                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                       id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <div onclick="openModal_my2()">
-                            <img width="35px" height="35px" src="{{user.profile_picture.url}}" alt="头像">
+                        <div class="mt-3">
+                            <button class="btn btn-primary btn-primary" type="button" id="dropdownMenuButton1"
+                                    data-bs-toggle="dropdown" style="width:250px">
+                                Home
+                            </button>
                         </div>
-                        <div id="myModal_my2" class="modal_my2">
-                            <div class="modal-content_my2">
-                                <div class="modal-header_my2">
-                                    <span class="close_my2" onclick="closeModal_my2()">&times;</span>
-                                    <h2 class="modal-title_my2">选择图片</h2>
-                                </div>
-                                <div class="modal-body_my2">
-                                    <form action="homepage" method="post" enctype="multipart/form-data">
-                                        <input type="hidden" name="submitType" value="modifyHeadProfile">
-                                        <!--modifHeadProfile?后端如何命名的-->
-                                        <input type="file" name="pic">
-                                        <br><br>
-                                        <input type="submit" value="提交">
-                                    </form>
-                                </div>
-                                <div class="modal-footer_my2">
-                                    <button onclick="closeModal_my2()">Close</button>
+
+                        <div class="dropdown mt-3">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton2"
+                                    data-bs-toggle="dropdown" style="width:250px">
+                                Notes
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width:250px">
+                                {% for graph in GraphTag_List %}
+                                <li style="padding-left:10px">
+                                    <a href="#">
+                                        <img class="inline" width="16px" height="16px"
+                                             src="/static/icons/diagram-3.svg" alt="">
+                                    </a>
+                                    <a class="inline dropdown-item" href="{% url 'Neo4j:kgviewer' graph.uid %}"
+                                       style="margin-left:20px">{{graph.name}} {{graph.tag}}</a>
+                                </li>
+                                {% endfor %}
+                                <li role="separator" class="divider"></li>
+                                {% for know in KnowTag_List %}
+                                <li style="padding-left:10px">
+                                    <a href="#">
+                                        <img class="inline" width="16px" height="16px"
+                                             src="/static/icons/circle-fill.svg" alt="">
+                                    </a>
+                                    <a class="inline dropdown-item" href="#" style="margin-left:20px">{{know.name}}
+                                        {{know.tag}}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+
+                        <div class="dropdown mt-3">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton3"
+                                    data-bs-toggle="dropdown" style="width:250px">
+                                Favor
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width:250px">
+                                {% for course in FavorCourses_List %}
+                                <li><a class="dropdown-item" href="{{course.web}}">{{course.name}}: {{course.web}}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="dropdown-divider"></div>
+
+                    <div class="dropdown" style="margin-bottom:20px;margin-left:25px;">
+                        <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                           id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div onclick="openModal_my2()">
+                                <img width="35px" height="35px" src="{{user.profile_picture.url}}" alt="头像">
+                            </div>
+                            <div id="myModal_my2" class="modal_my2">
+                                <div class="modal-content_my2">
+                                    <div class="modal-header_my2">
+                                        <span class="close_my2" onclick="closeModal_my2()">&times;</span>
+                                        <h2 class="modal-title_my2">选择图片</h2>
+                                    </div>
+                                    <div class="modal-body_my2">
+                                        <form action="homepage" method="post" enctype="multipart/form-data">
+                                            <input type="hidden" name="submitType" value="modifyHeadProfile">
+                                            <!--modifHeadProfile?后端如何命名的-->
+                                            <input type="file" name="pic">
+                                            <br><br>
+                                            <input type="submit" value="提交">
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer_my2">
+                                        <button onclick="closeModal_my2()">Close</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <span style="margin-left:20px;"><strong>{{user.username}}</strong></span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                        <li><a class="dropdown-item" href="#" style="color: black;">New project...</a></li>
-                        <li><a class="dropdown-item" href="#" style="color: black;">Settings</a></li>
-                        <li><a class="dropdown-item" data-toggle="modal" href="#modifyHeadProfile" style="color: black;">Profile</a></li>
-                        <!--直接这样似乎无法触发模态框。-->
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li>
-                            <a href="{% url 'User:logout' %}" class="dropdown-item" style="color: black;">
-                                Sign out
-                            </a>
-                        </li>
-                    </ul>
+                            <span style="margin-left:20px;"><strong>{{user.username}}</strong></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="#" style="color: black;">New project...</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: black;">Settings</a></li>
+                            <li><a class="dropdown-item" data-toggle="modal" href="#modifyHeadProfile"
+                                   style="color: black;">Profile</a></li>
+                            <!--直接这样似乎无法触发模态框。-->
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a href="{% url 'User:logout' %}" class="dropdown-item" style="color: black;">
+                                    Sign out
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
 
-            </div>
+<!--            <div class="row-wrapper min-height container-fluid" style="height:1100px;margin:0 auto;z-index:10;">                  version-0 -->
+<!--            <div class="row-wrapper min-height container-fluid" style="height:1100px;margin:0 auto;z-index:10;">                  version-1 -->
+                <div class="row-wrapper min-height container-fluid" style="height:1100px;margin:0 auto;z-index:10;width:70%;">   <!-- version-2:70% -->
+<!--                    <div class="row cols-xs-space cols-sm-space cols-md-space0" style="width:850px;">-->
+                    <div class="row cols-xs-space cols-sm-space cols-md-space0 container-fluid">
 
-
-            <div class="row-wrapper min-height" style="height:1100px;margin:0 auto;z-index:10;">
-                <div class="row cols-xs-space cols-sm-space cols-md-space0" style="width:850px;">
-
-                    <div class="jumbotron_my align-items-center justify-content-center text-center"
-                         style="height:75px;padding-top:15px;vertical-align:center">
-                        <h2>Graphs</h2>
-                    </div>
-
-                    {% for graph_node in Graph_List %}
-
-                    <div class="jumbotron align-items-center justify-content-center text-center"
-                         style="height:175px;padding:25px;">
-                         <button type="button" class="close" aria-label="Close" onclick="doDeleteGraph('{{graph_node.uid}}')">
-                            <span aria-hidden="true" onclick="doDeleteGraph('{{graph_node.uid}}')">&times;</span>
-                        </button>
-                        <h4>{{graph_node.graph_name}}</h4>
-                        <p>
-                            {{ article.content|linebreaksbr }}
-                        </p>
-                        <div class="dropdown" style="margin-bottom:20px;">
-                            <strong>简介: </strong>{{graph_node.introduction}}<br> 
-                            <strong>Notes: </strong>{{graph_node.tag}}
-                            <br>
-                            {{ article.content|linebreaksbr }}
-                            
-                            <a class="btn btn-sm btn-primary" role="button"
-                               href="{% url 'Neo4j:kgviewer' graph_node.uid %}">
-                                view more details
-                            </a>
+                        <div class="jumbotron_my align-items-center justify-content-center text-center"
+                             style="height:75px;padding-top:15px;vertical-align:center">
+                            <h2>Graphs</h2>
                         </div>
-                    </div>
-                    {% endfor %}
 
-                    <div class="jumbotron align-items-center justify-content-center text-center"
-                         style="height: 105px; padding: 10px;">
-                        <h3>new graph<br></h3>
-                        <p>
-                            {{ article.content|linebreaksbr }}
-                        </p>
-                        <!--                            <a class="btn btn-sm btn-primary" role="button"-->
-                        <!--                               href="#" data-bs-toggle="modal" data-bs-target="#myModal" id="openModal1">-->
-                        <!--                                add new graph-->
-                        <!--                            </a>-->
-                        <div>
-                            <button class="btn btn-sm btn-primary" role="button" id="openModal"
-                                    data-bs-toggle="modal" data-bs-target="#addGraph">add new graph
+                        {% for graph_node in Graph_List %}
+
+                        <div class="jumbotron align-items-center justify-content-center text-center"
+                             style="height:175px;padding:25px;">
+                            <button type="button" class="close" aria-label="Close"
+                                    onclick="doDeleteGraph('{{graph_node.uid}}')">
+                                <span aria-hidden="true" onclick="doDeleteGraph('{{graph_node.uid}}')">&times;</span>
                             </button>
-                            <!-- <div id="myModal" class="modal_my" data-backdrop="false" style="z-index:1050;">
-                                <div class="modal-content1 align-items-center justify-content-center text-center">
-                                    <span class="close_my">&times;</span>
-                                    <h2>New Graph</h2>
-                                    <p>Select a file as your new graph.</p>
-                                    这里放置添加图片的表单
-                                </div>
-                            </div> -->
+                            <h4>{{graph_node.graph_name}}</h4>
+                            <p>
+                                {{ article.content|linebreaksbr }}
+                            </p>
+                            <div class="dropdown" style="margin-bottom:20px;">
+                                <strong>简介: </strong>{{graph_node.introduction}}<br>
+                                <strong>Notes: </strong>{{graph_node.tag}}
+                                <br>
+                                {{ article.content|linebreaksbr }}
+
+                                <a class="btn btn-sm btn-primary" role="button"
+                                   href="{% url 'Neo4j:kgviewer' graph_node.uid %}">
+                                    view more details
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                        <div class="jumbotron align-items-center justify-content-center text-center"
+                             style="height: 105px; padding: 10px;">
+                            <h3>new graph<br></h3>
+                            <p>
+                                {{ article.content|linebreaksbr }}
+                            </p>
+                            <!--                            <a class="btn btn-sm btn-primary" role="button"-->
+                            <!--                               href="#" data-bs-toggle="modal" data-bs-target="#myModal" id="openModal1">-->
+                            <!--                                add new graph-->
+                            <!--                            </a>-->
+                            <div>
+                                <button class="btn btn-sm btn-primary" role="button" id="openModal"
+                                        data-bs-toggle="modal" data-bs-target="#addGraph">add new graph
+                                </button>
+                                <!-- <div id="myModal" class="modal_my" data-backdrop="false" style="z-index:1050;">
+                                    <div class="modal-content1 align-items-center justify-content-center text-center">
+                                        <span class="close_my">&times;</span>
+                                        <h2>New Graph</h2>
+                                        <p>Select a file as your new graph.</p>
+                                        这里放置添加图片的表单
+                                    </div>
+                                </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
         </main>
 
 
@@ -440,29 +453,32 @@
         </footer>
 
         <!--获取头像图片的模态框.-->
-        <form class="form"  method="post" enctype="multipart/form-data"> <!--缺省action, 交给自己-->
+        <form class="form" method="post" enctype="multipart/form-data"> <!--缺省action, 交给自己-->
             {% csrf_token %}
-            <div class="modal fade" id="modifyHeadProfile" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modifyHeadProfileLabel" aria-hidden="true">
+            <div class="modal fade" id="modifyHeadProfile" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                 aria-labelledby="modifyHeadProfileLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="modifyHeadProfileLabel">更改头像</h5>
-                    <button type="button" class="close" aria-label="Close" onclick="closeModal_my2()">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label>选择新头像</label>
-                            <p><input type="file" name="pic" accept="image/*"></p>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modifyHeadProfileLabel">更改头像</h5>
+                            <button type="button" class="close" aria-label="Close" onclick="closeModal_my2()">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>选择新头像</label>
+                                <p><input type="file" name="pic" accept="image/*"></p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" onclick="closeModal_my2()">关闭</button>
+                            <button type="submit" class="btn btn-primary" name="submitType" value="modifyHeadProfile">
+                                确定
+                            </button>
+                            <!--submit不能 data-dismiss! 否则表单交不出去..-->
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" onclick="closeModal_my2()">关闭</button>
-                        <button type="submit" class="btn btn-primary" name="submitType" value="modifyHeadProfile">确定</button>
-                        <!--submit不能 data-dismiss! 否则表单交不出去..-->
-                    </div>
-                </div>
                 </div>
             </div>
         </form>
@@ -471,7 +487,8 @@
         <form method="post">
             {% csrf_token %}
             <input type="text" id="deleteGraphUid" name="uid" value="" hidden>
-            <div class="modal modal-warning fade" id="deleteGraph" tabindex="-1" role="dialog" aria-labelledby="deleteGraph" aria-hidden="true">
+            <div class="modal modal-warning fade" id="deleteGraph" tabindex="-1" role="dialog"
+                 aria-labelledby="deleteGraph" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -487,7 +504,9 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-sm btn-primary" name="submitType" value="deleteGraph">删除</button>
+                            <button type="submit" class="btn btn-sm btn-primary" name="submitType" value="deleteGraph">
+                                删除
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -497,12 +516,13 @@
         <!--添加知识图谱的模态框-->
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            <div class="modal fade" id="addGraph" tabindex="-1" role="dialog" aria-labelledby="addGraph" aria-hidden="true">
+            <div class="modal fade" id="addGraph" tabindex="-1" role="dialog" aria-labelledby="addGraph"
+                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="modal_title_6">添加图谱</h5>
-                            <button type="button" class="close" aria-label="Close" data-bs-dismiss = 'modal'>
+                            <button type="button" class="close" aria-label="Close" data-bs-dismiss='modal'>
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
@@ -523,7 +543,9 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-                            <button type="submit" class="btn btn-sm btn-primary" name="submitType" value="addGraph">确定</button>
+                            <button type="submit" class="btn btn-sm btn-primary" name="submitType" value="addGraph">
+                                确定
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -587,6 +609,13 @@
             ipt.value = uid
             $('#deleteGraph').modal('show');
         }
+
+
+
+
+
+
+
         </script>
     </body>
 </html>
