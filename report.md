@@ -83,8 +83,12 @@
 
 1. 使用Django完成网页后端开发与前后端交互，使用html/js/css配合bootstrap框架、echarts库进行前端页面设计开发，实现用户系统，用户界面设计简单美观，易于使用。
 2. 使用Python网络爬虫工具BeautifulSoup, requests, Selenium获取共八个网站的课程资源。
-3. 点击知识图谱的知识节点可以显示对应课程资源，并能够按照一定指标分类和排序。
-4. 可以导入neo4j知识图谱并将其可视化，知识图谱资源根据不同用户进行差异化，提供了删除现有知识图谱节点的方法。课程可以根据六个维度的信息进行排序。
+3. 用户可以对知识图谱进行多个层次的管理和操作：  
+   + 节点层次，用户可以创建节点，连接节点并且删除节点，以及对编辑节点自身信息。  
+   + 节点的抽象层次，即知识点和课程方面，用户可以根据喜好来收藏课程；并且可以分别在主页和知识点界面查看对应范畴的收藏课程。
+   + 图谱层次，用户可以导入.json文件创建知识图谱，或者直接创建空图谱，也可以根据个性化设计的知识图谱导出.json文件。
+4. 点击知识图谱的知识节点可以显示对应课程资源，并能够按照一定指标分类和排序。
+5. 可以导入neo4j知识图谱并将其可视化，知识图谱资源根据不同用户进行差异化，提供了删除现有知识图谱节点的方法。课程可以根据六个维度的信息进行排序。
 
 ### 选做任务完成情况（已完成数量/3）
 
@@ -432,11 +436,13 @@ def get_str(self):
 
 - Neo4j模块
   - Neo4j 文档: https://neo4j.com/docs/cypher-manual/5
+  - neomodel 文档：https://neomodel.readthedocs.io/en/latest/
   - Echarts 文档：https://echarts.apache.org/zh/
 - User模块
   - Django文档: https://docs.djangoproject.com/zh-hans/4.2/
   - Bootstrap 文档：https://v5.bootcss.com/docs/getting-started/introduction/
-  - Django 模板 | 菜鸟教程: https://www.runoob.com/django/django-template.html
+  - UI元素包 boomerang 文档：https://www.bootmb.com/themes/boomerang/
+  - Django 菜鸟教程: https://www.runoob.com/django/
 - 爬虫模块
   - Beautiful Soup 文档: https://beautifulsoup.cn/
   - Selenium 文档: https://www.selenium.dev/zh-cn/documentation/
