@@ -60,7 +60,7 @@ class Register(View):
     注册用。用auth自带的UserCreationForm表单实现.  
     UserCreationField有三个fields: username(of User model), password1, password2.
     '''
-    default_graph_path = "static/graphs/example.json"
+    default_graph_path = "static/graphs/initial_graph.json"
 
     def get(self, request:HttpRequest):
         form = MyUserCreationForm()
