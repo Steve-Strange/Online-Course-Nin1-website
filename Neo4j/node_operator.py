@@ -41,3 +41,14 @@ def modifyFavor(user:UserProfile, course:Course):
         userfavor = UserFavorites(course_uid = course.uid, user = user).save()
         course.favor = True
     course.save()
+
+def deleteTagNode(user:UserProfile, node:TagNode):
+    # 注意要连带着删除tag, favor等.
+    if isinstance(node, Course):
+        if node.favor:
+            f = user.userfavorites_set.get(course_uid = node.uid)
+            f.delete()
+    if node.tag:
+        f = user.usertags_set.get(tag_uid = node.uid)
+        f.delete()
+    node.delete()

@@ -18,7 +18,7 @@ def iMOOC(keyword, key):
 
     search_url = "https://www.imooc.com/search/?type=course&words=" + keyword
     driver.get(search_url)
-    time.sleep(0.3)
+    time.sleep(0.7)
 
     try:
         click_place = driver.find_element(By.XPATH, "/html/body/div[5]/div/div[3]/div[1]/div[1]/div[3]/div[1]/p")
@@ -26,7 +26,7 @@ def iMOOC(keyword, key):
         time.sleep(0.1)
         click_place = driver.find_element(By.XPATH, "/html/body/div[5]/div/div[3]/div[1]/div[1]/div[3]/div[1]/div/ul/li[3]")
         ActionChains(driver).move_to_element(click_place).click(click_place).perform()
-        time.sleep(0.5)
+        time.sleep(0.3)
     except Exception:
         print("No results")
 

@@ -9,6 +9,7 @@ from django.conf import settings
 from os.path import join
 
 from Neo4j.models import GraphRoot, KnowledgeBlock, Course, TagEdge
+from Neo4j.node_operator import deleteTagNode
 from Utils.file_operators import csv_loader, DisjointSets
 from Utils.find import find_all_knowledge_in_graph, find_all_courses_in_knowledge, find_all_knowledge_from_knowledge
 from User.models import UserProfile, UserGraphs, UserTags
@@ -66,12 +67,16 @@ class Graph:
                 knowledge.rel_courses.connect(node)
     
 
-    def __init__(self, user:UserProfile, root:GraphRoot = None) -> None:
+    def __init__(self, user:UserProfile, root: str = None) -> None:
         '''
         指定图的根，或者不指定表示空图，将要进行创建等操作.
+        root 是根的uid或者GraphRoot对象.
         '''
         self.user = user
-        self.root = root
+        if isinstance(root, str):
+            self.root = GraphRoot.nodes.get(uid = root)
+        else:
+            self.root = root
         self.knowledges = find_all_knowledge_in_graph(self.root) if self.root is not None else []
         for know in self.knowledges:
             print(know.name)
@@ -316,12 +321,15 @@ class Graph:
         self.knowledges.pop(ind)
         # 删除所有相关课程.
         for course in knowledge.rel_courses.all():
-            course.delete()
+            
+            #ourse.delete()
+            deleteTagNode(self.user, course)
         # 把与这个knowledge相关的所有节点和root相连.防止删除之后不再连通.
         for rel_know in find_all_knowledge_from_knowledge(knowledge):
             self.root.rel_knowledge.connect(rel_know)
         uid = knowledge.uid
-        knowledge.delete()
+        # knowledge.delete()
+        deleteTagNode(self.user, knowledge)
         return uid
     
     def delete_node_via_uid(self, know_uid:str):
@@ -336,6 +344,13 @@ class Graph:
         if target is None:
             raise "KnowledgeBlock does not exist in this graph"
         return self.delete_node(target, False)
+    
+    def deleteSelf(self):
+        for i in self.knowledges:
+            self.delete_node(i, False)
+        uid = self.root.uid
+        self.user.usergraphs_set.get(root_uid = uid).delete()
+        deleteTagNode(self.user, self.root)
     
     def link_nodes(self, source:KnowledgeBlock, target:KnowledgeBlock, validate:bool = True):
         if validate:

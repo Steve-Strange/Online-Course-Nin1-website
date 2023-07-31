@@ -90,7 +90,7 @@ class KnowledgeGraph:
         except:
             return redirect(reverse("Neo4j:kgviewer",kwargs={"uid":graph_uid}))
         
-        src = "BiliBili"
+        src = "Bilibili"
         order = "名称"
         if request.method == "POST":
             t = request.POST.get("submitType")

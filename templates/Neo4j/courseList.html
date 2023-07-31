@@ -61,7 +61,7 @@
       </div>
     </nav> -->
     <main class="main">
-      <section class="py-xl bg-cover bg-size--cover" style="background-image: url('/static/boomerang/assets/images/backgrounds/img-1.jpg')"> <!--在这修改背景图片. -->
+      <section class="py-xl" style="background-image: url('/static/boomerang/assets/images/backgrounds/img-1.jpg')"> <!--在这修改背景图片. -->
         <div class="page-header">
           <h2>&emsp;&emsp; {{know.name}} <small>课程列表</small></h2>
           <hr>
@@ -84,7 +84,7 @@
                 <h5 style="color:white;"><small>来源: </small>{{source}};&emsp; <small>排序: </small> {{order}}</h5>  <!--直接在这里修改查询的状态.-->
                   <div style="display: grid; place-items: center;">
                       <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="来源:BiliBili" onclick="changeSource('BiliBili')">BiliBili</button>
+                          <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="来源:Bilibili" onclick="changeSource('Bilibili')">Bilibili</button>
                           <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="来源:国家高等教育智慧教育平台" onclick="changeSource('Chinaooc')">Chinaooc</button>
                           <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="来源:中国大学MOOC" onclick="changeSource('CNMOOC')">CNMOOC</button>
                           <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="来源:好大学在线" onclick="changeSource('HDXol')">HDXol</button>
@@ -197,24 +197,36 @@
     </main>
 
     <!--下方的黑框.-->
-    <footer class="pt-5 pb-3 footer  footer-dark bg-tertiary">
+    <footer class="pt-5 pb-3 footer footer-dark bg-tertiary">
       <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-4">
-            <div class="pr-lg-5">
-              <h1 class="heading h6 text-uppercase font-weight-700 mb-3"><strong>Boomerang</strong> UI Kit</h1>
-              <p>添加简介</p>
-            </div>
+          <div class="row">
+              <div class="col-12">
+                  <div class="pr-lg-5">
+                      <h1 class="heading h6 text-uppercase font-weight-700 mb-3">课程推荐系统
+                      </h1>
+                      <p> 这是一个为计算机科学领域提供优质课程资源的网站。我们以知识图谱为基础，提供个性化的学习体验和推荐课程。
+                          <br>
+                          在平台上，可以通过点击知识图谱中的知识节点，可以快速找到与该知识点相关的推荐课程。推荐课程的来源多样，以确保可以获得多样性和全面性的学习资源。用户不仅可以浏览推荐的课程，还可以根据不同指标对课程资源进行排序，以便根据喜好和需求进行个性化选择。
+                          <br>
+                          为了提供更好的用户体验，我们设计了美观大方的界面，以便轻松浏览和操作。同时，我们还为用户实现了注册、登录和个人主页功能，这意味着用户可以根据自身的学习进度和兴趣来管理和追踪课程资源。
+                          <br>
+                          课程资源平台还支持导入 Neo4j 知识图谱文件，并通过可视化进行直观的展示，以便更好地理解知识之间的联系和层次。
+                          <br>
+                          除此以外，知识图谱还有添加或删除节点的功能，以便根据自身学习需求来定制个性化的 知识图谱。
+                          <br>
+                          我们致力于为提供简洁和用户友好的体验，以便让用户专注于学习和探索计算机科学。
+                      </p>
+                  </div>
+              </div>
           </div>
-        </div>
-        <hr>
-        <div class="d-flex align-items-center">
-          <span class="">
-            2023夏python大作业  署名
-          </span>
-        </div>
+          <hr>
+          <div class="d-flex align-items-center">
+    <span class="">
+      2023夏python大作业  署名
+    </span>
+          </div>
       </div>
-    </footer>
+  </footer>
 
 
     <!--模态框-->

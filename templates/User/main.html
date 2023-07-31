@@ -131,7 +131,7 @@
                                     <h2 class="card-title fade-in">Welcome To The Ocean Of Knowledge</h2>
                                     <!--                                    <h2 class="card-text text-secondary fade-in" style="text-align: right;margin-top:20px;">-->
                                     <!--                                        您的专属课程私人定制助手</h2>-->
-                                    <h3 class="card-text text-secondary fade-in"
+                                    <h3 class="card-text text-primary fade-in"
                                         style="text-align: right;margin-top:20px;">
                                         Your customized personal<br> assistant for exclusive lessons</h3>
                                     <!--                                    <button type="button"-->
@@ -149,26 +149,26 @@
                                         <button type="button"
                                                 class="btn btn-primary btn-animated btn-animated-y button-type w-25"
                                                 style="height:50px; margin-right:3%;">
+                                            <a href="{% url 'User:login' %}" class="no-style-link">
                                                 <span class="btn-inner--hidden">
-                                                <a href="{% url 'User:login' %}" class="no-style-link">
-                                                    Sign-in
-                                                </a>
+                                                    <i class="fas fa-arrow-right"></i>
                                                 </span>
-                                            <span class="btn-inner--visible">
-                                                <i class="fas fa-arrow-right"></i>
-                                            </span>
+                                                <span class="btn-inner--visible">
+                                                    Sign-in
+                                                </span>
+                                            </a>
                                         </button>
                                         <button type="button"
                                                 class="btn btn-primary btn-animated btn-animated-y button-type w-25"
                                                 style="height:50px; margin-left:3%;">
+                                            <a href="{% url 'User:register' %}" class="no-style-link">
                                                 <span class="btn-inner--hidden">
-                                                <a href="{% url 'User:register' %}" class="no-style-link">
-                                                    Sign-up
-                                                </a>
+                                                    <i class="fas fa-arrow-right"></i>
                                                 </span>
-                                            <span class="btn-inner--visible">
-                                                <i class="fas fa-arrow-right"></i>
-                                            </span>
+                                                <span class="btn-inner--visible">
+                                                    Sign-up
+                                                </span>
+                                            </a>
                                         </button>
                                     </div>
 
@@ -194,18 +194,24 @@
         </main>
 
 
-        <footer class="pt-5 pb-3 footer  footer-dark bg-tertiary">
+        <footer class="pt-5 pb-3 footer footer-dark bg-tertiary">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-12">
+                    <div class="col-12">
                         <div class="pr-lg-5">
-                            <h1 class="heading h6 text-uppercase font-weight-700 mb-3">python暑期课程<br>课程推荐系统
+                            <h1 class="heading h6 text-uppercase font-weight-700 mb-3">课程推荐系统
                             </h1>
-                            <p>网站简介：<br>当代用户们渴望更加便捷和个性化的学习体验，这也是我们的网课推荐网站的关键特点。我们热衷于帮助用户们找到最适合他们的课程，通过根据用户提供的知识图谱和选课要素权重，为他们量身定制个性化的课程清单。<br>
-                                我们的网站设计简洁清晰，页面布局合理，使用户们能够轻松地浏览和使用。我们对颜色和图标的选择也考虑到了年轻用户的兴趣和喜好，给人一种温暖而有活力的感觉。<br>
-                                我们的网站拥有一个智能算法，通过分析用户的知识图谱和选课要素权重，能够推荐出最符合用户需求和兴趣的课程。我们也提供了丰富多样的课程种类，以满足不同用户的学习需求和兴趣爱好。<br>
-                                除了个性化推荐功能，我们的网站还提供了课程评价和讨论功能，让用户们可以与其他用户交流和分享学习经验。这种社交性质的功能使得用户们能够更好地互相激励和支持，创造出更积极的学习氛围。<br>
-                                我们相信，通过我们个性化设计的网课推荐网站，用户们将能够轻松找到适合自己的课程，实现个人学习目标，并且享受到更好的学习体验。无论是通过我们的智能算法或者与其他用户的互动，我们都致力于为用户们提供最优质的在线学习平台。<br>
+                            <p> 这是一个为计算机科学领域提供优质课程资源的网站。我们以知识图谱为基础，提供个性化的学习体验和推荐课程。
+                                <br>
+                                在平台上，可以通过点击知识图谱中的知识节点，可以快速找到与该知识点相关的推荐课程。推荐课程的来源多样，以确保可以获得多样性和全面性的学习资源。用户不仅可以浏览推荐的课程，还可以根据不同指标对课程资源进行排序，以便根据喜好和需求进行个性化选择。
+                                <br>
+                                为了提供更好的用户体验，我们设计了美观大方的界面，以便轻松浏览和操作。同时，我们还为用户实现了注册、登录和个人主页功能，这意味着用户可以根据自身的学习进度和兴趣来管理和追踪课程资源。
+                                <br>
+                                课程资源平台还支持导入 Neo4j 知识图谱文件，并通过可视化进行直观的展示，以便更好地理解知识之间的联系和层次。
+                                <br>
+                                除此以外，知识图谱还有添加或删除节点的功能，以便根据自身学习需求来定制个性化的 知识图谱。
+                                <br>
+                                我们致力于为提供简洁和用户友好的体验，以便让用户专注于学习和探索计算机科学。
                             </p>
                         </div>
                     </div>

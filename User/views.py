@@ -60,7 +60,7 @@ class Register(View):
     注册用。用auth自带的UserCreationForm表单实现.  
     UserCreationField有三个fields: username(of User model), password1, password2.
     '''
-    default_graph_path = "static/graphs/example.json"
+    default_graph_path = "static/graphs/initial_graph.json"
 
     def get(self, request:HttpRequest):
         form = MyUserCreationForm()
@@ -107,7 +107,8 @@ class Homepage:
         if request.method == "POST":
             t = request.POST.get("submitType")
             if t == "modifyHeadProfile":
-                file = request.POST.get("pic")
+                #file = request.POST.get("pic")
+                file = request.FILES.get("pic")
                 filename = thisuser.username + "_profile.jpg"
                 p = "%s/image/%s"%(settings.MEDIA_ROOT, filename)
                 content = file.chunks()
@@ -116,6 +117,31 @@ class Homepage:
                         f.write(i)
                 thisuser.profile_picture = 'image/%s'%(filename)
                 thisuser.save()
+
+            elif t == "deleteGraph":
+                uid = request.POST.get('uid')
+                graph = Graph(thisuser, uid)
+                graph.deleteSelf()
+
+            elif t == "addGraph":
+                try:
+                    file = request.FILES.get("graph")
+                except:
+                    file = None
+                newgraph = Graph(thisuser)
+                if file is not None:
+                    tmp_filename = thisuser.username + "_graph.json"
+                    p =  "static/graphs/%s"%(tmp_filename)
+                    with open(p, 'wb') as f:
+                        for i in file.chunks():
+                            f.write(i)
+                    newgraph.import_json(p, False)
+                else:
+                    name = request.POST.get('name')
+                    intro = request.POST.get('introduction')
+                    if name:
+                        newgraph.create_empty_graph(name, intro)
+                    
 
         tags = find_all_tags(thisuser)
         graphs = find_all_graphs(thisuser)

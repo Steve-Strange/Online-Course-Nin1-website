@@ -260,20 +260,25 @@
                             Notes
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width:250px">
-                            <li style="padding-left:10px">
-                                <a href="#">
-                                    <img class="inline" width="25px" height="23px"
-                                         src="/static/media/image/graph_withoutbg.png" alt="">
-                                </a>
-                                <a class="inline dropdown-item" href="#" style="margin-left:20px">GraphTags</a>
-                            </li>
-                            <li style="padding-left:10px">
-                                <a href="#">
-                                    <img class="inline" width="25px" height="23px"
-                                         src="/static/media/image/graph_withoutbg.png" alt="">
-                                </a>
-                                <a class="inline dropdown-item" href="#" style="margin-left:20px">KnowTags</a>
-                            </li>
+                            {% for graph in GraphTag_List %}
+                                <li style="padding-left:10px">
+                                    <a href="#">
+                                        <img class="inline" width="16px" height="16px"
+                                            src="/static/icons/diagram-3.svg" alt="">
+                                    </a>
+                                    <a class="inline dropdown-item" href="{% url 'Neo4j:kgviewer' graph.uid %}" style="margin-left:20px">{{graph.name}} {{graph.tag}}</a>
+                                </li>
+                            {% endfor %}
+                            <li role="separator" class="divider"></li>
+                            {% for know in KnowTag_List %}
+                                <li style="padding-left:10px">
+                                    <a href="#">
+                                        <img class="inline" width="16px" height="16px"
+                                            src="/static/icons/circle-fill.svg" alt="">
+                                    </a>
+                                    <a class="inline dropdown-item" href="#" style="margin-left:20px">{{know.name}} {{know.tag}}</a>
+                                </li>
+                            {% endfor %}
                         </ul>
                     </div>
 
@@ -284,8 +289,8 @@
                             Favor
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width:250px">
-                            {% for course in FavorCourses_Lis %}
-                            <li><a class="dropdown-item" href="{{course.web}}">{{course.name}}</a></li>
+                            {% for course in FavorCourses_List %}
+                            <li><a class="dropdown-item" href="{{course.web}}">{{course.name}}: {{course.web}}</a></li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -353,15 +358,19 @@
 
                     <div class="jumbotron align-items-center justify-content-center text-center"
                          style="height:175px;padding:25px;">
-                        <h2>{{graph_node.graph_name}}</h2>
+                         <button type="button" class="close" aria-label="Close" onclick="doDeleteGraph('{{graph_node.uid}}')">
+                            <span aria-hidden="true" onclick="doDeleteGraph('{{graph_node.uid}}')">&times;</span>
+                        </button>
+                        <h4>{{graph_node.graph_name}}</h4>
                         <p>
                             {{ article.content|linebreaksbr }}
                         </p>
                         <div class="dropdown" style="margin-bottom:20px;">
-                            {{graph_node.graph_name}}, uid: {{graph_node.uid}}
-                            <p>
-                                {{ article.content|linebreaksbr }}
-                            </p>
+                            <strong>简介: </strong>{{graph_node.introduction}}<br> 
+                            <strong>Notes: </strong>{{graph_node.tag}}
+                            <br>
+                            {{ article.content|linebreaksbr }}
+                            
                             <a class="btn btn-sm btn-primary" role="button"
                                href="{% url 'Neo4j:kgviewer' graph_node.uid %}">
                                 view more details
@@ -382,45 +391,41 @@
                         <!--                            </a>-->
                         <div>
                             <button class="btn btn-sm btn-primary" role="button" id="openModal"
-                                    data-bs-toggle="modal" data-bs-target="#myModal">add new graph
+                                    data-bs-toggle="modal" data-bs-target="#addGraph">add new graph
                             </button>
-                            <div id="myModal" class="modal_my" data-backdrop="false" style="z-index:1050;">
+                            <!-- <div id="myModal" class="modal_my" data-backdrop="false" style="z-index:1050;">
                                 <div class="modal-content1 align-items-center justify-content-center text-center">
                                     <span class="close_my">&times;</span>
                                     <h2>New Graph</h2>
                                     <p>Select a file as your new graph.</p>
-                                    <!--这里放置添加图片的表单-->
+                                    这里放置添加图片的表单
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
         </main>
 
-        <!--                    <button id="openModal">打开模态框</button>-->
 
-        <!--                    <div id="myModal" class="modal">-->
-        <!--                        <div class="modal-content">-->
-        <!--                            <span class="close">&times;</span>-->
-        <!--                            <h2>这是一个模态框</h2>-->
-        <!--                            <p>这是模态框的内容。您可以在这里添加任何您想要显示的内容。</p>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-
-
-        <footer class="pt-5 pb-3 footer  footer-dark bg-tertiary">
+        <footer class="pt-5 pb-3 footer footer-dark bg-tertiary">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-md-12">
+                    <div class="col-12">
                         <div class="pr-lg-5">
-                            <h1 class="heading h6 text-uppercase font-weight-700 mb-3">python暑期课程<br>课程推荐系统
+                            <h1 class="heading h6 text-uppercase font-weight-700 mb-3">课程推荐系统
                             </h1>
-                            <p>网站简介：<br>当代用户们渴望更加便捷和个性化的学习体验，这也是我们的网课推荐网站的关键特点。我们热衷于帮助用户们找到最适合他们的课程，通过根据用户提供的知识图谱和选课要素权重，为他们量身定制个性化的课程清单。<br>
-                                我们的网站设计简洁清晰，页面布局合理，使用户们能够轻松地浏览和使用。我们对颜色和图标的选择也考虑到了年轻用户的兴趣和喜好，给人一种温暖而有活力的感觉。<br>
-                                我们的网站拥有一个智能算法，通过分析用户的知识图谱和选课要素权重，能够推荐出最符合用户需求和兴趣的课程。我们也提供了丰富多样的课程种类，以满足不同用户的学习需求和兴趣爱好。<br>
-                                除了个性化推荐功能，我们的网站还提供了课程评价和讨论功能，让用户们可以与其他用户交流和分享学习经验。这种社交性质的功能使得用户们能够更好地互相激励和支持，创造出更积极的学习氛围。<br>
-                                我们相信，通过我们个性化设计的网课推荐网站，用户们将能够轻松找到适合自己的课程，实现个人学习目标，并且享受到更好的学习体验。无论是通过我们的智能算法或者与其他用户的互动，我们都致力于为用户们提供最优质的在线学习平台。<br>
+                            <p> 这是一个为计算机科学领域提供优质课程资源的网站。我们以知识图谱为基础，提供个性化的学习体验和推荐课程。
+                                <br>
+                                在平台上，可以通过点击知识图谱中的知识节点，可以快速找到与该知识点相关的推荐课程。推荐课程的来源多样，以确保可以获得多样性和全面性的学习资源。用户不仅可以浏览推荐的课程，还可以根据不同指标对课程资源进行排序，以便根据喜好和需求进行个性化选择。
+                                <br>
+                                为了提供更好的用户体验，我们设计了美观大方的界面，以便轻松浏览和操作。同时，我们还为用户实现了注册、登录和个人主页功能，这意味着用户可以根据自身的学习进度和兴趣来管理和追踪课程资源。
+                                <br>
+                                课程资源平台还支持导入 Neo4j 知识图谱文件，并通过可视化进行直观的展示，以便更好地理解知识之间的联系和层次。
+                                <br>
+                                除此以外，知识图谱还有添加或删除节点的功能，以便根据自身学习需求来定制个性化的 知识图谱。
+                                <br>
+                                我们致力于为提供简洁和用户友好的体验，以便让用户专注于学习和探索计算机科学。
                             </p>
                         </div>
                     </div>
@@ -435,25 +440,25 @@
         </footer>
 
         <!--获取头像图片的模态框.-->
-        <form class="form"  method="post"> <!--缺省action, 交给自己-->
+        <form class="form"  method="post" enctype="multipart/form-data"> <!--缺省action, 交给自己-->
             {% csrf_token %}
             <div class="modal fade" id="modifyHeadProfile" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="modifyHeadProfileLabel" aria-hidden="true">
                 <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
                     <h5 class="modal-title" id="modifyHeadProfileLabel">更改头像</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" aria-label="Close" onclick="closeModal_my2()">
                         <span aria-hidden="true">&times;</span>
                     </button>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
                             <label>选择新头像</label>
-                            <input type="file" name="pic">
+                            <p><input type="file" name="pic" accept="image/*"></p>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-secondary" onclick="closeModal_my2()">关闭</button>
                         <button type="submit" class="btn btn-primary" name="submitType" value="modifyHeadProfile">确定</button>
                         <!--submit不能 data-dismiss! 否则表单交不出去..-->
                     </div>
@@ -462,6 +467,71 @@
             </div>
         </form>
 
+        <!--询问是否删除图的模态框-->
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" id="deleteGraphUid" name="uid" value="" hidden>
+            <div class="modal modal-warning fade" id="deleteGraph" tabindex="-1" role="dialog" aria-labelledby="deleteGraph" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal_title_6">确定要删除吗</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="py-3 text-center">
+                                <i class="fas fa-exclamation-circle fa-4x"></i>
+                                <h4 class="heading mt-4">是否永久删除此节点</h4>
+                                <p>
+                                    该操作将无法恢复, 点击区域外取消。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-sm btn-primary" name="submitType" value="deleteGraph">删除</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!--添加知识图谱的模态框-->
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="modal fade" id="addGraph" tabindex="-1" role="dialog" aria-labelledby="addGraph" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal_title_6">添加图谱</h5>
+                            <button type="button" class="close" aria-label="Close" data-bs-dismiss = 'modal'>
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h5>创建空图谱</h5>
+                            <div class="form-group">
+                                <label>图谱名*</label>
+                                <p><input type="text" placeholder="请输入图谱名称" name="name"></p>
+                            </div>
+                            <div class="form-group">
+                                <label>简介</label>
+                                <p><textarea placeholder="请输入图谱简介" name="introduction"></textarea></p>
+                            </div>
+                            <hr>
+                            <h5>从文件导入</h5>
+                            <label>请选择json文件</label>
+                            <p><input type="file" name="graph" accept=".json"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                            <button type="submit" class="btn btn-sm btn-primary" name="submitType" value="addGraph">确定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+        <!-- <script src="/static/boomerang/assets/vendor/jquery/jquery.min.js"></script> -->
         <!--        <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>-->
         <script src="/static/media/js/jquery.js"></script>
         <script src="/static/media/plugins/bootstrap-5.3.0-dist/js/bootstrap.js"></script>
@@ -494,14 +564,29 @@
         }
 
         function openModal_my2() {
-          document.getElementById("myModal_my2").style.display = "block";
+          //document.getElementById("myModal_my2").style.display = "block";
+          $('#modifyHeadProfile').modal('show');
         }
 
         function closeModal_my2() {
-          document.getElementById("myModal_my2").style.display = "none";
+          //document.getElementById("myModal_my2").style.display = "none";
+          $('#modifyHeadProfile').modal('hide');
         }
 
+        function openAddGraphModal() {
+            $('#addGraph').modal('show');
+        }
 
+        function closeAddGraphModal() {
+            $('#addGraph').modal('hide');
+        }
+        
+        //删除图.
+        function doDeleteGraph(uid) {
+            ipt = document.getElementById('deleteGraphUid');
+            ipt.value = uid
+            $('#deleteGraph').modal('show');
+        }
         </script>
     </body>
 </html>

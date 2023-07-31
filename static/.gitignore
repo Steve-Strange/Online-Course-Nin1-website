@@ -138,10 +138,10 @@ dmypy.json
 cython_debug/
 
 
-/boomerang
 /graphs/*
 !/graphs/example.json
 !/graphs/schema.json
+!/graphs/initial_graph.json
 /echarts/*
 !/echarts/echarts.min.js
 !/echarts/echarts.js
